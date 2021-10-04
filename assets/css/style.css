@@ -218,20 +218,19 @@ body {
 }
 
 #leftsleevetile {
-    padding-bottom: 200px;
+    padding-bottom: 300px;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    padding-left: 50px;
     grid-column: 1;
     grid-row: 2;
     display: flex;
 }
 
 #rightsleevetile {
-    padding-bottom: 200px;
+    padding-bottom: 300px;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     grid-column: 3;
     grid-row: 2;
     display: flex;

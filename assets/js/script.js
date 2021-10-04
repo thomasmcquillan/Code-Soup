@@ -1,3 +1,5 @@
+let neckline = ("boop de boop");
+
 $(document).ready(function() {
     $( "#neckcollar" ).click(function() {
         $( "#neckround" ).toggle(),
@@ -39,17 +41,23 @@ $( "#leftsleevenarrowlong" ).click(function() {
 
 $( "#leftsleevenarrowshort" ).click(function() {
     $( "#leftsleevenarrowshort" ).toggle(),
-    $( "#leftsleevewidelong" ).toggle();
+    $( "#leftsleevewidelong" ).toggle(),
+    $( "#rightsleevenarrowshort" ).toggle(),
+    $( "#rightsleevewidelong" ).toggle();
 });
 
 $( "#leftsleevewidelong" ).click(function() {
     $( "#leftsleevewidelong" ).toggle(),
-    $( "#leftsleevewideshort" ).toggle();
+    $( "#leftsleevewideshort" ).toggle(),
+    $( "#rightsleevewidelong" ).toggle(),
+    $( "#rightsleevewideshort" ).toggle();
 });
 
 $( "#leftsleevewideshort" ).click(function() {
     $( "#leftsleevewideshort" ).toggle(),
-    $( "#leftsleevenarrowlong" ).toggle();
+    $( "#leftsleevenarrowlong" ).toggle(),
+    $( "#rightsleevewideshort" ).toggle(),
+    $( "#rightsleevenarrowlong" ).toggle();
 });
 
 $( "#rightsleevenarrowlong" ).click(function() {
@@ -68,10 +76,14 @@ $( "#rightsleevenarrowshort" ).click(function() {
 
 $( "#rightsleevewidelong" ).click(function() {
     $( "#rightsleevewidelong" ).toggle(),
-    $( "#rightsleevewideshort" ).toggle();
+    $( "#rightsleevewideshort" ).toggle(),
+    $( "#leftsleevewidelong" ).toggle(),
+    $( "#leftsleevewideshort" ).toggle();
 });
 
 $( "#rightsleevewideshort" ).click(function() {
     $( "#rightsleevewideshort" ).toggle(),
-    $( "#rightsleevenarrowlong" ).toggle();
+    $( "#rightsleevenarrowlong" ).toggle(),
+    $( "#leftsleevewideshort" ).toggle(),
+    $( "#leftsleevenarrowlong" ).toggle();
 });
