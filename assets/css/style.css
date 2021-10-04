@@ -185,20 +185,30 @@ body {
 
 #garmentgrid {
     display: subgrid;
-    width: 42vw;
-    height: 35vw;
+    width: 33vw;
+    height: 28vw;
     grid-column: 1;
     /* grid-column: 0 / span-2; */
     /* grid-template-columns: 120px 149px 120px; */
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    background-color: #FFF;
+    background-color: rgb(231, 229, 229);
+    border-radius: 4px;
 }
 
-.tileimg {
+.necktile {
     /* border: 1px solid grey; */
+    padding-top: 15px;
     flex-direction: row;
-    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#bodytile {
+    padding-top: 8px;
+    flex-direction: row-reverse;
+    align-items: center;
     justify-content: center;
     display: flex;
 }
@@ -208,5 +218,9 @@ body {
 }
 
 #neckwide {
+    display: none;
+}
+
+#bodyhip, #bodylong {
     display: none;
 }

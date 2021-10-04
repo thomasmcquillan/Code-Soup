@@ -1,8 +1,31 @@
 $(document).ready(function() {
     $( "#neckcollar" ).click(function() {
-        $( "#neckround.png" ).toggle(),
-        $( "#neckcollar.png" ).toggle();
+        $( "#neckround" ).toggle(),
+        $( "#neckcollar" ).toggle();
     });
 });
 
-console.log("hello");
+$( "#neckround" ).click(function() {
+        $( "#neckwide" ).toggle(),
+        $( "#neckround" ).toggle();
+});
+
+$( "#neckwide" ).click(function() {
+        $( "#neckcollar" ).show(),
+        $( "#neckwide" ).toggle();
+});
+
+$( "#bodycropped" ).click(function() {
+    $( "#bodycropped" ).toggle(),
+    $( "#bodyhip" ).toggle();
+});
+
+$( "#bodyhip" ).click(function() {
+    $( "#bodyhip" ).toggle(),
+    $( "#bodylong" ).toggle();
+});
+
+$( "#bodylong" ).click(function() {
+    $( "#bodylong" ).toggle(),
+    $( "#bodycropped" ).toggle();
+});
