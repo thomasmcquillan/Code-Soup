@@ -198,7 +198,7 @@ body {
 
 #necktile {
     /* border: 1px solid grey; */
-    padding-top: 15px;
+    padding-top: 35px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -208,7 +208,7 @@ body {
 }
 
 #bodytile {
-    padding-top: 8px;
+    padding-bottom: 220px;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
