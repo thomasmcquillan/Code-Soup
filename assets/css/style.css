@@ -2,6 +2,7 @@ body {
     margin: 0;
     background-color:#4a494a;
     background-color: #ffb100;
+    background-color: #b7b3a7;
 }
 
 .col-2 {
@@ -153,10 +154,11 @@ body {
     position: absolute;
     top: 0;
     margin: auto 0;
+    height: 100vh;
+    width: 100vw;
     /* grid-template-columns: 1fr 200px 1fr 200px 1fr 200px 1fr;
     grid-template-rows: 200px 200px 200px; */
-    grid-template-columns: repeat(3, 33vw);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 2fr 2fr;
     place-items: center;
     align-content: center;
 }
@@ -168,24 +170,33 @@ body {
     text-decoration: none;
 }
 
-.blacksquare {
-    display: flex;
-    position: fixed;
-    top: -50px;
-    right: 0;
-    height: 50vh;
-    width: 100vw;
-    z-index: -1;
-    background-color: #4a494a;
+.instructions {
+    grid-column: 2;
+    padding: 20px 40px 20px 20px;
 }
 
-.burntsquare {
+.instructions h5 {
+    padding: 20px 50px 20px 30px;
+}
+
+.instructions ul li {
+    padding-bottom: 6px;
+}
+
+#garmentgrid {
+    display: subgrid;
+    width: 50vw;
+    height: 42vw;
+    grid-column: 1;
+    /* grid-column: 0 / span-2; */
+    /* grid-template-columns: 120px 149px 120px; */
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #FFF;
+}
+
+.tileimg {
+    border: 1px solid pink;
+    align-content: center;
+    justify-content: center;
     display: flex;
-    position: fixed;
-    top: 500px;
-    right: 0;
-    height: 50vh;
-    width: 100vw;
-    z-index: -1;
-    background-color: #d46300;
 }
