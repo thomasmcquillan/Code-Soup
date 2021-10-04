@@ -227,6 +227,16 @@ body {
     display: flex;
 }
 
+#rightsleevetile {
+    padding-bottom: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+}
+
 #neckround {
     display: none;
 }
@@ -241,6 +251,9 @@ body {
 
 #leftsleevenarrowshort,
 #leftsleevewidelong,
-#leftsleevewideshort {
+#leftsleevewideshort,
+#rightsleevenarrowshort,
+#rightsleevewidelong,
+#rightsleevewideshort {
     display: none;
 }
