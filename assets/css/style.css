@@ -1,6 +1,7 @@
 body { 
-    margin: 0; 
-    background-color: white;
+    margin: 0;
+    background-color:#4a494a;
+    background-color: #ffb100;
 }
 
 .col-2 {
@@ -60,3 +61,43 @@ body {
 :is(html) .shape-wrapper .turqey:hover {
     background-color: darkgrey;
 }
+
+.gridtest {
+    display: block;
+    height: 200px;
+    width: 200px;
+    /*border: 1px solid grey; */
+    padding: 0;
+}
+
+.gridlock {
+    margin-top: 150px;
+    width: 600px;
+    height: 600px;
+}
+
+.gridtiles {
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    justify-self: center;
+}
+
+#topleft,
+#topright,
+#midcenter,
+#btmleft,
+#btmright {
+    background-color: #d47f34;
+}
+
+#topcenter,
+#midleft,
+#midright,
+#btmcenter {
+    background-color: #d46300;
+}
+
