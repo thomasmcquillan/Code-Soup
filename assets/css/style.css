@@ -3,8 +3,21 @@ body {
     background-color:#4a494a;
     background-color: #ffb100;
     background-color: #9c998f;
-
+    
     font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+li, li a {
+    list-style-type: none;
+    color: black;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a:hover {
+    color: #b35402;
 }
 
 .col-2 {
@@ -125,31 +138,6 @@ body {
     background-color: bisque;
 }
 
-/* #tile1 {
-    display: block;
-    position: absolute;
-    height: 600px;
-    width: 200px;
-    background-color: #d47f34;
-}
-
-#tile2 {
-    z-index:3;
-    position: absolute;
-}
-
-#tile3 {
-    display: flex;
-    
-    justify-self: flex-end;
-    height: 600px;
-    width: 200px;
-
-    z-index: 19;
-    background-color: #d46300;
-    border: 1px solid green;
-} */
-
 #testgrid {
     display: grid;
     padding: 0;
@@ -210,15 +198,6 @@ body {
 }
 
 #leftsleevetile {
-    /* padding-bottom: 300px;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 50px;
-    grid-column: 1;
-    grid-row: 2;
-    display: flex; */
-    
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,24 +209,14 @@ body {
 }
 
 #rightsleevetile {
-    /* padding-bottom: 300px;
-    flex-direction: row;
-    align-items: center;
-    grid-column: 3;
-    grid-row: 2;
-    display: flex; */
     justify-content: center;
     align-items: center;
     display: flex;
     padding-top: 157px;
     padding-right: 5px;
-    /* background-color: #ffb100 */
 }
 
-#neckround {
-    display: none;
-}
-
+#neckround,
 #neckwide {
     display: none;
 }
@@ -268,19 +237,7 @@ body {
 #lowerrighttile,
 #lowerlefttile {
     z-index: -1;
-    /* background: url("assets/images/neckswatch.png"); */
 }
-
-/* #neckswatch {
-    
-} */
-
-/* #colortileneck {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#5c5c5c;
-} */
 
 #patterndownloads {
     display: flex;
@@ -289,4 +246,9 @@ body {
     height: 200px;
     top: 0;
     left: 0;
+}
+
+#patternNeckRound > a,
+#patternNeckWide > a {
+    display: none;
 }

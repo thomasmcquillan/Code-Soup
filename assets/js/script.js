@@ -1,20 +1,36 @@
 let neckline = ("boop de boop");
 
+// $(document).ready(function() {
+//     $( "#neckcollar" ).click(function() {
+//         $( "#neckround" ).toggle(),
+//         $( "#neckcollar" ).toggle();
+//     });
+// });
+
 $(document).ready(function() {
-    $( "#neckcollar" ).click(function() {
-        $( "#neckround" ).toggle(),
-        $( "#neckcollar" ).toggle();
-    });
+    console.log("ready");
 });
+
+$( "#neckcollar" ).click(function() {
+        $( "#neckcollar" ).toggle(),
+        $( "#neckround" ).toggle(),
+        $( "#patternNeckCollar ").toggle(),
+        $( "#patternNeckRound ").toggle();
+});
+
 
 $( "#neckround" ).click(function() {
         $( "#neckwide" ).toggle(),
-        $( "#neckround" ).toggle();
+        $( "#neckround" ).toggle(),
+        $( "#patternNeckRound ").toggle(),
+        $( "#patternNeckWide ").toggle();
 });
 
 $( "#neckwide" ).click(function() {
-        $( "#neckcollar" ).show(),
-        $( "#neckwide" ).toggle();
+        $( "#neckcollar" ).toggle(),
+        $( "#neckwide" ).toggle(),
+        $( "#patternNeckWide ").toggle(),
+        $( "#patternNeckCollar ").toggle();
 });
 
 $( "#bodycropped" ).click(function() {
@@ -90,23 +106,21 @@ $( "#rightsleevewideshort" ).click(function() {
 
 //  testing code for selecting required pattern files
 
-var patternNeck;
+// var patternNeck;
 
-var patternNeckCollar;
-var patternNeckLong;
-var patternNeckWide = 
+// var patternNeckCollar;
+// var patternNeckLong;
+// var patternNeckWide = 
 
-$(document).ready(function () {
+// $(document).ready(function () {
   
-    // On button click, get value
-    // of input control Show alert
-    // message box
-    $("#neckcollar").click(function () {
-        patternNeck = document.getElementById('patternNeckCollar');
-        console.log(patternNeck);
-    });
-    document.getElementById("#patternfiles").append(patternNeck);
-});
+
+//     $("#neckcollar").click(function () {
+//         patternNeck = document.getElementById('patternNeckCollar');
+//         console.log(patternNeck);
+//     });
+//     document.getElementById("#patternfiles").append(patternNeck);
+// });
 
 // var myLink = document.getElementById("yourLinkId"); 
 // myLink.href = "some_url"
@@ -121,3 +135,36 @@ $(document).ready(function () {
 //         alert(inputString);
 //     });
 // });
+
+// $("#neckcollar").click(function(e){
+// 	$('#patterNeckCollar').toggle();
+//   e.preventDefault();
+// });
+
+
+
+
+
+// $(document).ready(function() {
+//     $( "#neckcollar" ).click(function() {
+//         $( "#neckround" ).toggle(),
+//         $( "#neckcollar" ).toggle();
+//     });
+// });
+
+// $( "#neckround" ).click(function() {
+//         $( "#neckwide" ).toggle(),
+//         $( "#neckround" ).toggle();
+// });
+
+// $( "#neckwide" ).click(function() {
+//         $( "#neckcollar" ).show(),
+//         $( "#neckwide" ).toggle();
+// });
+
+
+{/* <ul id="patterndownloads">
+        <li id=patternNeckCollar><a href="assets/downloads/print-temp-collar-neck.pdf">Pattern for Collar Neckline. (PDF download)</a></li>
+        <li id=patternNeckRound><a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Round Neckline. (PDF download)</a></li>
+        <li id=patternNeckWide><a href="assets/downloads/print-temp-wide-neck.pdf">Pattern for Wide Neckline. (PDF download)</a></li>
+    </ul> */}
