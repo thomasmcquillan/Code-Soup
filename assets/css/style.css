@@ -204,6 +204,18 @@ body {
   height: 28vw;
 }
 
+#colorgrid {
+    display: inline-grid;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 135px 135px 135px;
+    grid-gap: 3px;
+
+    margin-top: 250px;
+    margin-left: 75px;
+    width: 33vw;
+    height: 28vw;
+    }
+
 #necktile {
     /* padding-top: 35px;
     flex-direction: row;
@@ -215,6 +227,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-image: url("assets/images/neckswatch.png");
 }
 
 #bodytile {
@@ -257,6 +271,7 @@ body {
     align-items: center;
     display: flex;
     padding-top: 155px;
+    padding-right: 5px;
 }
 
 #neckround {
@@ -278,4 +293,14 @@ body {
 #rightsleevewidelong,
 #rightsleevewideshort {
     display: none;
+}
+
+#lowerrighttile,
+#lowerlefttile {
+    z-index: -1;
+    background: url("assets/images/neckswatch.png");
+}
+
+#neckswatch {
+    
 }
