@@ -1,4 +1,8 @@
-let neckline = ("boop de boop");
+const neckCollar = '<a href="assets/downloads/print-temp-collar-neck.pdf">Pattern for Collar Neckline. (PDF download)</a>';
+const neckRound = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Round Neckline. (PDF download)</a>';
+const neckWide = '<a href="assets/downloads/print-temp-wide-neck.pdf">Pattern for Wide Neckline. (PDF download)</a>';
+
+// var neckLine = neckCollar;
 
 // $(document).ready(function() {
 //     $( "#neckcollar" ).click(function() {
@@ -7,30 +11,40 @@ let neckline = ("boop de boop");
 //     });
 // });
 
-$(document).ready(function() {
-    console.log("ready");
-});
+// $(document).ready(function() {
+//     console.log("ready");
+// });
 
-$( "#neckcollar" ).click(function() {
+
+
+// $(document).ready(function() {
+// $("#neckcollar").click(function() {
+//         $( "#neckcollar" ).toggle(),
+//         $( "#neckround" ).toggle(),
+//         $( "#patternNeckCollar").toggle(),
+//         $( "#patternNeckRound").toggle();
+//     });
+// });
+
+$(document).ready(function() {
+    $("#neckcollar").click(function() {
         $( "#neckcollar" ).toggle(),
         $( "#neckround" ).toggle(),
-        $( "#patternNeckCollar ").toggle(),
-        $( "#patternNeckRound ").toggle();
-});
+        $( "#neckline" ).html(neckRound);
+        });
+    });
 
 
 $( "#neckround" ).click(function() {
         $( "#neckwide" ).toggle(),
         $( "#neckround" ).toggle(),
-        $( "#patternNeckRound ").toggle(),
-        $( "#patternNeckWide ").toggle();
+        $( "#neckline" ).html(neckWide);
 });
 
 $( "#neckwide" ).click(function() {
         $( "#neckcollar" ).toggle(),
         $( "#neckwide" ).toggle(),
-        $( "#patternNeckWide ").toggle(),
-        $( "#patternNeckCollar ").toggle();
+        $( "#neckline" ).html(neckCollar);
 });
 
 $( "#bodycropped" ).click(function() {

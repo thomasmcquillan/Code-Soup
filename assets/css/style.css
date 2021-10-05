@@ -240,12 +240,12 @@ a:hover {
 }
 
 #patterndownloads {
-    display: flex;
-    position: fixed;
-    width: 200px;
+    display: block;
+    position: absolute;
+    width: 400px;
     height: 200px;
-    top: 0;
-    left: 0;
+    bottom: 20px;
+    left: 140px;
 }
 
 #patternNeckRound > a,
