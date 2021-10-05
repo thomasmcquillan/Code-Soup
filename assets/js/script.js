@@ -87,3 +87,37 @@ $( "#rightsleevewideshort" ).click(function() {
     $( "#leftsleevewideshort" ).toggle(),
     $( "#leftsleevenarrowlong" ).toggle();
 });
+
+//  testing code for selecting required pattern files
+
+var patternNeck;
+
+var patternNeckCollar;
+var patternNeckLong;
+var patternNeckWide = 
+
+$(document).ready(function () {
+  
+    // On button click, get value
+    // of input control Show alert
+    // message box
+    $("#neckcollar").click(function () {
+        patternNeck = document.getElementById('patternNeckCollar');
+        console.log(patternNeck);
+    });
+    document.getElementById("#patternfiles").append(patternNeck);
+});
+
+// var myLink = document.getElementById("yourLinkId"); 
+// myLink.href = "some_url"
+
+// $(document).ready(function () {
+  
+//     // On button click, get value
+//     // of input control Show alert
+//     // message box
+//     $("#getValBtnID").click(function () {
+//         var inputString = $("#userInputID").val();
+//         alert(inputString);
+//     });
+// });

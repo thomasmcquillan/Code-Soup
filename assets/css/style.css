@@ -2,8 +2,9 @@ body {
     margin: 0;
     background-color:#4a494a;
     background-color: #ffb100;
-    background-color: #b7b3a7;
-    background-color: #4a494a;
+    background-color: #9c998f;
+
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .col-2 {
@@ -185,57 +186,27 @@ body {
 }
 
 #garmentgrid {
-    /* display: grid;
-    width: 33vw;
-    height: 28vw;
-    grid-column: 1;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    background-color: rgb(231, 229, 229);
-    border-radius: 4px; */
-
   display: inline-grid;
-  /* grid-template-rows: 143px 227px 150px;
-  grid-template-columns: 122px 149px 122px; */
   grid-template-rows: 260px 200px;
   grid-template-columns: 122px 149px 122px;
-
   grid-gap: 2px;
-  
   position: fixed;
   top: 250px;
-  left: 75px;
-  width: 33vw;
-  height: 28vw;
+  left: 15vw;
   z-index: 1;
+  background-color: #9c998f;
 }
 
-/* #colorgrid {
-    display: inline-grid;
-    grid-template-rows: 143px 150px 150px;
-    grid-template-columns: 135px 149px 135px;
-    grid-gap: 3px;
-    position: fixed;
-    top: 250px;
-    left: 75px;
-    width: 33vw;
-    height: 28vw;
-    z-index: 0;
-    } */
-
 #necktile {
-    /* grid-row: 1; */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#5c5c5c;
 }
 
 #bodytile {
     display: flex;
     padding-bottom: 130px;
     align-items: center;
-    background-color:#5c5c5c;
 }
 
 #leftsleevetile {
@@ -255,7 +226,7 @@ body {
     align-items: flex-end;
 
     padding-top: 157px;
-    background-color: #d46300;
+    /* background-color: black; */
 }
 
 #rightsleevetile {
@@ -270,7 +241,7 @@ body {
     display: flex;
     padding-top: 157px;
     padding-right: 5px;
-    background-color: #d46300;
+    /* background-color: #ffb100 */
 }
 
 #neckround {
@@ -310,3 +281,12 @@ body {
     align-items: center;
     background-color:#5c5c5c;
 } */
+
+#patterndownloads {
+    display: flex;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+}
