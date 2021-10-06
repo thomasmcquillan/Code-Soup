@@ -1,18 +1,102 @@
+/* makeuse styling notes
+
+colors
+
+body { color: #5c5c5c; 
+
+.t-light .t-stdlinks a, .t-light.t-stdlinks a {
+    color: #fffefe;
+}
+
+.t-light a, .t-light a:hover {
+    color: #FFF;
+}
+
+.t-dark .t-stdlinks a, .t-dark.t-stdlinks a {
+    color: #5c5c5c;
+}
+
+.t-light, .header-nav, .header-nav__link {
+    color: #fffefe;
+}
+.t-dark {
+    color: #5c5c5c;
+}
+.t-gray {
+    color: #888;
+}
+
+.bg--slate {
+    background-color: #4a494a;
+}
+.bg--silver {
+    background-color: #d7d7d7;
+}
+.bg--sand {
+    background-color: #b7b3a7;
+}
+.bg--orange {
+    background-color: #d46300;
+}
+.bg--gold {
+    background-color: #ffb100;
+}
+.color--slate {
+    color: #4a494a;
+}
+.color--silver {
+    color: #d7d7d7;
+}
+.color--sand {
+    color: #b7b3a7;
+}
+.color--orange {
+    color: #d46300;
+}
+.color--gold {
+    color: #ffb100;
+}
+
+.header-nav .header-nav__link.current, .header-nav .header-nav__link.section, .header-nav .header-nav__link:active, .header-nav .header-nav__link:focus, .header-nav .header-nav__link:hover {
+    color: #ffb100;
+}
+
+.header-nav .header-nav__link:active {
+    color: #ffd066;
+}
+
+.breadcrumb {
+    color: #4a494a;
+} */
+
+
+
+
+
+    
+
 body { 
     margin: 0;
     background-color:#4a494a;
+
+    background-color:  #5c5c5c;
     background-color: #ffb100;
     background-color: #9c998f;
     
+    color: #5c5c5c;
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
     list-style-type: none;
 }
 
-li, li a {
-    list-style-type: none;
+h1 {
+    color: #fffefe;
+}
+
+li, li a, a {
+    /* list-style-type: none; */
     color: black;
-    text-decoration: none;
+    text-decoration:u nderline;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -22,56 +106,6 @@ a:hover {
 
 .col-2 {
     border: 1px solid grey;
-}
-
-
-.shape-wrapper {
-    width: 100vw;
-    height: 100vh;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-
-.circle {
-  margin-top: 50px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: bounce .4s infinite alternate;
-  
-}
-
-@keyframes bounce {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-15px);
-  }
-}
-
-.pinky {
-    background-color: pink;
-}
-
-.turqey {
-    background-color: turquoise;
-    animation: bounce .7s infinite alternate;
-}
-
-.turqey:hover {
-    background-color: pink;
-}
-
-.pinky:hover {
-    background: turquoise;
-}
-
-:is(html) .shape-wrapper .turqey:hover {
-    background-color: darkgrey;
 }
 
 .gridtest {
@@ -225,7 +259,7 @@ a:hover {
     padding-right: 5px;
 }
 
-#neckround,
+#neckcollar,
 #neckwide {
     display: none;
 }
@@ -235,12 +269,23 @@ a:hover {
 }
 
 #leftsleevenarrowshort,
+#leftsleevenarrowlong,
 #leftsleevewidelong,
-#leftsleevewideshort,
 #rightsleevenarrowshort,
-#rightsleevewidelong,
-#rightsleevewideshort {
+#rightsleevenarrowlong,
+#rightsleevewidelong {
     display: none;
+}
+
+#leftsleevewideshort {
+    padding-top: 9px;
+}
+#rightsleevewideshort {
+    padding-top: 4px;
+}
+
+#leftsleevewidelong {
+    padding-bottom: 8px;
 }
 
 #lowerrighttile,
@@ -255,13 +300,12 @@ a:hover {
     height: 200px;
     bottom: 20px;
     left: 140px;
+    color: #5C5C5C;
+    list-style-type: none;
+    border: 1px solid grey;
 }
 
 #patternNeckRound > a,
 #patternNeckWide > a {
     display: none;
-}
-
-.linky {
-    z-index: 100;
 }

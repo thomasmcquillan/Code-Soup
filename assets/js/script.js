@@ -1,61 +1,29 @@
-const neckCollar = '<a href="assets/downloads/print-temp-collar-neck.pdf">Pattern for Collar Neckline. (PDF download)</a>';
+const neckCollar = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Collar Neckline. (PDF download)</a>';
 const neckRound = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Round Neckline. (PDF download)</a>';
 const neckWide = '<a href="assets/downloads/print-temp-wide-neck.pdf">Pattern for Wide Neckline. (PDF download)</a>';
 
-const bodyCropped = '<a href="assets/downloads/print-temp-collar-neck.pdf">Pattern for Collar Neckline. (PDF download)</a>';
-const bodyHip = 
-const bodyLong = 
-
-
-
-
-
-
-
-
-// var neckLine = neckCollar;
-
-// $(document).ready(function() {
-//     $( "#neckcollar" ).click(function() {
-//         $( "#neckround" ).toggle(),
-//         $( "#neckcollar" ).toggle();
-//     });
-// });
-
-// $(document).ready(function() {
-//     console.log("ready");
-// });
-
-
-
-// $(document).ready(function() {
-// $("#neckcollar").click(function() {
-//         $( "#neckcollar" ).toggle(),
-//         $( "#neckround" ).toggle(),
-//         $( "#patternNeckCollar").toggle(),
-//         $( "#patternNeckRound").toggle();
-//     });
-// });
+// const sleeveWide;
+// const sleeveNarrow;
 
 $(document).ready(function() {
-    $("#neckcollar").click(function() {
-        $( "#neckcollar" ).toggle(),
+    $("#neckround").click(function() {
         $( "#neckround" ).toggle(),
-        $( "#neckline" ).html(neckRound);
+        $( "#neckcollar" ).toggle(),
+        $( "#neckline" ).html(neckCollar);
         });
     });
 
 
-$( "#neckround" ).click(function() {
+$( "#neckcollar" ).click(function() {
+        $( "#neckcollar" ).toggle(),
         $( "#neckwide" ).toggle(),
-        $( "#neckround" ).toggle(),
         $( "#neckline" ).html(neckWide);
 });
 
 $( "#neckwide" ).click(function() {
-        $( "#neckcollar" ).toggle(),
         $( "#neckwide" ).toggle(),
-        $( "#neckline" ).html(neckCollar);
+        $( "#neckround" ).toggle(),
+        $( "#neckline" ).html(neckRound);
 });
 
 $( "#bodycropped" ).click(function() {
@@ -73,61 +41,92 @@ $( "#bodylong" ).click(function() {
     $( "#bodycropped" ).toggle();
 });
 
-$( "#leftsleevenarrowlong" ).click(function() {
-    $( "#leftsleevenarrowlong" ).toggle(),
+$( "#leftsleevewideshort" ).click(function() {
+    $( "#leftsleevewideshort" ).toggle(),
+    $( "#leftsleevewidelong" ).toggle(),
+    $( "#rightsleevewideshort" ).toggle(),
+    $( "#rightsleevewidelong" ).toggle()();
+});
+
+$( "#leftsleevewidelong" ).click(function() {
+    $( "#leftsleevewidelong" ).toggle(),
     $( "#leftsleevenarrowshort" ).toggle(),
-    $( "#rightsleevenarrowlong" ).toggle(),
+    $( "#rightsleevewidelong" ).toggle(),
     $( "#rightsleevenarrowshort" ).toggle();
 });
 
 $( "#leftsleevenarrowshort" ).click(function() {
     $( "#leftsleevenarrowshort" ).toggle(),
-    $( "#leftsleevewidelong" ).toggle(),
+    $( "#leftsleevenarrowlong" ).toggle(),
     $( "#rightsleevenarrowshort" ).toggle(),
-    $( "#rightsleevewidelong" ).toggle();
+    $( "#rightsleevenarrowlong" ).toggle();
 });
 
-$( "#leftsleevewidelong" ).click(function() {
-    $( "#leftsleevewidelong" ).toggle(),
+$( "#leftsleevenarrowlong" ).click(function() {
+    $( "#leftsleevenarrowlong" ).toggle(),
     $( "#leftsleevewideshort" ).toggle(),
-    $( "#rightsleevewidelong" ).toggle(),
+    $( "#rightsleevenarrowlong" ).toggle(),
     $( "#rightsleevewideshort" ).toggle();
 });
 
-$( "#leftsleevewideshort" ).click(function() {
+$( "#rightsleevewideshort" ).click(function() {
     $( "#leftsleevewideshort" ).toggle(),
-    $( "#leftsleevenarrowlong" ).toggle(),
+    $( "#leftsleevewidelong" ).toggle(),
     $( "#rightsleevewideshort" ).toggle(),
+    $( "#rightsleevewidelong" ).toggle()();
+});
+
+$( "#rightsleevewidelong" ).click(function() {
+    $( "#leftsleevewidelong" ).toggle(),
+    $( "#leftsleevenarrowshort" ).toggle(),
+    $( "#rightsleevewidelong" ).toggle(),
+    $( "#rightsleevenarrowshort" ).toggle();
+});
+
+$( "#rightsleevenarrowshort" ).click(function() {
+    $( "#leftsleevenarrowshort" ).toggle(),
+    $( "#leftsleevenarrowlong" ).toggle(),
+    $( "#rightsleevenarrowshort" ).toggle(),
     $( "#rightsleevenarrowlong" ).toggle();
 });
 
 $( "#rightsleevenarrowlong" ).click(function() {
-    $( "#rightsleevenarrowlong" ).toggle(),
-    $( "#rightsleevenarrowshort" ).toggle(),
     $( "#leftsleevenarrowlong" ).toggle(),
-    $( "#leftsleevenarrowshort" ).toggle();
-});
-
-$( "#rightsleevenarrowshort" ).click(function() {
-    $( "#rightsleevenarrowshort" ).toggle(),
-    $( "#rightsleevewidelong" ).toggle(),
-    $( "#leftsleevenarrowshort" ).toggle(),
-    $( "#leftsleevewidelong" ).toggle();
-});
-
-$( "#rightsleevewidelong" ).click(function() {
-    $( "#rightsleevewidelong" ).toggle(),
-    $( "#rightsleevewideshort" ).toggle(),
-    $( "#leftsleevewidelong" ).toggle(),
-    $( "#leftsleevewideshort" ).toggle();
-});
-
-$( "#rightsleevewideshort" ).click(function() {
-    $( "#rightsleevewideshort" ).toggle(),
-    $( "#rightsleevenarrowlong" ).toggle(),
     $( "#leftsleevewideshort" ).toggle(),
-    $( "#leftsleevenarrowlong" ).toggle();
+    $( "#rightsleevenarrowlong" ).toggle(),
+    $( "#rightsleevewideshort" ).toggle();
 });
+
+
+
+
+// $( "#rightsleevenarrowlong" ).click(function() {
+//     $( "#rightsleevenarrowlong" ).toggle(),
+//     $( "#rightsleevenarrowshort" ).toggle(),
+//     $( "#leftsleevenarrowlong" ).toggle(),
+//     $( "#leftsleevenarrowshort" ).toggle();
+// });
+
+// $( "#rightsleevenarrowshort" ).click(function() {
+//     $( "#rightsleevenarrowshort" ).toggle(),
+//     $( "#rightsleevewidelong" ).toggle(),
+//     $( "#leftsleevenarrowshort" ).toggle(),
+//     $( "#leftsleevewidelong" ).toggle();
+// });
+
+// $( "#rightsleevewidelong" ).click(function() {
+//     $( "#rightsleevewidelong" ).toggle(),
+//     $( "#rightsleevewideshort" ).toggle(),
+//     $( "#leftsleevewidelong" ).toggle(),
+//     $( "#leftsleevewideshort" ).toggle();
+// });
+
+// $( "#rightsleevewideshort" ).click(function() {
+//     $( "#rightsleevewideshort" ).toggle(),
+//     $( "#rightsleevenarrowlong" ).toggle(),
+//     $( "#leftsleevewideshort" ).toggle(),
+//     $( "#leftsleevenarrowlong" ).toggle();
+// });
 
 //  testing code for selecting required pattern files
 
