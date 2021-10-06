@@ -1,6 +1,6 @@
-// const neckCollar = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Collar Neckline. (PDF download)</a>';
-// const neckRound = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Round Neckline. (PDF download)</a>';
-// const neckWide = '<a href="assets/downloads/print-temp-wide-neck.pdf">Pattern for Wide Neckline. (PDF download)</a>';
+const neckCollar = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Collar Neckline. (PDF download)</a>';
+const neckRound = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Round Neckline. (PDF download)</a>';
+const neckWide = '<a href="assets/downloads/print-temp-wide-neck.pdf">Pattern for Wide Neckline. (PDF download)</a>';
 
 const sleeveWide = 50;
 const sleeveNarrow = 35;
@@ -19,13 +19,13 @@ const sleeveShort = 55;
 const sleeveLong = 75;
 // let sleevelengthCustom;
 
-let sleeveLength = sleeveShort;
+let sleeveLength = 55;
 
 let bodyCircumference = sleeveLength * 2;
 
 var fabricLength = (sleeveWidth * 0.5) + bodyLength;
 
-var fabricWidth = bodyCircumference;
+var fabricWidth = sleeveLength * 2;
 
 // $(document).ready(function() {
 //     $("#neckround").click(function() {
@@ -35,17 +35,30 @@ var fabricWidth = bodyCircumference;
 //         });
 //     });
 
+// $('#get').on('click', function () {
+//     alert($('.event').children('img').attr('src'));
+// });
+
 $(document).ready(function() {
     $("#width").text(fabricWidth + "cm."),
     $("#length").text(fabricLength + "cm.");
 });
 
-function getFabric() {
-    $("#bodylong").click(function() {
-        $("#length").text(fabricLength + "cm."),
-        $("#width").text(fabricWidth + "cm.");
-    });
-};
+// $(document).ready(function() {
+    
+    // $(".tiles").click(function() {
+    //     $( "#length" ).text(fabricLength+"cm."),
+    //     $( "#width" ).text(fabricWidth+"cm");
+    //     });
+    
+        // });
+
+    // $( "img" ).click(function() {
+    //     $("#length").html(fabricLength +"cm."),
+    //     $("#width").html(fabricWidth+"cm.");
+    // });
+
+
 
 $(document).ready(function() {
     $("#neckround").click(function() {
@@ -71,21 +84,24 @@ $( "#bodycropped" ).click(function() {
     $( "#bodycropped" ).toggle(),
     $( "#bodyhip" ).toggle(),
     bodyLength = bodyHip,
-    getFabric();
+    $( "#length" ).text(fabricLength+"cm."),
+    $( "#width" ).text(fabricWidth+"cm");
 });
 
 $( "#bodyhip" ).click(function() {
     $( "#bodyhip" ).toggle(),
     $( "#bodylong" ).toggle(),
     bodyLength = bodyLong,
-    getFabricDimensions();
+    $( "#length" ).text(fabricLength+"cm."),
+    $( "#width" ).text(fabricWidth+"cm");
 });
 
 $( "#bodylong" ).click(function() {
     $( "#bodylong" ).toggle(),
     $( "#bodycropped" ).toggle(),
     bodyLength = bodyCrop,
-    getFabricDimensions();
+    $( "#length" ).text(fabricLength+"cm."),
+    $( "#width" ).text(fabricWidth+"cm");
 });
 
 $( "#leftsleevewideshort" ).click(function() {
@@ -93,8 +109,7 @@ $( "#leftsleevewideshort" ).click(function() {
     $( "#leftsleevewidelong" ).toggle(),
     $( "#rightsleevewideshort" ).toggle(),
     $( "#rightsleevewidelong" ).toggle(),
-    sleeveLength = sleeveLong,
-    getFabricDimensions();
+    sleeveLength = sleeveLong;
 });
 
 $( "#leftsleevewidelong" ).click(function() {
@@ -103,8 +118,7 @@ $( "#leftsleevewidelong" ).click(function() {
     $( "#rightsleevewidelong" ).toggle(),
     $( "#rightsleevenarrowshort" ).toggle(),
     sleeveWidth = sleeveNarrow,
-    sleeveLength = sleeveShort,
-    getFabricDimensions();
+    sleeveLength = sleeveShort;
 });
 
 $( "#leftsleevenarrowshort" ).click(function() {
@@ -113,8 +127,7 @@ $( "#leftsleevenarrowshort" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle(),
     $( "#rightsleevenarrowlong" ).toggle(),
     sleeveWidth = sleeveNarrow,
-    sleeveLength = sleeveLong,
-    getFabricDimensions();
+    sleeveLength = sleeveLong;
 });
 
 $( "#leftsleevenarrowlong" ).click(function() {
@@ -123,8 +136,7 @@ $( "#leftsleevenarrowlong" ).click(function() {
     $( "#rightsleevenarrowlong" ).toggle(),
     $( "#rightsleevewideshort" ).toggle(),
     sleeveWidth = sleeveWide,
-    sleeveLength = sleeveShort,
-    getFabricDimensions();
+    sleeveLength = sleeveShort;
 });
 
 $( "#rightsleevewideshort" ).click(function() {
@@ -132,8 +144,7 @@ $( "#rightsleevewideshort" ).click(function() {
     $( "#leftsleevewidelong" ).toggle(),
     $( "#rightsleevewideshort" ).toggle(),
     $( "#rightsleevewidelong" ).toggle(),
-    sleeveLength = sleeveLong,
-    getFabricDimensions();
+    sleeveLength = sleeveLong;
 });
 
 $( "#rightsleevewidelong" ).click(function() {
@@ -142,8 +153,7 @@ $( "#rightsleevewidelong" ).click(function() {
     $( "#rightsleevewidelong" ).toggle(),
     $( "#rightsleevenarrowshort" ).toggle(),
     sleeveWidth = sleeveNarrow,
-    sleeveLength = sleeveShort,
-    getFabricDimensions();
+    sleeveLength = sleeveShort;
 });
 
 $( "#rightsleevenarrowshort" ).click(function() {
@@ -152,8 +162,7 @@ $( "#rightsleevenarrowshort" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle(),
     $( "#rightsleevenarrowlong" ).toggle(),
     sleeveWidth = sleeveNarrow,
-    sleeveLength = sleeveLong,
-    getFabricDimensions();
+    sleeveLength = sleeveLong;
 });
 
 $( "#rightsleevenarrowlong" ).click(function() {
@@ -162,6 +171,5 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#rightsleevenarrowlong" ).toggle(),
     $( "#rightsleevewideshort" ).toggle(),
     sleeveWidth = sleeveWide,
-    sleeveLength = sleeveShort,
-    getFabricDimensions();
+    sleeveLength = sleeveShort;
 });
