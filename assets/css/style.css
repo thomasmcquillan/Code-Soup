@@ -75,11 +75,20 @@ a:hover {
 }
 
 .gridtest {
-    display: block;
-    height: 200px;
-    width: 200px;
-    /*border: 1px solid grey; */
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 300px;
+    place-items: center;
+    margin-top: 200px;
+    padding: 0 5vw 0 5vw;
+}
+
+.gridimgtest1 {
+    animation: bounce .4s infinite alternate;
+}
+
+.gridimgtest2 {
+    animation: bounce .4s infinite alternate-reverse;
 }
 
 .gridlock {
@@ -251,4 +260,8 @@ a:hover {
 #patternNeckRound > a,
 #patternNeckWide > a {
     display: none;
+}
+
+.linky {
+    z-index: 100;
 }
