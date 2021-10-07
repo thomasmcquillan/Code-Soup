@@ -136,18 +136,6 @@ a:hover {
     background-color: bisque;
 }
 
-/* #testgrid {
-    display: grid;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    align-content: center;
-} */
-
 .cropt {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 32px;
@@ -157,11 +145,11 @@ a:hover {
 
 .instructions {
     grid-column: 2;
-    padding: 20px 110px 20px 45px;
+    padding: 45px 100px 20px 60px;
 }
 
 .instructions h5 {
-    padding: 50px 10px 20px 30px;
+    padding: 50px 10px 45px 30px;
 }
 
 .instructions ul li {
@@ -173,10 +161,7 @@ a:hover {
   grid-template-rows: 260px 175px;
   grid-template-columns: 122px 149px 122px;
   grid-gap: 2px;
-  /* position: absolute; */
-  /* grid-column: 1; */
-  /* top: 100px;
-  left: 10vw; */
+  left: 10vw;
   z-index: 1;
   background-color: #9c998f;
 }
@@ -263,5 +248,5 @@ a:hover {
 
 .gridwrapper {
     display: flex;
-    justify-content: center;
+    justify-items: center;
 }
