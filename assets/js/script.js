@@ -27,24 +27,9 @@ var fabricLength = (sleeveWidth * 0.5) + bodyLength;
 
 var fabricWidth = (sleeveLength * 2);
 
-// $(document).ready(function() {
-//     $("#neckround").click(function() {
-//         $( "#neckround" ).toggle();
-//         $( "#neckcollar" ).toggle();
-//         $( "#neckline" ).html(neckCollar);
-//         });
-//     });
 $(document).ready(function() {
     $( "#fabricRequired" ).html(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
 });
-// $(document).ready(function() {
-//     $("#width").text(fabricWidth + "cm.");
-//     $("#length").text(fabricLength + "cm.");
-// });
-    
-// $(".tiles").click(function() {
-//     $( "#fabricRequired" ).text(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
-// });
 
 $(document).ready(function() {
     $("#neckround").click(function() {
@@ -166,7 +151,3 @@ $( "#rightsleevenarrowlong" ).click(function() {
 $(".tiles").click(function() {
     $( "#fabricRequired" ).text(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
 });
-
-// $( "#rightsleevenarrowlong" ).click(function() {
-//     console.log(`Fabric required for your selection is ${fabricWidth}cm Wide x ${fabricLength}cm Long.`);
-// });
