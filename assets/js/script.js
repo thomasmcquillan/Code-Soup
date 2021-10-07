@@ -4,7 +4,7 @@ const neckWide = '<a href="assets/downloads/print-temp-wide-neck.pdf">Pattern fo
 
 const sleeveWide = 50;
 const sleeveNarrow = 35;
-let sleeveWidthCustom;
+// let sleeveWidthCustom;
 
 let sleeveWidth = 50;
 
@@ -13,7 +13,7 @@ const bodyHip = 75;
 const bodyLong = 100;
 // let bodyCustom;
 
-let bodyLength = bodyCrop;
+let bodyLength = 50;
 
 const sleeveShort = 55;
 const sleeveLong = 75;
@@ -34,30 +34,17 @@ var fabricWidth = (sleeveLength * 2);
 //         $( "#neckline" ).html(neckCollar);
 //         });
 //     });
-
-// $('#get').on('click'; function () {
-//     alert($('.event').children('img').attr('src'));
-// });
-
 $(document).ready(function() {
-    $("#width").text(fabricWidth + "cm.");
-    $("#length").text(fabricLength + "cm.");
+    $( "#fabricRequired" ).html(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
 });
-
 // $(document).ready(function() {
+//     $("#width").text(fabricWidth + "cm.");
+//     $("#length").text(fabricLength + "cm.");
+// });
     
-$(".tiles").click(function() {
-    $( "#fabricRequired" ).text(`Fabric required for your selection is ${sleeveLength * 2}cm Wide x ${(sleeveWidth * 0.5) + bodyLength}cm Long.`);
-});
-    
-        // });
-
-    // $( "img" ).click(function() {
-    //     $("#length").html(fabricLength +"cm.");
-    //     $("#width").html(fabricWidth+"cm.");
-    // });
-
-
+// $(".tiles").click(function() {
+//     $( "#fabricRequired" ).text(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
+// });
 
 $(document).ready(function() {
     $("#neckround").click(function() {
@@ -116,8 +103,12 @@ $( "#leftsleevewidelong" ).click(function() {
     $( "#leftsleevenarrowshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
     $( "#rightsleevenarrowshort" ).toggle();
+    console.log(sleeveWidth);
+    console.log(sleeveLength);
     sleeveWidth = sleeveNarrow;
     sleeveLength = sleeveShort;
+    console.log(sleeveWidth);
+    console.log(sleeveLength);
 });
 
 $( "#leftsleevenarrowshort" ).click(function() {
@@ -125,7 +116,6 @@ $( "#leftsleevenarrowshort" ).click(function() {
     $( "#leftsleevenarrowlong" ).toggle();
     $( "#rightsleevenarrowshort" ).toggle();
     $( "#rightsleevenarrowlong" ).toggle();
-    sleeveWidth = sleeveNarrow;
     sleeveLength = sleeveLong;
 });
 
@@ -173,7 +163,9 @@ $( "#rightsleevenarrowlong" ).click(function() {
     sleeveLength = sleeveShort;
 });
 
-
+$(".tiles").click(function() {
+    $( "#fabricRequired" ).text(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
+});
 
 // $( "#rightsleevenarrowlong" ).click(function() {
 //     console.log(`Fabric required for your selection is ${fabricWidth}cm Wide x ${fabricLength}cm Long.`);
