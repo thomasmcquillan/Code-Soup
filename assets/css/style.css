@@ -81,8 +81,9 @@ body {
     background-color:  #5c5c5c;
     
     background-color: #9c998f;
-    background-color: #4a494a;
+    
     background-color: #ffb100;
+    background-color: #4a494a;
     color: #4a494a;
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
@@ -156,14 +157,19 @@ a:hover {
 .instructions {
     grid-column: 2;
     padding: 45px 100px 20px 60px;
+    background-color: #4a494a;
+    line-height: 24px;
 }
 
 .instructions h5 {
     padding: 50px 10px 45px 30px;
+    color: #fffefe;
+    line-height: 32px;
 }
 
 .instructions ul li {
-    padding-bottom: 6px;
+    padding-bottom: 10px;
+    color: #fffefe;
 }
 
 #garmentgrid {
@@ -256,7 +262,8 @@ a:hover {
     /* margin-top: -5vw; */
     padding: 5vw 30px 0 0;
     z-index: 20;
-    background-color:#d47f34
+    background-color:#ffb100;
+    
 }
 
 .gridwrapper {
@@ -296,6 +303,42 @@ a:hover {
     display: table;
   }
 
-.logo {
-    box-sizing: border-box;
+.navbar-brand {
+    display: flex;
+    padding-left: 15px;
+}
+
+.navbar {
+    display: flex;
+   
+    padding: 25px 15px 50px 15px;
+}
+
+header {
+    height: 153.27px;
+}
+
+.navbar-nav {
+    
+    display: flex;
+    flex-direction: row;
+    justify-items: right;
+    justify-content: flex-end;
+    /* width: 40vw; */
+    /* padding: 0 15px 0 30px; */
+    font-size: 14px;
+    color: #fffefe;
+    text-transform: lowercase;
+    text-decoration: none;
+    font-weight: 700;
+    position: absolute;
+    width: 100vw;
+
+    right: 30px;
+    top: 84px;
+}
+
+.navbar-nav .nav-item a {
+    padding-left: 20px;
+    justify-self: right;
 }
