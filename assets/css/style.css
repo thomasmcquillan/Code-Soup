@@ -262,7 +262,7 @@ a:hover {
     /* margin-top: -5vw; */
     padding: 5vw 30px 0 0;
     z-index: 20;
-    background-color:#ffb100;
+    background-color:#fffefe;
     
 }
 
@@ -324,8 +324,6 @@ header {
     flex-direction: row;
     justify-items: right;
     justify-content: flex-end;
-    /* width: 40vw; */
-    /* padding: 0 15px 0 30px; */
     font-size: 14px;
     color: #fffefe;
     text-transform: lowercase;
@@ -342,3 +340,24 @@ header {
     padding-left: 20px;
     justify-self: right;
 }
+
+/* ------------------ */
+
+.navbar-nav .nav-link:nth-child(1n+0):before {
+    content: '◣'}
+    .navbar-nav .nav-link:nth-child(2n+0):before {
+    font-weight: 400;
+    content: "\E001"}
+    .navbar-nav .nav-link:nth-child(3n+0):before {
+    content: '◺'}
+.header-nav .header-nav__link.current, .header-nav .header-nav__link.section, .header-nav .header-nav__link:active, .header-nav .header-nav__link:focus, .header-nav .header-nav__link:hover {
+    color: #ffb100;
+}
+.header-nav .header-nav__link.current:before, .header-nav .header-nav__link.section:before, .header-nav .header-nav__link:active:before, .header-nav .header-nav__link:focus:before, .header-nav .header-nav__link:hover:before {
+    display: block;
+}
+
+.nav-item a:hover {
+    color: #ffd066;
+}
+/* ------------------ */
