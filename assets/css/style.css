@@ -91,10 +91,13 @@ h1 {
     color: #fffefe;
 }
 
+a {
+    text-decoration: underline;
+}
+
 li, li a, a {
     /* list-style-type: none; */
     color: black;
-    text-decoration: underline;
     font-family: 'Ubuntu', sans-serif;
     padding-bottom: 5px;
 }
@@ -166,9 +169,11 @@ a:hover {
   grid-template-rows: 260px 175px;
   grid-template-columns: 122px 149px 122px;
   grid-gap: 2px;
-  left: 10vw;
+  margin-top: 5vw;
+  /* left: 10vw; */
   z-index: 1;
   background-color: #9c998f;
+  /* background-color: #74726b; */
 }
 
 #necktile {
@@ -181,17 +186,16 @@ a:hover {
     display: flex;
     padding-bottom: 106px;
     align-items: center;
+    /* background-color: #4a494a; */
 }
 
 #leftsleevetile {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
-
-    align-items: flex-end;
-
+    align-items: center;
     padding-top: 157px;
-    /* background-color: black; */
+    /* background-color: #4a494a; */
 }
 
 #rightsleevetile {
@@ -199,7 +203,8 @@ a:hover {
     align-items: center;
     display: flex;
     padding-top: 157px;
-    padding-right: 5px;
+    padding-right: 4px;
+    /* background-color: #4a494a; */
 }
 
 #neckcollar,
@@ -234,6 +239,7 @@ a:hover {
 #lowerrighttile,
 #lowerlefttile {
     z-index: -1;
+    /* background-color: #464646; */
 }
 
 #patternNeckRound > a,
@@ -242,16 +248,23 @@ a:hover {
 }
 
 #whatYouNeed {
-    display: flex;
-    position: relative;
-    /* grid-column: 2; */
+    /* display: flex; */
+    /* position: relative; */
     justify-content: left;
-    align-items: center;
-    padding-left: 5vw;
-
+    /* margin-top: -5vw; */
+    padding: 5vw 30px 0 0;
+    z-index: 20;
 }
 
 .gridwrapper {
     display: flex;
-    justify-items: center;
+    justify-content: center;
+}
+
+.intro {
+    padding: 8vw 8vw 0 8vw;
+}
+
+.intro h5 {
+    line-height: 1.5em;
 }
