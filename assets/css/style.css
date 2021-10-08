@@ -1,10 +1,11 @@
-/* makeuse styling notes
+makeuse styling notes
 
 colors
 
 body { color: #5c5c5c; 
+}
 
-.t-light .t-stdlinks a, .t-light.t-stdlinks a {
+.t-light, .t-stdlinks a, .t-light, .t-stdlinks a {
     color: #fffefe;
 }
 
@@ -67,7 +68,10 @@ body { color: #5c5c5c;
 
 .breadcrumb {
     color: #4a494a;
-} */
+}
+
+/* makeuse specific styles end
+--------------------------------------- */
 
 body { 
     margin: 0;
@@ -77,7 +81,7 @@ body {
     background-color: #ffb100;
     background-color: #9c998f;
     
-    color: #5c5c5c;
+    color: #4a494a;
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
     list-style-type: none;
@@ -90,12 +94,13 @@ h1 {
 li, li a, a {
     /* list-style-type: none; */
     color: black;
-    text-decoration:u nderline;
+    text-decoration: underline;
     font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 5px;
 }
 
 a:hover {
-    color: #b35402;
+    color: #924501;
 }
 
 .col-2 {
