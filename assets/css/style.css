@@ -154,10 +154,6 @@ a:hover {
     top: 0;
 }
 
-#flexend:hover {
-    background-color: bisque;
-}
-
 .cropt {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 32px;
@@ -168,33 +164,10 @@ a:hover {
 .instructions {
     
     padding: 20px 40px 20px 40px;
-    /* background-color: #4a494a; */
     line-height: 24px;
     overflow: auto;
-    /* background: url(../images/makeusebg.png) 44%;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%), url(../images/makeusebg.png) no-repeat center center scroll; */
 }
 
-/* .instructionswrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    height: 100vh; 
-    overflow: hidden;
-    background-size: cover !important;
-    background: linear-gradient(black, black), url(../images/makeusebg.png) no-repeat center center scroll;
-} */
-
-/* .instructionswrapper {
-    background: rgba(80, 80, 80, 0.82);
-    width: 100vw;
-    overflow: hidden;
-    height: 100%;
-    z-index: 2;
-} */
 
 .instructions h5 {
     padding: 50px 30px 45px 30px;
@@ -213,10 +186,6 @@ a:hover {
     z-index: 2;
     padding-right: 40px;
 }
-
-/* .instructions {
-    background: url(../images/makeusebg.png) no-repeat center center fixed;
-} */
 
 #garmentgrid {
     display: inline-grid;
@@ -304,10 +273,14 @@ a:hover {
 }
 
 #whatYouNeed {
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
     justify-content: left;
+    align-content: space-between;
     /* margin-top: -5vw; */
-    padding: 5vw 30px 0 2rem;
+    padding: 5vw 30px 5vw 2rem;
+    max-height: 550px;
+    overflow: auto;
     z-index: 20;
     background-color:#fffefe;
 }
@@ -315,11 +288,7 @@ a:hover {
 .gridwrapper {
     display: flex;
     justify-content: center;
-
-    
     background-color: #9c998f;
-/* background visual element::::
-    background: url(../images/makeusebg.png) 72%; */
 }
 
 .intro {
@@ -391,17 +360,25 @@ header {
     justify-self: right;
 }
 
-#patterntshirtgrid,
+.patterns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 500px;
+    /* justify-items: space-apart; */
+}
+
+#patternTshirtGrid{
+    width: 100%;
+    padding-right: 1rem;
+}
+
 #patternNecklineRound,
 #patternNecklineCollar,
 #patternNecklineWide {
     display: inline-flex;
-    height: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: auto;
-    /* border: 1px solid grey; */
-    padding: 0;
+    width: 100%;
+    padding-left: 1rem;
 }
 
 #patternNecklineCollar,
@@ -409,15 +386,21 @@ header {
     display: none;
 }
 
+.patterns .img-fluid {
+    max-height: 140px;
+}
+
 .patternthumb {
-    display: inline-flex;
+    display: flex;
     height: auto;
-    width: 40%;
+    width: 180px;
     left: 0;
+    padding: 16px 0 0 0;
 }
 
 h5 {
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .header-nav .header-nav__link.current, .header-nav .header-nav__link.section, .header-nav .header-nav__link:active, .header-nav .header-nav__link:focus, .header-nav .header-nav__link:hover {
