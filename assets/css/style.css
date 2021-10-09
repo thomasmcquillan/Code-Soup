@@ -207,6 +207,15 @@ a:hover {
     align-items: center;
 }
 
+#necktile:hover,
+#bodytile:hover,
+#leftsleevetile:hover,
+#rightsleevetile:hover {
+    /* filter:invert(); */
+    /* border: 1px solid #ffb100; */
+    /* background: #ffb100; */
+}
+
 #bodytile {
     display: flex;
     padding-bottom: 108px;
@@ -363,15 +372,18 @@ header {
 .patterns {
     display: flex;
     flex-direction: row;
+    width: 340px;
     width: auto;
-    max-width: 300px;
+    margin-right:auto;
+    padding-right: 30px;
+    /* max-width: 300px; */
     padding-top: 12px;
     /* justify-items: space-apart; */
 }
 
 #patternTshirtGrid{
     width: 100%;
-    padding-right: 1rem;
+    /* padding-right: 1rem; */
     height: 140px;
 }
 
@@ -379,12 +391,15 @@ header {
 #patternNecklineCollar,
 #patternNecklineWide {
     display: inline-flex;
-    width: auto;
-    
+    flex-direction: row;
+    /* width: auto; */
+    overflow: auto;
     height: 140px;
+    width: 140px;
     /* align-self: center; */
     padding-left: 1rem;
     border: 1px solid grey;
+    /* transition: ease-in-out .3s; */
 }
 
 #patternNecklineCollar,
@@ -392,8 +407,15 @@ header {
     display: none;
 }
 
+/* #patternTshirtGrid:hover,
+#patternNecklineRound:hover,
+#patternNecklineCollar:hover,
+#patternNecklineWide:hover {
+    border: 1px solid #ffb100;
+} */
+
 .patterns .img-fluid {
-    max-height: 140px;
+    height: 140px;
 }
 
 .patternthumb {
