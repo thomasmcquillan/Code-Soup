@@ -90,6 +90,22 @@ body {
     list-style-type: none;
 }
 
+#makeusebg {
+    display: flex;
+    /* position: fixed; */
+    z-index: 100;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    width: 100%;
+    /* height: 100vh; if you don't want it to take up the full screen, reduce this number */
+    /* overflow: hidden; */
+    /* background-size: cover !important; */
+    /* background: #5c5c5c6b, url(../images/makeusebg.png) no-repeat center center scroll; */
+
+    
+  }
+
 h1 {
     color: #fffefe;
 }
@@ -155,22 +171,57 @@ a:hover {
 }
 
 .instructions {
-    grid-column: 2;
-    padding: 45px 100px 20px 60px;
-    background-color: #4a494a;
+    
+    padding: 20px 40px 20px 40px;
+    /* background-color: #4a494a; */
     line-height: 24px;
+    overflow: auto;
+    /* background: url(../images/makeusebg.png) 44%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%), url(../images/makeusebg.png) no-repeat center center scroll; */
 }
 
+/* .instructionswrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    background-size: cover !important;
+    background: linear-gradient(black, black), url(../images/makeusebg.png) no-repeat center center scroll;
+} */
+
+/* .instructionswrapper {
+    background: rgba(80, 80, 80, 0.82);
+    width: 100vw;
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+} */
+
 .instructions h5 {
-    padding: 50px 10px 45px 30px;
+    padding: 50px 30px 45px 30px;
     color: #fffefe;
-    line-height: 32px;
+    line-height: 36px;
 }
 
 .instructions ul li {
-    padding-bottom: 10px;
+    padding-bottom: 16px;
     color: #fffefe;
 }
+
+.instructions ul {
+    overflow: auto;
+    height: 100%;
+    z-index: 2;
+    padding-right: 40px;
+}
+
+/* .instructions {
+    background: url(../images/makeusebg.png) no-repeat center center fixed;
+} */
 
 #garmentgrid {
     display: inline-grid;
@@ -263,13 +314,13 @@ a:hover {
     padding: 5vw 30px 0 0;
     z-index: 20;
     background-color:#fffefe;
-    
+    border: 1px solid grey;    
 }
 
 .gridwrapper {
     display: flex;
     justify-content: center;
-    background-color:#9c998f
+    background-color:#9c998f; 
 }
 
 .intro {
@@ -343,13 +394,13 @@ header {
 
 /* ------------------ */
 
-.navbar-nav .nav-link:nth-child(1n+0):before {
+/* .navbar-nav .nav-link:nth-child(1n+0):before {
     content: '◣'}
     .navbar-nav .nav-link:nth-child(2n+0):before {
     font-weight: 400;
     content: "\E001"}
     .navbar-nav .nav-link:nth-child(3n+0):before {
-    content: '◺'}
+    content: '◺'} */
 .header-nav .header-nav__link.current, .header-nav .header-nav__link.section, .header-nav .header-nav__link:active, .header-nav .header-nav__link:focus, .header-nav .header-nav__link:hover {
     color: #ffb100;
 }
