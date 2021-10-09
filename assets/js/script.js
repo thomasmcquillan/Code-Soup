@@ -1,6 +1,14 @@
-const neckCollar = `<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Collar Neckline</a>`;
-const neckRound = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Round Neckline</a>';
-const neckWide = '<a href="assets/downloads/print-temp-wide-neck.pdf">Pattern for Wide Neckline</a>';
+// const neckCollar = `<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Collar Neckline</a>`;
+// const neckRound = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Round Neckline</a>';
+// const neckWide = '<a href="assets/downloads/print-temp-wide-neck.pdf">Pattern for Wide Neckline</a>';
+
+const neckRound = document.getElementById(patternNecklineRound);
+const neckCollar = document.getElementById(patternNecklineCollar);
+const neckWide = document.getElementById(patternNecklineWide);
+
+// const neckRound = document.getElementById(neckRoundPattern);
+// const neckCollar = document.getElementById(neckCollarPattern);
+// const neckWide = document.getElementById(neckWidePattern);
 
 const sleeveWide = 50;
 const sleeveNarrow = 35;
@@ -35,20 +43,26 @@ $(document).ready(function() {
     $("#neckround").click(function() {
     $( "#neckround" ).toggle();
     $( "#neckcollar" ).toggle();
-    $( "#neckline" ).html(neckCollar);
+    // $( "#neckline" ).html(neckCollar);
+    $( "#patternNecklineRound" ).toggle();
+    $( "#patternNecklineCollar" ).toggle();
    });
 });
 
 $( "#neckcollar" ).click(function() {
         $( "#neckcollar" ).toggle();
         $( "#neckwide" ).toggle();
-        $( "#neckline" ).html(neckWide);
+        // $( "#neckline" ).html(neckWide);
+        $( "#patternNecklineCollar" ).toggle();
+        $( "#patternNecklineWide" ).toggle();
 });
 
 $( "#neckwide" ).click(function() {
         $( "#neckwide" ).toggle();
         $( "#neckround" ).toggle();
-        $( "#neckline" ).html(neckRound);
+        // $( "#neckline" ).html(neckRound);
+        $( "#patternNecklineWide" ).toggle();
+        $( "#patternNecklineRound" ).toggle();
 });
 
 $( "#bodycropped" ).click(function() {

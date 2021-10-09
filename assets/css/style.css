@@ -363,22 +363,28 @@ header {
 .patterns {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    max-width: 500px;
+    width: auto;
+    max-width: 300px;
+    padding-top: 12px;
     /* justify-items: space-apart; */
 }
 
 #patternTshirtGrid{
     width: 100%;
     padding-right: 1rem;
+    height: 140px;
 }
 
 #patternNecklineRound,
 #patternNecklineCollar,
 #patternNecklineWide {
     display: inline-flex;
-    width: 100%;
+    width: auto;
+    
+    height: 140px;
+    /* align-self: center; */
     padding-left: 1rem;
+    border: 1px solid grey;
 }
 
 #patternNecklineCollar,
@@ -400,7 +406,7 @@ header {
 
 h5 {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .header-nav .header-nav__link.current, .header-nav .header-nav__link.section, .header-nav .header-nav__link:active, .header-nav .header-nav__link:focus, .header-nav .header-nav__link:hover {
