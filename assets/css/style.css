@@ -76,13 +76,10 @@ body {
 
 body { 
     margin: 0;
-    background-color:#4a494a;
-
+    /* background-color:#4a494a;
     background-color:  #5c5c5c;
-    
     background-color: #9c998f;
-    
-    background-color: #ffb100;
+    background-color: #ffb100; */
     background-color: #4a494a;
     color: #4a494a;
     font-family: 'Ubuntu', sans-serif;
@@ -102,8 +99,6 @@ body {
     /* overflow: hidden; */
     /* background-size: cover !important; */
     /* background: #5c5c5c6b, url(../images/makeusebg.png) no-repeat center center scroll; */
-
-    
   }
 
 h1 {
@@ -115,7 +110,7 @@ a {
 }
 
 li, li a, a {
-    /* list-style-type: none; */
+    list-style-type: none;
     color: black;
     font-family: 'Ubuntu', sans-serif;
     padding-bottom: 5px;
@@ -231,7 +226,9 @@ a:hover {
     margin-top: 5vw;
     /* left: 10vw; */
     z-index: 1;
-    background-color: #9c998f;
+
+    /* background-color: #9c998f; */
+
     /* background-color: #74726b; */
 }
 
@@ -308,19 +305,21 @@ a:hover {
 
 #whatYouNeed {
     /* display: flex; */
-    /* position: relative; */
     justify-content: left;
     /* margin-top: -5vw; */
-    padding: 5vw 30px 0 0;
+    padding: 5vw 30px 0 2rem;
     z-index: 20;
     background-color:#fffefe;
-    border: 1px solid grey;    
 }
 
 .gridwrapper {
     display: flex;
     justify-content: center;
-    background-color:#9c998f; 
+
+    
+    background-color: #9c998f;
+/* background visual element::::
+    background: url(../images/makeusebg.png) 72%; */
 }
 
 .intro {
@@ -392,23 +391,39 @@ header {
     justify-self: right;
 }
 
-/* ------------------ */
+#patterntshirtgrid,
+#patternNecklineRound,
+#patternNecklineCollar,
+#patternNecklineWide {
+    display: inline-flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+    /* border: 1px solid grey; */
+    padding: 0;
+}
 
-/* .navbar-nav .nav-link:nth-child(1n+0):before {
-    content: '◣'}
-    .navbar-nav .nav-link:nth-child(2n+0):before {
-    font-weight: 400;
-    content: "\E001"}
-    .navbar-nav .nav-link:nth-child(3n+0):before {
-    content: '◺'} */
+#patternNecklineCollar,
+#patternNecklineWide {
+    display: none;
+}
+
+.patternthumb {
+    display: inline-flex;
+    height: auto;
+    width: 40%;
+    left: 0;
+}
+
+h5 {
+    padding-top: 10px;
+}
+
 .header-nav .header-nav__link.current, .header-nav .header-nav__link.section, .header-nav .header-nav__link:active, .header-nav .header-nav__link:focus, .header-nav .header-nav__link:hover {
     color: #ffb100;
-}
-.header-nav .header-nav__link.current:before, .header-nav .header-nav__link.section:before, .header-nav .header-nav__link:active:before, .header-nav .header-nav__link:focus:before, .header-nav .header-nav__link:hover:before {
-    display: block;
 }
 
 .nav-item a:hover {
     color: #ffd066;
 }
-/* ------------------ */
