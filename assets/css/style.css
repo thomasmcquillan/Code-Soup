@@ -187,18 +187,17 @@ a:hover {
     padding-right: 40px;
 }
 
+#bodywrapper {
+    width: 94vw
+}
+
 #garmentgrid {
     display: inline-grid;
     grid-template-rows: 260px 175px;
     grid-template-columns: 122px 149px 122px;
     grid-gap: 2px;
     margin-top: 5vw;
-    /* left: 10vw; */
     z-index: 1;
-
-    /* background-color: #9c998f; */
-
-    /* background-color: #74726b; */
 }
 
 #necktile {
@@ -218,7 +217,8 @@ a:hover {
 
 #bodytile {
     display: flex;
-    padding-bottom: 108px;
+    /* padding-bottom: 107px; */
+    margin-bottom: 107px;
     align-items: center;
     /* background-color: #4a494a; */
 }
@@ -242,7 +242,8 @@ a:hover {
 }
 
 #neckcollar,
-#neckwide {
+#neckwide,
+#neckcollarHover {
     display: none;
 }
 
@@ -257,6 +258,10 @@ a:hover {
 #rightsleevenarrowlong,
 #rightsleevewidelong {
     display: none;
+}
+
+#rightsleevenarrowshort {
+    padding-top: 3px;
 }
 
 #leftsleevewideshort {

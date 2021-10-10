@@ -57,6 +57,20 @@ $( "#neckcollar" ).click(function() {
         $( "#patternNecklineWide" ).toggle();
 });
 
+// $( "#necktile" ).mouseenter(function() {
+//     $( "#neckcollar" ).toggle();
+//     $( "#neckcollarHover" ).toggle();
+//     $( "#necktile" ).mouseleave(function() {
+//         $( "#neckcollar" ).toggle();
+//         $( "#neckcollarHover" ).toggle();
+//     });
+// });
+
+// $( "#necktile" ).mouseleave(function() {
+//     $( "#neckcollar" ).toggle();
+//     $( "#neckcollarHover" ).toggle();
+// });
+
 $( "#neckwide" ).click(function() {
         $( "#neckwide" ).toggle();
         $( "#neckround" ).toggle();
