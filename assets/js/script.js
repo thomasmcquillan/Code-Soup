@@ -35,6 +35,14 @@ var fabricLength = (sleeveWidth * 0.5) + bodyLength;
 
 var fabricWidth = (sleeveLength * 2);
 
+
+
+// need to show following values:
+
+// body length; shoulder to hem;
+// sleeve Circumference;
+// body Circumference;
+
 $(document).ready(function() {
     $( "#fabricRequired" ).html(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
 });
@@ -68,6 +76,7 @@ $( "#bodycropped" ).click(function() {
     bodyLength = bodyHip;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
+    $( "#dimensionBodyLength" ).html(`${bodyLength}cm`);
 });
 
 $( "#bodyhip" ).click(function() {
@@ -76,6 +85,7 @@ $( "#bodyhip" ).click(function() {
     bodyLength = bodyLong;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
+    $( "#dimensionBodyLength" ).html(`${bodyLength}cm`);
 });
 
 $( "#bodylong" ).click(function() {
@@ -84,6 +94,7 @@ $( "#bodylong" ).click(function() {
     bodyLength = bodyCrop;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
+    $( "#dimensionBodyLength" ).html(`${bodyLength}cm`);
 });
 
 $( "#leftsleevewideshort" ).click(function() {
@@ -92,6 +103,7 @@ $( "#leftsleevewideshort" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
     sleeveLength = sleeveLong;
+    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
 });
 
 $( "#leftsleevewidelong" ).click(function() {
@@ -105,6 +117,8 @@ $( "#leftsleevewidelong" ).click(function() {
     sleeveLength = sleeveShort;
     console.log(sleeveWidth);
     console.log(sleeveLength);
+    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
 });
 
 $( "#leftsleevenarrowshort" ).click(function() {
@@ -113,6 +127,7 @@ $( "#leftsleevenarrowshort" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle();
     $( "#rightsleevenarrowlong" ).toggle();
     sleeveLength = sleeveLong;
+    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
 });
 
 $( "#leftsleevenarrowlong" ).click(function() {
@@ -122,6 +137,8 @@ $( "#leftsleevenarrowlong" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     sleeveWidth = sleeveWide;
     sleeveLength = sleeveShort;
+    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
 });
 
 $( "#rightsleevewideshort" ).click(function() {
@@ -130,6 +147,7 @@ $( "#rightsleevewideshort" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
     sleeveLength = sleeveLong;
+    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
 });
 
 $( "#rightsleevewidelong" ).click(function() {
@@ -139,6 +157,8 @@ $( "#rightsleevewidelong" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle();
     sleeveWidth = sleeveNarrow;
     sleeveLength = sleeveShort;
+    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
 });
 
 $( "#rightsleevenarrowshort" ).click(function() {
@@ -148,6 +168,7 @@ $( "#rightsleevenarrowshort" ).click(function() {
     $( "#rightsleevenarrowlong" ).toggle();
     sleeveWidth = sleeveNarrow;
     sleeveLength = sleeveLong;
+    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
 });
 
 $( "#rightsleevenarrowlong" ).click(function() {
@@ -157,6 +178,8 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     sleeveWidth = sleeveWide;
     sleeveLength = sleeveShort;
+    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
 });
 
 $( "#necktile" ).mouseenter(function() {
@@ -212,3 +235,6 @@ $( "#necktile" ).mouseleave(function() {
 $(".tiles").click(function() {
     $( "#fabricRequired" ).text(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
 });
+
+
+
