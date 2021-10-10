@@ -188,19 +188,20 @@ a:hover {
 }
 
 #bodywrapper {
-    width: 94vw
+    margin: 0 auto;
+    padding: 0;
 }
 
 #garmentgrid {
     display: inline-grid;
-    position: fixed;
+    position: relative;
     grid-template-columns: 122px 149px 122px;
     grid-template-rows: 260px 175px;
     grid-template-areas: "a b c"
                          ". d .";
     grid-gap: 2px;
     margin-top: 5vw;
-    z-index: 1;
+    z-index: 100;
 }
 
 #necktile {
@@ -452,4 +453,52 @@ h5 {
 
 .nav-item a:hover {
     color: #ffd066;
+}
+
+.tablewrapper {
+    display: block;
+    height: 300px;
+    width: 50vw;
+    color: white;
+}
+
+table {
+    /* color:#d47f34 !important; */
+    color:#fffefe !important;
+    background-color:#d47f34;
+    border-collapse: collapse;
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 40px 0 40px 0;
+}
+
+td, th {
+    border: none;
+}
+
+#fabricwidthtable {
+    display: flex;
+    justify-self: flex-start;
+    width: 100vw;
+    padding: 20px;
+    background-color:#d47f34;
+    
+}
+
+/* #customInputBody table > th {
+    border: 1px solid pink;
+    background-color: pink;
+} */
+
+#greyoblong {
+    display: block;
+    /* box-sizing: border-box; */
+    width: 100%;
+    max-width: 930px;
+    height: 265px;
+    padding: 40px 15px 40px 15px;
+    background-color: #5c5c5c;
+    margin: auto;
+    position: absolute;
+    left: 0;
 }

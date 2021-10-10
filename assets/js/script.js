@@ -42,28 +42,15 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#neckroundHover").click(function() {
     $( "#neckroundHover" ).toggle();
-    // $( "#neckcollar" ).toggle();
     $( "#neckcollarHover" ).toggle();
-
-
     $( "#patternNecklineRound" ).toggle();
     $( "#patternNecklineCollar" ).toggle();
    });
 });
 
-// $("#neckround").click(function() {
-//     $( "#neckroundHover" ).toggle();
-//     $( "#neckcollar" ).toggle();
-
-//     $( "#patternNecklineRound" ).toggle();
-//     $( "#patternNecklineCollar" ).toggle();
-//    });
-
-
 $( "#neckcollarHover" ).click(function() {
         $( "#neckcollarHover" ).toggle();
         $( "#neckwideHover" ).toggle();
-        // $( "#neckline" ).html(neckWide);
         $( "#patternNecklineCollar" ).toggle();
         $( "#patternNecklineWide" ).toggle();
 });
@@ -71,15 +58,9 @@ $( "#neckcollarHover" ).click(function() {
 $( "#neckwideHover" ).click(function() {
     $( "#neckwideHover" ).toggle();
     $( "#neckroundHover" ).toggle();
-    // $( "#neckline" ).html(neckRound);
     $( "#patternNecklineWide" ).toggle();
     $( "#patternNecklineRound" ).toggle();
 });
-
-// $( "#necktile" ).mouseleave(function() {
-//     $( "#neckcollar" ).toggle();
-//     $( "#neckcollarHover" ).toggle();
-// });
 
 $( "#bodycropped" ).click(function() {
     $( "#bodycropped" ).toggle();
