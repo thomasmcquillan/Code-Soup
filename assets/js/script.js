@@ -40,44 +40,46 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $("#neckround").click(function() {
-    $( "#neckround" ).toggle();
-    $( "#neckcollar" ).toggle();
-    // $( "#neckline" ).html(neckCollar);
+    $("#neckroundHover").click(function() {
+    $( "#neckroundHover" ).toggle();
+    // $( "#neckcollar" ).toggle();
+    $( "#neckcollarHover" ).toggle();
+
+
     $( "#patternNecklineRound" ).toggle();
     $( "#patternNecklineCollar" ).toggle();
    });
 });
 
-$( "#neckcollar" ).click(function() {
-        $( "#neckcollar" ).toggle();
-        $( "#neckwide" ).toggle();
+// $("#neckround").click(function() {
+//     $( "#neckroundHover" ).toggle();
+//     $( "#neckcollar" ).toggle();
+
+//     $( "#patternNecklineRound" ).toggle();
+//     $( "#patternNecklineCollar" ).toggle();
+//    });
+
+
+$( "#neckcollarHover" ).click(function() {
+        $( "#neckcollarHover" ).toggle();
+        $( "#neckwideHover" ).toggle();
         // $( "#neckline" ).html(neckWide);
         $( "#patternNecklineCollar" ).toggle();
         $( "#patternNecklineWide" ).toggle();
 });
 
-// $( "#necktile" ).mouseenter(function() {
-//     $( "#neckcollar" ).toggle();
-//     $( "#neckcollarHover" ).toggle();
-//     $( "#necktile" ).mouseleave(function() {
-//         $( "#neckcollar" ).toggle();
-//         $( "#neckcollarHover" ).toggle();
-//     });
-// });
+$( "#neckwideHover" ).click(function() {
+    $( "#neckwideHover" ).toggle();
+    $( "#neckroundHover" ).toggle();
+    // $( "#neckline" ).html(neckRound);
+    $( "#patternNecklineWide" ).toggle();
+    $( "#patternNecklineRound" ).toggle();
+});
 
 // $( "#necktile" ).mouseleave(function() {
 //     $( "#neckcollar" ).toggle();
 //     $( "#neckcollarHover" ).toggle();
 // });
-
-$( "#neckwide" ).click(function() {
-        $( "#neckwide" ).toggle();
-        $( "#neckround" ).toggle();
-        // $( "#neckline" ).html(neckRound);
-        $( "#patternNecklineWide" ).toggle();
-        $( "#patternNecklineRound" ).toggle();
-});
 
 $( "#bodycropped" ).click(function() {
     $( "#bodycropped" ).toggle();
@@ -174,6 +176,56 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     sleeveWidth = sleeveWide;
     sleeveLength = sleeveShort;
+});
+
+$( "#necktile" ).mouseenter(function() {
+    if($("#neckround").is(":visible")){
+        $( "#neckround" ).toggle();
+        $( "#neckroundHover" ).toggle();
+    } else if (
+        ($("#neckcollar").is(":visible"))){
+            $( "#neckcollar" ).toggle();
+            $( "#neckcollarHover" ).toggle();
+    } else if (
+        ($("#neckwide").is(":visible"))){
+            $( "#neckwide" ).toggle();
+            $( "#neckwideHover" ).toggle();
+    } else {
+        return;
+    };
+});
+
+$( "#necktile" ).mouseleave(function() {
+    if($("#neckroundHover").is(":visible")){
+        $( "#neckround" ).toggle();
+        $( "#neckroundHover" ).toggle();
+    } else if (
+        ($("#neckround").is(":visible"))){
+            $( "#neckround" ).toggle();
+            $( "#neckroundHover" ).toggle();
+    } else if (
+        ($("#neckcollarHover").is(":visible"))){
+            $( "#neckcollar" ).toggle();
+            $( "#neckcollarHover" ).toggle();
+    }
+    else if (
+        ($("#neckcollar").is(":visible"))){
+            $( "#neckcollar" ).toggle();
+            $( "#neckcollarHover" ).toggle();
+    } 
+    else if (
+        ($("#neckwideHover").is(":visible"))){
+            $( "#neckwide" ).toggle();
+            $( "#neckwideHover" ).toggle();
+    } 
+    else if (
+        ($("#neckwide").is(":visible"))){
+            $( "#neckwide" ).toggle();
+            $( "#neckwideHover" ).toggle();
+    }
+    else {
+        return;
+    };
 });
 
 $(".tiles").click(function() {
