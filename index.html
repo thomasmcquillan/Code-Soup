@@ -105,70 +105,60 @@
                     
             </div>
             
-           <div id="tablewrapper">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Measurements for Current Style</th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col ml-4">Custom values:</th>
-                        </tr>
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td scope="col">Body Length (shoulder to hem):</td>
-                            <td scope="col" id="dimensionBodyLength">50cm</td>
-                            <td scope="col"></td>
-                            <td scope="col">Body Length:</td>
-                            <td scope="col"><input id="customInputBodyLength" type="number"></td>
-                        </tr>
-                        <tr>
-                            <td scope="row">Body Circumference:</td>
-                            <td id="dimensionBodyCircumference">110cm</td>
-                            <td></td>
-                            <td>Body Circumference:</td>
-                            <td><input id="customInputBodyCircum" type="number"></td>
-                        </tr>
-                        <tr>
-                            <td scope="row">Sleeve Circumference:</td>
-                            <td id="dimensionSleeveCircumference">50cm</td>
-                            <td></td>
-                            <td>Sleeve Circumference:</td>
-                            <td><input id="customInputSleeveCircum" type="number"></td>
-                        </tr>
-                        <!-- <tr>
-                            <th scope="row">Custom Values:</th>
-                            <td><input id="customInputBodyLength" type="number"></td>
-                            <td><input id="customInputBodyCircum" type="number"></td>
-                            <td><input id="customInputSleeveCircum" type="number"></td>
-                        </tr> -->
-                        
-                        </tbody>
-                    </table>
-                </div>
+        <div id="tablewrapper">
+            <table class="currentStyleTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Measurements for Current Style</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col">Body Length (shoulder to hem):</td>
+                        <td scope="col" id="dimensionBodyLength">50cm</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Body Circumference:</td>
+                        <td id="dimensionBodyCircumference">110cm</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Sleeve Circumference:</td>
+                        <td id="dimensionSleeveCircumference">50cm</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="customStyleTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Custom Measurements:</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col">Body Length:</td>
+                        <td scope="col"><input id="customInputBodyLength" type="number" placeholder=" ____cm"></td>
+                    </tr>
+                    <tr>
+                        <td>Body Circumference:</td>
+                        <td scope="col"><input id="customInputBodyCircum" type="number" placeholder=" ____cm"></td>
+                    </tr>
+                    <tr>
+                        <td>Sleeve Circumference:</td>
+                        <td><input id="customInputSleeveCircum" type="number" placeholder=" ____cm"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-            <form id="garmentInfoForm" class="container" action="">
+            <!-- <form id="garmentInfoForm" class="container" action="">
                 <h5 class="col-8">Enter your email to receive a summary of the instructions, fabric requirements and pattern download links required for your chosen style.</h5>
                 <div class="mb-2 col-8">
                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="userEmail" placeholder="Your email here..">
                   </div>
-
-                  
-                  <!-- <div class="mb-2 col-8">
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" id="formInfoVessel" rows="6">Chosen style: Wide neckline / Short-wide sleeve / Cropped body.</textarea>
-                  </div> -->
-            </form>  
+            </form>   -->
 
             <div class="instructions col-12 col-lg-11">
                 <h5>Each Make/Use garment made in this method is unique to both the fabric and the user.  The length of a Make/Use cropped Tshirt can be altered to suit an individual's height or taste; a favourite fabric can be used to make the Cropped Tshirt and drastically alter its appearance; new iterations can be created by combining templates in ways dreamt up by the maker/user. The possibilities are literally endless.</h5>
