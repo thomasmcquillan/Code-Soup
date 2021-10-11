@@ -37,6 +37,13 @@ var fabricWidth = (sleeveLength * 2);
 
 
 
+
+let customInputBodyLength;
+let customInputBodyCircum;
+let customInputSleeveCircum;
+
+
+
 // need to show following values:
 
 // body length; shoulder to hem;
@@ -45,6 +52,19 @@ var fabricWidth = (sleeveLength * 2);
 
 $(document).ready(function() {
     $( "#fabricRequired" ).html(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
+});
+
+
+
+
+// var test = parseInt($("#testid").val(), 10);
+
+$("#customInputBodyLength").keydown(function(event) {
+    if (
+        (event.key === "Enter")) {
+            let customBodyLength = parseInt($( "#customInputBodyLength" ).val(), 10);
+            $( "#fabricRequired" ).html(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + customBodyLength}cm long`);
+        } 
 });
 
 $(document).ready(function() {
@@ -237,4 +257,5 @@ $(".tiles").click(function() {
 });
 
 
+// $( "#formInfoVessel" )
 
