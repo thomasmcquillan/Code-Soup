@@ -469,15 +469,13 @@ h5 {
 
 #tablewrapper {
     display: flex;
-    justify-items: center;
+    justify-content: space-between;
+    justify-items: space-between;
     align-content: center;
-    
+    justify-self: center;
     left: 0;
     color: white;
-
-    /* display: block; */
-    /* justify-self: flex-start; */
-    width: 100%;
+    width: 110vw;
     margin: 0 auto;
     left: 0;
     padding: 25px 0 35px 0;
@@ -488,15 +486,27 @@ table {
     /* color:#d47f34 !important; */
     color:#fffefe !important;
     /* background-color:#d47f34; */
-    /* border-collapse: collapse; */
-    width: 100vw;
+    border-collapse: collapse;
+    justify-content: space-between;
+    justify-items: space-between;
+    min-width: 100%;
     margin: 0 auto 0 30px;
     padding: 55px 0 40px 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 td, th {
     border: none;
+    padding: none;
+    margin: none;
+}
+
+input {
+    border: none;
+    text-align: center;
+    width: 50%;
+    margin-left: 50%;
 }
 
 
@@ -533,6 +543,7 @@ td, th {
     line-height: 34px;
     margin: 0;
     padding: 30px 0 20px 0;
+    display: flex;
 }
 
 /* #formInfoVessel {} */
