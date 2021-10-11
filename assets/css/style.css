@@ -577,7 +577,7 @@ input {
     width: 100%;
     max-width: 930px;
     /* height: 265px; */
-    height: 255px;
+    height: 288px;
     padding: 40px 15px 40px 15px;
     background-color: #5c5c5c;
     margin: auto;
@@ -599,4 +599,9 @@ input {
     margin: 0;
     padding: 30px 0 20px 0;
     display: flex;
+}
+
+#patternThumbWide,
+#patternThumbCollar {
+    display: none;
 }
