@@ -62,27 +62,56 @@ $("#customInputBodyLength").keydown(function(event) {
         }
 });
 
+// $(document).ready(function() {
+//     $("#neckroundHover").click(function() {
+//     $( "#neckroundHover" ).toggle();
+//     $( "#neckcollarHover" ).toggle();
+//     $( "#patternNecklineRound" ).toggle();
+//     $( "#patternNecklineCollar" ).toggle();
+//    });
+// });
+
+// $( "#neckcollarHover" ).click(function() {
+//         $( "#neckcollarHover" ).toggle();
+//         $( "#neckwideHover" ).toggle();
+//         $( "#patternNecklineCollar" ).toggle();
+//         $( "#patternNecklineWide" ).toggle();
+// });
+
+// $( "#neckwideHover" ).click(function() {
+//     $( "#neckwideHover" ).toggle();
+//     $( "#neckroundHover" ).toggle();
+//     $( "#patternNecklineWide" ).toggle();
+//     $( "#patternNecklineRound" ).toggle();
+// });
+
 $(document).ready(function() {
     $("#neckroundHover").click(function() {
     $( "#neckroundHover" ).toggle();
     $( "#neckcollarHover" ).toggle();
-    $( "#patternNecklineRound" ).toggle();
-    $( "#patternNecklineCollar" ).toggle();
+    // $( "#patternNecklineRound" ).toggle();
+    // $( "#patternNecklineCollar" ).toggle();
+    $(neckRound).toggle();
+    $(neckCollar).toggle();
    });
 });
 
 $( "#neckcollarHover" ).click(function() {
         $( "#neckcollarHover" ).toggle();
         $( "#neckwideHover" ).toggle();
-        $( "#patternNecklineCollar" ).toggle();
-        $( "#patternNecklineWide" ).toggle();
+        // $( "#patternNecklineCollar" ).toggle();
+        // $( "#patternNecklineWide" ).toggle();
+        $(neckCollar).toggle();
+        $(neckWide).toggle();
 });
 
 $( "#neckwideHover" ).click(function() {
     $( "#neckwideHover" ).toggle();
     $( "#neckroundHover" ).toggle();
-    $( "#patternNecklineWide" ).toggle();
-    $( "#patternNecklineRound" ).toggle();
+    // $( "#patternNecklineWide" ).toggle();
+    // $( "#patternNecklineRound" ).toggle();
+    $(neckWide).toggle();
+    $(neckRound).toggle();
 });
 
 $( "#bodycropped" ).click(function() {

@@ -214,7 +214,7 @@ a:hover {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-areas: b;
+    grid-area: b;
     /* grid-template-areas: 2 1; */
 }
 
@@ -232,6 +232,7 @@ a:hover {
     /* padding-bottom: 107px; */
     margin-bottom: 107px;
     align-items: center;
+    grid-area: d;
     /* background-color: #4a494a; */
 }
 
@@ -268,7 +269,7 @@ a:hover {
 }
 
 #bodyhip {
-    padding-bottom: 2px;
+    padding-bottom: 1px;
 }
 
 #leftsleevenarrowshort,
@@ -406,9 +407,13 @@ header {
 }
 
 .patternThumb {
-    height: 100px;
+    height: 110px;
     width: auto;
     display: flex;
+}
+
+.patternThumb:hover img {
+    filter: opacity(55%);
 }
 
 #tshirtGridPattern,
@@ -416,54 +421,36 @@ header {
 #patternNecklineCollar,
 #patternNecklineWide,
 #patternSleeveCutLeft,
-#patternSleeveCutRight {
-    /* display: inline-flex; */
+#patternSleeveCutRight,
+#patternTshirtGrid {
+    display: inline-flex;
     flex-direction: row;
     /* width: auto; */
     overflow: auto;
-    height: auto;
-    /* width: 140px; */
+    /* height: auto; */
+    width: auto;
     width: 100%;
+
     width: 1fr;
     align-self:left;
     
     /* margin-left: 1rem; */
     border: 1px solid grey;
+    background-color: #ffd066;
+    max-height: 110px;
     
-    /* transition: ease-in-out .3s; */
+    transition: ease-in-out 50ms;
 }
 
-#patternTshirtGrid,
-#tshirtGridPattern {
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-#patternNecklineCollar,
-#patternNecklineWide {
+#patternThumbWide,
+#patternThumbCollar {
     display: none;
 }
-
-/* #patternTshirtGrid:hover,
-#patternNecklineRound:hover,
-#patternNecklineCollar:hover,
-#patternNecklineWide:hover {
-    border: 1px solid #ffb100;
-} */
 
 .patterns .img-fluid {
     height: 100%;
 }
-
-/* .patternthumb {
-    display: inline-flex;
-    height: auto;
-    width: 180px;
-    left: 0;
-    padding: 16px 0 0 0;
-} */
 
 h5 {
     padding-top: 10px;
@@ -489,10 +476,10 @@ h5 {
     left: 0;
     /* color: white; */
     width: 100vw;
-    
-    
     padding: 15px 0 25px 0;
     background-color:#d47f34;
+    background-color:#FFB100;
+    background-color: #d46300;
 }
 
 table {
@@ -599,9 +586,4 @@ input {
     margin: 0;
     padding: 30px 0 20px 0;
     display: flex;
-}
-
-#patternThumbWide,
-#patternThumbCollar {
-    display: none;
 }
