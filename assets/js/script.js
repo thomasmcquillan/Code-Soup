@@ -93,6 +93,7 @@ $(document).ready(function() {
     // $( "#patternNecklineCollar" ).toggle();
     $(neckRound).toggle();
     $(neckCollar).toggle();
+    $("#tablewrapper").css("background-color", "#FFB100");
    });
 });
 
@@ -103,6 +104,7 @@ $( "#neckcollarHover" ).click(function() {
         // $( "#patternNecklineWide" ).toggle();
         $(neckCollar).toggle();
         $(neckWide).toggle();
+        $("#tablewrapper").css("background-color", "#d47f34");
 });
 
 $( "#neckwideHover" ).click(function() {
@@ -112,6 +114,7 @@ $( "#neckwideHover" ).click(function() {
     // $( "#patternNecklineRound" ).toggle();
     $(neckWide).toggle();
     $(neckRound).toggle();
+    $("#tablewrapper").css("background-color", "#d46300");
 });
 
 $( "#bodycropped" ).click(function() {
