@@ -426,7 +426,7 @@ header {
     align-self:left;
     
     /* margin-left: 1rem; */
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     background-color: #ffd066;
 
     max-height: 110px;
@@ -442,6 +442,16 @@ header {
 #patternTshirtGrid img {
     padding: 5px 5px 5px 5px;
     display: flex;
+}
+
+#patternTshirtGrid {
+    border: none;
+    padding: none;
+    width: 40px;
+}
+
+.thumbs {
+    background-color:#ffd066;
 }
 
 #patternThumbWide,

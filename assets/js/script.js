@@ -115,6 +115,7 @@ $( "#neckwideHover" ).click(function() {
     $(neckWide).toggle();
     $(neckRound).toggle();
     $("#tablewrapper").css("background-color", "#d46300");
+    $("#patternThumbRound a").css("background-color", "#d46300");
 });
 
 $( "#bodycropped" ).click(function() {
