@@ -1,14 +1,10 @@
-// const neckCollar = `<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Collar Neckline</a>`;
-// const neckRound = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Round Neckline</a>';
-// const neckWide = '<a href="assets/downloads/print-temp-wide-neck.pdf">Pattern for Wide Neckline</a>';
+// const neckRound = document.getElementById("patternNecklineRound");
+// const neckCollar = document.getElementById("patternNecklineCollar");
+// const neckWide = document.getElementById("patternNecklineWide");
 
-const neckRound = document.getElementById("patternNecklineRound");
-const neckCollar = document.getElementById("patternNecklineCollar");
-const neckWide = document.getElementById("patternNecklineWide");
-
-// const neckRound = document.getElementById(neckRoundPattern);
-// const neckCollar = document.getElementById(neckCollarPattern);
-// const neckWide = document.getElementById(neckWidePattern);
+const neckRound = document.getElementById("patternThumbRound");
+const neckCollar = document.getElementById("patternThumbCollar");
+const neckWide = document.getElementById("patternThumbWide");
 
 const sleeveWide = 50;
 const sleeveNarrow = 35;
@@ -62,9 +58,9 @@ $("#customInputBodyLength").keydown(function(event) {
         }
 });
 
-$("#tablewrapper").click(function() {
-    $("#garmentgrid").toggle();
-})
+// $("#tablewrapper").click(function() {
+//     $("#garmentgrid").toggle();
+// })
 
 // $(document).ready(function() {
 //     $("#neckroundHover").click(function() {
@@ -90,7 +86,7 @@ $("#tablewrapper").click(function() {
 // });
 
 $(document).ready(function() {
-    $("#neckroundHover").click(function() {
+    $( "#neckroundHover" ).click(function() {
     $( "#neckroundHover" ).toggle();
     $( "#neckcollarHover" ).toggle();
     // $( "#patternNecklineRound" ).toggle();
@@ -159,12 +155,8 @@ $( "#leftsleevewidelong" ).click(function() {
     $( "#leftsleevenarrowshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
     $( "#rightsleevenarrowshort" ).toggle();
-    console.log(sleeveWidth);
-    console.log(sleeveLength);
     sleeveWidth = sleeveNarrow;
     sleeveLength = sleeveShort;
-    console.log(sleeveWidth);
-    console.log(sleeveLength);
     $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
     $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
 });
@@ -283,7 +275,3 @@ $( "#necktile" ).mouseleave(function() {
 $(".tiles").click(function() {
     $( "#fabricRequired" ).text(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
 });
-
-
-// $( "#formInfoVessel" )
-
