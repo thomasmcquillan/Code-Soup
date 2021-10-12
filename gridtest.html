@@ -8,24 +8,206 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>    
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
     <title>testing</title>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/script.js" defer></script>
 </head>
+
 <body>
 
-<header></header>
+    <header>
+        <nav class="navbar clearfix t-light">
+            <a class="navbar-brand" href="www.makeuse.co.nz">
+               <span><img src="assets/images/makeuse-logo.png" width="200" height="78.26" alt=""></span>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="https://makeuse.nz/make/">make</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://makeuse.nz/about/">about</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://makeuse.nz/articles/">articles</a>
+                </li>
+        </nav>
+    </header>
+<div id="makeusebg"></div>
 
-<div class="gridtest">
-    <img class="gridimgtest1" src="assets/images/transparencypng-test.png" alt="MakeUse cropped tshirt">
-    <img class="gridimgtest2" src="assets/images/transparencypng-test.png" alt="MakeUse cropped tshirt">
-    <img class="gridimgtest1" src="assets/images/transparencypng-test.png" alt="MakeUse cropped tshirt">
-    <img class="gridimgtest2" src="assets/images/transparencypng-test.png" alt="MakeUse cropped tshirt">
-    <img class="gridimgtest1" src="assets/images/transparencypng-test.png" alt="MakeUse cropped tshirt">
-    <img class="gridimgtest2" src="assets/images/transparencypng-test.png" alt="MakeUse cropped tshirt">
+
+<div id="bodywrapper" class="container-fluid">
+    <div id="greyoblong" class="row"></div>
+    <div class="row">
+            <div class="gridwrapper container-fluid col-12 col-md-6">
+                <div id="garmentgrid">
+                    <div id="leftsleevetile">
+                        <img class="tiles" id="leftsleevewideshort" src="assets/images/leftsleevewideshort.png" alt="">
+                        <img class="tiles" id="leftsleevewidelong" src="assets/images/leftsleevewidelong.png" alt="">
+                        <img class="tiles" id="leftsleevenarrowshort" src="assets/images/leftsleevenarrowshort.png" alt="">
+                        <img class="tiles" id="leftsleevenarrowlong" src="assets/images/leftsleevenarrowlong.png" alt="">
+                    </div>
+                    <div id="necktile">
+                        <img class="tiles" id="neckround" src="assets/images/neckround.png" alt="">
+                        <img class="tiles" id="neckroundHover" src="assets/images/neckroundhover.png" alt="">
+                        <img class="tiles" id="neckcollar" src="assets/images/neckcollar.png" alt="">
+                        <img class="tiles" id="neckcollarHover" src="assets/images/neckcollarhover.png" alt="">
+                        <img class="tiles" id="neckwide" src="assets/images/neckwide.png" alt="">
+                        <img class="tiles" id="neckwideHover" src="assets/images/neckwidehover.png" alt="">
+                    </div>
+                    <div id="rightsleevetile">
+                        <img class="tiles" id="rightsleevenarrowlong" src="assets/images/rightsleevenarrowlong.png" alt="">
+                        <img class="tiles" id="rightsleevenarrowshort" src="assets/images/rightsleevenarrowshort.png" alt="">
+                        <img class="tiles" id="rightsleevewidelong" src="assets/images/rightsleevewidelong.png" alt="">
+                        <img class="tiles" id="rightsleevewideshort" src="assets/images/rightsleevewideshort.png" alt="">
+                    </div>
+                    <div id="lowerlefttile"></div>
+                    <div id="bodytile">
+                        <img class="tiles" id="bodycropped" src="assets/images/bodycropped.png" alt="">
+                        <img class="tiles" id="bodyhip" src="assets/images/bodyhip.png" alt="">
+                        <img class="tiles filter-me" id="bodylong" src="assets/images/bodylong.png" alt="">
+                    </div>
+                    <div id="lowerrighttile"></div>
+                </div>
+            </div>
+
+            <div id="whatYouNeed" class="container-fluid col-12 col-md-6">
+                <p>Click on the collar, sleeve and body areas of the garment to customize fit and style. This will update the list below, providing you with the fabric requirements and pattern templates needed for construction of your chosen garment.</p>
+                <h5>Required Fabric:</h5>
+                <p id="fabricRequired">110cm wide x 75cm long</p>
+                <h5>Required Patterns:</h5>
+                <div class="row">
+                    <div id="patternTshirtGrid" class="patternThumb col">
+                        <a href="assets/downloads/tshirt-pattern-with-grid.pdf">
+                            <span><img id="tshirtGridPattern" class="img-fluid" src="assets/images/tshirt-pattern-with-grid_thumbsquare.jpg" alt=""></span>
+                        </a>
+                    </div>
+                    <!-- <div class="patternThumb col">
+                        <a id="patternNecklineRound" href="assets/downloads/print-temp-round-neck.pdf">
+                            <span><img id="neckRoundPattern" class="img-fluid" src="assets/images/print-temp-round-neck.png" alt=""></span>
+                        </a>
+                    </div>
+                    <div id="patternThumbCollar" class="patternThumb col">
+                        <a id="patternNecklineCollar" href="assets/downloads/print-temp-collar-neck.pdf">
+                            <span><img id="neckCollarPattern" class="img-fluid" src="assets/images/print-temp-collar-neck.png" alt=""></span>
+                        </a>
+                    </div>
+                    <div id="patternThumbWide" class="patternThumb col">
+                        <a id="patternNecklineWide" href="assets/downloads/print-temp-wide-neck.pdf">
+                            <span><img id="neckWidePattern" class="img-fluid" src="assets/images/print-temp-wide-neck.png" alt=""></span>
+                        </a>
+                    </div> -->
+                    <div class="patternThumb col">
+                        <a id="patternNecklineRound" href="assets/downloads/print-temp-round-neck.pdf">
+                            <span><img id="neckRoundPattern" class="img-fluid" src="assets/images/print-temp-round-neck.png" alt=""></span>
+                        </a>
+                    </div>
+                    <div id="patternThumbCollar" class="patternThumb col">
+                        <a id="patternNecklineCollar" href="assets/downloads/print-temp-collar-neck.pdf">
+                            <span><img id="neckCollarPattern" class="img-fluid" src="assets/images/print-temp-collar-neck.png" alt=""></span>
+                        </a>
+                    </div>
+                    <div id="patternThumbWide" class="patternThumb col">
+                        <a id="patternNecklineWide" href="assets/downloads/print-temp-wide-neck.pdf">
+                            <span><img id="neckWidePattern" class="img-fluid" src="assets/images/print-temp-wide-neck.png" alt=""></span>
+                        </a>
+                    </div>
+                    <!-- ------------------------------update image asset when file provided------------------------------------- -->
+                    <div class="patternThumb col">
+                        <a id="patternSleeveCutLeft" href="assets/downloads/sleevecutleft.pdf">
+                            <span><img id="sleeveLeftPattern" class="img-fluid" src="assets/images/print-temp-wide-neck.png" alt=""></span>
+                        </a>
+                    </div>
+                    <!-- ------------------------------update image asset when file provided------------------------------------- -->
+                    <div class="patternThumb col">
+                        <a id="patternSleeveCutRight" href="assets/downloads/sleevecutright.pdf">
+                            <span><img id="sleeveRightPattern" class="img-fluid" src="assets/images/print-temp-wide-neck.png" alt=""></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                    
+            </div>
+            
+        <div id="tablewrapper">
+            <table class="currentStyleTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Measurements for Current Style</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col">Body Length:</td>
+                        <td scope="col" id="dimensionBodyLength">50cm</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Body Circumference:</td>
+                        <td id="dimensionBodyCircumference">110cm</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Sleeve Circumference:</td>
+                        <td id="dimensionSleeveCircumference">50cm</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="customStyleTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Custom Values:</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="col">Body Length:</td>
+                        <td scope="col"><input id="customInputBodyLength" type="number" placeholder=" ____cm"></td>
+                    </tr>
+                    <tr>
+                        <td>Body Circumference:</td>
+                        <td scope="col"><input id="customInputBodyCircum" type="number" placeholder=" ____cm"></td>
+                    </tr>
+                    <tr>
+                        <td>Sleeve Circumference:</td>
+                        <td><input id="customInputSleeveCircum" type="number" placeholder=" ____cm"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+            <!-- <form id="garmentInfoForm" class="container" action="">
+                <h5 class="col-8">Enter your email to receive a summary of the instructions, fabric requirements and pattern download links required for your chosen style.</h5>
+                <div class="mb-2 col-8">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="userEmail" placeholder="Your email here..">
+                  </div>
+            </form>   -->
+
+            <div class="instructions col-12 col-lg-11">
+                <h5>Each Make/Use garment made in this method is unique to both the fabric and the user.  The length of a Make/Use cropped Tshirt can be altered to suit an individual's height or taste; a favourite fabric can be used to make the Cropped Tshirt and drastically alter its appearance; new iterations can be created by combining templates in ways dreamt up by the maker/user. The possibilities are literally endless.</h5>
+                <p class="directions"><strong>Directions:</strong></p>
+                <ul>
+                    <li>Using the Cropped Tshirt Grid file as a guide, mark half way between edges of fabric for Fabric Centre Line and ¼ Fabric Width (A) either side of this.</li>
+                    <li>Measure on your body the desired depth of sleeve (B) from your own shoulder down - this begins to determine how wide your sleeve is on your garment.</li>
+                    <li>Measure on your fabric 1 x B to Shoulder Line, and 1 x B from Shoulder Line to Sleeve Depth.</li>
+                    <li>Finally measure from shoulder to finished desired length and then minus B, for C.</li>
+                    <li>Mark horizontal and vertical lines with tailors chalk.</li>
+                    <li>The intersections of Fabric Centre Line and Shoulder Line, as well as ¼ fabric width and Sleeve Depth are key anchors for placing the templates.</li>
+                    <li>Print: Print out using a standard printer the files only A4 and/or A3 paper or card and cut out the dotted fill. Follow the instructions on the pages</li>
+                    <li>Lasercut: Download files and have laser cut on 2mm card according to lasercutter specifications.</li>
+                    <li>Line up desired templates with grid and follow instructions printed on them.</li>
+                </ul>
+            </div>
+            
+    </div>
 </div>
 
 <footer></footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
 </body>
 </html>

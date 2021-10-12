@@ -2,9 +2,9 @@
 // const neckRound = '<a href="assets/downloads/print-temp-round-neck.pdf">Pattern for Round Neckline</a>';
 // const neckWide = '<a href="assets/downloads/print-temp-wide-neck.pdf">Pattern for Wide Neckline</a>';
 
-const neckRound = document.getElementById(patternNecklineRound);
-const neckCollar = document.getElementById(patternNecklineCollar);
-const neckWide = document.getElementById(patternNecklineWide);
+const neckRound = document.getElementById("patternNecklineRound");
+const neckCollar = document.getElementById("patternNecklineCollar");
+const neckWide = document.getElementById("patternNecklineWide");
 
 // const neckRound = document.getElementById(neckRoundPattern);
 // const neckCollar = document.getElementById(neckCollarPattern);
@@ -61,6 +61,10 @@ $("#customInputBodyLength").keydown(function(event) {
             $( "#fabricRequired" ).html(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + customBodyLength}cm long`);
         }
 });
+
+$("#tablewrapper").click(function() {
+    $("#garmentgrid").toggle();
+})
 
 // $(document).ready(function() {
 //     $("#neckroundHover").click(function() {
