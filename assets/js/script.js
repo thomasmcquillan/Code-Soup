@@ -4,7 +4,7 @@ const neckRound = document.getElementById("patternThumbRound");
 const neckCollar = document.getElementById("patternThumbCollar");
 const neckWide = document.getElementById("patternThumbWide");
 
-// Declaring constants - fixed values for provided styles of garment length / sleeve width / sleeve length.
+// Declaring constant values for body-length, sleeve-width and sleeve length of supplied pattern options.
 
 const bodyCrop = 50;
 const bodyHip = 75;
@@ -16,49 +16,37 @@ const sleeveNarrow = 35;
 const sleeveShort = 55;
 const sleeveLong = 75;
 
-// Declaring variables for currently displayed style, 
-// and setting the initial values to match the default 
-// garment style, as shown at page-load. 
-// These values will change when user clicks the tiles.
+// Declaring variables for current style.
 
 let currentBodyLength = 50;
 let currentSleeveWidth = 50;
 let currentSleeveLength = 55;
 
-// Declaring variable used to display body circumference
-// of currently selected style.
+// Setting variable to calculate body circumference of currently selected style.
 
 let bodyCircumference = currentSleeveLength * 2;
 
 // Declaring variables for custom input values.  
-// These will be used to calculate fabric needs
-// when visitors enter custom measurements values.
 
 let customInputSleeveCircum;
 let customInputBodyLength;
 let customInputBodyCircum;
 
 // Declaring variables for displaying the fabric width
-// and length required to make selected style.
+// and length required to make currently selected style.
 
 var fabricWidth = (currentSleeveLength * 2);
 var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 
-// Function that calculates fabric size required to make 
-// currently selected garment.
+// To calculate fabric size required for currently selected style.
 
 $(".tiles").click(function() {
     $( "#fabricRequired" ).text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
 });
 
 // Function that calculates fabric size required to make 
-// garment based on the custom values input by user. 
-// This key-listener event will run when user presses
-// either the "Enter" or "Tab" key while the custom body
-// length input field is selected.
-
-// - Note: I am yet to write the equivalent function for
-// the custom body circumference and sleeve circumference cells.
+// garment based on the custom values input by user.
+// Triggered by Enter/Tab keys in custom body length input.
 
 $("#customInputBodyLength").keydown(function(event) {
     if (
@@ -68,20 +56,16 @@ $("#customInputBodyLength").keydown(function(event) {
         }
 });
 
-// Mouse-click event listener to run when user clicks
-// in the neckline-tile of garment. The function was
-// initially written to hide current tile and display
-// the next tile using the toggle()function.
-// It has since had further arguments added to toggle
-// displayed download items and update variables used
-// to calculate fabric requirements.
+// Click event to run when user clicks
+// the neckline-tile of garment.
 
 $(document).ready(function() {
     $( "#neckroundHover" ).click(function() {
-    $( "#neckroundHover" ).toggle();    // current neckline tile is toggled off.
-    $( "#neckcollarHover" ).toggle();   // next available neckline tile is toggled on.
-    $(neckRound).toggle();    // div containing pattern download for current neckline is toggled off. 
-    $(neckCollar).toggle();   // div containing pattern download for next neckline tile is toggled on.
+    $( "#neckroundHover" ).toggle();    // Toggles off current neckline tile.
+    $( "#neckcollarHover" ).toggle();   // Toggles on next available neckline tile.
+    $(neckRound).toggle();    // Toggles off div containing download for current neckline. 
+    $(neckCollar).toggle();   // Toggles on div containing download for next style of neckline.
+    $("#patternThumbCollar a").css("background-color", "#ffb100");
    });
 });
 
@@ -90,6 +74,7 @@ $( "#neckcollarHover" ).click(function() {
         $( "#neckwideHover" ).toggle();
         $(neckCollar).toggle();
         $(neckWide).toggle();
+        $("#patternThumbWide a").css("background-color", "#ffd066");
 });
 
 $( "#neckwideHover" ).click(function() {
@@ -100,8 +85,7 @@ $( "#neckwideHover" ).click(function() {
     $("#patternThumbRound a").css("background-color", "#d46300");
 });
 
-// Mouse-click event listener to run when user clicks
-// in the body-tile of garment. 
+// Triggered when 'crop' body tile is clicked. 
 
 $( "#bodycropped" ).click(function() {
     $( "#bodycropped" ).toggle();
@@ -112,6 +96,8 @@ $( "#bodycropped" ).click(function() {
     $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionBodyLength", replacing the contents of cell with value for currentBodyLength.
 });
 
+// Triggered when 'hip' body tile is clicked. 
+
 $( "#bodyhip" ).click(function() {
     $( "#bodyhip" ).toggle();
     $( "#bodylong" ).toggle();
@@ -120,6 +106,8 @@ $( "#bodyhip" ).click(function() {
     $( "#width" ).html(fabricWidth);
     $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
 });
+
+// Triggered when 'long' body tile is clicked. 
 
 $( "#bodylong" ).click(function() {
     $( "#bodylong" ).toggle();
@@ -130,14 +118,18 @@ $( "#bodylong" ).click(function() {
     $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
 });
 
+// Triggered when 'wide and short' left sleeve tile is clicked. 
+
 $( "#leftsleevewideshort" ).click(function() {
     $( "#leftsleevewideshort" ).toggle();
     $( "#leftsleevewidelong" ).toggle();
-    $( "#rightsleevewideshort" ).toggle();
-    $( "#rightsleevewidelong" ).toggle();
+    $( "#rightsleevewideshort" ).toggle();    // right sleeve tiles also toggled,
+    $( "#rightsleevewidelong" ).toggle();     // so that both sleeves matches.
     currentSleeveLength = sleeveLong;
     $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
+
+// Triggered when 'wide and long' left sleeve tile is clicked. 
 
 $( "#leftsleevewidelong" ).click(function() {
     $( "#leftsleevewidelong" ).toggle();
@@ -150,6 +142,8 @@ $( "#leftsleevewidelong" ).click(function() {
     $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
 });
 
+// Triggered when 'narrow and short' left sleeve tile is clicked. 
+
 $( "#leftsleevenarrowshort" ).click(function() {
     $( "#leftsleevenarrowshort" ).toggle();
     $( "#leftsleevenarrowlong" ).toggle();
@@ -158,6 +152,8 @@ $( "#leftsleevenarrowshort" ).click(function() {
     currentSleeveLength = sleeveLong;
     $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
+
+// Triggered when 'narrow and long' left sleeve tile is clicked.
 
 $( "#leftsleevenarrowlong" ).click(function() {
     $( "#leftsleevenarrowlong" ).toggle();
@@ -170,6 +166,8 @@ $( "#leftsleevenarrowlong" ).click(function() {
     $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
 });
 
+// Triggered when 'wide and short' right sleeve tile is clicked.
+
 $( "#rightsleevewideshort" ).click(function() {
     $( "#leftsleevewideshort" ).toggle();
     $( "#leftsleevewidelong" ).toggle();
@@ -178,6 +176,8 @@ $( "#rightsleevewideshort" ).click(function() {
     currentSleeveLength = sleeveLong;
     $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
+
+// Triggered when 'wide and long' right sleeve tile is clicked.
 
 $( "#rightsleevewidelong" ).click(function() {
     $( "#leftsleevewidelong" ).toggle();
@@ -190,6 +190,8 @@ $( "#rightsleevewidelong" ).click(function() {
     $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
 });
 
+// Triggered when 'narrow and short' right sleeve tile is clicked.
+
 $( "#rightsleevenarrowshort" ).click(function() {
     $( "#leftsleevenarrowshort" ).toggle();
     $( "#leftsleevenarrowlong" ).toggle();
@@ -199,6 +201,8 @@ $( "#rightsleevenarrowshort" ).click(function() {
     currentSleeveLength = sleeveLong;
     $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
+
+// Triggered when 'narrow and long' right sleeve tile is clicked.
 
 $( "#rightsleevenarrowlong" ).click(function() {
     $( "#leftsleevenarrowlong" ).toggle();
@@ -211,18 +215,12 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
 });
 
-// Mouse-enter listener to detect when user hovers
-// over the neckline-tile. When the mouse enters the
-// div it triggers an else/if conditional statement.
-// If neckround is visible then show the neckroundhover
-// image, while hiding the neckround image. If not visible,
-// check if neckcollar is visible and run applicable code etc.
-// Obvious parallels to CSS :hover states but more powerful.
+// Listener function to trigger else/if conditional statement.
 
 $( "#necktile" ).mouseenter(function() {
     if($("#neckround").is(":visible")){
-        $( "#neckround" ).toggle();
-        $( "#neckroundHover" ).toggle();
+        $( "#neckround" ).toggle();            // Toggles off 'round' neck tile if displayed,
+        $( "#neckroundHover" ).toggle();       // Toggles on colored version of 'round' neck tile.
     } else if (
         ($("#neckcollar").is(":visible"))){
             $( "#neckcollar" ).toggle();
@@ -236,16 +234,13 @@ $( "#necktile" ).mouseenter(function() {
     };
 });
 
-// Essentially the same as the mouse-enter function
-// described above, but this time for reversing the
-// hovered state - returning the tile to it's original
-// image.
+// Else if mouse-leave function to restore neck-tile to unhovered state.
 
 $( "#necktile" ).mouseleave(function() {
-    if($("#neckroundHover").is(":visible")){
-        $( "#neckround" ).toggle();
-        $( "#neckroundHover" ).toggle();
-    } else if (
+    if($("#neckroundHover").is(":visible")){        // Checks if current neckline is 'round' style,
+        $( "#neckround" ).toggle();                 // toggling off 'hover' image -
+        $( "#neckroundHover" ).toggle();            // and toggling back on original.
+    } else if (                                     // "else if" to check other possible options.
         ($("#neckround").is(":visible"))){
             $( "#neckround" ).toggle();
             $( "#neckroundHover" ).toggle();
