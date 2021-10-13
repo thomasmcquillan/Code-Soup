@@ -1,60 +1,70 @@
-// const neckRound = document.getElementById("patternNecklineRound");
-// const neckCollar = document.getElementById("patternNecklineCollar");
-// const neckWide = document.getElementById("patternNecklineWide");
+// Declaring constants - targets divs for pattern download thumbnails.
 
 const neckRound = document.getElementById("patternThumbRound");
 const neckCollar = document.getElementById("patternThumbCollar");
 const neckWide = document.getElementById("patternThumbWide");
 
-const sleeveWide = 50;
-const sleeveNarrow = 35;
-// let sleeveWidthCustom;
-
-let sleeveWidth = 50;
+// Declaring constants - fixed values for provided styles of garment length / sleeve width / sleeve length.
 
 const bodyCrop = 50;
 const bodyHip = 75;
 const bodyLong = 100;
-// let bodyCustom;
 
-let bodyLength = 50;
+const sleeveWide = 50;
+const sleeveNarrow = 35;
 
 const sleeveShort = 55;
 const sleeveLong = 75;
-// let sleevelengthCustom;
 
-let sleeveLength = 55;
+// Declaring variables for currently displayed style, 
+// and setting the initial values to match the default 
+// garment style, as shown at page-load. 
+// These values will change when user clicks the tiles.
 
-let bodyCircumference = sleeveLength * 2;
+let currentBodyLength = 50;
+let currentSleeveWidth = 50;
+let currentSleeveLength = 55;
 
-var fabricLength = (sleeveWidth * 0.5) + bodyLength;
+// Declaring variable used to display body circumference
+// of currently selected style.
 
-var fabricWidth = (sleeveLength * 2);
+let bodyCircumference = currentSleeveLength * 2;
 
+// Declaring variables for custom input values.  
+// These will be used to calculate fabric needs
+// when visitors enter custom measurements values.
 
-
-
+let customInputSleeveCircum;
 let customInputBodyLength;
 let customInputBodyCircum;
-let customInputSleeveCircum;
 
+// Declaring variables for displaying the fabric width
+// and length required to make selected style.
 
+var fabricWidth = (currentSleeveLength * 2);
+var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 
-// need to show following values:
-
-// body length; shoulder to hem;
-// sleeve Circumference;
-// body Circumference;
+// Function that calculates fabric size required to make 
+// currently selected garment.
 
 $(document).ready(function() {
-    $( "#fabricRequired" ).html(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
+    $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
 });
+
+// Function that calculates fabric size required to make 
+// garment based on the custom values input by user. 
+// This key-listener event will run when user presses
+// either the "Enter" or "Tab" key while the custom body
+// length input field is selected.
+
+// - Note: I still need to write the equivalent function for
+// the custom body circumference and sleeve circumference cells.
 
 $("#customInputBodyLength").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
             let customBodyLength = parseInt($( "#customInputBodyLength" ).val(), 10);
-            $( "#fabricRequired" ).html(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + customBodyLength}cm long`);
+            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         }
 });
 
@@ -121,28 +131,28 @@ $( "#neckwideHover" ).click(function() {
 $( "#bodycropped" ).click(function() {
     $( "#bodycropped" ).toggle();
     $( "#bodyhip" ).toggle();
-    bodyLength = bodyHip;
+    currentBodyLength = bodyHip;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
-    $( "#dimensionBodyLength" ).html(`${bodyLength}cm`);
+    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
 });
 
 $( "#bodyhip" ).click(function() {
     $( "#bodyhip" ).toggle();
     $( "#bodylong" ).toggle();
-    bodyLength = bodyLong;
+    currentBodyLength = bodyLong;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
-    $( "#dimensionBodyLength" ).html(`${bodyLength}cm`);
+    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
 });
 
 $( "#bodylong" ).click(function() {
     $( "#bodylong" ).toggle();
     $( "#bodycropped" ).toggle();
-    bodyLength = bodyCrop;
+    currentBodyLength = bodyCrop;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
-    $( "#dimensionBodyLength" ).html(`${bodyLength}cm`);
+    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
 });
 
 $( "#leftsleevewideshort" ).click(function() {
@@ -150,8 +160,8 @@ $( "#leftsleevewideshort" ).click(function() {
     $( "#leftsleevewidelong" ).toggle();
     $( "#rightsleevewideshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
-    sleeveLength = sleeveLong;
-    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    currentSleeveLength = sleeveLong;
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 $( "#leftsleevewidelong" ).click(function() {
@@ -159,9 +169,9 @@ $( "#leftsleevewidelong" ).click(function() {
     $( "#leftsleevenarrowshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
     $( "#rightsleevenarrowshort" ).toggle();
-    sleeveWidth = sleeveNarrow;
-    sleeveLength = sleeveShort;
-    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    currentSleeveWidth = sleeveNarrow;
+    currentSleeveLength = sleeveShort;
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
     $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
 });
 
@@ -170,8 +180,8 @@ $( "#leftsleevenarrowshort" ).click(function() {
     $( "#leftsleevenarrowlong" ).toggle();
     $( "#rightsleevenarrowshort" ).toggle();
     $( "#rightsleevenarrowlong" ).toggle();
-    sleeveLength = sleeveLong;
-    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    currentSleeveLength = sleeveLong;
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 $( "#leftsleevenarrowlong" ).click(function() {
@@ -179,9 +189,9 @@ $( "#leftsleevenarrowlong" ).click(function() {
     $( "#leftsleevewideshort" ).toggle();
     $( "#rightsleevenarrowlong" ).toggle();
     $( "#rightsleevewideshort" ).toggle();
-    sleeveWidth = sleeveWide;
-    sleeveLength = sleeveShort;
-    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    currentSleeveWidth = sleeveWide;
+    currentSleeveLength = sleeveShort;
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
     $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
 });
 
@@ -190,8 +200,8 @@ $( "#rightsleevewideshort" ).click(function() {
     $( "#leftsleevewidelong" ).toggle();
     $( "#rightsleevewideshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
-    sleeveLength = sleeveLong;
-    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    currentSleeveLength = sleeveLong;
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 $( "#rightsleevewidelong" ).click(function() {
@@ -199,9 +209,9 @@ $( "#rightsleevewidelong" ).click(function() {
     $( "#leftsleevenarrowshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
     $( "#rightsleevenarrowshort" ).toggle();
-    sleeveWidth = sleeveNarrow;
-    sleeveLength = sleeveShort;
-    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    currentSleeveWidth = sleeveNarrow;
+    currentSleeveLength = sleeveShort;
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
     $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
 });
 
@@ -210,9 +220,9 @@ $( "#rightsleevenarrowshort" ).click(function() {
     $( "#leftsleevenarrowlong" ).toggle();
     $( "#rightsleevenarrowshort" ).toggle();
     $( "#rightsleevenarrowlong" ).toggle();
-    sleeveWidth = sleeveNarrow;
-    sleeveLength = sleeveLong;
-    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    currentSleeveWidth = sleeveNarrow;
+    currentSleeveLength = sleeveLong;
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 $( "#rightsleevenarrowlong" ).click(function() {
@@ -220,9 +230,9 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#leftsleevewideshort" ).toggle();
     $( "#rightsleevenarrowlong" ).toggle();
     $( "#rightsleevewideshort" ).toggle();
-    sleeveWidth = sleeveWide;
-    sleeveLength = sleeveShort;
-    $( "#dimensionBodyCircumference" ).html(`${sleeveLength * 2}cm`);
+    currentSleeveWidth = sleeveWide;
+    currentSleeveLength = sleeveShort;
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
     $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
 });
 
@@ -277,5 +287,5 @@ $( "#necktile" ).mouseleave(function() {
 });
 
 $(".tiles").click(function() {
-    $( "#fabricRequired" ).text(`${sleeveLength * 2}cm wide x ${(sleeveWidth * 0.5) + bodyLength}cm long`);
+    $( "#fabricRequired" ).text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
 });
