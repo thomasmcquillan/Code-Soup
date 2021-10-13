@@ -47,8 +47,8 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 // Function that calculates fabric size required to make 
 // currently selected garment.
 
-$(document).ready(function() {
-    $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
+$(".tiles").click(function() {
+    $( "#fabricRequired" ).text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
 });
 
 // Function that calculates fabric size required to make 
@@ -57,7 +57,7 @@ $(document).ready(function() {
 // either the "Enter" or "Tab" key while the custom body
 // length input field is selected.
 
-// - Note: I still need to write the equivalent function for
+// - Note: I am yet to write the equivalent function for
 // the custom body circumference and sleeve circumference cells.
 
 $("#customInputBodyLength").keydown(function(event) {
@@ -68,73 +68,48 @@ $("#customInputBodyLength").keydown(function(event) {
         }
 });
 
-// $("#tablewrapper").click(function() {
-//     $("#garmentgrid").toggle();
-// })
-
-// $(document).ready(function() {
-//     $("#neckroundHover").click(function() {
-//     $( "#neckroundHover" ).toggle();
-//     $( "#neckcollarHover" ).toggle();
-//     $( "#patternNecklineRound" ).toggle();
-//     $( "#patternNecklineCollar" ).toggle();
-//    });
-// });
-
-// $( "#neckcollarHover" ).click(function() {
-//         $( "#neckcollarHover" ).toggle();
-//         $( "#neckwideHover" ).toggle();
-//         $( "#patternNecklineCollar" ).toggle();
-//         $( "#patternNecklineWide" ).toggle();
-// });
-
-// $( "#neckwideHover" ).click(function() {
-//     $( "#neckwideHover" ).toggle();
-//     $( "#neckroundHover" ).toggle();
-//     $( "#patternNecklineWide" ).toggle();
-//     $( "#patternNecklineRound" ).toggle();
-// });
+// Mouse-click event listener to run when user clicks
+// in the neckline-tile of garment. The function was
+// initially written to hide current tile and display
+// the next tile using the toggle()function.
+// It has since had further arguments added to toggle
+// displayed download items and update variables used
+// to calculate fabric requirements.
 
 $(document).ready(function() {
     $( "#neckroundHover" ).click(function() {
-    $( "#neckroundHover" ).toggle();
-    $( "#neckcollarHover" ).toggle();
-    // $( "#patternNecklineRound" ).toggle();
-    // $( "#patternNecklineCollar" ).toggle();
-    $(neckRound).toggle();
-    $(neckCollar).toggle();
-    $("#tablewrapper").css("background-color", "#FFB100");
+    $( "#neckroundHover" ).toggle();    // current neckline tile is toggled off.
+    $( "#neckcollarHover" ).toggle();   // next available neckline tile is toggled on.
+    $(neckRound).toggle();    // div containing pattern download for current neckline is toggled off. 
+    $(neckCollar).toggle();   // div containing pattern download for next neckline tile is toggled on.
    });
 });
 
 $( "#neckcollarHover" ).click(function() {
         $( "#neckcollarHover" ).toggle();
         $( "#neckwideHover" ).toggle();
-        // $( "#patternNecklineCollar" ).toggle();
-        // $( "#patternNecklineWide" ).toggle();
         $(neckCollar).toggle();
         $(neckWide).toggle();
-        $("#tablewrapper").css("background-color", "#d47f34");
 });
 
 $( "#neckwideHover" ).click(function() {
     $( "#neckwideHover" ).toggle();
     $( "#neckroundHover" ).toggle();
-    // $( "#patternNecklineWide" ).toggle();
-    // $( "#patternNecklineRound" ).toggle();
     $(neckWide).toggle();
     $(neckRound).toggle();
-    $("#tablewrapper").css("background-color", "#d46300");
     $("#patternThumbRound a").css("background-color", "#d46300");
 });
+
+// Mouse-click event listener to run when user clicks
+// in the body-tile of garment. 
 
 $( "#bodycropped" ).click(function() {
     $( "#bodycropped" ).toggle();
     $( "#bodyhip" ).toggle();
-    currentBodyLength = bodyHip;
-    $( "#length" ).html(fabricLength);
-    $( "#width" ).html(fabricWidth);
-    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
+    currentBodyLength = bodyHip;    // Updates currentBodyLength variable with value assigned to bodyHip constant.
+    $( "#length" ).html(fabricLength);    // Replaces fabric length requirement displayed on the page with 'fabricLength' variable.
+    $( "#width" ).html(fabricWidth);    // Replaces fabric width requirement displayed on the page with 'fabricWidth' variable.
+    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionBodyLength", replacing the contents of cell with value for currentBodyLength.
 });
 
 $( "#bodyhip" ).click(function() {
@@ -236,6 +211,14 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
 });
 
+// Mouse-enter listener to detect when user hovers
+// over the neckline-tile. When the mouse enters the
+// div it triggers an else/if conditional statement.
+// If neckround is visible then show the neckroundhover
+// image, while hiding the neckround image. If not visible,
+// check if neckcollar is visible and run applicable code etc.
+// Obvious parallels to CSS :hover states but more powerful.
+
 $( "#necktile" ).mouseenter(function() {
     if($("#neckround").is(":visible")){
         $( "#neckround" ).toggle();
@@ -252,6 +235,11 @@ $( "#necktile" ).mouseenter(function() {
         return;
     };
 });
+
+// Essentially the same as the mouse-enter function
+// described above, but this time for reversing the
+// hovered state - returning the tile to it's original
+// image.
 
 $( "#necktile" ).mouseleave(function() {
     if($("#neckroundHover").is(":visible")){
@@ -284,8 +272,4 @@ $( "#necktile" ).mouseleave(function() {
     else {
         return;
     };
-});
-
-$(".tiles").click(function() {
-    $( "#fabricRequired" ).text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
 });
