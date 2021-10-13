@@ -2,9 +2,9 @@
 
 [View the live website here.](https://thomasmcquillan.github.io/makeuse-fashiondesigntool/index.html)
 
-Conducted in consultation with the creators of makeuse.nz, this project is a radical redevelopment and reimagining of a selected 'MAKE' page from their live website. The MakeUse website documents their major Zero-Waste Fashion exhibition and workshop series launched in Auckland, New Zealand in 2016. The 'MAKE' section of the site features sub-pages with documentation on how to make countless variations of garments featured in the exhibition. In addition to instructions, open-source pattern template downloads and laser-cutting files is provided. These resources are rich in detail but take some deciphering on the part of site visitors to determine exactly what to make and what resources will be required.
+Conducted in consultation with the creators of makeuse.nz, this project is a radical redevelopment of a selected 'MAKE' page from their existing website. The MakeUse site is an online toolset and education hub for Zero-Waste Fashion, launched alongside a design exhibition and workshop series in Auckland, New Zealand in 2016. The 'MAKE' section of the site features a series of sub-pages - each documenting on how to make variations of garments featured in the exhibition. Alongside instructions, open-source pattern template downloads are provided. The resources are highly detailed but can take some deciphering by users to determine which downloads they need and how the finished garment may look.
 
- The brief was to reimagine and streamline the delivery of these resources to improve the user experience to engage and inspire visitors to the site. Adopting the 'Cropped Tshirt' page as a pilot project, the current page's extensive text instructions and download links are replaced by interactive elements including a modifiable computer-rendering of the garment. As the pictured garment changes style and proportions, these changes automatically update fabric size requirements and filter the download list to only display files relevant to the selected design. Upon settling on a design, the user has the option of entering their email address and have the information and download links sent to their inbox for easy reference.
+ The brief was to reimagine and streamline the delivery of these resources to improve the user experience to engage and inspire visitors to the site. Adopting the 'Cropped Tshirt' page as a pilot project, I supplement the text instructions and download links with interactive elements including a dynamic, customisable model of the garment. Users click on areas of the garment to switch styles. As the garment model changes, these changes also update the displayed fabric size requirements, and filter the download list to display on the files relevant to the selected design. Once happy with their chosen style, the user may enter their email to have a summary of their selection along with instructions and download links sent to their inbox.
 
 <!-- Placeholder for mockup images of finished page:
 
@@ -39,9 +39,9 @@ Conducted in consultation with the creators of makeuse.nz, this project is a rad
 
         * As a returning visitor I would like to attempt a new modification of the design and gather the appropriate resources to do so.
 
-    * ### Frequent Visitor Goals
+    <!-- * ### Frequent Visitor Goals
 
-        * 
+        *  -->
 
 * ## Client Stories
 
