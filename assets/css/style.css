@@ -64,7 +64,7 @@ html {
     color: #ffb100;
 }
 
-.header-nav .header-nav__link.current, .header-nav .header-nav__link.section, .header-nav .header-nav__link:active, .header-nav .header-nav__link:focus, .header-nav .header-nav__link:hover {
+.header-nav__link:hover {
     color: #ffb100;
 }
 
@@ -81,10 +81,6 @@ html {
 
 body { 
     margin: 0;
-    /* background-color:#4a494a;
-    background-color:  #5c5c5c;
-    background-color: #9c998f;
-    background-color: #ffb100; */
     background-color: #4a494a;
     color: #4a494a;
     font-family: 'Ubuntu', sans-serif;
@@ -92,18 +88,10 @@ body {
     list-style-type: none;
 }
 
-/* #makeusebg {
-    display: flex;
-    z-index: 100;
-    justify-content: center;
-    
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background-size: cover !important;
-    background: #5c5c5c6b, url(../images/makeusebg.png) no-repeat center center scroll;
-  } */
+nav {
+    max-width: 980px;
+    margin: auto;
+}
 
 h1 {
     color: #fffefe;
@@ -111,47 +99,22 @@ h1 {
 
 a {
     text-decoration: underline;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+    font-weight: 700;
 }
 
 li, li a, a {
     list-style-type: none;
-    color: black;
     font-family: 'Ubuntu', sans-serif;
     padding-bottom: 5px;
 }
 
-a:hover {
+.nav-item:hover {
     color: #FFB100;
 }
 
-/* .col-2 {
-    border: 1px solid grey;
-} */
-
-/* .gridtiles {
-    display: flex;
-    top: 0;
-    left: 0;
-    height: 200px;
-    width: 200px;
-    align-self: center;
-    justify-self: center;
-} */
-
-#topleft,
-#topright,
-#midcenter,
-#btmleft,
-#btmright {
-    background-color: #d47f34;
-}
-
-#topcenter,
-#midleft,
-#midright,
-#btmcenter {
-    background-color: #d46300;
-}
 #flexend {
     display: flex;
     position: relative;
@@ -183,9 +146,16 @@ a:hover {
     padding-right: 40px;
 }
 
-#bodywrapper {
+/* #bodywrapper {
     margin: 0 auto;
     padding: 0;
+} */
+
+.gridwrapper {
+    display: flex;
+    justify-content: center;
+    /* padding-bottom: 25px; */
+    background-color: #9c998f;
 }
 
 #garmentgrid {
@@ -196,9 +166,10 @@ a:hover {
     grid-template-areas: "a b c"
                          ". d .";
     grid-gap: 2px;
-    margin-top: 5vw;
     z-index: 100;
     margin: auto;
+    background-color: #9c998f;
+    background: none;
 }
 
 #necktile {
@@ -206,34 +177,27 @@ a:hover {
     justify-content: center;
     align-items: center;
     grid-area: b;
-    /* grid-template-areas: 2 1; */
 }
 
-/* #necktile:hover,
-#bodytile:hover,
-#leftsleevetile:hover,
-#rightsleevetile:hover {
-    filter:invert();
-    border: 1px solid #ffb100;
-    background: #ffb100;
-} */
+.navbar-brand:hover {
+    filter:invert(30%);
+    transition: ease-in all 50ms;
+}
 
 #bodytile {
     display: flex;
-    /* padding-bottom: 107px; */
     margin-bottom: 107px;
     align-items: center;
     grid-area: d;
-    /* background-color: #4a494a; */
 }
 
 #leftsleevetile {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     padding-top: 157px;
-    /* background-color: #4a494a; */
+    background-color: #d46300;
+    filter: opacity(77%);
 }
 
 #rightsleevetile {
@@ -242,34 +206,31 @@ a:hover {
     display: flex;
     padding-top: 157px;
     padding-right: 4px;
-    /* background-color: #4a494a; */
+    background-color: #ffb100;
+    filter: opacity(77%);
 }
 
 #neckcollar,
 #neckwide,
 #neckcollarHover,
 #neckroundHover,
-#neckwideHover {
-    display: none;
-    grid-template-areas: b;
-    overflow: auto;
-}
-
-#bodyhip, #bodylong {
-    display: none;
-}
-
-#bodyhip {
-    padding-bottom: 1px;
-}
-
+#neckwideHover,
+#bodyhip, #bodylong,
 #leftsleevenarrowshort,
 #leftsleevenarrowlong,
 #leftsleevewidelong,
 #rightsleevenarrowshort,
 #rightsleevenarrowlong,
-#rightsleevewidelong {
+#rightsleevewidelong,
+#patternThumbWide,
+#patternThumbCollar,
+#patternNeckRound > a,
+#patternNeckWide > a {
     display: none;
+}
+
+#bodyhip {
+    padding-bottom: 1px;
 }
 
 #rightsleevenarrowshort {
@@ -290,31 +251,41 @@ a:hover {
 #lowerrighttile,
 #lowerlefttile {
     z-index: -1;
-    /* background-color: #464646; */
+    background-color: #464646;
+    background-color: #b7b3a7;
 }
 
-#patternNeckRound > a,
-#patternNeckWide > a {
-    display: none;
-}
+/* #whatYouNeed {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 40px 30px 5vw 30px;
+    z-index: 20;
+    background-color: #fae4b0;
+    background-color:#b7b3a7;
+    margin-top: 40px;
+} */
 
 #whatYouNeed {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    align-content: space-between;
-    /* margin-top: -5vw; */
-    padding: 5vw 30px 5vw 30px;
-    max-height: 550px;
-    overflow: auto;
+    padding: 20px 30px 25px 30px;
     z-index: 20;
-    background-color:#fffefe;
+    background-color: #fae4b0;
+    background-color:#b7b3a7;
+    position: relative;
+    background: none;
+    color:#e9e7e7;
+    margin-top: 20px;
+    max-width: 640px;
 }
 
 .gridwrapper {
     display: flex;
     justify-content: center;
     background-color: #9c998f;
+    background-color: rgb(43, 43, 43);
 }
 
 .intro {
@@ -338,7 +309,7 @@ a:hover {
     background: #4a494a;
 }
 
-.clearfix {
+/* .clearfix {
     overflow: auto;
 }
 
@@ -346,7 +317,7 @@ a:hover {
     content: "";
     clear: both;
     display: table;
-  }
+  } */
 
 .navbar-brand {
     display: flex;
@@ -355,7 +326,6 @@ a:hover {
 
 .navbar {
     display: flex;
-   
     padding: 20px 15px 50px 15px;
 }
 
@@ -364,19 +334,16 @@ header {
 }
 
 .navbar-nav {
-    
     display: flex;
     flex-direction: row;
     justify-items: right;
     justify-content: flex-end;
     font-size: 14px;
     color: #fffefe;
-    text-transform: lowercase;
     text-decoration: none;
     font-weight: 700;
     position: absolute;
     width: 100vw;
-
     right: 32px;
     top: 78px;
 }
@@ -386,21 +353,71 @@ header {
     justify-self: right;
 }
 
+/* Media Query for centering site logo and nav below 600w */
+
+@media (max-width: 600px) {
+    
+    header {
+        height: 180px;
+    }
+
+    nav {
+       display: flex;
+       justify-items: center;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100vw;
+        left: 0;
+        top: 122px;
+        
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        padding-left: 40px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+ }
+
 .patterns {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    max-height: 140px;
-    padding-top: 12px;
+    max-height: 200px;
     align-content: center;
     justify-content: space-between;
-    /* padding-right: 15px; */
+    padding-right: 15px;
+}
+
+#downloadwrapper {
+    min-height: 150px;
+    max-height: 200px;
+    max-height: auto;
+    padding: 30px 30px 30px 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    left: 0;
+    width: 100vw;
+    justify-content: center;
 }
 
 .patternThumb {
-    height: 110px;
-    width: auto;
     display: flex;
+    flex-direction: row;
+    max-height: 200px;
+    max-width: 200px;
+    padding-top: 20px;
 }
 
 .patternThumb:hover img {
@@ -416,20 +433,11 @@ header {
 #patternTshirtGrid {
     display: inline-flex;
     flex-direction: row;
-    /* width: auto; */
     overflow: auto;
-    /* height: auto; */
-    width: auto;
-    width: 100%;
-
     width: 1fr;
     align-self:left;
-    
-    /* margin-left: 1rem; */
-    /* border: 1px solid grey; */
     background-color: #ffd066;
-
-    max-height: 110px;
+    max-height: 100px;
     transition: ease-in-out 50ms;
 }
 
@@ -438,25 +446,13 @@ header {
 #patternNecklineCollar,
 #patternNecklineWide,
 #patternSleeveCutLeft,
-#patternSleeveCutRight,
-#patternTshirtGrid img {
+#patternSleeveCutRight {
     padding: 5px 5px 5px 5px;
-    display: flex;
-}
-
-#patternTshirtGrid {
-    border: none;
-    padding: none;
-    width: 40px;
 }
 
 .thumbs {
-    background-color:#ffd066;
-}
-
-#patternThumbWide,
-#patternThumbCollar {
-    display: none;
+    background-color:#ad750b;
+    background-color:#c9a96f;
 }
 
 .patterns .img-fluid {
@@ -468,35 +464,19 @@ h5 {
     padding-bottom: 5px;
 }
 
-.header-nav .header-nav__link.current, .header-nav .header-nav__link.section, .header-nav .header-nav__link:active, .header-nav .header-nav__link:focus, .header-nav .header-nav__link:hover {
-    color: #ffb100;
-}
-
 .nav-item a:hover {
     color: #FFB100;
 }
 
 #tablewrapper {
-    display: inline-flex;
-    justify-items: space-between;
-    align-items: center;
     margin: 0 auto;
-    height: 240px;
-    /* margin-left: 30px; */
-    /* position: absolute; */
-    left: 0;
-    /* color: white; */
-    width: 100vw;
-    padding: 15px 0 25px 0;
-    background-color:#d47f34;
-    background-color:#FFB100;
-    background-color: #d46300;
+    height: auto;
+    padding: 15px 0 20px 0;
+    background-color: #5c5c5c;
 }
 
 table {
-    /* color:#d47f34 !important; */
     color:#fffefe !important;
-    /* background-color:#d47f34; */
     border-collapse: collapse;
     justify-content: space-between;
     justify-items: space-between;
@@ -508,23 +488,12 @@ table {
 }
 
 #currentStyleTable {
-    display: inline-flex;
-    margin-left: 30px;
-    flex-direction: row;
-    justify-self: flex-start;
     color:#fffefe;
-    width: 50vw;
 }
 
 #customStyleTable {
-    display: inline-flex;
-    margin-right: 20px;
-    flex-direction: row;
-    justify-self: right;
     color:#fffefe;
-    width: 50vw;
     padding: none;
-    position: absolute;
     right: 0;
 }
 
@@ -551,36 +520,12 @@ td {
     padding-right: 15px;
 }
 
-/* @media screen {would be good to add media query to reduce font size or otherwise fix display
-    issue of table data text being squished onto two lines, messing up layout) */
-
 input {
     border: none;
     text-align: center;
     width: 50%;
     margin-left: 50%;
     border-radius: 8px;
-}
-
-
-
-/* #customInputBody table > th {
-    border: 1px solid pink;
-    background-color: pink;
-} */
-
-#greyoblong {
-    display: flex;
-    width: 100%;
-    max-width: 930px;
-    /* height: 265px; */
-    height: 288px;
-    padding: 40px 15px 40px 15px;
-    background-color: #5c5c5c;
-    margin: auto;
-    position: absolute;
-    left: 0;
-    display: none;
 }
 
 .directions {
