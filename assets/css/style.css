@@ -286,6 +286,35 @@ li, li a, a {
     justify-content: center;
     background-color: #9c998f;
     background-color: rgb(43, 43, 43);
+
+    max-width: 940px;
+}
+
+@media (min-width: 940px) {
+    body {
+        background-color:rgb(43, 43, 43);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    #bodywrapper {
+        display: block;
+        max-width: 940px;
+
+        height: 100%;
+        background-color:#4a494a;
+        margin: 0 auto;
+        z-index: -300;
+    }
+
+    header {
+        background-color: rgb(43, 43, 43);
+        background-color: #4a494a;
+        max-width: 940px;
+        display: block;
+    }
 }
 
 .intro {
@@ -470,8 +499,8 @@ h5 {
 
 #tablewrapper {
     margin: 0 auto;
-    height: auto;
-    padding: 15px 0 20px 0;
+    height: fit-content;
+    padding: 10px 0 15px 0;
     background-color: #5c5c5c;
 }
 
@@ -481,8 +510,8 @@ table {
     justify-content: space-between;
     justify-items: space-between;
     width: 100vw;
-    margin: 0 auto 0 20px;
-    padding: 55px 0 40px 0;
+    margin: 0 auto 0 0px;
+    padding: 35px 0 40px 50px;
     display: flex;
     flex-direction: column;
 }
