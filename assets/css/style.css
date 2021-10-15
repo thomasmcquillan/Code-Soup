@@ -108,11 +108,11 @@ li, li a, a {
     color: #FFB100;
 }
 
-/* .instructions p {
-    padding: 15px 150px 20px 15px;
-    line-height: 24px;
+.instructions  {
+    /* padding: 15px 150px 20px 15px; */
+    line-height: 32px;
     overflow: auto;
-} */
+}
 
 .instructions h5 {
     padding: 50px 30px 45px 30px;
@@ -141,6 +141,9 @@ li, li a, a {
     display: flex;
     justify-content: center;
     background-color: #9c998f;
+
+    width: 398px;
+    height: 398px;
 }
 
 #garmentgrid {
@@ -155,13 +158,6 @@ li, li a, a {
     margin: auto;
     /* background-color: rgba(40, 38, 39, 0.459); */
     background: none;
-
-    /* border: 2px solid #ffd066; */
-    /* box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
-              0 4px 2px rgba(0,0,0,0.09), 
-              0 8px 4px rgba(0,0,0,0.09), 
-              0 16px 8px rgba(0,0,0,0.09),
-              0 32px 16px rgba(0,0,0,0.09); */
 }
 
 #necktile {
@@ -239,8 +235,9 @@ li, li a, a {
 #lowerrighttile,
 #lowerlefttile {
     z-index: -1;
-    background-color: #464646;
+    /* background-color: #464646; */
     background-color: #b7b3a7;
+    height: 66px;
 }
 
 #whatYouNeed {
@@ -254,8 +251,8 @@ li, li a, a {
     position: relative;
     background: none;
     color:#e9e7e7;
-    margin-top: 200px;
     max-width: 640px;
+    line-height: 1.8rem;
     text-align: left;
 }
 
@@ -265,6 +262,7 @@ li, li a, a {
     background-color: #9c998f;
     background-color: rgb(43, 43, 43);
     max-width: 1024px;
+    max-width: 400px;
 }
 
 .intro {
@@ -354,7 +352,7 @@ header {
 }
 
 #downloadwrapper {
-    padding: 40px 10px;
+    padding: 33px 10px;
     justify-content: space-evenly;
     display: flex;
     margin: 0 auto;
@@ -552,7 +550,6 @@ input {
     .row {
         background-color: rgb(43, 43, 43);
     }
-
  }
 
 @media (min-width: 960px) {
@@ -572,6 +569,15 @@ input {
               0 8px 4px rgba(0,0,0,0.09), 
               0 16px 8px rgba(0,0,0,0.09),
               0 32px 16px rgba(0,0,0,0.09);
+    }
+
+    #whatYouNeed {
+        margin-top: 300px;
+    }
+
+    #downloadwrapper {
+        background-color: #b7b3a7;
+        margin-top: 122px;
     }
 
     #bodywrapper {
