@@ -90,7 +90,7 @@ $( "#neckwideHover" ).click(function() {
 $( "#bodycropped" ).click(function() {
     $( "#bodycropped" ).toggle();
     $( "#bodyhip" ).toggle();
-    currentBodyLength = bodyHip;    // Updates currentBodyLength variable with value assigned to bodyHip constant.
+    currentBodyLength = bodyHip;    // Updates variable for current body-length with value assigned to bodyHip constant.
     $( "#length" ).html(fabricLength);    // Replaces fabric length requirement displayed on the page with 'fabricLength' variable.
     $( "#width" ).html(fabricWidth);    // Replaces fabric width requirement displayed on the page with 'fabricWidth' variable.
     $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionBodyLength", replacing the contents of cell with value for currentBodyLength.
