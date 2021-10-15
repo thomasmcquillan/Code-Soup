@@ -39,9 +39,9 @@ var fabricWidth = (currentSleeveLength * 2);
 var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 
 // To calculate fabric size required for currently selected style.
-
-$(".tiles").click(function() {
-    $( "#fabricRequired" ).text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
+// $(".tiles").children().click(function() {
+$("#garmentgrid").children().click(function() {
+    $( "#fabricRequired" ).text(`Fabric required: ${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
 });
 
 // Function that calculates fabric size required to make 
@@ -268,3 +268,48 @@ $( "#necktile" ).mouseleave(function() {
         return;
     };
 });
+
+// Site-logo hover the jquery way.
+
+$(document).ready(function() {
+    $( "#makeuse-logo" ).mouseenter(function() {
+    $( "#makeuse-logo" ).toggle();
+    $( "#logo-hover" ).toggle();
+   });
+});
+
+// And to return to unhovered state.
+
+    $( "#makeuse-logo" ).mouseleave(function() {
+    $( "#makeuse-logo" ).toggle();
+    $( "#logo-hover" ).toggle();
+});
+
+// Snippet to avoid hover effects on touch devices borrowed from stackoverflow user "Blade" here:
+// https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+
+function watchForHover() {
+   
+    let lastTouchTime = 0
+  
+    function enableHover() {
+      if (new Date() - lastTouchTime < 500) return
+      document.body.classList.add('hasHover')
+    }
+  
+    function disableHover() {
+      document.body.classList.remove('hasHover')
+    }
+  
+    function updateLastTouchTime() {
+      lastTouchTime = new Date()
+    }
+  
+    document.addEventListener('touchstart', updateLastTouchTime, true)
+    document.addEventListener('touchstart', disableHover, true)
+    document.addEventListener('mousemove', enableHover, true)
+  
+    enableHover()
+  }
+  
+  watchForHover()

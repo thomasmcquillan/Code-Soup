@@ -16,144 +16,101 @@
     </head>
 
     <body>
-
-        <div id="pagewrap"></div>
         <div id="bodywrapper" class="container-fluid">
-        <header>
-            <nav class="navbar clearfix t-light">
-                <!-- <a class="navbar-brand" href="www.makeuse.co.nz"> -->
-                <a href="https://makeuse.nz/">
-                <span class="navbar-brand"><img src="assets/images/makeuse-logo.png" alt=""></span>
-                </a>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link" href="https://makeuse.nz/make/">make</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="https://makeuse.nz/about/">about</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="https://makeuse.nz/articles/">articles</a>
-                    </li>
-            </nav>
-        </header>
+            <header>
+                <nav class="navbar clearfix t-light">
+                    <a href="https://makeuse.nz/">
+                    <span class="navbar-brand"><img id="makeuse-logo" src="assets/images/makeuse-logo.png" alt="Make/Use Logo">
+                        <img id="logo-hover" src="assets/images/pattern-thumbs/makeuse-logo-hover.png"></span>
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://makeuse.nz/make/">make</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://makeuse.nz/about/">about</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://makeuse.nz/articles/">articles</a>
+                        </li>
+                </nav>
+            </header>
 
-    <!-- <div id="bodywrapper" class="container-fluid"> -->
-
-        <div class="row">
-                <div class="gridwrapper container-fluid col-10 col-md-5">
-                    <div id="garmentgrid">
-                        <div id="leftsleevetile">
-                            <img class="tiles" id="leftsleevewideshort" src="assets/images/leftsleevewideshort.png" alt="">
-                            <img class="tiles" id="leftsleevewidelong" src="assets/images/leftsleevewidelong.png" alt="">
-                            <img class="tiles" id="leftsleevenarrowshort" src="assets/images/leftsleevenarrowshort.png" alt="">
-                            <img class="tiles" id="leftsleevenarrowlong" src="assets/images/leftsleevenarrowlong.png" alt="">
-                        </div>
-                        <div id="necktile">
-                            <img class="tiles" id="neckround" src="assets/images/neckround.png" alt="">
-                            <img class="tiles" id="neckroundHover" src="assets/images/neckroundhover.png" alt="">
-                            <img class="tiles" id="neckcollar" src="assets/images/neckcollar.png" alt="">
-                            <img class="tiles" id="neckcollarHover" src="assets/images/neckcollarhover.png" alt="">
-                            <img class="tiles" id="neckwide" src="assets/images/neckwide.png" alt="">
-                            <img class="tiles" id="neckwideHover" src="assets/images/neckwidehover.png" alt="">
-                        </div>
-                        <div id="rightsleevetile">
-                            <img class="tiles" id="rightsleevenarrowlong" src="assets/images/rightsleevenarrowlong.png" alt="">
-                            <img class="tiles" id="rightsleevenarrowshort" src="assets/images/rightsleevenarrowshort.png" alt="">
-                            <img class="tiles" id="rightsleevewidelong" src="assets/images/rightsleevewidelong.png" alt="">
-                            <img class="tiles" id="rightsleevewideshort" src="assets/images/rightsleevewideshort.png" alt="">
-                        </div>
-                        <div id="lowerlefttile"></div>
-                        <div id="bodytile">
-                            <img class="tiles" id="bodycropped" src="assets/images/bodycropped.png" alt="">
-                            <img class="tiles" id="bodyhip" src="assets/images/bodyhip.png" alt="">
-                            <img class="tiles" id="bodylong" src="assets/images/bodylong.png" alt="">
-                        </div>
-                        <div id="lowerrighttile"></div>
+        <section id="croptshirt-from-template" class="row">
+            <div class="gridwrapper container-fluid col-9 col-md-5">
+                <div id="garmentgrid">
+                    <div id="leftsleevetile">
+                        <img id="leftsleevewideshort" src="assets/images/leftsleevewideshort.png" alt="">
+                        <img id="leftsleevewidelong" src="assets/images/leftsleevewidelong.png" alt="">
+                        <img id="leftsleevenarrowshort" src="assets/images/leftsleevenarrowshort.png" alt="">
+                        <img id="leftsleevenarrowlong" src="assets/images/leftsleevenarrowlong.png" alt="">
                     </div>
+                    <div id="necktile">
+                        <img id="neckround" src="assets/images/neckround.png" alt="">
+                        <img id="neckroundHover" src="assets/images/neckroundhover.png" alt="">
+                        <img id="neckcollar" src="assets/images/neckcollar.png" alt="">
+                        <img id="neckcollarHover" src="assets/images/neckcollarhover.png" alt="">
+                        <img id="neckwide" src="assets/images/neckwide.png" alt="">
+                        <img id="neckwideHover" src="assets/images/neckwidehover.png" alt="">
+                    </div>
+                    <div id="rightsleevetile">
+                        <img id="rightsleevenarrowlong" src="assets/images/rightsleevenarrowlong.png" alt="">
+                        <img id="rightsleevenarrowshort" src="assets/images/rightsleevenarrowshort.png" alt="">
+                        <img id="rightsleevewidelong" src="assets/images/rightsleevewidelong.png" alt="">
+                        <img id="rightsleevewideshort" src="assets/images/rightsleevewideshort.png" alt="">
+                    </div>
+                    <div id="lowerlefttile"></div>
+                    <div id="bodytile">
+                        <img id="bodycropped" src="assets/images/bodycropped.png" alt="">
+                        <img id="bodyhip" src="assets/images/bodyhip.png" alt="">
+                        <img id="bodylong" src="assets/images/bodylong.png" alt="">
+                    </div>
+                    <div id="lowerrighttile"></div>
                 </div>
-                
-                <div id="downloadwrapper" class="row">
-                    <div id="pattern-tshirt-grid" class="patternThumb col-3 col-md-3">
-                        <a id="patternTshirtGrid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
-                            <span><img id="tshirtGridPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/tshirt-grid-pattern-preview.png" alt=""></span>
-                            <!-- update image asset with custom thumbnail that fits better -->
-                            <!-- <span><img id="tshirtGridPattern" class="thumbs img-fluid" src="assets/images/tshirt-pattern-with-grid_thumbsquare.jpg" alt=""></span> -->
-                        </a>
-                    </div>
-    
-                    <div id="patternThumbRound" class="patternThumb col-3 col-md-3">
-                        <a id="patternNecklineRound" href="assets/downloads/print-temp-round-neck.pdf">
-                            <span><img id="neckRoundPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt=""></span>
-                        </a>
-                    </div>
-                    <div id="patternThumbCollar" class="patternThumb col-3 col-md-3">
-                        <a id="patternNecklineCollar" href="assets/downloads/print-temp-collar-neck.pdf">
-                            <span><img id="neckCollarPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreviewtest.png" alt=""></span>
-                        </a>
-                    </div>
-                    <div id="patternThumbWide" class="patternThumb col-3 col-md-3">
-                        <a id="patternNecklineWide" href="assets/downloads/print-temp-wide-neck.pdf">
-                            <span><img id="neckWidePattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/wideneckpatternpreview.png" alt=""></span>
-                        </a>
-                    </div>
-                    <!-- ------------------------------update image asset when file provided------------------------------------- -->
-                    <div class="patternThumb col-3 col-md-3">
-                        <a id="patternSleeveCutLeft" href="assets/downloads/sleevecutleft.pdf">
-                            <span><img id="sleeveLeftPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt=""></span>
-                        </a>
-                    </div>
-                    <!-- ------------------------------update image asset when file provided------------------------------------- -->
-                    <div class="patternThumb col-3 col-md-3">
-                        <a id="patternSleeveCutRight" href="assets/downloads/sleevecutright.pdf">
-                            <span><img id="sleeveRightPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreview.png" alt=""></span>
-                        </a>
-                    </div>
-                </div>
-
-
-            <div id="whatYouNeed" class="container-fluid col-12 col-md-8">
-                <p>Click on the collar, sleeve and body areas of the garment to customize fit and style. This will update the list below, providing you with the fabric requirements and pattern templates needed for construction of your chosen garment.</p>
-                <h5>Required Fabric:</h5>
-                <p id="fabricRequired">110cm wide x 75cm long</p>
-                <!-- <h5>Required Patterns:</h5> -->
             </div>
-                 
-            <!-- <div id="downloadwrapper" class="row">
-                <div class="patternThumb col-5 col-md-3">
+
+            <div id="whatYouNeed" class="container-fluid col-10 col-md-6">
+                <p>Click the collar, sleeve and body tiles of the garment to alter fit and style. This will update the fabric size and pattern template downloads you need to make your chosen style.</p>
+                <br>
+                <p id="fabricRequired">Fabric needed: 110cm wide x 75cm long</p>
+                
+            </div>
+
+            <div id="downloadwrapper" class="row">
+                <div id="pattern-tshirt-grid" class="patternThumb col-3">
                     <a id="patternTshirtGrid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
-                        <span><img id="tshirtGridPattern" class="thumbs img-fluid" src="assets/images/print-temp-wide-neck.png" alt=""></span>
+                        <span><img id="tshirtGridPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/tshirt-grid-pattern-preview.png" alt="Grid template pattern, an essential for making all variations of the MakeUse Crop-Tshirt."></span>
                     </a>
                 </div>
 
-                <div id="patternThumbRound" class="patternThumb col-5 col-md-3">
+                <div id="patternThumbRound" class="patternThumb col-3">
                     <a id="patternNecklineRound" href="assets/downloads/print-temp-round-neck.pdf">
-                        <span><img id="neckRoundPattern" class="thumbs img-fluid" src="assets/images/print-temp-round-neck.png" alt=""></span>
+                        <span><img id="neckRoundPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt=""></span>
                     </a>
                 </div>
-                <div id="patternThumbCollar" class="patternThumb col-5 col-md-3">
+                <div id="patternThumbCollar" class="patternThumb col-3">
                     <a id="patternNecklineCollar" href="assets/downloads/print-temp-collar-neck.pdf">
-                        <span><img id="neckCollarPattern" class="thumbs img-fluid" src="assets/images/print-temp-collar-neck.png" alt=""></span>
+                        <span><img id="neckCollarPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreviewtest.png" alt=""></span>
                     </a>
                 </div>
-                <div id="patternThumbWide" class="patternThumb col-5 col-md-3">
+                <div id="patternThumbWide" class="patternThumb col-3">
                     <a id="patternNecklineWide" href="assets/downloads/print-temp-wide-neck.pdf">
-                        <span><img id="neckWidePattern" class="thumbs img-fluid" src="assets/images/print-temp-wide-neck.png" alt=""></span>
+                        <span><img id="neckWidePattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/wideneckpatternpreview.png" alt=""></span>
                     </a>
                 </div>
-    
-                <div class="patternThumb col-5 col-md-3">
+                <!-- ------------------------------update image asset when file provided------------------------------------- -->
+                <div class="patternThumb col-3">
                     <a id="patternSleeveCutLeft" href="assets/downloads/sleevecutleft.pdf">
-                        <span><img id="sleeveLeftPattern" class="thumbs img-fluid" src="assets/images/print-temp-wide-neck.png" alt=""></span>
+                        <span><img id="sleeveLeftPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt=""></span>
                     </a>
                 </div>
-    
-                <div class="patternThumb col-5 col-md-3">
+                <!-- ------------------------------update image asset when file provided------------------------------------- -->
+                <div class="patternThumb col-3">
                     <a id="patternSleeveCutRight" href="assets/downloads/sleevecutright.pdf">
-                        <span><img id="sleeveRightPattern" class="thumbs img-fluid" src="assets/images/print-temp-wide-neck.png" alt=""></span>
+                        <span><img id="sleeveRightPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreview.png" alt=""></span>
                     </a>
                 </div>
-            </div> -->
+            </div>
 
             <div id="tablewrapper" class="row">
                 <table class="currentStyleTable col container-fluid">
@@ -202,7 +159,7 @@
                 </table>
             </div>
             
-            <div class="instructions col-12 col-lg-10">
+            <div class="instructions container-fluid col-12 col-lg-10">
                 <h5>Each Make/Use garment made in this method is unique to both the fabric and the user.  The length of a Make/Use cropped Tshirt can be altered to suit an individual's height or taste; a favourite fabric can be used to make the Cropped Tshirt and drastically alter its appearance; new iterations can be created by combining templates in ways dreamt up by the maker/user. The possibilities are literally endless.</h5>
                 <p class="directions"><strong>Directions:</strong></p>
                 <ul>

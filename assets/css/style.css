@@ -108,11 +108,11 @@ li, li a, a {
     color: #FFB100;
 }
 
-.instructions p {
+/* .instructions p {
     padding: 15px 150px 20px 15px;
     line-height: 24px;
     overflow: auto;
-}
+} */
 
 .instructions h5 {
     padding: 50px 30px 45px 30px;
@@ -129,7 +129,7 @@ li, li a, a {
     overflow: auto;
     height: 100%;
     z-index: 2;
-    padding-right: 40px;
+    /* padding-right: 40px; */
 }
 
 #bodywrapper {
@@ -140,14 +140,7 @@ li, li a, a {
 .gridwrapper {
     display: flex;
     justify-content: center;
-    /* padding-bottom: 25px; */
     background-color: #9c998f;
-    /* border: 1px solid #ffd066; */
-    /* box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
-              0 4px 2px rgba(0,0,0,0.09), 
-              0 8px 4px rgba(0,0,0,0.09), 
-              0 16px 8px rgba(0,0,0,0.09),
-              0 32px 16px rgba(0,0,0,0.09); */
 }
 
 #garmentgrid {
@@ -177,11 +170,6 @@ li, li a, a {
     align-items: center;
     grid-area: b;
     background-color: #747169
-}
-
-.navbar-brand:hover {
-    filter:invert(30%);
-    transition: ease-in all 50ms;
 }
 
 #bodytile {
@@ -255,30 +243,20 @@ li, li a, a {
     background-color: #b7b3a7;
 }
 
-/* #whatYouNeed {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    padding: 40px 30px 5vw 30px;
-    z-index: 20;
-    background-color: #fae4b0;
-    background-color:#b7b3a7;
-    margin-top: 40px;
-} */
-
 #whatYouNeed {
     display: flex;
+    max-width: 512px;
+    max-height: 440px;
     flex-direction: column;
     justify-content: left;
-    padding: 20px 30px 25px 30px;
+    padding: 20px 40px 25px 30px;
     z-index: 20;
-    background-color: #fae4b0;
-    background-color:#b7b3a7;
     position: relative;
     background: none;
     color:#e9e7e7;
-    margin-top: 20px;
+    margin-top: 200px;
     max-width: 640px;
+    text-align: left;
 }
 
 .gridwrapper {
@@ -288,8 +266,6 @@ li, li a, a {
     background-color: rgb(43, 43, 43);
     max-width: 1024px;
 }
-
-
 
 .intro {
     padding: 8vw 8vw 0 8vw;
@@ -330,6 +306,15 @@ li, li a, a {
     height: 78.26px;
 }
 
+#logo-hover {
+    z-index: 400;
+    display: none;
+    left:auto;
+    width: 174px;
+    height: auto;
+
+}
+
 .navbar {
     display: flex;
     padding: 20px 15px 50px 15px;
@@ -340,6 +325,12 @@ li, li a, a {
 header {
     height: 153.27px;
     width: 100%;
+
+    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+    0 4px 2px rgba(0,0,0,0.09), 
+    0 8px 4px rgba(0,0,0,0.09), 
+    0 16px 8px rgba(0,0,0,0.09),
+    0 32px 16px rgba(0,0,0,0.09);
 }
 
 .navbar-nav {
@@ -362,50 +353,24 @@ header {
     justify-self: right;
 }
 
-/* .patterns {
-    display: flex;
-    flex-direction: row;
-    max-height: 200px;
-    align-content: center;
-    justify-content: space-between;
-    padding-right: 15px;
-} */
-
 #downloadwrapper {
-    padding: 20px 0;
-}
-
-/* #downloadwrapper {
-    min-height: 150px;
-    max-height: 200px;
-    max-height: auto;
-    padding: 30px 30px 30px 30px;
-    height: 150px;
-    margin: auto;
+    padding: 40px 10px;
+    justify-content: space-evenly;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    left: 0;
-    width: 100vw;
-    justify-content: center;
-} */
-
-/* .patternThumb {
-    display: block;
-    flex-direction: row;
-    max-height: 200px;
-    max-width: 200px;
-    padding-top: 20px;
-} */
+    margin: 0 auto;
+    width: 100%;
+}
 
 .patternThumb:hover img {
     filter: opacity(55%);
 }
 
 .patternThumb a {
-    display: flex;
+    display: inline-flex;
     padding: none;
-    border: 2px solid #ffd066;
+    background-color:  #ffd066;
+    border: 1px solid #d4b467;
+    transition: ease-in-out 50ms;
     box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
               0 4px 2px rgba(0,0,0,0.09), 
               0 8px 4px rgba(0,0,0,0.09), 
@@ -413,23 +378,8 @@ header {
               0 32px 16px rgba(0,0,0,0.09);
 }
 
-#tshirtGridPattern,
-#patternNecklineRound,
-#patternNecklineCollar,
-#patternNecklineWide,
-#patternSleeveCutLeft,
-#patternSleeveCutRight,
-#patternTshirtGrid,
-#pattern-tshirt-grid {
-    /* display: inline-flex; */
-    /* display: inline-flex;
-    flex-direction: row;
-    overflow: auto;
-    width: 1fr;
-    align-self:left;
-    background-color: #ffd066;
-    max-height: 100px;
-    transition: ease-in-out 50ms; */
+.patternThumb img {
+    max-height: 180px;
 }
 
 #tshirtGridPattern,
@@ -559,12 +509,19 @@ input {
     }
 
     .navbar-nav {
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
         justify-content: center;
-        width: 100vw;
-        left: 0;
+        text-align: center;
+        margin: 0 auto;
         top: 122px;
+    }
+
+    #makeuse-logo {
+        width: 88%;
+        display: flex;
+        margin-right: 50px;
+        
     }
 
     #garmentgrid {
@@ -580,9 +537,9 @@ input {
         justify-content: center;
     }
 
-    .navbar-brand {
+    /* .navbar-brand {
         padding-left: 40px;
-    }
+    } */
 
     #garmentgrid {
         width: 100vw;
@@ -595,6 +552,7 @@ input {
     .row {
         background-color: rgb(43, 43, 43);
     }
+
  }
 
 @media (min-width: 960px) {
@@ -606,6 +564,15 @@ input {
         width: 100vw;
     }
 
+    nav {
+        max-width: 1024px;
+
+        box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+              0 4px 2px rgba(0,0,0,0.09), 
+              0 8px 4px rgba(0,0,0,0.09), 
+              0 16px 8px rgba(0,0,0,0.09),
+              0 32px 16px rgba(0,0,0,0.09);
+    }
 
     #bodywrapper {
         display: flex;
@@ -623,7 +590,6 @@ input {
     header {
         background-color: rgb(43, 43, 43);
         background-color: #4a494a;
-        /* max-width: 960px; */
         display: block;
         display: flex;
         position: absolute;
@@ -632,7 +598,7 @@ input {
         min-width: 960px;
         width: 100vw;
         left: 0;
-        padding: none;
+        padding: 0 0 40px 0;
         /* max-width: 1024px; */
         box-shadow: #888;
 
@@ -647,4 +613,7 @@ input {
         background-color: rgb(43, 43, 43);
     }
 
+    #garmentgrid {
+        margin-top: 200px;
+    }
 }
