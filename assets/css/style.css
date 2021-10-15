@@ -1,7 +1,28 @@
 body { 
     color: #5c5c5c; 
     scroll-behavior: smooth;
-    max-width: 100vw;
+    /* max-width: 100vw; */
+    box-sizing: inherit;
+    height: 100%;
+    font: 15px sans-serif;
+    background: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -50;
+}
+
+.row {
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: rgb(43, 43, 43);
+    /* background-color: rgb(43, 43, 43); */
+    /* background-color: #4a494a; */
+    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+              0 4px 2px rgba(0,0,0,0.09), 
+              0 8px 4px rgba(0,0,0,0.09), 
+              0 16px 8px rgba(0,0,0,0.09),
+              0 32px 16px rgba(0,0,0,0.09);
 }
 
 html {
@@ -9,7 +30,7 @@ html {
     max-width: 100vw;
 }
 
-.t-light, .t-stdlinks a, .t-light, .t-stdlinks a {
+.t-light, .header-nav, .header-nav__link {
     color: #fffefe;
 }
 
@@ -17,61 +38,35 @@ html {
     color: #FFF;
 }
 
-.t-dark .t-stdlinks a, .t-dark.t-stdlinks a {
-    color: #5c5c5c;
-}
-
-.t-light, .header-nav, .header-nav__link {
-    color: #fffefe;
-}
 .t-dark {
     color: #5c5c5c;
 }
+
 .t-gray {
     color: #888;
 }
 
-.bg--slate {
+.bg--slate, .color--slate,
+.breadcrumb {
     background-color: #4a494a;
 }
-.bg--silver {
+
+.bg--silver, .color--silver {
     background-color: #d7d7d7;
 }
-.bg--sand {
+.bg--sand, .color--sand {
     background-color: #b7b3a7;
 }
-.bg--orange {
+.bg--orange, .color--orange {
     background-color: #d46300;
 }
-.bg--gold {
-    background-color: #ffb100;
-}
-.color--slate {
-    color: #4a494a;
-}
-.color--silver {
-    color: #d7d7d7;
-}
-.color--sand {
-    color: #b7b3a7;
-}
-.color--orange {
-    color: #d46300;
-}
-.color--gold {
-    color: #ffb100;
-}
-
+.bg--gold, .color--gold,
 .header-nav__link:hover {
-    color: #ffb100;
-}
+    background-color: #ffb100;
+} 
 
 .header-nav .header-nav__link:active {
     color: #ffd066;
-}
-
-.breadcrumb {
-    color: #4a494a;
 }
 
 /* makeuse specific styles end
@@ -87,7 +82,7 @@ body {
 }
 
 nav {
-    max-width: 980px;
+    /* max-width: 980px; */
     margin: auto;
 }
 
@@ -113,18 +108,11 @@ li, li a, a {
     color: #FFB100;
 }
 
-#flexend {
-    display: flex;
-    position: relative;
-    top: 0;
-}
-
-.instructions {
+.instructions p {
     padding: 15px 150px 20px 15px;
     line-height: 24px;
     overflow: auto;
 }
-
 
 .instructions h5 {
     padding: 50px 30px 45px 30px;
@@ -144,16 +132,22 @@ li, li a, a {
     padding-right: 40px;
 }
 
-/* #bodywrapper {
+#bodywrapper {
     margin: 0 auto;
-    padding: 0;
-} */
+    z-index: -299;
+}
 
 .gridwrapper {
     display: flex;
     justify-content: center;
     /* padding-bottom: 25px; */
     background-color: #9c998f;
+    /* border: 1px solid #ffd066; */
+    /* box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+              0 4px 2px rgba(0,0,0,0.09), 
+              0 8px 4px rgba(0,0,0,0.09), 
+              0 16px 8px rgba(0,0,0,0.09),
+              0 32px 16px rgba(0,0,0,0.09); */
 }
 
 #garmentgrid {
@@ -166,8 +160,15 @@ li, li a, a {
     grid-gap: 2px;
     z-index: 100;
     margin: auto;
-    background-color: #9c998f;
+    /* background-color: rgba(40, 38, 39, 0.459); */
     background: none;
+
+    /* border: 2px solid #ffd066; */
+    /* box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+              0 4px 2px rgba(0,0,0,0.09), 
+              0 8px 4px rgba(0,0,0,0.09), 
+              0 16px 8px rgba(0,0,0,0.09),
+              0 32px 16px rgba(0,0,0,0.09); */
 }
 
 #necktile {
@@ -175,6 +176,7 @@ li, li a, a {
     justify-content: center;
     align-items: center;
     grid-area: b;
+    background-color: #747169
 }
 
 .navbar-brand:hover {
@@ -284,36 +286,10 @@ li, li a, a {
     justify-content: center;
     background-color: #9c998f;
     background-color: rgb(43, 43, 43);
-
-    max-width: 940px;
+    max-width: 1024px;
 }
 
-@media (min-width: 940px) {
-    body {
-        background-color:rgb(43, 43, 43);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100vw;
-    }
 
-    #bodywrapper {
-        display: block;
-        max-width: 940px;
-
-        height: 100%;
-        background-color:#4a494a;
-        margin: 0 auto;
-        z-index: -300;
-    }
-
-    header {
-        background-color: rgb(43, 43, 43);
-        background-color: #4a494a;
-        max-width: 940px;
-        display: block;
-    }
-}
 
 .intro {
     padding: 8vw 8vw 0 8vw;
@@ -330,13 +306,14 @@ li, li a, a {
 
 #makeuseheader {
     display: block;
+    display: flex;
     height: 78.6px;
     min-height: 140px;
     padding: 25px 0 50px;
-    background: #4a494a;
+    background-color: #4a494a;
 }
 
-/* .clearfix {
+.clearfix {
     overflow: auto;
 }
 
@@ -344,20 +321,25 @@ li, li a, a {
     content: "";
     clear: both;
     display: table;
-  } */
+  }
 
 .navbar-brand {
     display: flex;
     padding-left: 15px;
+    width: 200px;
+    height: 78.26px;
 }
 
 .navbar {
     display: flex;
     padding: 20px 15px 50px 15px;
+    background-color:RGB(40, 38, 39);
+    width: 100%;
 }
 
 header {
     height: 153.27px;
+    width: 100%;
 }
 
 .navbar-nav {
@@ -380,68 +362,25 @@ header {
     justify-self: right;
 }
 
-/* Media Query for centering site logo and nav below 600w */
-
-@media (max-width: 600px) {
-    
-    header {
-        height: 180px;
-        width: 100vw;
-        display: flex;
-        justify-items: center;
-    }
-
-    nav {
-       display: flex;
-       justify-items: center;
-       width: 100vw;
-    }
-
-    .navbar-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100vw;
-        left: 0;
-        top: 122px;
-    }
-
-    .row {
-        left: calc(100vw - 320px) !important;
-        margin-left: 0;
-    }
-
-    .navbar {
-        justify-content: center;
-    }
-
-    .navbar-brand {
-        padding-left: 40px;
-    }
-
-    #garmentgrid {
-        width: 100vw - 30px;
-    }
-
-    a {
-        font-size: 14px;
-    }
- }
-
-.patterns {
+/* .patterns {
     display: flex;
     flex-direction: row;
     max-height: 200px;
     align-content: center;
     justify-content: space-between;
     padding-right: 15px;
-}
+} */
 
 #downloadwrapper {
+    padding: 20px 0;
+}
+
+/* #downloadwrapper {
     min-height: 150px;
     max-height: 200px;
     max-height: auto;
     padding: 30px 30px 30px 30px;
+    height: 150px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -449,18 +388,29 @@ header {
     left: 0;
     width: 100vw;
     justify-content: center;
-}
+} */
 
-.patternThumb {
-    display: flex;
+/* .patternThumb {
+    display: block;
     flex-direction: row;
     max-height: 200px;
     max-width: 200px;
     padding-top: 20px;
-}
+} */
 
 .patternThumb:hover img {
     filter: opacity(55%);
+}
+
+.patternThumb a {
+    display: flex;
+    padding: none;
+    border: 2px solid #ffd066;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+              0 4px 2px rgba(0,0,0,0.09), 
+              0 8px 4px rgba(0,0,0,0.09), 
+              0 16px 8px rgba(0,0,0,0.09),
+              0 32px 16px rgba(0,0,0,0.09);
 }
 
 #tshirtGridPattern,
@@ -469,24 +419,27 @@ header {
 #patternNecklineWide,
 #patternSleeveCutLeft,
 #patternSleeveCutRight,
-#patternTshirtGrid {
-    display: inline-flex;
+#patternTshirtGrid,
+#pattern-tshirt-grid {
+    /* display: inline-flex; */
+    /* display: inline-flex;
     flex-direction: row;
     overflow: auto;
     width: 1fr;
     align-self:left;
     background-color: #ffd066;
     max-height: 100px;
-    transition: ease-in-out 50ms;
+    transition: ease-in-out 50ms; */
 }
 
 #tshirtGridPattern,
+#patternTshirtGrid,
 #patternNecklineRound,
 #patternNecklineCollar,
 #patternNecklineWide,
 #patternSleeveCutLeft,
 #patternSleeveCutRight {
-    padding: 5px 5px 5px 5px;
+    padding: 4px 4px 4px 4px;
 }
 
 .thumbs {
@@ -494,9 +447,9 @@ header {
     background-color:#c9a96f;
 }
 
-.patterns .img-fluid {
+/* .patterns .img-fluid {
     height: 100%;
-}
+} */
 
 h5 {
     padding-top: 10px;
@@ -581,4 +534,117 @@ input {
     margin: 0;
     padding: 30px 0 20px 0;
     display: flex;
+}
+
+.mu-dark-slate {
+    background-color: RGB(40, 38, 39);
+}
+
+/* Media Query for centering site logo and nav below 600w */
+
+@media (max-width: 600px) {
+    
+    header {
+        height: 180px;
+        width: 100vw;
+        display: flex;
+        justify-items: center;
+    }
+
+    nav {
+       display: flex;
+       justify-items: center;
+       width: 100vw;
+       margin: 0 auto;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100vw;
+        left: 0;
+        top: 122px;
+    }
+
+    #garmentgrid {
+        width: 60%;
+    }
+
+    #downloadwrapper {
+        padding: 14px 24px 14px 24px;
+        max-height: 130px;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        padding-left: 40px;
+    }
+
+    #garmentgrid {
+        width: 100vw;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    .row {
+        background-color: rgb(43, 43, 43);
+    }
+ }
+
+@media (min-width: 960px) {
+    body {
+        background-color:rgb(43, 43, 43);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+    }
+
+
+    #bodywrapper {
+        display: flex;
+        /* max-width: 960px; */
+        /* max-width: 1024px; */
+
+        height: 100%;
+        width: 100vw;
+        background-color:#4a494a;
+        margin: 0 auto;
+        z-index: -300;
+        background-color: #b7b3a7;
+    }
+
+    header {
+        background-color: rgb(43, 43, 43);
+        background-color: #4a494a;
+        /* max-width: 960px; */
+        display: block;
+        display: flex;
+        position: absolute;
+        justify-self: center;
+        margin: 0 auto;
+        min-width: 960px;
+        width: 100vw;
+        left: 0;
+        padding: none;
+        /* max-width: 1024px; */
+        box-shadow: #888;
+
+        box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+              0 4px 2px rgba(0,0,0,0.09), 
+              0 8px 4px rgba(0,0,0,0.09), 
+              0 16px 8px rgba(0,0,0,0.09),
+              0 32px 16px rgba(0,0,0,0.09);
+    }
+
+    .row {
+        background-color: rgb(43, 43, 43);
+    }
+
 }
