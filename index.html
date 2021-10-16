@@ -16,29 +16,34 @@
     </head>
 
     <body>
-        <div id="bodywrapper" class="container-fluid">
-            <header>
-                <nav class="navbar clearfix t-light">
-                    <a href="https://makeuse.nz/">
-                    <span class="navbar-brand"><img id="makeuse-logo" src="assets/images/makeuse-logo.png" alt="Make/Use Logo">
-                        <img id="logo-hover" src="assets/images/pattern-thumbs/makeuse-logo-hover.png"></span>
-                    </a>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link" href="https://makeuse.nz/make/">make</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="https://makeuse.nz/about/">about</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="https://makeuse.nz/articles/">articles</a>
-                        </li>
-                </nav>
-            </header>
 
-        <section id="croptshirt-from-template" class="row">
-            <div class="gridwrapper container-fluid col-9 col-md-5">
-                <div id="garmentgrid">
+        <header id="makeuseheader">
+        <!-- <header id="makeuseheader" class="container-fluid"> -->
+            <nav class="navbar clearfix t-light fixed-top">
+                <!-- <a href="https://makeuse.nz/"> -->
+                <a href="https://makeuse.nz/" class="navbar-brand">
+                    <!-- <span class="navbar-brand"><img id="makeuse-logo" src="assets/images/makeuse-logo.png" alt="Make/Use Logo"> -->
+                    <span><img id="makeuse-logo" src="assets/images/makeuse-logo.png" alt="Make/Use Logo">
+                        <img id="logo-hover" src="assets/images/pattern-thumbs/makeuse-logo-hover.png">
+                    </span>
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://makeuse.nz/make/">make</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://makeuse.nz/about/">about</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://makeuse.nz/articles/">articles</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="croptshirt-from-template" class="container-flex">
+            <div id="gridwrapper" class="row">
+                <div id="garmentgrid" class="col-12 col-lg-6">
                     <div id="leftsleevetile">
                         <img id="leftsleevewideshort" src="assets/images/leftsleevewideshort.png" alt="">
                         <img id="leftsleevewidelong" src="assets/images/leftsleevewidelong.png" alt="">
@@ -67,51 +72,52 @@
                     </div>
                     <div id="lowerrighttile"></div>
                 </div>
-            </div>
-
-            <div id="whatYouNeed" class="container-fluid col-10 col-md-6">
-                <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This updates fabric size and pattern template downloads required to make your chosen style.</p>
-                <br>
-                <p id="fabricRequired">Fabric needed: 110cm wide x 75cm long</p>
-                
+                <div id="whatYouNeed" class="col-12 col-md-6">
+                    <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This updates fabric size and pattern template downloads required to make your chosen style.</p>
+                    <br>
+                    <p id="fabricRequired">Fabric needed: 110cm wide x 75cm long</p>
+                </div>
             </div>
 
             <div id="downloadwrapper" class="row">
-                <div id="pattern-tshirt-grid" class="patternThumb col-3">
+                <div id="pattern-tshirt-grid" class="patternThumb col-5 col-md-3">
                     <a id="patternTshirtGrid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
-                        <span><img id="tshirtGridPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/tshirt-grid-pattern-preview.png" alt="Grid template pattern, an essential for making all variations of the MakeUse Crop-Tshirt."></span>
+                        <span><img id="tshirtGridPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/tshirt-grid-pattern-preview.png" alt="Make/Use grid-template pattern, essential resource for making all variations of the MakeUse Crop-Tshirt."></span>
                     </a>
                 </div>
-
-                <div id="patternThumbRound" class="patternThumb col-3">
+                <div id="patternThumbRound" class="patternThumb col-5 col-md-3">
                     <a id="patternNecklineRound" href="assets/downloads/print-temp-round-neck.pdf">
-                        <span><img id="neckRoundPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt=""></span>
+                        <span><img id="neckRoundPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt="Make/Use template pattern for round-neck version of Tshirt."></span>
                     </a>
                 </div>
-                <div id="patternThumbCollar" class="patternThumb col-3">
+                <div id="patternThumbCollar" class="patternThumb col-5 col-md-3">
                     <a id="patternNecklineCollar" href="assets/downloads/print-temp-collar-neck.pdf">
-                        <span><img id="neckCollarPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreviewtest.png" alt=""></span>
+                        <span><img id="neckCollarPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreviewtest.png" alt="Make/Use template pattern for collar-neck version of Tshirt."></span>
                     </a>
                 </div>
-                <div id="patternThumbWide" class="patternThumb col-3">
+                <div id="patternThumbWide" class="patternThumb col-5 col-md-3">
                     <a id="patternNecklineWide" href="assets/downloads/print-temp-wide-neck.pdf">
-                        <span><img id="neckWidePattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/wideneckpatternpreview.png" alt=""></span>
+                        <span><img id="neckWidePattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/wideneckpatternpreview.png" alt="Make/Use template pattern for wide-neck version of Tshirt."></span>
                     </a>
                 </div>
                 <!-- ------------------------------update image asset when file provided------------------------------------- -->
-                <div class="patternThumb col-3">
+                <div class="patternThumb col-5 col-md-3">
                     <a id="patternSleeveCutLeft" href="assets/downloads/sleevecutleft.pdf">
-                        <span><img id="sleeveLeftPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt=""></span>
+                        <span><img id="sleeveLeftPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
                     </a>
                 </div>
                 <!-- ------------------------------update image asset when file provided------------------------------------- -->
-                <div class="patternThumb col-3">
+                <div class="patternThumb col-5 col-md-3">
                     <a id="patternSleeveCutRight" href="assets/downloads/sleevecutright.pdf">
-                        <span><img id="sleeveRightPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreview.png" alt=""></span>
+                        <span><img id="sleeveRightPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreview.png" alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
                     </a>
                 </div>
             </div>
-
+        </section>
+        
+            
+        
+        <section>
             <div id="tablewrapper" class="row">
                 <table class="currentStyleTable col container-fluid">
                     <thead>
@@ -174,8 +180,9 @@
                     <li>Line up desired templates with grid and follow instructions printed on them.</li>
                 </ul>
             </div>
+        </section>
 
-        </div>
+        
     </div>
 
     <footer></footer>
