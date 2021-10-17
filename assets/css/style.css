@@ -54,40 +54,50 @@ body {
     list-style-type: none;
     display: flex;
     max-width: 1024px;
-    margin: 0 10px;;
+    margin: 0 10px;
+    background-color: #cfbf9a;
+    background-color: #b7b3a7;
+    background-color: #c8c5b5;
+    background-color: #fffefe;
 }
+
+/* .container-flex, .col-12 { 
+    max-width: 960px;
+} */
 
 #croptshirt-from-template {
     display: flex;
-    width: 100vw;
-    position: relative;
-    top:  153.27px;
+    min-width: 120vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: absolute;
+    top: 153.27px;
+    top: 288px;
+    left: -10vw;
+    background-color: #d7d7d7;
 }
 
 #makeuseheader {
     display: block;
-    
-    position: absolute;
     position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
-    /* width: 100vw; */
     height: 153.27px;
-
-    padding: 0 0 60px 0;
-    background-color: rgb(43, 43, 43);
+    z-index: 555;
     background-color: #4a494a;
     background-color: rgb(40, 38, 39);
-    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
-          0 4px 2px rgba(0,0,0,0.09), 
-          0 8px 4px rgba(0,0,0,0.09), 
-          0 16px 8px rgba(0,0,0,0.09),
-          0 32px 16px rgba(0,0,0,0.09);
+    background-color: #FFB100;
+    /* box-shadow: 
+        0 2px 1px rgba(0,0,0,0.09), 
+        0 4px 2px rgba(0,0,0,0.09), 
+        0 8px 4px rgba(0,0,0,0.09), 
+        0 16px 8px rgba(0,0,0,0.09),
+        0 32px 16px rgba(0,0,0,0.09); */
 }
 
 nav {
-    margin: auto;
+    margin: 0 auto;
 }
 
 .navbar {
@@ -97,6 +107,7 @@ nav {
     padding: 20px 15px 50px 15px;
     /* background-color: rgb(40, 38, 39); */
     max-width: 1024px;
+    z-index: 1000;
 }
 
 .navbar-brand img {
@@ -124,6 +135,7 @@ nav {
     width: 100vw;
     right: 32px;
     top: 78px;
+    z-index: 1001;
 }
 
 .navbar-nav .nav-item a {
@@ -132,7 +144,7 @@ nav {
     z-index:3000;
 }
 
-.nav-item:hover {
+.navbar .nav-item a:hover {
     color: #FFB100;
 }
 
@@ -155,31 +167,34 @@ li, li a, a {
 }
 
 #garmentgrid {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: 122px 149px 123px;
     grid-template-rows: 398px 0px;
     grid-template-areas: "a b c"
                          ". d .";
     height: 399px;
-    place-self: center;
+    width: 396px;
     padding: 0;
     flex-direction: column;
     margin: 15px auto 0 15px;
-    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
-          0 4px 2px rgba(0,0,0,0.09), 
-          0 8px 4px rgba(0,0,0,0.09), 
-          0 16px 8px rgba(0,0,0,0.09),
-          0 32px 16px rgba(0,0,0,0.09);
+    box-shadow: 
+        0 2px 1px rgba(0,0,0,0.09), 
+        0 4px 2px rgba(0,0,0,0.09), 
+        0 8px 4px rgba(0,0,0,0.09), 
+        0 16px 8px rgba(0,0,0,0.09),
+        0 32px 16px rgba(0,0,0,0.09);
+    margin: 0;
+    margin-top: 100px;
 }
 
 #gridwrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    justify-items: center;
     /* background-color: rgb(43, 43, 43); */
-    height: fit-content;
-    margin: 0 auto;
+    height: 399px;
+    width: 396px;
+    margin: 20px auto 20px 14px;
+    /* background-color: #ffd066; */
 }
 
 #croptshirt-from-template {
@@ -188,6 +203,7 @@ li, li a, a {
     margin: 0 auto;
     display: flex;
     position: absolute;
+
 }
 
 #bodytile {
@@ -311,9 +327,6 @@ li, li a, a {
     height: 50px;
     left: 0;
     margin: 20px 10px 15px 10px;
-
-    /* height: auto; */
-    /* flex-direction: column; */
     align-content: flex-start;
     margin-bottom: 40px;
 }
@@ -325,6 +338,29 @@ li, li a, a {
     max-width: 500px;
     line-height: 1.8rem;
     margin-top: 10%;
+    text-align: left;
+    justify-content: left;
+}
+
+.templateintro {
+    display: inline-flex;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+.templateintro p {
+    
+    color:#e9e7e7;
+    color: #202020;
+    /* background-color: #c8c5b5; */
+    font-size: 18px;
+    font-weight: 400;
+    flex-direction: column;
+    /* max-width: 500px; */
+    line-height: 1.8rem;
+    margin: 20px 20px 30px 30px;
+    padding: 20px 40px 30px 20px;
     text-align: left;
     justify-content: left;
 }
@@ -354,7 +390,8 @@ li, li a, a {
 
 #downloadwrapper > .row {
     width: 1fr;
-    padding: 30px 20px 30px 20px;
+    /* padding: 30px 20px 30px 20px; */
+    
     position: absolute;
     left: 0;
     top: 153.24px;
@@ -365,33 +402,22 @@ li, li a, a {
 }
 
 #downloadwrapper {
-    /* padding: 10px; */
     display: flex;
     flex-direction: row;
-    /* justify-content: center;
-    align-content: center;
-    justify-items: center; */
-    /* position: relative; */
-    /* position: fixed; */
-    z-index: 110;
-    /* top: 600px; */
     max-height: 210px;
-    margin: 15px 15px 20px 15px;
-    /* left: 0; */
+    /* margin: 15px 15px 20px 15px; */
     top: 153.28;
-    /* left: 0; */
     width: calc(100vw - (26px / 2));
     max-width: 1024px;
+    margin: 20px 20px 20px 20px;
 }
 
 #downloads {
-    /* max-width: 1024px; */
     display: flex;
     align-items: center;
     margin: 0 auto;
     width: 1fr;
     padding: 20px 15px 50px 15px;
-    /* width: 100vw; */
 }
 
 .fabricsize {
@@ -410,16 +436,16 @@ li, li a, a {
 
 .patternThumb a {
     display: inline-flex;
-    /* display: flex; */
     padding: none;
-    background-color:  #ffd066;
+    background-color:#ffd066;
     border: 1px solid #d4b467;
     transition: ease-in-out 50ms;
-    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
-              0 4px 2px rgba(0,0,0,0.09), 
-              0 8px 4px rgba(0,0,0,0.09), 
-              0 16px 8px rgba(0,0,0,0.09),
-              0 32px 16px rgba(0,0,0,0.09);
+    box-shadow: 
+        0 2px 1px rgba(0,0,0,0.09), 
+        0 4px 2px rgba(0,0,0,0.09), 
+        0 8px 4px rgba(0,0,0,0.09), 
+        0 16px 8px rgba(0,0,0,0.09),
+        0 32px 16px rgba(0,0,0,0.09);
 }
 
 #tshirtGridPattern,
@@ -442,32 +468,18 @@ h5 {
     padding-bottom: 5px;
 }
 
-/* #tablewrapper {
-    margin: 0 auto;
-    height: fit-content;
-    padding: 10px 0 15px 0;
-    background-color: #5c5c5c;
-} */
-
 .table-responsive-lg {
     color:#fffefe;
-    /* border-collapse: collapse; */
-    /* justify-content: space-between;
-    justify-items: space-between; */
-    /* padding: 20px; */
-    /* margin: 0 auto 0 0px;
-    padding: 35px 0 40px 50px; */
-    /* display: block; */
     justify-content:space-between;
-    margin: 15px 0 15px 10px;
-    max-width: 60%;
+    margin: 15px 20px 15px 20px;
+    margin: auto auto 0px auto;
+    max-width: 85%;
+    padding: 10px 20px 20px 20px;
 }
 
 .table-responsive-lg td, 
 .table-responsive-lg th {
     border: none;
-    /* margin: none;
-    padding: none; */
     font-size: 14px;
     text-align: center;
     color:#fffefe;
@@ -478,8 +490,7 @@ tr {
 }
 
 th, td {
-    padding-right: 2rem;
-    background-color: #cfbf9a;
+    background-color: #c8c5b5;
 }
 
 
@@ -487,8 +498,9 @@ input {
     border: none;
     text-align: center;
     padding-left: 20px;
-    
     border-radius: 3px;
+    background-color: #c8c5b5;
+    background-color:  #e9e7e7;
 }
 
 .directions {
@@ -545,15 +557,8 @@ input {
         justify-content: center;
         left: 0;
         margin: 0;
-        
     }
-
-    html { 
-        /* display: flex;
-        justify-content: center;
-        max-width: 100%; */
-    }
-
+    
     nav {
         display: inline-flex;
         flex-direction: row;
@@ -632,21 +637,9 @@ input {
     }
 
     #downloadwrapper {
-        /* width: 100vw;
-        display: flex; */
-        /* justify-content: space-evenly; */
         position: relative;
-        /* right: 0; */
-        
-        /* width: 1fr;
-        background-color: none;
-        border: 1px solid yellow; */
-       
+        border: 1px solid yellow;
     }
-
-    /* #patternThumb img {
-        max-height: 100px;
-    } */
 
     #downloads {
         border: 1px solid black;
@@ -658,6 +651,8 @@ input {
  }
 
 @media (min-width: 960px) {
-
+    /* html {
+        max-width: 1024px;
+    } */
     
 }

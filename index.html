@@ -65,7 +65,7 @@
                         <img id="rightsleevewideshort" src="assets/images/rightsleevewideshort.png" alt="">
                     </div>
                     <div id="lowerlefttile">
-                        <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will calculate how much fabric you need and display the pattern downloads required to make your chosen style.</p>
+                        <span class="fabricsize"><h5 id="fabricRequired">Fabric needed: 110cm wide x 75cm long</h5></span>
                     </div>
                     <div id="bodytile">
                         <img id="bodycropped" src="assets/images/bodycropped.png" alt="">
@@ -74,10 +74,9 @@
                     </div>
                     <div id="lowerrighttile"></div>
                 </div>
+                
             </div>
         
-           
-
                 <!-- <section id="downloadwrapper" class="row">
                             
                         <div id="pattern-tshirt-grid" class="patternThumb col-10 col-md-3">
@@ -117,7 +116,45 @@
                 </section> -->
 
             <div id="downloadwrapper" class="row">
-                            
+                
+                <div class="templateintro col-md-8">
+                    
+                    <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will calculate how much fabric you need and display the pattern downloads required to make your chosen style.</p>
+                </div>
+
+                <table class="table-responsive-lg">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <th scope="col">Body Length</th>
+                            <th scope="col">Body Circumference</th>
+                            <th scope="col">Sleeve Circumference</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td scope="row" id="dimensionBodyLength">50cm</td>
+                            <td id="dimensionBodyCircumference">110cm</td>
+                            <td id="dimensionSleeveCircumference">50cm</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input id="customInputBodyLength" type="number" placeholder=" .......cm"></td>
+                            <td><input id="customInputBodyCircum" type="number" placeholder=" .......cm"></td>
+                            <td><input id="customInputSleeveCircum" type="number" placeholder=".......cm"></td>
+                            <td></td>
+                        </tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
+                
+                <!-- <div></div> -->
+
+                <h5>Required Pattern Downloads:</h5>
+
                 <div id="pattern-tshirt-grid" class="patternThumb col-10 col-md-3">
                     <a id="patternTshirtGrid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
                         <span><img id="tshirtGridPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/tshirt-grid-pattern-preview.png" alt="Make/Use grid-template pattern, essential resource for making all variations of the MakeUse Crop-Tshirt."></span>
@@ -150,127 +187,57 @@
                         <span><img id="sleeveRightPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreview.png" alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
                     </a>
                 </div>
-
-                <span class="fabricsize"><p id="fabricRequired">Fabric needed: 110cm wide x 75cm long</p></span>
                 
-                <table class="table-responsive-lg">
+                <!-- <table class="table-responsive-lg">
                     <thead>
                         <tr>
+                            <td></td>
                             <th scope="col">Body Length</th>
                             <th scope="col">Body Circumference</th>
                             <th scope="col">Sleeve Circumference</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="dimensionBodyLength">50cm</td>
+                            <td></td>
+                            <td scope="row" id="dimensionBodyLength">50cm</td>
                             <td id="dimensionBodyCircumference">110cm</td>
                             <td id="dimensionSleeveCircumference">50cm</td>
-                            
+                            <td></td>
                         </tr>
                         <tr>
-                            <br>
+                            <td></td>
                             <td><input id="customInputBodyLength" type="number" placeholder=" .......cm"></td>
                             <td><input id="customInputBodyCircum" type="number" placeholder=" .......cm"></td>
                             <td><input id="customInputSleeveCircum" type="number" placeholder=".......cm"></td>
+                            <td></td>
                         </tr>
-                        <tr>
-                            
-                            
-                            
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- <table id="customgarmenttable col-auto">
-                    <thead>
-                        <tr>
-                            <th scope="col">Custom Values:</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="col"><input id="customInputBodyLength" type="number" placeholder=" ____cm"></td>
-                        </tr>
-                        <tr>
-                            <td scope="col"><input id="customInputBodyCircum" type="number" placeholder=" ____cm"></td>
-                        </tr>
-                        <tr>
-                            <td><input id="customInputSleeveCircum" type="number" placeholder=" ____cm"></td>
-                        </tr>
+                        <tr></tr>
                     </tbody>
                 </table> -->
+                 
+                <div class="instructions col-12 col-lg-10">
+                    <h5>Each Make/Use garment made in this method is unique to both the fabric and the user.  The length of a Make/Use cropped Tshirt can be altered to suit an individual's height or taste; a favourite fabric can be used to make the Cropped Tshirt and drastically alter its appearance; new iterations can be created by combining templates in ways dreamt up by the maker/user. The possibilities are literally endless.</h5>
+                    <p class="directions"><strong>Directions:</strong></p>
+                    <ul>
+                        <li>Using the Cropped Tshirt Grid file as a guide, mark half way between edges of fabric for Fabric Centre Line and ¼ Fabric Width (A) either side of this.</li>
+                        <li>Measure on your body the desired depth of sleeve (B) from your own shoulder down - this begins to determine how wide your sleeve is on your garment.</li>
+                        <li>Measure on your fabric 1 x B to Shoulder Line, and 1 x B from Shoulder Line to Sleeve Depth.</li>
+                        <li>Finally measure from shoulder to finished desired length and then minus B, for C.</li>
+                        <li>Mark horizontal and vertical lines with tailors chalk.</li>
+                        <li>The intersections of Fabric Centre Line and Shoulder Line, as well as ¼ fabric width and Sleeve Depth are key anchors for placing the templates.</li>
+                        <li>Print: Print out using a standard printer the files only A4 and/or A3 paper or card and cut out the dotted fill. Follow the instructions on the pages</li>
+                        <li>Lasercut: Download files and have laser cut on 2mm card according to lasercutter specifications.</li>
+                        <li>Line up desired templates with grid and follow instructions printed on them.</li>
+                    </ul>
+                </div>
             </div>
-
-            
-                
-            
         </div>
     </section>
         
-            <!-- <div id="tablewrapper" class="container-fluid">
-                <div class="row">
-                <table class="currentStyleTable col-12 col-md-6">
-                    <thead>
-                        <tr>
-                            <th scope="col">Measurements for Current Style</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="col">Body Length:</td>
-                            <td scope="col" id="dimensionBodyLength">50cm</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">Body Circumference:</td>
-                            <td id="dimensionBodyCircumference">110cm</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">Sleeve Circumference:</td>
-                            <td id="dimensionSleeveCircumference">50cm</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="customStyleTable col-12 col-md-6">
-                    <thead>
-                        <tr>
-                            <th scope="col">Custom Values:</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="col">Body Length:</td>
-                            <td scope="col"><input id="customInputBodyLength" type="number" placeholder=" ____cm"></td>
-                        </tr>
-                        <tr>
-                            <td>Body Circumference:</td>
-                            <td scope="col"><input id="customInputBodyCircum" type="number" placeholder=" ____cm"></td>
-                        </tr>
-                        <tr>
-                            <td>Sleeve Circumference:</td>
-                            <td><input id="customInputSleeveCircum" type="number" placeholder=" ____cm"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            </div> -->
             
-           <!-- <div class="instructions container-fluid col-12 col-lg-10">
-                <h5>Each Make/Use garment made in this method is unique to both the fabric and the user.  The length of a Make/Use cropped Tshirt can be altered to suit an individual's height or taste; a favourite fabric can be used to make the Cropped Tshirt and drastically alter its appearance; new iterations can be created by combining templates in ways dreamt up by the maker/user. The possibilities are literally endless.</h5>
-                <p class="directions"><strong>Directions:</strong></p>
-                <ul>
-                    <li>Using the Cropped Tshirt Grid file as a guide, mark half way between edges of fabric for Fabric Centre Line and ¼ Fabric Width (A) either side of this.</li>
-                    <li>Measure on your body the desired depth of sleeve (B) from your own shoulder down - this begins to determine how wide your sleeve is on your garment.</li>
-                    <li>Measure on your fabric 1 x B to Shoulder Line, and 1 x B from Shoulder Line to Sleeve Depth.</li>
-                    <li>Finally measure from shoulder to finished desired length and then minus B, for C.</li>
-                    <li>Mark horizontal and vertical lines with tailors chalk.</li>
-                    <li>The intersections of Fabric Centre Line and Shoulder Line, as well as ¼ fabric width and Sleeve Depth are key anchors for placing the templates.</li>
-                    <li>Print: Print out using a standard printer the files only A4 and/or A3 paper or card and cut out the dotted fill. Follow the instructions on the pages</li>
-                    <li>Lasercut: Download files and have laser cut on 2mm card according to lasercutter specifications.</li>
-                    <li>Line up desired templates with grid and follow instructions printed on them.</li>
-                </ul>
-            </div> -->
+           
         
 
         
