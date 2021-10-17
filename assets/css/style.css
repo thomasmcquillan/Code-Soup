@@ -1,14 +1,3 @@
-/* .row {
-    margin: 0;
-    padding: 0;
-} */
-
-/* html {
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-} */
-
 .mu-dark-slate {
     background-color: RGB(40, 38, 39);
 }
@@ -165,19 +154,6 @@ li, li a, a {
     padding-bottom: 5px;
 }
 
-/* #garmentgrid {
-    display: inline-grid;
-    grid-template-columns: 122px 149px 123px;
-    grid-template-rows: 398px 0px;
-    grid-template-areas: "a b c"
-                         ". d .";
-    z-index: 100;
-    height: 399px;
-    width: 100vw;
-    place-self: center;
-    padding: 0;
-} */
-
 #garmentgrid {
     display: inline-grid;
     grid-template-columns: 122px 149px 123px;
@@ -185,15 +161,10 @@ li, li a, a {
     grid-template-areas: "a b c"
                          ". d .";
     height: 399px;
-    /* width: 100vw; */
     place-self: center;
     padding: 0;
-    
-    /* max-width: 1024px; */
     flex-direction: column;
     margin: 15px auto 0 15px;
-    /* width: fit-content; */
-    /* z-index:2000; */
     box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
           0 4px 2px rgba(0,0,0,0.09), 
           0 8px 4px rgba(0,0,0,0.09), 
@@ -203,20 +174,12 @@ li, li a, a {
 
 #gridwrapper {
     display: flex;
-    /* width: 100vw; */
-    /* max-width: 1024px; */
     flex-direction: column;
     justify-content: center;
     justify-items: center;
     /* background-color: rgb(43, 43, 43); */
-    /* position: absolute; */
-    /* left: 0; */
-    /* top:400px; */
     height: fit-content;
     margin: 0 auto;
-    /* z-index: 400; */
-    /* top: 240px; */
-    
 }
 
 #croptshirt-from-template {
@@ -336,9 +299,7 @@ li, li a, a {
 #lowerlefttile {
     display: block;
     position: relative;
-    /* background-color: #b7b3a7; */
     height: 202px;
-    width: 394px;
     width: 100vw;
     color: #e9e7e7;
     left: 0;
@@ -398,10 +359,9 @@ li, li a, a {
     left: 0;
     top: 153.24px;
     justify-content: center;
-    max-width: 1024px;
+    
     display: flex;
     align-content: center;
-
 }
 
 #downloadwrapper {
@@ -416,12 +376,12 @@ li, li a, a {
     z-index: 110;
     /* top: 600px; */
     max-height: 210px;
-    margin: 15px 15px 0 15px;
+    margin: 15px 15px 20px 15px;
     /* left: 0; */
     top: 153.28;
     /* left: 0; */
     width: calc(100vw - (26px / 2));
-    
+    max-width: 1024px;
 }
 
 #downloads {
@@ -489,47 +449,46 @@ h5 {
     background-color: #5c5c5c;
 } */
 
-table {
+.table-responsive-lg {
     color:#fffefe;
-    border-collapse: collapse;
-    justify-content: space-between;
-    justify-items: space-between;
-    padding: 20px;
+    /* border-collapse: collapse; */
+    /* justify-content: space-between;
+    justify-items: space-between; */
+    /* padding: 20px; */
     /* margin: 0 auto 0 0px;
     padding: 35px 0 40px 50px; */
-    display: block;
+    /* display: block; */
+    justify-content:space-between;
+    margin: 15px 0 15px 10px;
+    max-width: 60%;
 }
 
-/* .custom-size-input th,
-.custom-size-input td {
-    width: fit-content;
-} */
-
-.garmentsizestable {
-    width: 100%;
-}
-
-td, th {
+.table-responsive-lg td, 
+.table-responsive-lg th {
     border: none;
-    margin: none;
-    padding: none;
+    /* margin: none;
+    padding: none; */
     font-size: 14px;
+    text-align: center;
+    color:#fffefe;
 }
 
 tr {
-    line-height: 36px;
+    line-height: 34px;
 }
 
-td {
-    padding-right: 15px;
+th, td {
+    padding-right: 2rem;
+    background-color: #cfbf9a;
 }
+
 
 input {
     border: none;
     text-align: center;
-    width: 50%;
-    margin-left: 50%;
-    border-radius: 8px;
+    padding-left: 20px;
+    
+    border-radius: 3px;
 }
 
 .directions {
@@ -584,13 +543,15 @@ input {
         display: flex;
         max-width: 100%;
         justify-content: center;
+        left: 0;
+        margin: 0;
         
     }
 
     html { 
-        display: flex;
+        /* display: flex;
         justify-content: center;
-        max-width: 100%;
+        max-width: 100%; */
     }
 
     nav {
@@ -634,6 +595,7 @@ input {
         width: 100vw;
         top: 0;
         left: 0;
+        margin-bottom: 55px;
     }
 
     /* nav {
@@ -663,7 +625,10 @@ input {
 
     #gridwrapper,
     #garmentgrid {
-        border: 1px solid pink;
+        /* border: 1px solid pink; */
+        left: 0;
+        margin: 0 auto;
+        position: 0;
     }
 
     #downloadwrapper {
