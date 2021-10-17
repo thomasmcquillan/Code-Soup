@@ -1,35 +1,25 @@
-body { 
-    color: #5c5c5c; 
-    scroll-behavior: smooth;
-    /* max-width: 100vw; */
-    /* box-sizing: inherit; */
-    width: 100%;
-    /* height: 100%; */
-    font: 15px sans-serif;
-    background: #fff;
-    /* width: 100%;
+.row {
     margin: 0;
     padding: 0;
-    z-index: -50; */
-}
-
-.row {
-    /* max-width: 1024px; */
-    /* margin: 0 auto; */
-    background-color: rgb(43, 43, 43);
+    /* background-color: rgb(43, 43, 43); */
     /* background-color: rgb(43, 43, 43); */
     /* background-color: #4a494a; */
-    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+    /* box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
               0 4px 2px rgba(0,0,0,0.09), 
               0 8px 4px rgba(0,0,0,0.09), 
               0 16px 8px rgba(0,0,0,0.09),
-              0 32px 16px rgba(0,0,0,0.09);
+              0 32px 16px rgba(0,0,0,0.09); */
 }
-
-/* html {
+/* 
+html {
     display: flex;
+    width: 100vw;
     justify-content: center;
 } */
+
+.mu-dark-slate {
+    background-color: RGB(40, 38, 39);
+}
 
 .t-light, .header-nav, .header-nav__link {
     color: #fffefe;
@@ -74,19 +64,22 @@ body {
 --------------------------------------- */
 
 body { 
-    /* width: 100vw;
+    /* color: #5c5c5c;  */
+    scroll-behavior: smooth;
+      
     position: absolute;
-    top: 180px; */
-    top: 200px;
+  
     background-color: #4a494a;
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
     list-style-type: none;
 }
 
-#croptshirt-from-template{
-    position: absolute;
-    top: 180px;
+#croptshirt-from-template {
+    display: flex;
+    width: 100vw;
+    position: relative;
+    top:  153.27px;
 }
 
 #makeuseheader {
@@ -94,7 +87,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100vw;
+    /* width: 100vw; */
     height: 153.27px;
 
     padding: 0 0 60px 0;
@@ -114,8 +108,10 @@ nav {
 
 .navbar {
     display: flex;
-    /* padding: 20px 15px 50px 15px; */
-    background-color: rgb(40, 38, 39);
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 15px 50px 15px;
+    /* background-color: rgb(40, 38, 39); */
     max-width: 1024px;
 }
 
@@ -149,6 +145,7 @@ nav {
 .navbar-nav .nav-item a {
     padding-left: 20px;
     justify-self: right;
+    z-index:3000;
 }
 
 .nav-item:hover {
@@ -173,55 +170,71 @@ li, li a, a {
     padding-bottom: 5px;
 }
 
-#gridwrapper {
-    display: block;
-    justify-content: space-between;
-    justify-items: space-between;
+/* #garmentgrid {
+    display: inline-grid;
+    grid-template-columns: 122px 149px 123px;
+    grid-template-rows: 398px 0px;
+    grid-template-areas: "a b c"
+                         ". d .";
+    z-index: 100;
+    height: 399px;
     width: 100vw;
-    background-color: rgb(43, 43, 43);
-    left: 0;
-    top: 200px;
-    
-
-    position: absolute;
-    top: 33vw;
-    left: 0;
-    margin: 0 auto;
-    /* width: 397; */
-    height: 437px;
-    width: inherit;
-    height:inherit;
-}
+    place-self: center;
+    padding: 0;
+} */
 
 #garmentgrid {
     display: inline-grid;
-    /* position: relative; */
-    grid-template-columns: 122px 149px 122px;
-    grid-template-rows: 260px 175px;
+    grid-template-columns: 122px 149px 123px;
+    grid-template-rows: 398px 0px;
     grid-template-areas: "a b c"
                          ". d .";
-    grid-gap: 2px;
     z-index: 100;
-    margin: auto;
-    /* background-color: rgba(40, 38, 39, 0.459); */
-    /* background: #4b4b4b; */
-    width: 100vw;
+    height: 399px;
+    /* width: 100vw; */
+    place-self: center;
+    padding: 0;
     
-    
-    margin: 50px auto;
-    height: auto;
-    height: 437px;
-    position: absolute;
-    left: 0;
-    /* width: 100%; */
+    /* max-width: 1024px; */
+    flex-direction: column;
+    margin: 0 auto;
+    /* z-index:2000; */
 }
 
-#necktile {
-    display: grid;
+#gridwrapper {
+    display: flex;
+    /* width: 100vw; */
+    /* max-width: 1024px; */
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    grid-area: b;
-    background-color: #747169
+    justify-items: center;
+    /* background-color: rgb(43, 43, 43); */
+    left: calc(100vw - (1024 / 2));
+    top:200px;
+    height: fit-content;
+    margin: 0 auto;
+    /* z-index: 400; */
+    top: 100px;
+}
+
+#croptshirt-from-template {
+    width: 100vw;
+    left: 0;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+}
+
+.fabricneeds p {
+    display: block;
+    /* border: 1px solid green; */
+    color: #e9e7e7;
+    position: fixed;
+    z-index: 5000;
+    height: 60px;
+    width: 200px;
+    top: 500px;
+    left: 100px;
 }
 
 #bodytile {
@@ -231,14 +244,20 @@ li, li a, a {
     grid-area: d;
 }
 
+/* #necktile {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-area: b;
+    background-color: #747169
+}
+
 #leftsleevetile {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 157px;
-    background-color: rgb(212, 99, 0, 77);
-    /* background-color: #d46300; */
-    /* filter: opacity(77%); */
+    background-color: rgba(212, 99, 0, 98%);
 }
 
 #rightsleevetile {
@@ -247,9 +266,32 @@ li, li a, a {
     display: flex;
     padding-top: 157px;
     padding-right: 4px;
-    background-color: rgb(255, 177, 0, 77);
-    /* background-color: #ffb100; */
-    /* filter: opacity(77%); */
+    background-color: rgba(255, 177, 0, 98%);
+} */
+
+#necktile {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-area: b;
+    /* background-color: #747169; */
+}
+
+#leftsleevetile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 157px;
+    /* background-color: rgba(212, 99, 0, 98%); */
+}
+
+#rightsleevetile {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 157px;
+    padding-right: 4px;
+    /* background-color: rgba(255, 177, 0, 98%); */
 }
 
 #neckcollar,
@@ -271,10 +313,6 @@ li, li a, a {
     display: none;
 }
 
-#bodyhip {
-    padding-bottom: 1px;
-}
-
 #rightsleevenarrowshort {
     padding-top: 3px;
 }
@@ -290,29 +328,64 @@ li, li a, a {
     padding-bottom: 8px;
 }
 
-#lowerrighttile,
 #lowerlefttile {
-    z-index: -1;
-    /* background-color: #464646; */
+    width: 320%;
+    height: 40px;
+}
+
+#garmentgrid img {
+    padding-bottom: 130px;
+}
+
+#garmentgrid #bodycropped,
+#garmentgrid #bodylong,
+#garmentgrid #bodyhip {
+    padding-bottom: 198px;
+}
+
+.row {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 153.24px;
+}
+
+#lowerlefttile {
+    display: block;
+    position: absolute;
+    top: 55vw;
     background-color: #b7b3a7;
-    height: 66px;
+    height: 202px;
+    width: 394px;
+    width: 100vw;
+}
+
+#lowerlefttile > p {
+    display: flex;
+    background-color: #b7b3a7;
+    width: 380px;
+    height: 50px;
+    left: 0;
+    margin: 20px 10px 15px 10px;
+
+    /* height: auto; */
+    /* flex-direction: column; */
+    align-content: flex-start;
+    margin-bottom: 40px;
 }
 
 #whatYouNeed {
-    display: flex;
-    max-width: 512px;
-    max-height: 440px;
-    flex-direction: column;
-    justify-content: left;
-    padding: 20px 40px 25px 30px;
-    z-index: 20;
-    position: relative;
-    background: none;
+    display: block;
     color:#e9e7e7;
-    max-width: 640px;
+    flex-direction: column;
+    max-width: 500px;
     line-height: 1.8rem;
+    margin-top: 10%;
     text-align: left;
+    justify-content: left;
 }
+
+
 
 .intro {
     padding: 8vw 8vw 0 8vw;
@@ -338,15 +411,29 @@ li, li a, a {
 }
 
 #downloadwrapper {
-    padding: 33px 10px;
-    justify-content: space-evenly;
+    /* padding: 10px; */
     display: flex;
-    margin: auto;
-    height: auto;
-    position: absolute;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    /* display: block; */
+    
+    justify-items: center;
+ 
+    position: fixed;
+    z-index: 110;
+    /* top: 600px; */
+    max-height: 210px;
+    top: 153.28;
     left: 0;
-    top: 77vh;
-    width: 100%;
+    width: 100vw;
+    padding: none;
+    margin: 0 auto;
+}
+
+.patternThumb img {
+    max-height: 190px;
+    padding: 10px;
 }
 
 .patternThumb:hover img {
@@ -367,10 +454,6 @@ li, li a, a {
               0 32px 16px rgba(0,0,0,0.09);
 }
 
-.patternThumb img {
-    /* max-height: 180px; */
-}
-
 #tshirtGridPattern,
 #patternTshirtGrid,
 #patternNecklineRound,
@@ -385,10 +468,6 @@ li, li a, a {
     background-color:#ad750b;
     background-color:#c9a96f;
 }
-
-/* .patterns .img-fluid {
-    height: 100%;
-} */
 
 h5 {
     padding-top: 10px;
@@ -467,8 +546,8 @@ input {
     display: flex;
 }
 
-.mu-dark-slate {
-    background-color: RGB(40, 38, 39);
+#garmentgrid {
+    left: 0;
 }
 
 .instructions  {
@@ -500,11 +579,11 @@ input {
 @media (max-width: 600px) { 
 
     nav {
-       display: block;
-       justify-items: center;
-       justify-content: center;
-       width: 100%;
-       left: 0;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        width: 100%;
+        left: 0;
     }
 
     .navbar-nav {
@@ -518,53 +597,34 @@ input {
 
     #navbar-brand {
         justify-self: center;
-        display: flex;
+        display: grid;
+        place-self: center;
+        left: 0;
+        width: 100vw;
         margin: 0 auto;
     }
 
-    /* #gridwrapper {
-        position: absolute;
-        top: 400px;
-    } */
-
-    /* #garmentgrid {
-        position: absolute;
-        top: 400px;
-    } */
-
     #downloadwrapper {
-        /* max-height: 130px; */
-        position: absolute;
-        top: 77vw;
-        height: auto;
-        width: 100vw;
-        justify-content: space-evenly;
+        width: 33vw;
+        position:absolute;
+        margin-left: 66vw;
+        top: 40px;
+        height: 100vh;
+        background-color: none;;
+        flex-direction: row;
     }
 
     .patternThumb {
-        padding: 20px 20px;
+       
         min-height: 35vw;
     }
-
-    .gridwrapper {
-        display: flex;
-    }
-
-    /* .navbar {
-        justify-content: center;
-    } */
-
-    /* .navbar-brand {
-        padding-left: 40px;
-    } */
 
     a {
         font-size: 14px;
     }
 
-    .row {
-        background-color: rgb(43, 43, 43);
-        background-color: lightblue;
+    html {
+        background-color: none;;
     }
  }
 

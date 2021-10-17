@@ -19,7 +19,7 @@
 
         <header id="makeuseheader">
         <!-- <header id="makeuseheader" class="container-fluid"> -->
-            <nav class="navbar clearfix t-light fixed-top">
+            <nav class="navbar t-light">
                 <!-- <a href="https://makeuse.nz/"> -->
                 <a href="https://makeuse.nz/" class="navbar-brand">
                     <!-- <span class="navbar-brand"><img id="makeuse-logo" src="assets/images/makeuse-logo.png" alt="Make/Use Logo"> -->
@@ -41,9 +41,9 @@
             </nav>
         </header>
         
-        <section id="croptshirt-from-template" class="container-flex">
+        <section id="croptshirt-from-template" class="container-fluid">
             <div id="gridwrapper" class="row">
-                <div id="garmentgrid" class="col-12 col-lg-6">
+                <!-- <div id="garmentgrid" class="col-12 col-md-6">
                     <div id="leftsleevetile">
                         <img id="leftsleevewideshort" src="assets/images/leftsleevewideshort.png" alt="">
                         <img id="leftsleevewidelong" src="assets/images/leftsleevewidelong.png" alt="">
@@ -64,22 +64,101 @@
                         <img id="rightsleevewidelong" src="assets/images/rightsleevewidelong.png" alt="">
                         <img id="rightsleevewideshort" src="assets/images/rightsleevewideshort.png" alt="">
                     </div>
-                    <div id="lowerlefttile"></div>
+                    <div id="lowerlefttile">
+                        <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will calculate how much fabric you need and display the pattern downloads required to make your chosen style.</p>
+                        <br>
+                        <p id="fabricRequired">Fabric needed: 110cm wide x 75cm long</p>
+                    </div>
                     <div id="bodytile">
                         <img id="bodycropped" src="assets/images/bodycropped.png" alt="">
                         <img id="bodyhip" src="assets/images/bodyhip.png" alt="">
                         <img id="bodylong" src="assets/images/bodylong.png" alt="">
                     </div>
                     <div id="lowerrighttile"></div>
-                </div>
-                <div id="whatYouNeed" class="col-12 col-md-6">
-                    <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This updates fabric size and pattern template downloads required to make your chosen style.</p>
-                    <br>
-                    <p id="fabricRequired">Fabric needed: 110cm wide x 75cm long</p>
+                </div> -->
+
+                <div id="garmentgrid" class="col-12 col-md-6">
+                    <div id="leftsleevetile">
+                        <img id="leftsleevewideshort" src="assets/images/leftsleevewideshort.png" alt="">
+                        <img id="leftsleevewidelong" src="assets/images/leftsleevewidelong.png" alt="">
+                        <img id="leftsleevenarrowshort" src="assets/images/leftsleevenarrowshort.png" alt="">
+                        <img id="leftsleevenarrowlong" src="assets/images/leftsleevenarrowlong.png" alt="">
+                    </div>
+                    <div id="necktile">
+                        <img id="neckround" src="assets/images/neckround.png" alt="">
+                        <img id="neckroundHover" src="assets/images/neckroundhover.png" alt="">
+                        <img id="neckcollar" src="assets/images/neckcollar.png" alt="">
+                        <img id="neckcollarHover" src="assets/images/neckcollarhover.png" alt="">
+                        <img id="neckwide" src="assets/images/neckwide.png" alt="">
+                        <img id="neckwideHover" src="assets/images/neckwidehover.png" alt="">
+                    </div>
+                    <div id="rightsleevetile">
+                        <img id="rightsleevenarrowlong" src="assets/images/rightsleevenarrowlong.png" alt="">
+                        <img id="rightsleevenarrowshort" src="assets/images/rightsleevenarrowshort.png" alt="">
+                        <img id="rightsleevewidelong" src="assets/images/rightsleevewidelong.png" alt="">
+                        <img id="rightsleevewideshort" src="assets/images/rightsleevewideshort.png" alt="">
+                    </div>
+                    <div id="lowerlefttile">
+                        <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will calculate how much fabric you need and display the pattern downloads required to make your chosen style.</p>
+                        <br>
+                        <p id="fabricRequired">Fabric needed: 110cm wide x 75cm long</p>
+                    </div>
+                    <div id="bodytile">
+                        <img id="bodycropped" src="assets/images/bodycropped.png" alt="">
+                        <img id="bodyhip" src="assets/images/bodyhip.png" alt="">
+                        <img id="bodylong" src="assets/images/bodylong.png" alt="">
+                    </div>
+                    <div id="lowerrighttile"></div>
+                    <!-- <span class="fabricneeds"><p id="fabricRequired">Fabric required: <br> 110cm wide x 75cm long</p></span> -->
                 </div>
             </div>
 
+                
             <div id="downloadwrapper" class="row">
+                    <!-- <div class="col-xl-1"></div> -->
+                    <div id="pattern-tshirt-grid" class="patternThumb col-10 col-md-3 col-xl-2">
+                        <a id="patternTshirtGrid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
+                            <span><img id="tshirtGridPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/tshirt-grid-pattern-preview.png" alt="Make/Use grid-template pattern, essential resource for making all variations of the MakeUse Crop-Tshirt."></span>
+                        </a>
+                    </div>
+                    <div id="patternThumbRound" class="patternThumb col-10 col-md-3 col-xl-2">
+                        <a id="patternNecklineRound" href="assets/downloads/print-temp-round-neck.pdf">
+                            <span><img id="neckRoundPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt="Make/Use template pattern for round-neck version of Tshirt."></span>
+                        </a>
+                    </div>
+                    <div id="patternThumbCollar" class="patternThumb col-10 col-md-3 col-xl-2">
+                        <a id="patternNecklineCollar" href="assets/downloads/print-temp-collar-neck.pdf">
+                            <span><img id="neckCollarPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreviewtest.png" alt="Make/Use template pattern for collar-neck version of Tshirt."></span>
+                        </a>
+                    </div>
+                    <div id="patternThumbWide" class="patternThumb col-10 col-md-3 col-xl-2">
+                        <a id="patternNecklineWide" href="assets/downloads/print-temp-wide-neck.pdf">
+                            <span><img id="neckWidePattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/wideneckpatternpreview.png" alt="Make/Use template pattern for wide-neck version of Tshirt."></span>
+                        </a>
+                    </div>
+                    <!-- ------------------------------update image asset when file provided------------------------------------- -->
+                    <div class="patternThumb col-10 col-md-3 col-xl-2">
+                        <a id="patternSleeveCutLeft" href="assets/downloads/sleevecutleft.pdf">
+                            <span><img id="sleeveLeftPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
+                        </a>
+                    </div>
+                    <!-- ------------------------------update image asset when file provided------------------------------------- -->
+                    <div class="patternThumb col-10 col-md-3 col-xl-2">
+                        <a id="patternSleeveCutRight" href="assets/downloads/sleevecutright.pdf">
+                            <span><img id="sleeveRightPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreview.png" alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
+                        </a>
+                    </div>
+                    <!-- <div class="d-none col-xl-1"></div> -->
+                </div>
+
+                <!-- <div id="whatYouNeed" class="col-12 col-md-6">
+                    <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will calculate how much fabric you need and display the pattern downloads required to make your chosen style.</p>
+                    <br>
+                    <p id="fabricRequired">Fabric needed: 110cm wide x 75cm long</p>
+                </div> -->
+            </div>
+
+            <!-- <div id="downloadwrapper" class="row">
                 <div id="pattern-tshirt-grid" class="patternThumb col-5 col-md-3">
                     <a id="patternTshirtGrid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
                         <span><img id="tshirtGridPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/tshirt-grid-pattern-preview.png" alt="Make/Use grid-template pattern, essential resource for making all variations of the MakeUse Crop-Tshirt."></span>
@@ -100,24 +179,27 @@
                         <span><img id="neckWidePattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/wideneckpatternpreview.png" alt="Make/Use template pattern for wide-neck version of Tshirt."></span>
                     </a>
                 </div>
-                <!-- ------------------------------update image asset when file provided------------------------------------- -->
+                
+
                 <div class="patternThumb col-5 col-md-3">
                     <a id="patternSleeveCutLeft" href="assets/downloads/sleevecutleft.pdf">
                         <span><img id="sleeveLeftPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/roundneckpatternpreview.png" alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
                     </a>
                 </div>
-                <!-- ------------------------------update image asset when file provided------------------------------------- -->
+                
+
+
                 <div class="patternThumb col-5 col-md-3">
                     <a id="patternSleeveCutRight" href="assets/downloads/sleevecutright.pdf">
                         <span><img id="sleeveRightPattern" class="thumbs img-fluid" src="assets/images/pattern-thumbs/collarneckpatternpreview.png" alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
                     </a>
                 </div>
-            </div>
+            </div> -->
         </section>
         
             
         
-        <section>
+        <!-- <section>
             <div id="tablewrapper" class="row">
                 <table class="currentStyleTable col container-fluid">
                     <thead>
@@ -180,17 +262,17 @@
                     <li>Line up desired templates with grid and follow instructions printed on them.</li>
                 </ul>
             </div>
-        </section>
+        </section> -->
 
         
-    </div>
+   
 
-    <footer></footer>
+        <!-- <footer></footer> -->
 
     
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
     </body>
 </html>
