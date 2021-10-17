@@ -63,6 +63,9 @@ body {
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
     list-style-type: none;
+    display: flex;
+    max-width: 1024px;
+    margin: 0 10px;;
 }
 
 #croptshirt-from-template {
@@ -189,8 +192,14 @@ li, li a, a {
     
     /* max-width: 1024px; */
     flex-direction: column;
-    margin: 0 auto;
+    margin: 30px auto 0 30px;
+    width: fit-content;
     /* z-index:2000; */
+    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+          0 4px 2px rgba(0,0,0,0.09), 
+          0 8px 4px rgba(0,0,0,0.09), 
+          0 16px 8px rgba(0,0,0,0.09),
+          0 32px 16px rgba(0,0,0,0.09);
 }
 
 #gridwrapper {
@@ -201,12 +210,14 @@ li, li a, a {
     justify-content: center;
     justify-items: center;
     /* background-color: rgb(43, 43, 43); */
-    left: calc(100vw - (1024 / 2));
-    top:200px;
+    position: absolute;
+    left: 0;
+    top:400px;
     height: fit-content;
     margin: 0 auto;
     /* z-index: 400; */
-    top: 100px;
+    top: 240px;
+    
 }
 
 #croptshirt-from-template {
@@ -266,7 +277,10 @@ li, li a, a {
     justify-content: center;
     align-items: center;
     grid-area: b;
-    /* background-color: #747169; */
+    background-color: #747169;
+    background-color: #cfbf9a;
+    background-color: rgba(40, 38, 39, 0.685)
+    /* border: 1px solid grey; */
 }
 
 #leftsleevetile {
@@ -274,7 +288,8 @@ li, li a, a {
     justify-content: center;
     align-items: center;
     padding-top: 157px;
-    /* background-color: rgba(212, 99, 0, 98%); */
+    background-color: rgba(212, 99, 0, 98%);
+    /* border: 1px solid grey; */
 }
 
 #rightsleevetile {
@@ -283,7 +298,8 @@ li, li a, a {
     display: flex;
     padding-top: 157px;
     padding-right: 4px;
-    /* background-color: rgba(255, 177, 0, 98%); */
+    background-color: rgba(255, 177, 0, 98%);
+    /* border: 1px solid grey; */
 }
 
 #neckcollar,
@@ -320,11 +336,6 @@ li, li a, a {
     padding-bottom: 8px;
 }
 
-#lowerlefttile {
-    width: 320%;
-    height: 40px;
-}
-
 #garmentgrid img {
     padding-bottom: 130px;
 }
@@ -335,26 +346,19 @@ li, li a, a {
     padding-bottom: 198px;
 }
 
-.row {
-    width: 100vw;
-    position: absolute;
-    left: 0;
-    top: 153.24px;
-}
-
 #lowerlefttile {
     display: block;
-    position: absolute;
-    top: 55vw;
-    background-color: #b7b3a7;
+    position: relative;
+    /* background-color: #b7b3a7; */
     height: 202px;
     width: 394px;
     width: 100vw;
+    color: #e9e7e7;
+    left: 0;
 }
 
 #lowerlefttile > p {
     display: flex;
-    background-color: #b7b3a7;
     width: 380px;
     height: 50px;
     left: 0;
@@ -376,8 +380,6 @@ li, li a, a {
     text-align: left;
     justify-content: left;
 }
-
-
 
 .intro {
     padding: 8vw 8vw 0 8vw;
@@ -402,25 +404,44 @@ li, li a, a {
     display: table;
 }
 
+#downloadwrapper > .row {
+    width: 1fr;
+    padding: 30px 20px 30px 20px;
+    position: absolute;
+    left: 0;
+    top: 153.24px;
+    justify-content: center;
+}
+
 #downloadwrapper {
     /* padding: 10px; */
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    justify-items: center;
-    /* display: block; */
-    
-    justify-items: center;
- 
-    position: fixed;
+    /* justify-content: center;
+    align-content: center;
+    justify-items: center; */
+    /* position: relative; */
+    /* position: fixed; */
     z-index: 110;
     /* top: 600px; */
     max-height: 210px;
+    /* left: 0; */
     top: 153.28;
-    left: 0;
+    /* left: 0; */
     width: 100vw;
-    padding: none;
+    /* padding: 0 20% 0 20%;
+    margin: 0 auto; */
     margin: 0 auto;
+}
+
+#downloads {
+    margin: 0 auto;
+    max-width: 1024px;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 15px 50px 15px;
+    /* width: 100vw; */
 }
 
 .patternThumb img {
@@ -650,19 +671,21 @@ input {
         left: 0;
     }
 
-    #downloadwrapper {
-        width: 33vw;
-        position:absolute;
-        margin-left: 66vw;
-        top: 40px;
-        height: 100vh;
-        background-color: none;;
-        flex-direction: row;
+    #gridwrapper {
+        border: 1px solid pink;
     }
 
-    .patternThumb {
+    #downloadwrapper {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        position:absolute;
+        left: 0;
+        /* right: 0; */
+        flex-direction: row;
+        background-color: none;
+        border: 1px solid yellow;
        
-        min-height: 35vw;
     }
 
     a {
@@ -676,9 +699,9 @@ input {
 
 @media (min-width: 960px) {
 
-    #whatYouNeed {
+    /* #whatYouNeed {
         margin-top: 300px;
-    }
+    } */
 
     #downloadwrapper {
         background-color: #b7b3a7;
