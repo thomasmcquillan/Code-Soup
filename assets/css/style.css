@@ -184,7 +184,6 @@ li, li a, a {
     grid-template-rows: 398px 0px;
     grid-template-areas: "a b c"
                          ". d .";
-    z-index: 100;
     height: 399px;
     /* width: 100vw; */
     place-self: center;
@@ -192,8 +191,8 @@ li, li a, a {
     
     /* max-width: 1024px; */
     flex-direction: column;
-    margin: 30px auto 0 30px;
-    width: fit-content;
+    margin: 15px auto 0 15px;
+    /* width: fit-content; */
     /* z-index:2000; */
     box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
           0 4px 2px rgba(0,0,0,0.09), 
@@ -210,13 +209,13 @@ li, li a, a {
     justify-content: center;
     justify-items: center;
     /* background-color: rgb(43, 43, 43); */
-    position: absolute;
-    left: 0;
-    top:400px;
+    /* position: absolute; */
+    /* left: 0; */
+    /* top:400px; */
     height: fit-content;
     margin: 0 auto;
     /* z-index: 400; */
-    top: 240px;
+    /* top: 240px; */
     
 }
 
@@ -226,18 +225,6 @@ li, li a, a {
     margin: 0 auto;
     display: flex;
     position: absolute;
-}
-
-.fabricneeds p {
-    display: block;
-    /* border: 1px solid green; */
-    color: #e9e7e7;
-    position: fixed;
-    z-index: 5000;
-    height: 60px;
-    width: 200px;
-    top: 500px;
-    left: 100px;
 }
 
 #bodytile {
@@ -411,6 +398,10 @@ li, li a, a {
     left: 0;
     top: 153.24px;
     justify-content: center;
+    max-width: 1024px;
+    display: flex;
+    align-content: center;
+
 }
 
 #downloadwrapper {
@@ -425,23 +416,27 @@ li, li a, a {
     z-index: 110;
     /* top: 600px; */
     max-height: 210px;
+    margin: 15px 15px 0 15px;
     /* left: 0; */
     top: 153.28;
     /* left: 0; */
-    width: 100vw;
-    /* padding: 0 20% 0 20%;
-    margin: 0 auto; */
-    margin: 0 auto;
+    width: calc(100vw - (26px / 2));
+    
 }
 
 #downloads {
-    margin: 0 auto;
-    max-width: 1024px;
+    /* max-width: 1024px; */
     display: flex;
+    align-items: center;
     margin: 0 auto;
-    width: 100%;
+    width: 1fr;
     padding: 20px 15px 50px 15px;
     /* width: 100vw; */
+}
+
+.fabricsize {
+    margin-top: 20px;
+    color: #e9e7e7;
 }
 
 .patternThumb img {
@@ -487,37 +482,31 @@ h5 {
     padding-bottom: 5px;
 }
 
-#tablewrapper {
+/* #tablewrapper {
     margin: 0 auto;
     height: fit-content;
     padding: 10px 0 15px 0;
     background-color: #5c5c5c;
-}
+} */
 
 table {
-    color:#fffefe !important;
+    color:#fffefe;
     border-collapse: collapse;
     justify-content: space-between;
     justify-items: space-between;
-    width: 100vw;
-    margin: 0 auto 0 0px;
-    padding: 35px 0 40px 50px;
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
+    /* margin: 0 auto 0 0px;
+    padding: 35px 0 40px 50px; */
+    display: block;
 }
 
-#currentStyleTable {
-    color:#fffefe;
-}
+/* .custom-size-input th,
+.custom-size-input td {
+    width: fit-content;
+} */
 
-#customStyleTable {
-    color:#fffefe;
-    padding: none;
-    right: 0;
-}
-
-table th {
-    padding-bottom: 15px;
+.garmentsizestable {
+    width: 100%;
 }
 
 td, th {
@@ -593,14 +582,15 @@ input {
 
     body {
         display: flex;
-        width: 100vw;
+        max-width: 100%;
         justify-content: center;
-        left: 0;
+        
     }
 
     html { 
         display: flex;
         justify-content: center;
+        max-width: 100%;
     }
 
     nav {
@@ -671,39 +661,38 @@ input {
         left: 0;
     }
 
-    #gridwrapper {
+    #gridwrapper,
+    #garmentgrid {
         border: 1px solid pink;
     }
 
     #downloadwrapper {
-        width: 100vw;
-        display: flex;
-        justify-content: space-evenly;
-        position:absolute;
-        left: 0;
+        /* width: 100vw;
+        display: flex; */
+        /* justify-content: space-evenly; */
+        position: relative;
         /* right: 0; */
-        flex-direction: row;
+        
+        /* width: 1fr;
         background-color: none;
-        border: 1px solid yellow;
+        border: 1px solid yellow; */
        
+    }
+
+    /* #patternThumb img {
+        max-height: 100px;
+    } */
+
+    #downloads {
+        border: 1px solid black;
     }
 
     a {
         font-size: 14px;
     }
-
-    html {
-        background-color: none;;
-    }
  }
 
 @media (min-width: 960px) {
 
-    /* #whatYouNeed {
-        margin-top: 300px;
-    } */
-
-    #downloadwrapper {
-        background-color: #b7b3a7;
-    }
+    
 }
