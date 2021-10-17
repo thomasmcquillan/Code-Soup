@@ -51,10 +51,46 @@ $("#garmentgrid").children().click(function() {
 $("#customInputBodyLength").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
+            if ($( "#customInputBodyLength" ).val() > 0) {
             let customBodyLength = parseInt($( "#customInputBodyLength" ).val(), 10);
+            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+        } else { 
+            $(".fabricsize").text('Custom values will update fabric size required, but will not be updated in the illustration.');
+            $("#bodytile img").css('filter', 'blur(3px) invert(8)');
+            }
+        }
+    });
+
+
+
+
+
+$("#customInputBodyCircum").keydown(function(event) {
+    if (
+        (event.key === "Enter" || event.key == "Tab")) {
+
+            let customBodyCircum = parseInt($( "#customInputBodyCircum" ).val(), 10);
+
             $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         }
 });
+
+$("#customInputBodyCircum").keydown(function(event) {
+    if (
+        (event.key === "Enter" || event.key == "Tab")) {
+            let customBodyCircum = parseInt($( "#customInputBodyCircum" ).val(), 10);
+            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+        }
+});
+
+$("#customInputSleeveCircum").keydown(function(event) {
+    if (
+        (event.key === "Enter" || event.key == "Tab")) {
+            let customBodyCircum = parseInt($( "#customInputBodyCircum" ).val(), 10);
+            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+        }
+});
+
 
 // Click event to run when user clicks
 // the neckline-tile of garment.
