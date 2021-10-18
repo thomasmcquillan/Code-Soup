@@ -1,0 +1,391 @@
+/* \\---  Global variables  ---// */
+
+html, body {
+    overflow: hidden;
+    padding: 0;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* \\---  Header & Navigation  ---// */
+
+/* body {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    left: 0;
+    margin: 0;
+}  */
+
+#makeuseheader {
+    display: flex;
+    height: 200px;
+    padding: 0;
+    position: absolute;
+    width: 100vw;
+    margin: 0 auto;
+    /* box-shadow: 
+        0 2px 1px rgba(0,0,0,0.09), 
+        0 4px 2px rgba(0,0,0,0.09), 
+        0 8px 4px rgba(0,0,0,0.09), 
+        0 16px 8px rgba(0,0,0,0.09),
+        0 32px 16px rgba(0,0,0,0.09); */
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    /* justify-items: center; */
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    background-color: rgb(40, 38, 39);
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items:center;
+    text-align: center;
+    top: 122px;
+    width: 100vw;
+    left: 0;
+    padding: 0 33vw 0 33vw;
+}
+
+.navbar .navbar-brand {
+    display: block;
+    margin: auto;
+}
+
+.navbar .navbar-brand img {
+    justify-self: center;
+    padding-left: 15px;
+    width: 200px;
+    height: 78.26px;
+}
+
+#logo-hover {
+    z-index: 400;
+    display: none;
+    left: auto;
+}
+
+.navbar .nav-item a {
+    padding-left: 20px;
+    justify-self: right;
+}
+
+/* .navbar-brand {
+    padding-right: 16px;
+} */
+
+
+/* .navbar-nav .nav-item a {
+    padding: 0;
+} */
+
+/* \\---  Fonts  ---////////////////////////////// */
+
+li, li a, a {
+    list-style-type: none;
+    font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 5px;
+}
+
+/* \\---  Links  ---////////////////////////////// */
+
+.navbar .nav-item a {
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+    font-weight: 700;
+    color: #fffefe;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.navbar .nav-item a:hover {
+    color: #ffb100;
+}
+
+/* \\---  Colors  ---///////////////////////////// */
+
+.t-light {
+    color: #fffefe;
+}
+
+.t-dark {
+    color: #5c5c5c;
+}
+
+.t-gray {
+    color: #888;
+}
+
+.bg-dark-slate {
+    background-color: RGB(40, 38, 39);
+}
+
+
+
+.header-nav .header-nav__link:active {
+    color: #ffd066;
+}
+
+.bg--slate, .color--slate,
+.breadcrumb {
+    background-color: #4a494a;
+}
+
+.bg--silver, .color--silver {
+    background-color: #d7d7d7;
+}
+.bg--sand {
+    background-color: #b7b3a7;
+}
+.bg--orange, .color--orange {
+    background-color: #d46300;
+}
+
+/* \\---  Body Layout  ---// */
+
+.makeuse-tshirt {}
+
+/* \\---  Garment Grid  ---/////////////////////// */
+
+#garmentgrid {
+    padding: 0;
+    display: grid;
+    grid-template-areas: "a b c"
+                         ". d .";
+    grid-template-columns: 122px 149px 123px;
+    grid-template-rows: 398px 0px;
+    padding: 0;
+    flex-direction: column;
+}
+
+#garmentgrid img {
+    padding-bottom: 130px;
+}
+
+#garmentgrid #bodycropped,
+#garmentgrid #bodylong,
+#garmentgrid #bodyhip {
+    padding-bottom: 198px;
+}
+
+#bodytile {
+    display: flex;
+    margin-bottom: 107px;
+    align-items: center;
+    grid-area: d;
+}
+
+#necktile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: b;
+    background-color: rgba(40, 38, 39, 0.685)
+}
+
+#leftsleevetile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 157px;
+    grid-area: a;
+    background-color: rgba(212, 99, 0, 98%);
+}
+
+#rightsleevetile {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 157px;
+    padding-right: 4px;
+    background-color: rgba(255, 177, 0, 98%);
+}
+
+#neckcollar,
+#neckwide,
+#neckcollarHover,
+#neckroundHover,
+#neckwideHover,
+#bodyhip, #bodylong,
+#leftsleevenarrowshort,
+#leftsleevenarrowlong,
+#leftsleevewidelong,
+#rightsleevenarrowshort,
+#rightsleevenarrowlong,
+#rightsleevewidelong,
+#patternThumbWide,
+#patternThumbCollar,
+#patternNeckRound > a,
+#patternNeckWide > a {
+    display: none;
+}
+
+#rightsleevenarrowshort {
+    padding-top: 3px;
+}
+
+#leftsleevewideshort {
+    padding-top: 9px;
+}
+#rightsleevewideshort {
+    padding-top: 4px;
+}
+
+#leftsleevewidelong {
+    padding-bottom: 8px;
+}
+
+#lowerlefttile {
+    display: block;
+    position: relative;
+    height: 202px;
+    width: 100vw;
+    color: #e9e7e7;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////// */
+
+/* \\---  Animations  ---// */
+
+
+
+
+/* \\---  Media Queries  ---// */
+
+/* // Small devices (landscape phones, 576px and up)
+
+
+
+
+*/
+
+@media (min-width: 576px) {
+
+
+    #makeuseheader {
+        background-color: rgb(40, 38, 39);
+        display: block;
+        width: 100vw;
+        margin: 0 auto;
+        border: 1px solid pink;
+        height: 153px;
+    }
+
+    nav {
+        background-color: rgb(40, 38, 39);
+        display: flex;
+        flex-direction: row;
+        min-width: 100vw;
+        justify-content: right;
+    }
+
+    .navbar {
+        background-color: rgb(40, 38, 39);
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: right;
+        position: absolute;
+        left: 0;
+        /* width: 100%; */
+        padding: 20px 15px 50px 15px;
+        margin: 0 auto;
+    }
+
+    .navbar {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px 15px 50px 15px;
+        max-width: 1024px;
+        z-index: 1000;
+    }
+
+    .navbar .navbar-nav {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        color: #fffefe;
+        text-decoration: none;
+        justify-content: flex-end;
+        font-weight: 700;
+        width: 100vw;
+        position: absolute;
+        padding-right: 0;
+        text-align: right;
+        top: 78px;
+        border: 1px solid yellow;
+    }
+
+    .navbar .navbar-brand {
+        justify-content: flex-start;
+        margin: auto auto auto 15px;
+        left: 15px;
+    }
+/*     
+    nav .navbar-nav {
+        padding: none;
+            display: flex;
+            flex-direction: row;
+            justify-items: right;
+            justify-content: right;
+            font-size: 14px;
+            color: #fffefe;
+            text-decoration: none;
+            font-weight: 700;
+            position: absolute;
+            width: 100vw;
+            left: 0;
+            top: 78px;
+            z-index: 1001;
+        } */
+        
+        /* .navbar-nav .nav-item a {
+            padding-left: 20px;
+            justify-self: right;
+            z-index:3000;
+        } */
+    }
+
+    @media (min-width: 992px) { 
+        html {
+            min-width: 960px;
+            overflow: hidden;
+        }
+    }
+
+/* // Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) { */
+/* 
+// Large devices (desktops, 992px and up)
+
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... } 
+ */
