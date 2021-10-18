@@ -188,11 +188,12 @@ li, li a, a {
         0 8px 4px rgba(0,0,0,0.09), 
         0 16px 8px rgba(0,0,0,0.09),
         0 32px 16px rgba(0,0,0,0.09); */
+        margin: 190px auto 30px 15px;
 }
 
 #garmentgrid {
     display: inline-grid;
-    grid-template-columns: 31% 37.8% 31.2%;
+    grid-template-columns: 31% 37% 31%;
     grid-template-rows: 1fr 0;
     grid-template-areas:    "a b c"
                             ". d .";
@@ -206,7 +207,17 @@ li, li a, a {
     /* flex-direction: column; */
 }
 
-#garmentgrid {
+#garmentgrid div {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* #garmentgrid img {
+    max-width: 100%;
+    height: auto;
+} */
+
+/* #garmentgrid {
     display: grid;
     grid-template-areas: "a b c"
                          ". d .";
@@ -214,12 +225,7 @@ li, li a, a {
     grid-template-rows: 398px 0px;
     padding: 0;
     flex-direction: column;
-    margin: 15px auto 0 15px;
-    
-    
-    margin: 0;
-    margin-top: 100px;
-}
+} */
 
 #garmentgrid img {
     padding-bottom: 130px;
@@ -405,7 +411,7 @@ li, li a, a {
     line-height: 24px;
 }
 
-.clearfix {
+/* .clearfix {
     overflow: auto;
 }
 
@@ -413,17 +419,13 @@ li, li a, a {
     content: "";
     clear: both;
     display: table;
-}
+} */
 
 #downloadwrapper > .row {
-    width: 1fr;
-    /* padding: 30px 20px 30px 20px; */
-    
     position: absolute;
     left: 0;
-    top: 153.24px;
+    top: 660px;
     justify-content: center;
-    
     display: flex;
     align-content: center;
 }
@@ -434,8 +436,8 @@ li, li a, a {
     max-height: 210px;
     /* margin: 15px 15px 20px 15px; */
     top: 153.28;
-    width: calc(100vw - (26px / 2));
-    max-width: 1024px;
+    /* width: calc(100vw - (26px / 2));
+    max-width: 1024px; */
     margin: 20px 20px 20px 20px;
 }
 
@@ -650,7 +652,7 @@ input {
         justify-content: center;
         left: 0;
     }
-    
+
     a {
         font-size: 14px;
     }
