@@ -44,45 +44,56 @@
 /* makeuse specific styles end
 --------------------------------------- */
 
+html, body {
+    overflow: hidden;
+    padding: 0;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
 body { 
     /* color: #5c5c5c;  */
     scroll-behavior: smooth;
-    position: absolute;
+    /* display: flex; */
+    
+    top: 288px;
+    
     background-color: #4a494a;
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
     list-style-type: none;
-    display: flex;
-    max-width: 1024px;
-    margin: 0 10px;
-    background-color: #cfbf9a;
-    background-color: #b7b3a7;
+    /* display: flex; */
+    /* margin: 0 10px; */
     background-color: #c8c5b5;
-    background-color: #fffefe;
+    /* background-color: #b7b3a7; */
+    /* background-color: #c8c5b5; */
+    /* background-color: #fffefe; */
 }
 
-/* .container-flex, .col-12 { 
-    max-width: 960px;
-} */
-
-#croptshirt-from-template {
+#crop-t-from-template {
+    scroll-behavior: smooth;
     display: flex;
-    height: 100vh;
-    margin: 0 auto;
-    position: absolute;
+    position: static;
+    top: 154px;
+    
+    background-color: #4a494a;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* #croptshirt-from-template {
+    display: flex;
+    position: fixed;
     top: 153.27px;
     top: 288px;
-    left: -10vw;
     background-color: #d7d7d7;
-}
+} */
 
 #makeuseheader {
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 153.27px;
+    display: flex;
+    position: absolute;
+    /* position: fixed; */
     z-index: 555;
     background-color: #4a494a;
     background-color: rgb(40, 38, 39);
@@ -165,45 +176,68 @@ li, li a, a {
     padding-bottom: 5px;
 }
 
-#garmentgrid {
-    display: grid;
-    grid-template-columns: 122px 149px 123px;
-    grid-template-rows: 398px 0px;
-    grid-template-areas: "a b c"
-                         ". d .";
-    height: 399px;
-    width: 396px;
-    padding: 0;
+#gridwrapper {
+    display: flex;
     flex-direction: column;
-    margin: 15px auto 0 15px;
-    box-shadow: 
+    max-width: 100%;
+    height: auto;
+    background-color: none;
+    /* box-shadow: 
         0 2px 1px rgba(0,0,0,0.09), 
         0 4px 2px rgba(0,0,0,0.09), 
         0 8px 4px rgba(0,0,0,0.09), 
         0 16px 8px rgba(0,0,0,0.09),
-        0 32px 16px rgba(0,0,0,0.09);
+        0 32px 16px rgba(0,0,0,0.09); */
+}
+
+#garmentgrid {
+    display: inline-grid;
+    grid-template-columns: 31% 37.8% 31.2%;
+    grid-template-rows: 1fr 0;
+    grid-template-areas:    "a b c"
+                            ". d .";
+    /* grid-template-columns: 122px 149px 123px;
+    grid-template-rows: 398px 0px;
+    grid-template-areas: "a b c"
+                         ". d ."; */
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+    /* flex-direction: column; */
+}
+
+#garmentgrid {
+    display: grid;
+    grid-template-areas: "a b c"
+                         ". d .";
+    grid-template-columns: 122px 149px 123px;
+    grid-template-rows: 398px 0px;
+    padding: 0;
+    flex-direction: column;
+    margin: 15px auto 0 15px;
+    
+    
     margin: 0;
     margin-top: 100px;
 }
 
-#gridwrapper {
-    display: flex;
-    flex-direction: column;
-    /* background-color: rgb(43, 43, 43); */
-    height: 399px;
-    width: 396px;
-    margin: 20px auto 20px 14px;
-    /* background-color: #ffd066; */
+#garmentgrid img {
+    padding-bottom: 130px;
 }
 
-#croptshirt-from-template {
+#garmentgrid #bodycropped,
+#garmentgrid #bodylong,
+#garmentgrid #bodyhip {
+    padding-bottom: 198px;
+}
+
+/* #croptshirt-from-template {
     width: 100vw;
     left: 0;
     margin: 0 auto;
     display: flex;
     position: absolute;
-
-}
+} */
 
 #bodytile {
     display: flex;
@@ -212,12 +246,12 @@ li, li a, a {
     grid-area: d;
 }
 
-/* #necktile {
-    display: grid;
+#necktile {
+    display: flex;
     justify-content: center;
     align-items: center;
     grid-area: b;
-    background-color: #747169
+    background-color: rgba(40, 38, 39, 0.685)
 }
 
 #leftsleevetile {
@@ -225,6 +259,40 @@ li, li a, a {
     justify-content: center;
     align-items: center;
     padding-top: 157px;
+    grid-area: a;
+    background-color: rgba(212, 99, 0, 98%);
+}
+
+#rightsleevetile {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 157px;
+    padding-right: 4px;
+    background-color: rgba(255, 177, 0, 98%);
+}
+/* ////////////////////////////////////saved garment tiles in case things go wrong */
+/* #bodytile {
+    display: flex;
+    margin-bottom: 107px;
+    align-items: center;
+    grid-area: d;
+}
+
+#necktile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: b;
+    background-color: rgba(40, 38, 39, 0.685)
+}
+
+#leftsleevetile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 157px;
+    grid-area: a;
     background-color: rgba(212, 99, 0, 98%);
 }
 
@@ -236,37 +304,7 @@ li, li a, a {
     padding-right: 4px;
     background-color: rgba(255, 177, 0, 98%);
 } */
-
-#necktile {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-area: b;
-    background-color: #747169;
-    background-color: #cfbf9a;
-    background-color: rgba(40, 38, 39, 0.685)
-    /* border: 1px solid grey; */
-}
-
-#leftsleevetile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 157px;
-    background-color: rgba(212, 99, 0, 98%);
-    /* border: 1px solid grey; */
-}
-
-#rightsleevetile {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding-top: 157px;
-    padding-right: 4px;
-    background-color: rgba(255, 177, 0, 98%);
-    /* border: 1px solid grey; */
-}
-
+/* /////////////////////////////////////// */
 #neckcollar,
 #neckwide,
 #neckcollarHover,
@@ -299,16 +337,6 @@ li, li a, a {
 
 #leftsleevewidelong {
     padding-bottom: 8px;
-}
-
-#garmentgrid img {
-    padding-bottom: 130px;
-}
-
-#garmentgrid #bodycropped,
-#garmentgrid #bodylong,
-#garmentgrid #bodyhip {
-    padding-bottom: 198px;
 }
 
 #lowerlefttile {
@@ -518,10 +546,6 @@ input {
     display: flex;
 }
 
-#garmentgrid {
-    left: 0;
-}
-
 .instructions  {
     /* padding: 15px 150px 20px 15px; */
     line-height: 32px;
@@ -557,7 +581,7 @@ input {
         left: 0;
         margin: 0;
     }
-    
+
     nav {
         display: inline-flex;
         flex-direction: row;
@@ -626,32 +650,18 @@ input {
         justify-content: center;
         left: 0;
     }
-
-    #gridwrapper,
-    #garmentgrid {
-        /* border: 1px solid pink; */
-        left: 0;
-        margin: 0 auto;
-        position: 0;
-    }
-
-    #downloadwrapper {
-        position: relative;
-        border: 1px solid yellow;
-    }
-
-    #downloads {
-        border: 1px solid black;
-    }
-
+    
     a {
         font-size: 14px;
     }
  }
 
 @media (min-width: 960px) {
-    /* html {
-        max-width: 1024px;
-    } */
+    html {
+        min-width: 960px;
+        overflow: hidden;
+    }
+
+    
     
 }
