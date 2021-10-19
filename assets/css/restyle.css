@@ -1,7 +1,7 @@
 /* \\---  Global variables  ---// */
 
 html, body {
-    overflow: hidden;
+    overflow: auto;
     padding: 0;
     margin: auto;
     flex-wrap: wrap;
@@ -12,21 +12,12 @@ html, body {
 
 /* \\---  Header & Navigation  ---// */
 
-/* body {
-    display: flex;
-    max-width: 100%;
-    justify-content: center;
-    left: 0;
-    margin: 0;
-}  */
-
 #makeuseheader {
     display: flex;
     height: 200px;
     padding: 0;
-    position: absolute;
-    width: 100vw;
-    margin: 0 auto;
+    left: 0;
+    margin-bottom: 50px;
     /* box-shadow: 
         0 2px 1px rgba(0,0,0,0.09), 
         0 4px 2px rgba(0,0,0,0.09), 
@@ -38,12 +29,12 @@ html, body {
 nav {
     display: flex;
     flex-direction: row;
-    /* justify-items: center; */
     justify-content: center;
     position: absolute;
     top: 0;
-    /* left: 0; */
-    background-color: rgb(40, 38, 39);
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #4a494a;
 }
 
 .navbar-nav {
@@ -53,9 +44,13 @@ nav {
     justify-items:center;
     text-align: center;
     top: 122px;
-    width: 100vw;
-    left: 0;
+    margin: 0 auto;
     padding: 0 33vw 0 33vw;
+    max-width: 100%;
+}
+
+nav .navbar .navbar-custom {
+    max-width: 100%;
 }
 
 .navbar .navbar-brand {
@@ -81,24 +76,22 @@ nav {
     justify-self: right;
 }
 
-/* .navbar-brand {
-    padding-right: 16px;
-} */
-
-
-/* .navbar-nav .nav-item a {
-    padding: 0;
-} */
-
 /* \\---  Fonts  ---////////////////////////////// */
 
-li, li a, a {
+body {
     list-style-type: none;
     font-family: 'Ubuntu', sans-serif;
-    padding-bottom: 5px;
 }
 
-/* \\---  Links  ---////////////////////////////// */
+.template-intro {
+    /* background-color: #b7b3a7; */
+    color: #5c5c5c;
+    align-content: top;
+    line-height: 1.8rem;
+   
+}
+
+/* \\---  Link Styles  ---////////////////////////////// */
 
 .navbar .nav-item a {
     text-decoration: none;
@@ -133,8 +126,6 @@ li, li a, a {
     background-color: RGB(40, 38, 39);
 }
 
-
-
 .header-nav .header-nav__link:active {
     color: #ffd066;
 }
@@ -156,76 +147,72 @@ li, li a, a {
 
 /* \\---  Body Layout  ---// */
 
-.makeuse-tshirt {}
 
 /* \\---  Garment Grid  ---/////////////////////// */
 
-#garmentgrid {
-    padding: 0;
+#garment-grid-wrapper {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+    grid-template-rows: 1fr 2fr;
+    max-height: auto;
+    margin: 0 0 -30px 0;
+}
+
+.tile-neck {
     display: grid;
-    grid-template-areas: "a b c"
-                         ". d .";
-    grid-template-columns: 122px 149px 123px;
-    grid-template-rows: 398px 0px;
-    padding: 0;
-    flex-direction: column;
+    grid-column: 2;
+    grid-row: 1;
 }
 
-#garmentgrid img {
-    padding-bottom: 130px;
+.tile-body {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2 / 4;
+    align-content: top;
 }
 
-#garmentgrid #bodycropped,
-#garmentgrid #bodylong,
-#garmentgrid #bodyhip {
-    padding-bottom: 198px;
+.tile-sleevetestleft {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    justify-content: right;
 }
 
-#bodytile {
-    display: flex;
-    margin-bottom: 107px;
-    align-items: center;
-    grid-area: d;
+.tile-sleevetestright {
+    display: grid;
+    grid-column: 3;
+    grid-row: 1 / 3;
+    justify-content: left;
 }
 
-#necktile {
-    display: flex;
+/* \\---  Pattern Template Downloads  ---////////////////////////////// */
+
+#downloadwrapper > .row {
+    padding: none;
     justify-content: center;
-    align-items: center;
-    grid-area: b;
-    background-color: rgba(40, 38, 39, 0.685)
-}
-
-#leftsleevetile {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 157px;
-    grid-area: a;
-    background-color: rgba(212, 99, 0, 98%);
+    align-content: center;
 }
 
-#rightsleevetile {
-    justify-content: center;
-    align-items: center;
+#downloadwrapper {
     display: flex;
-    padding-top: 157px;
-    padding-right: 4px;
-    background-color: rgba(255, 177, 0, 98%);
+    justify-content: space-between;
+    margin: 20px 20px 20px 20px;
 }
 
-#neckcollar,
-#neckwide,
-#neckcollarHover,
-#neckroundHover,
-#neckwideHover,
-#bodyhip, #bodylong,
-#leftsleevenarrowshort,
-#leftsleevenarrowlong,
-#leftsleevewidelong,
-#rightsleevenarrowshort,
-#rightsleevenarrowlong,
-#rightsleevewidelong,
+#downloads {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 1fr;
+    padding: 20px 15px 50px 15px;
+}
+
+.fabricsize {
+    margin-top: 20px;
+    color: #e9e7e7;
+}
+
 #patternThumbWide,
 #patternThumbCollar,
 #patternNeckRound > a,
@@ -233,80 +220,139 @@ li, li a, a {
     display: none;
 }
 
-#rightsleevenarrowshort {
-    padding-top: 3px;
+.patternThumb img {
+    padding: 10px;
 }
 
-#leftsleevewideshort {
-    padding-top: 9px;
-}
-#rightsleevewideshort {
-    padding-top: 4px;
+.patternThumb {
+    padding: 0 20px 38px 20px;
 }
 
-#leftsleevewidelong {
-    padding-bottom: 8px;
+.patternThumb:hover img {
+    filter: opacity(55%);
 }
 
-#lowerlefttile {
-    display: block;
-    position: relative;
-    height: 202px;
-    width: 100vw;
-    color: #e9e7e7;
-    left: 0;
+.patternThumb a {
+    display: inline-flex;
+    padding: none;
+    background-color:#ffd066;
+    border: 1px solid #d4b467;
+    transition: ease-in-out 50ms;
+    box-shadow: 
+        0 2px 1px rgba(0,0,0,0.09), 
+        0 4px 2px rgba(0,0,0,0.09), 
+        0 8px 4px rgba(0,0,0,0.09), 
+        0 16px 8px rgba(0,0,0,0.09),
+        0 32px 16px rgba(0,0,0,0.09);
+}
+
+#tshirtGridPattern,
+#patternTshirtGrid,
+#patternNecklineRound,
+#patternNecklineCollar,
+#patternNecklineWide,
+#patternSleeveCutLeft,
+#patternSleeveCutRight {
+    padding: 4px 4px 4px 4px;
+}
+
+.thumbs {
+    background-color:#ad750b;
+    background-color:#c9a96f;
+}
+
+h5 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.table-responsive-lg {
+    color:#fffefe;
+    justify-content:space-between;
+    margin: 15px 20px 15px 20px;
+    margin: auto auto 0px auto;
+    max-width: 85%;
+    padding: 10px 20px 20px 20px;
+}
+
+.table-responsive-lg td, 
+.table-responsive-lg th {
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    color:#fffefe;
+}
+
+tr {
+    line-height: 34px;
+}
+
+th, td {
+    background-color: #c8c5b5;
 }
 
 
+input {
+    border: none;
+    text-align: center;
+    padding-left: 20px;
+    border-radius: 3px;
+    background-color: #c8c5b5;
+    background-color:  #e9e7e7;
+}
 
+.directions {
+    color:#fffefe;
+    margin-left: 30px;
+    font-size: 18px;
+}
 
-
-
-
+#garmentInfoForm h5 {
+    color:#fffefe;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    margin: 0;
+    padding: 30px 0 20px 0;
+    display: flex;
+}
 
 /* /////////////////////////////////////////////////////////// */
 
 /* \\---  Animations  ---// */
 
-
-
-
 /* \\---  Media Queries  ---// */
 
-/* // Small devices (landscape phones, 576px and up)
-
-
-
-
-*/
 
 @media (min-width: 576px) {
 
 
     #makeuseheader {
         background-color: rgb(40, 38, 39);
-        display: block;
-        width: 100vw;
+        display: flex;
+     
         margin: 0 auto;
-        border: 1px solid pink;
         height: 153px;
     }
 
     nav {
-        background-color: rgb(40, 38, 39);
         display: flex;
         flex-direction: row;
-        min-width: 100vw;
-        justify-content: right;
+        /* min-width: 100vw; */
+        max-width: 1024px;
+        margin: 0 auto;
+        justify-content: center;
     }
 
     .navbar {
         background-color: rgb(40, 38, 39);
+        background-color: #4a494a;
         display: flex;
         flex-direction: row;
-        width: 100vw;
-        justify-content: right;
+        max-width: 1024px;
+        justify-self: center;
         position: absolute;
+        height: 153px;
         left: 0;
         /* width: 100%; */
         padding: 20px 15px 50px 15px;
@@ -317,9 +363,12 @@ li, li a, a {
         display: flex;
         margin: 0 auto;
         width: 100%;
-        padding: 20px 15px 50px 15px;
-        max-width: 1024px;
+        padding: 20px 15px 50px 15px; 
         z-index: 1000;
+    }
+
+    nav .navbar .navbar-custom {
+        justify-self: center;
     }
 
     .navbar .navbar-nav {
@@ -331,50 +380,32 @@ li, li a, a {
         text-decoration: none;
         justify-content: flex-end;
         font-weight: 700;
-        width: 100vw;
         position: absolute;
-        padding-right: 0;
+        
         text-align: right;
+        right: 15px;
         top: 78px;
-        border: 1px solid yellow;
+        /* max-width: 1024px; */
     }
 
     .navbar .navbar-brand {
-        justify-content: flex-start;
-        margin: auto auto auto 15px;
-        left: 15px;
+        /* justify-content: flex-start; */
+        margin: auto auto auto 0;
     }
-/*     
-    nav .navbar-nav {
-        padding: none;
-            display: flex;
-            flex-direction: row;
-            justify-items: right;
-            justify-content: right;
-            font-size: 14px;
-            color: #fffefe;
-            text-decoration: none;
-            font-weight: 700;
-            position: absolute;
-            width: 100vw;
-            left: 0;
-            top: 78px;
-            z-index: 1001;
-        } */
-        
-        /* .navbar-nav .nav-item a {
-            padding-left: 20px;
-            justify-self: right;
-            z-index:3000;
-        } */
+    
+    #garment-grid-wrapper {
+        margin: 0 0 -80px 0;
     }
 
-    @media (min-width: 992px) { 
-        html {
-            min-width: 960px;
-            overflow: hidden;
-        }
     }
+
+
+@media (min-width: 992px) { 
+    html {
+        min-width: 960px;
+        overflow: auto;
+    }
+}
 
 /* // Medium devices (tablets, 768px and up)
 
