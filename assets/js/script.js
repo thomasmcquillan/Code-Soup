@@ -96,29 +96,29 @@ $("#customInputSleeveCircum").keydown(function(event) {
 // the neckline-tile of garment.
 
 $(document).ready(function() {
-    $( "#neckroundHover" ).click(function() {
-    $( "#neckroundHover" ).toggle();    // Toggles off current neckline tile.
-    $( "#neckcollarHover" ).toggle();   // Toggles on next available neckline tile.
+    $( "#neckround" ).click(function() {
+    $( "#neckround" ).toggle();    // Toggles off current neckline tile.
+    $( "#neckcollar" ).toggle();   // Toggles on next available neckline tile.
     $(neckRound).toggle();    // Toggles off div containing download for current neckline. 
     $(neckCollar).toggle();   // Toggles on div containing download for next style of neckline.
-    $("#patternThumbCollar a").css("background-color", "#ffb100");
+    // $("#patternThumbCollar a").css("background-color", "#ffb100");
    });
 });
 
-$( "#neckcollarHover" ).click(function() {
-        $( "#neckcollarHover" ).toggle();
-        $( "#neckwideHover" ).toggle();
+$( "#neckcollar" ).click(function() {
+        $( "#neckcollar" ).toggle();
+        $( "#neckwide" ).toggle();
         $(neckCollar).toggle();
         $(neckWide).toggle();
-        $("#patternThumbWide a").css("background-color", "#ffd066");
+        // $("#patternThumbWide a").css("background-color", "#ffd066");
 });
 
-$( "#neckwideHover" ).click(function() {
-    $( "#neckwideHover" ).toggle();
-    $( "#neckroundHover" ).toggle();
+$( "#neckwide" ).click(function() {
+    $( "#neckwide" ).toggle();
+    $( "#neckround" ).toggle();
     $(neckWide).toggle();
     $(neckRound).toggle();
-    $("#patternThumbRound a").css("background-color", "#d46300");
+    // $("#patternThumbRound a").css("background-color", "#d46300");
 });
 
 // Triggered when 'crop' body tile is clicked. 
@@ -253,62 +253,62 @@ $( "#rightsleevenarrowlong" ).click(function() {
 
 // Listener function to trigger else/if conditional statement.
 
-$( "#necktile" ).mouseenter(function() {
-    if($("#neckround").is(":visible")){
-        $( "#neckround" ).toggle();            // Toggles off 'round' neck tile if displayed,
-        $( "#neckroundHover" ).toggle();       // Toggles on colored version of 'round' neck tile.
-    } else if (
-        ($("#neckcollar").is(":visible"))){
-            $( "#neckcollar" ).toggle();
-            $( "#neckcollarHover" ).toggle();
-    } else if (
-        ($("#neckwide").is(":visible"))){
-            $( "#neckwide" ).toggle();
-            $( "#neckwideHover" ).toggle();
-    } else {
-        return;
-    };
-});
+// $( "#necktile" ).mouseenter(function() {
+//     if($("#neckround").is(":visible")){
+//         $( "#neckround" ).toggle();           
+//         $( "#neckround" ).toggle();       
+//     } else if (
+//         ($("#neckcollar").is(":visible"))){
+//             $( "#neckcollar" ).toggle();
+//             $( "#neckcollar" ).toggle();
+//     } else if (
+//         ($("#neckwide").is(":visible"))){
+//             $( "#neckwide" ).toggle();
+//             $( "#neckwide" ).toggle();
+//     } else {
+//         return;
+//     };
+// });
 
 // Else if mouse-leave function to restore neck-tile to unhovered state.
 
-$( "#necktile" ).mouseleave(function() {
-    if($("#neckroundHover").is(":visible")){        // Checks if current neckline is 'round' style,
-        $( "#neckround" ).toggle();                 // toggling off 'hover' image -
-        $( "#neckroundHover" ).toggle();            // and toggling back on original.
-    } else if (                                     // "else if" to check other possible options.
-        ($("#neckround").is(":visible"))){
-            $( "#neckround" ).toggle();
-            $( "#neckroundHover" ).toggle();
-    } else if (
-        ($("#neckcollarHover").is(":visible"))){
-            $( "#neckcollar" ).toggle();
-            $( "#neckcollarHover" ).toggle();
-    }
-    else if (
-        ($("#neckcollar").is(":visible"))){
-            $( "#neckcollar" ).toggle();
-            $( "#neckcollarHover" ).toggle();
-    } 
-    else if (
-        ($("#neckwideHover").is(":visible"))){
-            $( "#neckwide" ).toggle();
-            $( "#neckwideHover" ).toggle();
-    } 
-    else if (
-        ($("#neckwide").is(":visible"))){
-            $( "#neckwide" ).toggle();
-            $( "#neckwideHover" ).toggle();
-    }
-    else {
-        return;
-    };
-});
+// $( "#necktile" ).mouseleave(function() {
+//     if($("#neckroundHover").is(":visible")){       
+//         $( "#neckround" ).toggle();                
+//         $( "#neckroundHover" ).toggle();           
+//     } else if (                                    
+//         ($("#neckround").is(":visible"))){
+//             $( "#neckround" ).toggle();
+//             $( "#neckroundHover" ).toggle();
+//     } else if (
+//         ($("#neckcollarHover").is(":visible"))){
+//             $( "#neckcollar" ).toggle();
+//             $( "#neckcollarHover" ).toggle();
+//     }
+//     else if (
+//         ($("#neckcollar").is(":visible"))){
+//             $( "#neckcollar" ).toggle();
+//             $( "#neckcollarHover" ).toggle();
+//     } 
+//     else if (
+//         ($("#neckwideHover").is(":visible"))){
+//             $( "#neckwide" ).toggle();
+//             $( "#neckwideHover" ).toggle();
+//     } 
+//     else if (
+//         ($("#neckwide").is(":visible"))){
+//             $( "#neckwide" ).toggle();
+//             $( "#neckwideHover" ).toggle();
+//     }
+//     else {
+//         return;
+//     };
+// });
 
 // Site-logo hover the jquery way.
 
 $(document).ready(function() {
-    $( "#makeuse-logo" ).mouseenter(function() {
+    $( "#makeuse-logo" ).mouseover(function() {
     $( "#makeuse-logo" ).toggle();
     $( "#logo-hover" ).toggle();
    });
@@ -324,28 +324,28 @@ $(document).ready(function() {
 // Snippet to avoid hover effects on touch devices borrowed from stackoverflow user "Blade" here:
 // https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
 
-function watchForHover() {
+// function watchForHover() {
    
-    let lastTouchTime = 0
+//     let lastTouchTime = 0
   
-    function enableHover() {
-      if (new Date() - lastTouchTime < 500) return
-      document.body.classList.add('hasHover')
-    }
+//     function enableHover() {
+//       if (new Date() - lastTouchTime < 500) return
+//       document.body.classList.add('hasHover')
+//     }
   
-    function disableHover() {
-      document.body.classList.remove('hasHover')
-    }
+//     function disableHover() {
+//       document.body.classList.remove('hasHover')
+//     }
   
-    function updateLastTouchTime() {
-      lastTouchTime = new Date()
-    }
+//     function updateLastTouchTime() {
+//       lastTouchTime = new Date()
+//     }
   
-    document.addEventListener('touchstart', updateLastTouchTime, true)
-    document.addEventListener('touchstart', disableHover, true)
-    document.addEventListener('mousemove', enableHover, true)
+//     document.addEventListener('touchstart', updateLastTouchTime, true)
+//     document.addEventListener('touchstart', disableHover, true)
+//     document.addEventListener('mousemove', enableHover, true)
   
-    enableHover()
-  }
+//     enableHover()
+//   }
   
-  watchForHover()
+//   watchForHover()
