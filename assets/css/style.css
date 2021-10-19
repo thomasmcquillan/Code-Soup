@@ -306,24 +306,7 @@ li, li a, a {
     background-color: rgba(255, 177, 0, 98%);
 } */
 /* /////////////////////////////////////// */
-#neckcollar,
-#neckwide,
-#neckcollarHover,
-#neckroundHover,
-#neckwideHover,
-#bodyhip, #bodylong,
-#leftsleevenarrowshort,
-#leftsleevenarrowlong,
-#leftsleevewidelong,
-#rightsleevenarrowshort,
-#rightsleevenarrowlong,
-#rightsleevewidelong,
-#patternThumbWide,
-#patternThumbCollar,
-#patternNeckRound > a,
-#patternNeckWide > a {
-    display: none;
-}
+
 
 #rightsleevenarrowshort {
     padding-top: 3px;
@@ -416,132 +399,7 @@ li, li a, a {
     display: table;
 } */
 
-#downloadwrapper > .row {
-    position: absolute;
-    left: 0;
-    top: 660px;
-    justify-content: center;
-    display: flex;
-    align-content: center;
-}
 
-#downloadwrapper {
-    display: flex;
-    flex-direction: row;
-    max-height: 210px;
-    /* margin: 15px 15px 20px 15px; */
-    top: 153.28;
-    /* width: calc(100vw - (26px / 2));
-    max-width: 1024px; */
-    margin: 20px 20px 20px 20px;
-}
-
-#downloads {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    width: 1fr;
-    padding: 20px 15px 50px 15px;
-}
-
-.fabricsize {
-    margin-top: 20px;
-    color: #e9e7e7;
-}
-
-.patternThumb img {
-    max-height: 190px;
-    padding: 10px;
-}
-
-.patternThumb:hover img {
-    filter: opacity(55%);
-}
-
-.patternThumb a {
-    display: inline-flex;
-    padding: none;
-    background-color:#ffd066;
-    border: 1px solid #d4b467;
-    transition: ease-in-out 50ms;
-    box-shadow: 
-        0 2px 1px rgba(0,0,0,0.09), 
-        0 4px 2px rgba(0,0,0,0.09), 
-        0 8px 4px rgba(0,0,0,0.09), 
-        0 16px 8px rgba(0,0,0,0.09),
-        0 32px 16px rgba(0,0,0,0.09);
-}
-
-#tshirtGridPattern,
-#patternTshirtGrid,
-#patternNecklineRound,
-#patternNecklineCollar,
-#patternNecklineWide,
-#patternSleeveCutLeft,
-#patternSleeveCutRight {
-    padding: 4px 4px 4px 4px;
-}
-
-.thumbs {
-    background-color:#ad750b;
-    background-color:#c9a96f;
-}
-
-h5 {
-    padding-top: 10px;
-    padding-bottom: 5px;
-}
-
-.table-responsive-lg {
-    color:#fffefe;
-    justify-content:space-between;
-    margin: 15px 20px 15px 20px;
-    margin: auto auto 0px auto;
-    max-width: 85%;
-    padding: 10px 20px 20px 20px;
-}
-
-.table-responsive-lg td, 
-.table-responsive-lg th {
-    border: none;
-    font-size: 14px;
-    text-align: center;
-    color:#fffefe;
-}
-
-tr {
-    line-height: 34px;
-}
-
-th, td {
-    background-color: #c8c5b5;
-}
-
-
-input {
-    border: none;
-    text-align: center;
-    padding-left: 20px;
-    border-radius: 3px;
-    background-color: #c8c5b5;
-    background-color:  #e9e7e7;
-}
-
-.directions {
-    color:#fffefe;
-    margin-left: 30px;
-    font-size: 18px;
-}
-
-#garmentInfoForm h5 {
-    color:#fffefe;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 34px;
-    margin: 0;
-    padding: 30px 0 20px 0;
-    display: flex;
-}
 
 .instructions  {
     /* padding: 15px 150px 20px 15px; */

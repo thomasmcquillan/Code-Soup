@@ -84,11 +84,12 @@ body {
 }
 
 .template-intro {
-    /* background-color: #b7b3a7; */
     color: #5c5c5c;
     align-content: top;
     line-height: 1.8rem;
-   
+    text-align: justify;
+    justify-content: center;
+    display: flex;
 }
 
 /* \\---  Link Styles  ---////////////////////////////// */
@@ -155,7 +156,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr;   
     grid-template-rows: 1fr 2fr;
     max-height: auto;
-    margin: 0 0 -30px 0;
+    max-width: 684px;
+    margin: 0 0 -66px 0;
 }
 
 .tile-neck {
@@ -266,8 +268,24 @@ h5 {
     padding-bottom: 5px;
 }
 
+#whatYouNeed {
+    display: block;
+    color:#e9e7e7;
+    flex-direction: column;
+    max-width: 500px;
+    line-height: 1.8rem;
+    margin-top: 10%;
+    text-align: left;
+    justify-content: left;
+}
+
+.tablewrap {
+    padding: none;
+}
+
 .table-responsive-lg {
     color:#fffefe;
+    display: block;
     justify-content:space-between;
     margin: 15px 20px 15px 20px;
     margin: auto auto 0px auto;
@@ -328,30 +346,27 @@ input {
 
 
     #makeuseheader {
-        background-color: rgb(40, 38, 39);
+        background-color: #4a494a;
         display: flex;
-     
+        min-width: 100%;
         margin: 0 auto;
         height: 153px;
+        justify-content: center;
     }
 
     nav {
         display: flex;
         flex-direction: row;
-        /* min-width: 100vw; */
         max-width: 1024px;
         margin: 0 auto;
         justify-content: center;
     }
 
     .navbar {
-        background-color: rgb(40, 38, 39);
         background-color: #4a494a;
         display: flex;
         flex-direction: row;
-        max-width: 1024px;
-        justify-self: center;
-        position: absolute;
+        width: 100%;
         height: 153px;
         left: 0;
         /* width: 100%; */
@@ -381,35 +396,50 @@ input {
         justify-content: flex-end;
         font-weight: 700;
         position: absolute;
-        
         text-align: right;
         right: 15px;
         top: 78px;
-        /* max-width: 1024px; */
     }
 
     .navbar .navbar-brand {
-        /* justify-content: flex-start; */
         margin: auto auto auto 0;
     }
     
     #garment-grid-wrapper {
         margin: 0 0 -80px 0;
+        padding: 0 0 0 -20px;
     }
 
+    .template-intro {
+        margin: 60px 33px 28px -15px;
+        text-align: justify;
+        padding: none;
+        
     }
 
+}
 
-@media (min-width: 992px) { 
+@media (min-width: 768px) {}
+
+
+/* @media (min-width: 992px) { 
     html {
-        min-width: 960px;
+        
         overflow: auto;
+    }
+} */
+
+@media (min-width: 1200px) {
+    nav {
+        max-width: 1200px;
+    }
+
+    #garment-grid-wrapper {
+        max-width: 700px;
     }
 }
 
-/* // Medium devices (tablets, 768px and up)
 
-@media (min-width: 768px) { */
 /* 
 // Large devices (desktops, 992px and up)
 

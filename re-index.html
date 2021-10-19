@@ -51,7 +51,7 @@
         
         <div class="container-lg">
             <div class="row">
-                <div class="col-12 col-md-8" id="garment-grid-wrapper">
+                <div class="col-12 col-md-7 col-lg-10" id="garment-grid-wrapper">
                     <div class="tile-neck">
                         <img class="img-fluid d-none" src="assets/images/makeuse-tshirt-crop-gridtesting/neckcollartiletest.png" alt="">
                         <img class="img-fluid d-none" src="assets/images/makeuse-tshirt-crop-gridtesting/neckwidetiletest.png" alt="">
@@ -69,14 +69,36 @@
                     </div>
                 </div>
 
-                <div class="col-10 col-md-8 mx-auto mr-md-auto">
-                    <p class="template-intro">Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will calculate how much fabric you need and display the pattern downloads required to make your chosen style.</p>
+                <div class="col-10 col-md-5 col-lg-8 mx-auto">
+                    <p class="template-intro">Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will update how much fabric you need and display the pattern downloads required to make your chosen style.</p>
+                </div>
+
+                <div class="tablewrap col-12 mr-lg-auto">
+                    <table class="table-responsive-lg">
+                    <thead>
+                        <tr>
+                            <th scope="col">Body Length</th>
+                            <th scope="col">Body Circumference</th>
+                            <th scope="col">Sleeve Circumference</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" id="dimensionBodyLength">50cm</td>
+                            <td id="dimensionBodyCircumference">110cm</td>
+                            <td id="dimensionSleeveCircumference">50cm</td>
+                        </tr>
+                        <tr>
+                            <td><input id="customInputBodyLength" type="number" placeholder=" .......cm"></td>
+                            <td><input id="customInputBodyCircum" type="number" placeholder=" .......cm"></td>
+                            <td><input id="customInputSleeveCircum" type="number" placeholder=".......cm"></td>
+                        </tr>
+                    </tbody>
+                    </table>
                 </div>
 
                 <div class="what-you-need col-12">
-                    <!-- <div class="templateintro col-12">
-                        <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will calculate how much fabric you need and display the pattern downloads required to make your chosen style.</p>
-                    </div> -->
+                    
                     <div id="downloadwrapper" class="row">
                         
                         <div id="pattern-tshirt-grid" class="patternThumb col-6 col-md-3">
