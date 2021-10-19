@@ -1,13 +1,17 @@
-.mu-dark-slate {
-    background-color: RGB(40, 38, 39);
+/* \\---  Global variables  ---// */
+
+html, body {
+    overflow: auto;
+    padding: 0;
+    margin: auto;
+    flex-wrap: wrap;
+    background-color: #d7d7d7;
 }
 
-.t-light, .header-nav, .header-nav__link {
+/* \\---  Colors  ---///////////////////////////// */
+
+.t-light {
     color: #fffefe;
-}
-
-.t-light a, .t-light a:hover {
-    color: #FFF;
 }
 
 .t-dark {
@@ -18,6 +22,14 @@
     color: #888;
 }
 
+.bg-dark-slate {
+    background-color: RGB(40, 38, 39);
+}
+
+.header-nav .header-nav__link:active {
+    color: #ffd066;
+}
+
 .bg--slate, .color--slate,
 .breadcrumb {
     background-color: #4a494a;
@@ -26,82 +38,21 @@
 .bg--silver, .color--silver {
     background-color: #d7d7d7;
 }
-.bg--sand, .color--sand {
+.bg--sand {
     background-color: #b7b3a7;
 }
 .bg--orange, .color--orange {
     background-color: #d46300;
 }
-.bg--gold, .color--gold,
-.header-nav__link:hover {
-    background-color: #ffb100;
-} 
 
-.header-nav .header-nav__link:active {
-    color: #ffd066;
-}
-
-/* makeuse specific styles end
---------------------------------------- */
-  
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-html, body {
-    overflow: hidden;
-    padding: 0;
-    margin: auto;
-    flex-wrap: wrap;
-}
-
-body { 
-    /* color: #5c5c5c;  */
-    scroll-behavior: smooth;
-    /* display: flex; */
-    
-    background-color: #4a494a;
-    font-family: 'Ubuntu', sans-serif;
-    text-decoration: none;
-    list-style-type: none;
-    background-color: #c8c5b5;
-}
-
-.row {
-    max-width: 1024px;
-    margin: 0 auto;
-}
-
-#crop-t-from-template {
-    scroll-behavior: smooth;
-    display: flex;
-    position: static;
-    top: 154px;
-    
-    background-color: #4a494a;
-    font-family: 'Ubuntu', sans-serif;
-    text-decoration: none;
-    list-style-type: none;
-}
-
-/* #croptshirt-from-template {
-    display: flex;
-    position: fixed;
-    top: 153.27px;
-    top: 288px;
-    background-color: #d7d7d7;
-} */
+/* \\---  Header & Navigation  ---// */
 
 #makeuseheader {
     display: flex;
-    position: absolute;
-    /* position: fixed; */
-    z-index: 555;
-    background-color: #4a494a;
-    background-color: rgb(40, 38, 39);
-    background-color: #FFB100;
+    height: 153px;
+    padding: 0;
+    left: 0;
+    margin-bottom: 50px;
     box-shadow: 
         0 2px 1px rgba(0,0,0,0.09), 
         0 4px 2px rgba(0,0,0,0.09), 
@@ -110,17 +61,36 @@ body {
         0 32px 16px rgba(0,0,0,0.09);
 }
 
-.navbar {
+nav {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    max-width: 100%;
     margin: 0 auto;
-    width: 100%;
-    padding: 20px 15px 50px 15px;
-    /* background-color: rgb(40, 38, 39); */
-    max-width: 1024px;
-    z-index: 1000;
+    background-color: #4a494a;
 }
 
-.navbar-brand img {
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items:center;
+    text-align: center;
+    top: 122px;
+    margin: 0 auto;
+    padding: 0 33vw 0 33vw;
+    max-width: 100%;
+}
+
+.navbar .navbar-brand {
+    display: block;
+    margin: auto;
+}
+
+.navbar .navbar-brand img {
+    justify-self: center;
     padding-left: 15px;
     width: 200px;
     height: 78.26px;
@@ -132,392 +102,353 @@ body {
     left: auto;
 }
 
-.navbar-nav {
-    display: flex;
-    flex-direction: row;
-    justify-items: right;
-    justify-content: flex-end;
-    font-size: 14px;
-    color: #fffefe;
-    text-decoration: none;
-    font-weight: 700;
-    position: absolute;
-    width: 100vw;
-    right: 32px;
-    top: 78px;
-    z-index: 1001;
-}
-
-.navbar-nav .nav-item a {
+.navbar .nav-item a {
     padding-left: 20px;
     justify-self: right;
-    z-index:3000;
 }
 
-.navbar .nav-item a:hover {
-    color: #FFB100;
+/* \\---  Fonts  ---////////////////////////////// */
+
+body {
+    list-style-type: none;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-a {
-    text-decoration: underline;
+.template-intro {
+    color: #5c5c5c;
+    align-content: top;
+    line-height: 1.8rem;
+    text-align: justify;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+/* \\---  Link Styles  ---////////////////////////////// */
+
+.navbar .nav-item a {
+    text-decoration: none;
     background-color: transparent;
     cursor: pointer;
     transition: color .2s ease-in-out;
     font-weight: 700;
-}
-
-h1 {
     color: #fffefe;
+    margin-right: 5px;
+    font-size: 14px;
 }
 
-li, li a, a {
-    list-style-type: none;
-    font-family: 'Ubuntu', sans-serif;
-    padding-bottom: 5px;
+.navbar .nav-item a:hover {
+    color: #ffb100;
 }
 
-#gridwrapper {
+
+
+/* \\---  Body Layout  ---// */
+
+
+/* \\---  Garment Grid  ---/////////////////////// */
+
+#garment-grid-wrapper {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+    grid-template-rows: 1fr 2fr;
+    max-height: auto;
+    max-width: 684px;
+    margin: 0 0 -66px 0;
+    padding: none;
+    margin: none;
+    box-shadow: 
+    0 2px 1px rgba(0,0,0,0.09), 
+    0 4px 2px rgba(0,0,0,0.09), 
+    0 8px 4px rgba(0,0,0,0.09), 
+    0 16px 8px rgba(0,0,0,0.09),
+    0 32px 16px rgba(0,0,0,0.09);
+}
+
+.tile-neck {
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    /* background-color: #ffd066; */
+}
+
+.tile-body {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2 / 4;
+    align-content: top;
+    background-color: #d46300;
+}
+
+.tile-sleevetestleft {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    justify-content: right;
+    /* background-color: #ad750b; */
+}
+
+.tile-sleevetestright {
+    display: grid;
+    grid-column: 3;
+    grid-row: 1 / 3;
+    justify-content: left;
+    /* background-color: #ffb100; */
+}
+
+/* \\---  Pattern Template Downloads  ---////////////////////////////// */
+
+#downloadwrapper > .row {
+    padding: none;
+    justify-content: center;
     display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    height: auto;
-    background-color: none;
-    /* box-shadow: 
+    align-content: center;
+}
+
+#downloadwrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 20px 20px;
+}
+
+#downloads {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 1fr;
+    padding: 20px 15px 50px 15px;
+}
+
+.fabricsize {
+    margin-top: 20px;
+    color: #e9e7e7;
+}
+
+#patternThumbWide,
+#patternThumbCollar,
+#patternNeckRound > a,
+#patternNeckWide > a {
+    display: none;
+}
+
+.patternThumb img {
+    padding: 10px;
+}
+
+.patternThumb {
+    padding: 0 20px 38px 20px;
+}
+
+.patternThumb:hover img {
+    filter: opacity(55%);
+}
+
+.patternThumb a {
+    display: inline-flex;
+    padding: none;
+    background-color:#ffd066;
+    border: 1px solid #d4b467;
+    transition: ease-in-out 50ms;
+    box-shadow: 
         0 2px 1px rgba(0,0,0,0.09), 
         0 4px 2px rgba(0,0,0,0.09), 
         0 8px 4px rgba(0,0,0,0.09), 
         0 16px 8px rgba(0,0,0,0.09),
-        0 32px 16px rgba(0,0,0,0.09); */
-        margin: 190px auto 30px 15px;
+        0 32px 16px rgba(0,0,0,0.09);
 }
 
-#garmentgrid {
-    display: inline-grid;
-    grid-template-columns: 31% 37% 31%;
-    grid-template-rows: 1fr 0;
-    grid-template-areas:    "a b c"
-                            ". d .";
-    padding: 0;
-    max-width: 100%;
-    height: auto;
+#tshirtGridPattern,
+#patternTshirtGrid,
+#patternNecklineRound,
+#patternNecklineCollar,
+#patternNecklineWide,
+#patternSleeveCutLeft,
+#patternSleeveCutRight {
+    padding: 4px 4px 4px 4px;
 }
 
-/* #garmentgrid div {
-    width: fit-content;
-    height: fit-content;
-} */
-
-/* #garmentgrid img {
-    max-width: 100%;
-    height: auto;
-} */
-
-#garmentgrid {
-    display: grid;
-    grid-template-areas: "a b c"
-                         ". d .";
-    grid-template-columns: 122px 149px 123px;
-    grid-template-rows: 398px 0px;
-    padding: 0;
-    flex-direction: column;
+.thumbs {
+    background-color:#ad750b;
+    background-color:#c9a96f;
 }
 
-#garmentgrid img {
-    padding-bottom: 130px;
+h5 {
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
-#garmentgrid #bodycropped,
-#garmentgrid #bodylong,
-#garmentgrid #bodyhip {
-    padding-bottom: 198px;
+.tablewrap {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    background-color: #888;
+    margin: 77px 0 0 0;
+    max-width: 688px;
+    box-sizing: border-box;
 }
 
-/* #croptshirt-from-template {
-    width: 100vw;
-    left: 0;
+.table {
+    width: auto;
     margin: 0 auto;
-    display: flex;
-    position: absolute;
-} */
-
-#bodytile {
-    display: flex;
-    margin-bottom: 107px;
-    align-items: center;
-    grid-area: d;
+    justify-content:space-between;
+    /* align-content: center; */
 }
 
-#necktile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: b;
-    background-color: rgba(40, 38, 39, 0.685)
-}
-
-#leftsleevetile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 157px;
-    grid-area: a;
-    background-color: rgba(212, 99, 0, 98%);
-}
-
-#rightsleevetile {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding-top: 157px;
-    padding-right: 4px;
-    background-color: rgba(255, 177, 0, 98%);
-}
-/* ////////////////////////////////////saved garment tiles in case things go wrong */
-/* #bodytile {
-    display: flex;
-    margin-bottom: 107px;
-    align-items: center;
-    grid-area: d;
-}
-
-#necktile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: b;
-    background-color: rgba(40, 38, 39, 0.685)
-}
-
-#leftsleevetile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 157px;
-    grid-area: a;
-    background-color: rgba(212, 99, 0, 98%);
-}
-
-#rightsleevetile {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding-top: 157px;
-    padding-right: 4px;
-    background-color: rgba(255, 177, 0, 98%);
-} */
-/* /////////////////////////////////////// */
-
-
-#rightsleevenarrowshort {
-    padding-top: 3px;
-}
-
-#leftsleevewideshort {
-    padding-top: 9px;
-}
-#rightsleevewideshort {
-    padding-top: 4px;
-}
-
-#leftsleevewidelong {
-    padding-bottom: 8px;
-}
-
-#lowerlefttile {
-    display: block;
-    position: relative;
-    height: 202px;
-    width: 100vw;
+.table td, 
+.table th {
+    border: none;
+    font-size: 13px;
+    text-align: center;
+    padding: none;
+    background-color: #888;
     color: #e9e7e7;
-    left: 0;
+    font-weight: 500;
+    font-size: 14px;
 }
 
-#lowerlefttile > p {
-    display: flex;
-    width: 380px;
-    height: 50px;
-    left: 0;
-    margin: 20px 10px 15px 10px;
-    align-content: flex-start;
-    margin-bottom: 40px;
+tr {
+    line-height: 34px;
 }
 
-#whatYouNeed {
-    display: block;
-    color:#e9e7e7;
-    flex-direction: column;
-    max-width: 500px;
-    line-height: 1.8rem;
-    margin-top: 10%;
-    text-align: left;
-    justify-content: left;
+.table td{
+    font-size: 18px;
 }
 
-.templateintro {
-    display: inline-flex;
-    width: 100%;
-    flex-direction: row;
-    margin-top: 60px;
+input {
+    border: none;
+    text-align: center;
+    padding-left: 20px;
+    border-radius: 3px;
+    background-color: #c8c5b5;
+    background-color:  #e9e7e7;
 }
 
-.templateintro p {
-    
-    color:#e9e7e7;
-    color: #202020;
-    /* background-color: #c8c5b5; */
+.directions {
+    color:#fffefe;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+#garmentInfoForm h5 {
+    color:#fffefe;
     font-size: 18px;
     font-weight: 400;
-    flex-direction: column;
-    /* max-width: 500px; */
-    line-height: 1.8rem;
-    margin: 20px 20px 30px 30px;
-    padding: 20px 40px 30px 20px;
-    text-align: left;
-    justify-content: left;
+    line-height: 34px;
+    margin: 0;
+    padding: 30px 0 20px 0;
+    display: flex;
 }
 
-.intro {
-    padding: 8vw 8vw 0 8vw;
-}
+/* /////////////////////////////////////////////////////////// */
 
-.intro h5 {
-    line-height: 1.5em;
-}
+/* \\---  Animations  ---// */
 
-.instructions ul {
-    margin: 8px 0px 16px 0px;
-    line-height: 24px;
-}
-
-/* .clearfix {
-    overflow: auto;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-} */
+/* \\---  Media Queries  ---// */
 
 
+@media (min-width: 576px) {
 
-.instructions  {
-    /* padding: 15px 150px 20px 15px; */
-    line-height: 32px;
-    overflow: auto;
-}
-
-.instructions h5 {
-    padding: 50px 30px 45px 30px;
-    color: #fffefe;
-    line-height: 36px;
-}
-
-.instructions ul li {
-    padding-bottom: 16px;
-    color: #fffefe;
-}
-
-.instructions ul {
-    overflow: auto;
-    height: 100%;
-    z-index: 2;
-    /* padding-right: 40px; */
-}
-
-/* Media Query for centering site logo and nav below 600w */
-
-@media (max-width: 600px) { 
-
-    /* body {
+    #makeuseheader {
+        background-color: #4a494a;
         display: flex;
-        max-width: 100%;
-        justify-content: center;
-        left: 0;
-        margin: 0;
-    }
-
-    header {
-        display: block;
-        padding: 0;
+        min-width: 100%;
         margin: 0 auto;
+        height: 153px;
         justify-content: center;
-        position: absolute;
-        width: 100%;
-        
-        margin-bottom: 55px;
-    } */
+    }
 
     nav {
-        display: block;
-        /* flex-direction: row;
-        justify-items: center;
-        justify-content: center; */
-        position: absolute;
-        width: 100%;
-        left: 0;
-    }
-
-    .navbar-nav {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        justify-items:center;
-        text-align: center;
-        top: 122px;
-        width: 100vw;
-        left: 0;
-        padding: 0 33vw 0 33vw;
-    }
-
-    .navbar-brand {
-        padding-right: 16px;
-    }
-
-
-    .navbar-nav .nav-item a {
-        padding: 0;
-    }
-
-
-    
-
-    /* nav {
-        display: flex;
-        justify-items: center;
-        justify-content: center;
-        width: 100%vw;
-        left: 0;
-    }
-
-    .navbar-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        text-align: center;
+        max-width: 1024px;
         margin: 0 auto;
-        top: 122px;
-    } */
-
-    .navbar-brand {
-        /* width: 100vw; */
-        /* flex-direction: row; */
-        display: flex;
         justify-content: center;
+    }
+
+    .navbar {
+        background-color: #4a494a;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 153px;
         left: 0;
+        /* width: 100%; */
+        padding: 20px 15px 50px 15px;
+        margin: 0 auto;
     }
 
-    a {
+    .navbar {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px 15px 50px 15px; 
+        z-index: 1000;
+    }
+
+    nav .navbar .navbar-custom {
+        justify-self: center;
+    }
+
+    .navbar .navbar-nav {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
         font-size: 14px;
+        color: #fffefe;
+        text-decoration: none;
+        justify-content: flex-end;
+        font-weight: 700;
+        position: absolute;
+        text-align: right;
+        right: 15px;
+        top: 78px;
     }
- }
 
-@media (min-width: 960px) {
-    html {
-        min-width: 960px;
-        overflow: hidden;
+    .navbar .navbar-brand {
+        margin: auto auto auto 0;
+    }
+    
+    #garment-grid-wrapper {
+        margin: 0 0 -80px 0;
+        padding: 0 0 0 -20px;
     }
 
-    
-    
+    .template-intro {
+        margin: 60px 33px 28px -15px;
+        text-align: justify;
+        padding: none;
+        
+    }
+
 }
+
+@media (min-width: 768px) {}
+
+
+/* @media (min-width: 992px) { 
+    html {
+        
+        overflow: auto;
+    }
+} */
+
+@media (min-width: 1200px) {
+    nav {
+        max-width: 1200px;
+    }
+
+    #garment-grid-wrapper {
+        max-width: 700px;
+    }
+}
+
+
+/* 
+// Large devices (desktops, 992px and up)
+
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... } 
+ */
