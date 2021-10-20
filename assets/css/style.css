@@ -96,12 +96,6 @@ nav {
     height: 78.26px;
 }
 
-#logo-hover {
-    z-index: 400;
-    display: none;
-    left: auto;
-}
-
 .navbar .nav-item a {
     padding-left: 20px;
     justify-self: right;
@@ -258,30 +252,30 @@ body {
     color: #e9e7e7;
 }
 
-#patternThumbWide,
-#patternThumbCollar,
-#patternNeckRound > a,
-#patternNeckWide > a {
+#pattern-thumb-wide,
+#pattern-thumb-collar,
+#pattern-neck-round > a,
+#pattern-neck-wide > a {
     display: none;
 }
 
-.patternThumb img {
+.pattern-thumb img {
     padding: 10px;
 }
 
-.patternThumb {
+.pattern-thumb {
     padding: 0 20px 38px 20px;
 }
 
-.patternThumb:hover img {
+.pattern-thumb:hover img {
     filter: opacity(55%);
 }
 
-.patternThumb a {
+.pattern-thumb a {
     display: inline-flex;
     padding: none;
-    background-color:#ffd066;
-    border: 1px solid #d4b467;
+    /* background-color:#ffd066;
+    border: 1px solid #d4b467; */
     transition: ease-in-out 50ms;
     box-shadow: 
         0 2px 1px rgba(0,0,0,0.09), 
@@ -291,13 +285,7 @@ body {
         0 32px 16px rgba(0,0,0,0.09);
 }
 
-#tshirtGridPattern,
-#patternTshirtGrid,
-#patternNecklineRound,
-#patternNecklineCollar,
-#patternNecklineWide,
-#patternSleeveCutLeft,
-#patternSleeveCutRight {
+.pattern-link {
     padding: 4px 4px 4px 4px;
 }
 

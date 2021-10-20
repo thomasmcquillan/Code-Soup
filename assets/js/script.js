@@ -1,8 +1,8 @@
 // Declaring constants - targets divs for pattern download thumbnails.
 
-const neckRound = document.getElementById("patternThumbRound");
-const neckCollar = document.getElementById("patternThumbCollar");
-const neckWide = document.getElementById("patternThumbWide");
+const neckRound = document.getElementById("pattern-thumb-round");
+const neckCollar = document.getElementById("pattern-thumb-collar");
+const neckWide = document.getElementById("pattern-thumb-wide");
 
 // Declaring constant values for body-length, sleeve-width and sleeve length of supplied pattern options.
 
@@ -29,7 +29,7 @@ let bodyCircumference = currentSleeveLength * 2;
 // Declaring variables for custom input values.  
 
 let customInputSleeveCircum;
-let customInputBodyLength;
+let customInputBodylength;
 let customInputBodyCircum;
 
 // Declaring variables for displaying the fabric width
@@ -41,19 +41,19 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 // To calculate fabric size required for currently selected style.
 // $(".tiles").children().click(function() {
 $("#garmentgrid").children().click(function() {
-    $( "#fabricRequired" ).text(`Fabric required: ${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
+    $( "#fabricrequired" ).text(`Fabric required: ${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
 });
 
 // Function that calculates fabric size required to make 
 // garment based on the custom values input by user.
 // Triggered by Enter/Tab keys in custom body length input.
 
-$("#customInputBodyLength").keydown(function(event) {
+$("#customInputbodylength").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            if ($( "#customInputBodyLength" ).val() > 0) {
-            let customBodyLength = parseInt($( "#customInputBodyLength" ).val(), 10);
-            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            if ($( "#customInputbodylength" ).val() > 0) {
+            let customBodyLength = parseInt($( "#customInputbodylength" ).val(), 10);
+            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         } else { 
             $(".fabricsize").text('Custom values will update fabric size required, but will not be updated in the illustration.');
             $("#bodytile img").css('filter', 'blur(3px) invert(8)');
@@ -61,29 +61,29 @@ $("#customInputBodyLength").keydown(function(event) {
         }
     });
 
-$("#customInputBodyCircum").keydown(function(event) {
+$("#custominputbodycircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
 
-            let customBodyCircum = parseInt($( "#customInputBodyCircum" ).val(), 10);
+            let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
 
-            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         }
 });
 
-$("#customInputBodyCircum").keydown(function(event) {
+$("#custominputbodycircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            let customBodyCircum = parseInt($( "#customInputBodyCircum" ).val(), 10);
-            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
+            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         }
 });
 
-$("#customInputSleeveCircum").keydown(function(event) {
+$("#custominputsleevecircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            let customBodyCircum = parseInt($( "#customInputBodyCircum" ).val(), 10);
-            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
+            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         }
 });
 
@@ -97,7 +97,7 @@ $(document).ready(function() {
     $( "#neckcollar" ).toggle();   // Toggles on next available neckline tile.
     $(neckRound).toggle();    // Toggles off div containing download for current neckline. 
     $(neckCollar).toggle();   // Toggles on div containing download for next style of neckline.
-    // $("#patternThumbCollar a").css("background-color", "#ffb100");
+    // $("#pattern-thumb-collar a").css("background-color", "#ffb100");
    });
 });
 
@@ -106,7 +106,7 @@ $( "#neckcollar" ).click(function() {
         $( "#neckwide" ).toggle();
         $(neckCollar).toggle();
         $(neckWide).toggle();
-        // $("#patternThumbWide a").css("background-color", "#ffd066");
+        // $("#pattern-thumb-wide a").css("background-color", "#ffd066");
 });
 
 $( "#neckwide" ).click(function() {
@@ -114,7 +114,7 @@ $( "#neckwide" ).click(function() {
     $( "#neckround" ).toggle();
     $(neckWide).toggle();
     $(neckRound).toggle();
-    // $("#patternThumbRound a").css("background-color", "#d46300");
+    // $("#pattern-thumb-round a").css("background-color", "#d46300");
 });
 
 $( "#bodycropped" ).click(function() {
@@ -123,7 +123,7 @@ $( "#bodycropped" ).click(function() {
     currentBodyLength = bodyHip;    // Updates variable for current body-length with value assigned to bodyHip constant.
     $( "#length" ).html(fabricLength);    // Replaces fabric length requirement displayed on the page with 'fabricLength' variable.
     $( "#width" ).html(fabricWidth);    // Replaces fabric width requirement displayed on the page with 'fabricWidth' variable.
-    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionBodyLength", replacing the contents of cell with value for currentBodyLength.
+    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionbodylength", replacing the contents of cell with value for currentBodyLength.
 });
 
 $( "#bodyhip" ).click(function() {
@@ -132,7 +132,7 @@ $( "#bodyhip" ).click(function() {
     currentBodyLength = bodyLong;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
-    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
+    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
 });
 
 $( "#bodylong" ).click(function() {
@@ -141,7 +141,7 @@ $( "#bodylong" ).click(function() {
     currentBodyLength = bodyCrop;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
-    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
+    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
 });
 
 $( "#leftsleevewideshort" ).click(function() {
@@ -150,7 +150,7 @@ $( "#leftsleevewideshort" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();    // right sleeve tiles also toggled,
     $( "#rightsleevewidelong" ).toggle();     // so that both sleeves matches.
     currentSleeveLength = sleeveLong;
-    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 // Triggered when 'wide and long' left sleeve tile is clicked. 
@@ -162,8 +162,8 @@ $( "#leftsleevewidelong" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle();
     currentSleeveWidth = sleeveNarrow;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
+    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionsleevecircumference" ).html(`${sleeveNarrow}cm`);
 });
 
 // Triggered when 'narrow and short' left sleeve tile is clicked. 
@@ -174,7 +174,7 @@ $( "#leftsleevenarrowshort" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle();
     $( "#rightsleevenarrowlong" ).toggle();
     currentSleeveLength = sleeveLong;
-    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 // Triggered when 'narrow and long' left sleeve tile is clicked.
@@ -186,8 +186,8 @@ $( "#leftsleevenarrowlong" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     currentSleeveWidth = sleeveWide;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
+    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionsleevecircumference" ).html(`${sleeveWide}cm`);
 });
 
 // Triggered when 'wide and short' right sleeve tile is clicked.
@@ -198,7 +198,7 @@ $( "#rightsleevewideshort" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
     currentSleeveLength = sleeveLong;
-    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 // Triggered when 'wide and long' right sleeve tile is clicked.
@@ -210,8 +210,8 @@ $( "#rightsleevewidelong" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle();
     currentSleeveWidth = sleeveNarrow;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
+    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionsleevecircumference" ).html(`${sleeveNarrow}cm`);
 });
 
 // Triggered when 'narrow and short' right sleeve tile is clicked.
@@ -223,7 +223,7 @@ $( "#rightsleevenarrowshort" ).click(function() {
     $( "#rightsleevenarrowlong" ).toggle();
     currentSleeveWidth = sleeveNarrow;
     currentSleeveLength = sleeveLong;
-    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 // Triggered when 'narrow and long' right sleeve tile is clicked.
@@ -235,8 +235,8 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     currentSleeveWidth = sleeveWide;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
+    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionsleevecircumference" ).html(`${sleeveWide}cm`);
 });
 
 // Listener function to trigger else/if conditional statement.
@@ -300,4 +300,11 @@ $(document).ready(function() {
     $( "#makeuse-logo" ).toggle();
     $( "#logo-hover" ).toggle();
    });
+});
+
+// And to return to unhovered state.
+
+$( "#makeuse-logo" ).mouseleave(function() {
+    $( "#makeuse-logo" ).toggle();
+    $( "#logo-hover" ).toggle();
 });
