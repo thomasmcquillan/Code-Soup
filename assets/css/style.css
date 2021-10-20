@@ -8,6 +8,14 @@ html, body {
     background-color: #d7d7d7;
 }
 
+/* body {
+    background-color: #fffefe;
+} */
+
+.row {
+    background-color: #fffefe;
+}
+
 /* \\---  Colors  ---///////////////////////////// */
 
 .t-light {
@@ -167,7 +175,7 @@ body {
 #body-tile {
     display: grid;
     grid-column: 2;
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
     align-content: flex-start;
     max-height: 99.3%;
     background-color: #b3b2b2;
@@ -298,21 +306,21 @@ h5 {
 }
 
 .tablewrap {
-    padding-top: 40px;
-    padding-bottom: 15px;
-    background-color: #888;
-    margin: 77px 0 0 0;
-    width: inherit;
+    /* padding-top: 40px;
+    padding-bottom: 15px; */
+    /* margin: 77px 0 0 0; */
     box-sizing: border-box;
     display: grid;
+    justify-content:stretch;
     grid-row: 3;
-    grid-column: 1 / 5;
+    grid-column: 0 / 3;
 }
 
 .table {
-    /* width: auto; */
-    margin: 0 auto;
-    justify-content:space-between;
+    padding: 0;
+    margin: 0;
+    width:100%;
+    max-width: inherit;
     /* align-content: center; */
 }
 
@@ -326,6 +334,7 @@ h5 {
     color: #e9e7e7;
     font-weight: 500;
     font-size: 14px;
+    margin: auto;
 }
 
 tr {
@@ -339,7 +348,7 @@ tr {
 input {
     border: none;
     text-align: center;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     border-radius: 3px;
     background-color: #c8c5b5;
     background-color:  #e9e7e7;
