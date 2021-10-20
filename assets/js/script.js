@@ -91,9 +91,9 @@ $("#customInputSleeveCircum").keydown(function(event) {
         }
 });
 
-
-// Click event to run when user clicks
-// the neckline-tile of garment.
+// Following functions, when clicked, cycle to next image of their type
+// (neckline/body/sleeves), and update variables required for displaying 
+// key fabric measurements and pattern downloads for users.
 
 $(document).ready(function() {
     $( "#neckround" ).click(function() {
@@ -121,8 +121,6 @@ $( "#neckwide" ).click(function() {
     // $("#patternThumbRound a").css("background-color", "#d46300");
 });
 
-// Triggered when 'crop' body tile is clicked. 
-
 $( "#bodycropped" ).click(function() {
     $( "#bodycropped" ).toggle();
     $( "#bodyhip" ).toggle();
@@ -131,8 +129,6 @@ $( "#bodycropped" ).click(function() {
     $( "#width" ).html(fabricWidth);    // Replaces fabric width requirement displayed on the page with 'fabricWidth' variable.
     $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionBodyLength", replacing the contents of cell with value for currentBodyLength.
 });
-
-// Triggered when 'hip' body tile is clicked. 
 
 $( "#bodyhip" ).click(function() {
     $( "#bodyhip" ).toggle();
@@ -143,8 +139,6 @@ $( "#bodyhip" ).click(function() {
     $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
 });
 
-// Triggered when 'long' body tile is clicked. 
-
 $( "#bodylong" ).click(function() {
     $( "#bodylong" ).toggle();
     $( "#bodycropped" ).toggle();
@@ -153,8 +147,6 @@ $( "#bodylong" ).click(function() {
     $( "#width" ).html(fabricWidth);
     $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
 });
-
-// Triggered when 'wide and short' left sleeve tile is clicked. 
 
 $( "#leftsleevewideshort" ).click(function() {
     $( "#leftsleevewideshort" ).toggle();
@@ -308,7 +300,7 @@ $( "#rightsleevenarrowlong" ).click(function() {
 // Site-logo hover the jquery way.
 
 $(document).ready(function() {
-    $( "#makeuse-logo" ).mouseover(function() {
+    $( "#makeuse-logo" ).mouseenter(function() {
     $( "#makeuse-logo" ).toggle();
     $( "#logo-hover" ).toggle();
    });
@@ -316,36 +308,7 @@ $(document).ready(function() {
 
 // And to return to unhovered state.
 
-    $( "#makeuse-logo" ).mouseleave(function() {
-    $( "#makeuse-logo" ).toggle();
-    $( "#logo-hover" ).toggle();
-});
-
-// Snippet to avoid hover effects on touch devices borrowed from stackoverflow user "Blade" here:
-// https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
-
-// function watchForHover() {
-   
-//     let lastTouchTime = 0
-  
-//     function enableHover() {
-//       if (new Date() - lastTouchTime < 500) return
-//       document.body.classList.add('hasHover')
-//     }
-  
-//     function disableHover() {
-//       document.body.classList.remove('hasHover')
-//     }
-  
-//     function updateLastTouchTime() {
-//       lastTouchTime = new Date()
-//     }
-  
-//     document.addEventListener('touchstart', updateLastTouchTime, true)
-//     document.addEventListener('touchstart', disableHover, true)
-//     document.addEventListener('mousemove', enableHover, true)
-  
-//     enableHover()
-//   }
-  
-//   watchForHover()
+//     $( "#makeuse-logo" ).mouseleave(function() {
+//     $( "#makeuse-logo" ).toggle();
+//     $( "#logo-hover" ).toggle();
+// });
