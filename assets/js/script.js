@@ -61,10 +61,6 @@ $("#customInputBodyLength").keydown(function(event) {
         }
     });
 
-
-
-
-
 $("#customInputBodyCircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
@@ -305,10 +301,3 @@ $(document).ready(function() {
     $( "#logo-hover" ).toggle();
    });
 });
-
-// And to return to unhovered state.
-
-//     $( "#makeuse-logo" ).mouseleave(function() {
-//     $( "#makeuse-logo" ).toggle();
-//     $( "#logo-hover" ).toggle();
-// });

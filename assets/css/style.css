@@ -200,7 +200,33 @@ body {
     background-color: #7a7a7a;
 }
 
-#neckcollar, #neckwide {
+/* \\---  Garment Grid-Tile Sequencing  ---/////////////////////// */
+
+#neckline-collar, #neckline-wide, #neckline-coat,
+
+#sleeve-left-narrow-long-rotate, #sleeve-left-narrow-short,
+#sleeve-left-narrow-short-rotate, #sleeve-left-wide-long,
+#sleeve-left-wide-long-rotate, #sleeve-left-wide-short,
+#sleeve-left-wide-short-rotate,
+
+#sleeve-right-narrow-long-rotate, #sleeve-right-narrow-short,
+#sleeve-right-narrow-short-rotate, #sleeve-right-wide-long,
+#sleeve-right-wide-long-rotate, #sleeve-right-wide-short,
+#sleeve-right-wide-short-rotate,
+
+#tshirt-body-narrow-crop-rotate, #tshirt-body-narrow-hip,
+#tshirt-body-narrow-hip-rotate, #tshirt-body-narrow-long,
+#tshirt-body-narrow-long-rotate, #tshirt-body-wide-crop,
+#tshirt-body-wide-crop-rotate, #tshirt-body-wide-hip,
+#tshirt-body-wide-hip-rotate, #tshirt-body-wide-long,
+#tshirt-body-wide-long-rotate,
+
+#coat-body-narrow-crop, #coat-body-narrow-crop-rotate, 
+#coat-body-narrow-hip, #coat-body-narrow-hip-rotate,
+#coat-body-narrow-long, #coat-body-narrow-long-rotate,
+#coat-body-wide-crop, #coat-body-wide-crop-rotate,
+#coat-body-wide-hip, #coat-body-wide-hip-rotate,
+#coat-body-wide-long, #coat-body-wide-long-rotate {
     display: none;
 }
 
