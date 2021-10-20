@@ -1,8 +1,8 @@
 // Declaring constants - targets divs for pattern download thumbnails.
 
-const neckRound = document.getElementById("pattern-thumb-neck-round");
-const neckCollar = document.getElementById("pattern-thumb-neck-collar");
-const neckWide = document.getElementById("pattern-thumb-neck-wide");
+const neckRound = document.getElementById("patternThumbRound");
+const neckCollar = document.getElementById("patternThumbCollar");
+const neckWide = document.getElementById("patternThumbWide");
 
 // Declaring constant values for body-length, sleeve-width and sleeve length of supplied pattern options.
 
@@ -29,7 +29,7 @@ let bodyCircumference = currentSleeveLength * 2;
 // Declaring variables for custom input values.  
 
 let customInputSleeveCircum;
-let customInputBodylength;
+let customInputBodyLength;
 let customInputBodyCircum;
 
 // Declaring variables for displaying the fabric width
@@ -41,19 +41,19 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 // To calculate fabric size required for currently selected style.
 // $(".tiles").children().click(function() {
 $("#garmentgrid").children().click(function() {
-    $( "#fabricrequired" ).text(`Fabric required: ${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
+    $( "#fabricRequired" ).text(`Fabric required: ${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
 });
 
 // Function that calculates fabric size required to make 
 // garment based on the custom values input by user.
 // Triggered by Enter/Tab keys in custom body length input.
 
-$("#customInputbodylength").keydown(function(event) {
+$("#customInputBodyLength").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            if ($( "#customInputbodylength" ).val() > 0) {
-            let customBodyLength = parseInt($( "#customInputbodylength" ).val(), 10);
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            if ($( "#customInputBodyLength" ).val() > 0) {
+            let customBodyLength = parseInt($( "#customInputBodyLength" ).val(), 10);
+            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         } else { 
             $(".fabricsize").text('Custom values will update fabric size required, but will not be updated in the illustration.');
             $("#bodytile img").css('filter', 'blur(3px) invert(8)');
@@ -61,79 +61,78 @@ $("#customInputbodylength").keydown(function(event) {
         }
     });
 
-$("#custominputbodycircum").keydown(function(event) {
+
+
+
+
+$("#customInputBodyCircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
 
-            let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
+            let customBodyCircum = parseInt($( "#customInputBodyCircum" ).val(), 10);
 
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         }
 });
 
-$("#custominputbodycircum").keydown(function(event) {
+$("#customInputBodyCircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            let customBodyCircum = parseInt($( "#customInputBodyCircum" ).val(), 10);
+            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         }
 });
 
-$("#custominputsleevecircum").keydown(function(event) {
+$("#customInputSleeveCircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            let customBodyCircum = parseInt($( "#customInputBodyCircum" ).val(), 10);
+            $( "#fabricRequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
         }
 });
 
-// Following functions, when clicked, cycle to next image of their type
-// (neckline/body/sleeves), and update variables required for displaying 
-// key fabric measurements and pattern downloads for users.
+
+// Click event to run when user clicks
+// the neckline-tile of garment.
 
 $(document).ready(function() {
-    $( "#neckline-round" ).click(function() {
-    $( "#neckline-round" ).toggle();    // Toggles off current neckline tile.
-    $( "#neckline-collar" ).toggle();   // Toggles on next available neckline tile.
+    $( "#neckround" ).click(function() {
+    $( "#neckround" ).toggle();    // Toggles off current neckline tile.
+    $( "#neckcollar" ).toggle();   // Toggles on next available neckline tile.
     $(neckRound).toggle();    // Toggles off div containing download for current neckline. 
     $(neckCollar).toggle();   // Toggles on div containing download for next style of neckline.
-    // $("#pattern-thumb-collar a").css("background-color", "#ffb100");
+    // $("#patternThumbCollar a").css("background-color", "#ffb100");
    });
 });
 
-$( "#neckline-collar" ).click(function() {
-        $( "#neckline-collar" ).toggle();
-        $( "#neckline-wide" ).toggle();
+$( "#neckcollar" ).click(function() {
+        $( "#neckcollar" ).toggle();
+        $( "#neckwide" ).toggle();
         $(neckCollar).toggle();
         $(neckWide).toggle();
-        // $("#pattern-thumb-wide a").css("background-color", "#ffd066");
+        // $("#patternThumbWide a").css("background-color", "#ffd066");
 });
 
-$( "#neckline-wide" ).click(function() {
-    $( "#neckline-wide" ).toggle();
-    $( "#neckline-round" ).toggle();
+$( "#neckwide" ).click(function() {
+    $( "#neckwide" ).toggle();
+    $( "#neckround" ).toggle();
     $(neckWide).toggle();
     $(neckRound).toggle();
-    // $("#pattern-thumb-round a").css("background-color", "#d46300");
+    // $("#patternThumbRound a").css("background-color", "#d46300");
 });
 
-$( "#tshirt-body-wide-crop" ).click(function() {
-    $( "#tshirt-body-wide-crop" ).toggle();
-    // $( "#tshirt-body-wide-hip" ).toggle();
-    
-    $( "#length" ).html(fabricLength);   
-    $( "#width" ).html(fabricWidth);    
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
-});
+// Triggered when 'crop' body tile is clicked. 
 
-$( "#tshirt-body-wide-crop" ).click(function() {
-    $( "#tshirt-body-wide-crop" ).toggle();
-    $( "#tshirt-body-wide-hip" ).toggle();
+$( "#bodycropped" ).click(function() {
+    $( "#bodycropped" ).toggle();
+    $( "#bodyhip" ).toggle();
     currentBodyLength = bodyHip;    // Updates variable for current body-length with value assigned to bodyHip constant.
     $( "#length" ).html(fabricLength);    // Replaces fabric length requirement displayed on the page with 'fabricLength' variable.
     $( "#width" ).html(fabricWidth);    // Replaces fabric width requirement displayed on the page with 'fabricWidth' variable.
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionbodylength", replacing the contents of cell with value for currentBodyLength.
+    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionBodyLength", replacing the contents of cell with value for currentBodyLength.
 });
+
+// Triggered when 'hip' body tile is clicked. 
 
 $( "#bodyhip" ).click(function() {
     $( "#bodyhip" ).toggle();
@@ -141,8 +140,10 @@ $( "#bodyhip" ).click(function() {
     currentBodyLength = bodyLong;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
 });
+
+// Triggered when 'long' body tile is clicked. 
 
 $( "#bodylong" ).click(function() {
     $( "#bodylong" ).toggle();
@@ -150,8 +151,10 @@ $( "#bodylong" ).click(function() {
     currentBodyLength = bodyCrop;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+    $( "#dimensionBodyLength" ).html(`${currentBodyLength}cm`);
 });
+
+// Triggered when 'wide and short' left sleeve tile is clicked. 
 
 $( "#leftsleevewideshort" ).click(function() {
     $( "#leftsleevewideshort" ).toggle();
@@ -159,7 +162,7 @@ $( "#leftsleevewideshort" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();    // right sleeve tiles also toggled,
     $( "#rightsleevewidelong" ).toggle();     // so that both sleeves matches.
     currentSleeveLength = sleeveLong;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 // Triggered when 'wide and long' left sleeve tile is clicked. 
@@ -171,8 +174,8 @@ $( "#leftsleevewidelong" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle();
     currentSleeveWidth = sleeveNarrow;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionsleevecircumference" ).html(`${sleeveNarrow}cm`);
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
 });
 
 // Triggered when 'narrow and short' left sleeve tile is clicked. 
@@ -183,7 +186,7 @@ $( "#leftsleevenarrowshort" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle();
     $( "#rightsleevenarrowlong" ).toggle();
     currentSleeveLength = sleeveLong;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 // Triggered when 'narrow and long' left sleeve tile is clicked.
@@ -195,8 +198,8 @@ $( "#leftsleevenarrowlong" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     currentSleeveWidth = sleeveWide;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionsleevecircumference" ).html(`${sleeveWide}cm`);
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
 });
 
 // Triggered when 'wide and short' right sleeve tile is clicked.
@@ -207,7 +210,7 @@ $( "#rightsleevewideshort" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     $( "#rightsleevewidelong" ).toggle();
     currentSleeveLength = sleeveLong;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 // Triggered when 'wide and long' right sleeve tile is clicked.
@@ -219,8 +222,8 @@ $( "#rightsleevewidelong" ).click(function() {
     $( "#rightsleevenarrowshort" ).toggle();
     currentSleeveWidth = sleeveNarrow;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionsleevecircumference" ).html(`${sleeveNarrow}cm`);
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionSleeveCircumference" ).html(`${sleeveNarrow}cm`);
 });
 
 // Triggered when 'narrow and short' right sleeve tile is clicked.
@@ -232,7 +235,7 @@ $( "#rightsleevenarrowshort" ).click(function() {
     $( "#rightsleevenarrowlong" ).toggle();
     currentSleeveWidth = sleeveNarrow;
     currentSleeveLength = sleeveLong;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
 });
 
 // Triggered when 'narrow and long' right sleeve tile is clicked.
@@ -244,8 +247,8 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#rightsleevewideshort" ).toggle();
     currentSleeveWidth = sleeveWide;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionsleevecircumference" ).html(`${sleeveWide}cm`);
+    $( "#dimensionBodyCircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $( "#dimensionSleeveCircumference" ).html(`${sleeveWide}cm`);
 });
 
 // Listener function to trigger else/if conditional statement.
@@ -305,7 +308,7 @@ $( "#rightsleevenarrowlong" ).click(function() {
 // Site-logo hover the jquery way.
 
 $(document).ready(function() {
-    $( "#makeuse-logo" ).mouseenter(function() {
+    $( "#makeuse-logo" ).mouseover(function() {
     $( "#makeuse-logo" ).toggle();
     $( "#logo-hover" ).toggle();
    });
@@ -313,7 +316,36 @@ $(document).ready(function() {
 
 // And to return to unhovered state.
 
-$( "#makeuse-logo" ).mouseleave(function() {
+    $( "#makeuse-logo" ).mouseleave(function() {
     $( "#makeuse-logo" ).toggle();
     $( "#logo-hover" ).toggle();
 });
+
+// Snippet to avoid hover effects on touch devices borrowed from stackoverflow user "Blade" here:
+// https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+
+// function watchForHover() {
+   
+//     let lastTouchTime = 0
+  
+//     function enableHover() {
+//       if (new Date() - lastTouchTime < 500) return
+//       document.body.classList.add('hasHover')
+//     }
+  
+//     function disableHover() {
+//       document.body.classList.remove('hasHover')
+//     }
+  
+//     function updateLastTouchTime() {
+//       lastTouchTime = new Date()
+//     }
+  
+//     document.addEventListener('touchstart', updateLastTouchTime, true)
+//     document.addEventListener('touchstart', disableHover, true)
+//     document.addEventListener('mousemove', enableHover, true)
+  
+//     enableHover()
+//   }
+  
+//   watchForHover()

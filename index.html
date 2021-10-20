@@ -47,7 +47,8 @@
         
         <div class="container-lg">
             <div class="row">
-                <div class="grid-outer-wrapper col-12 col-md-8 mx-auto">
+                
+                <div class="grid-outer-wrapper col-12 col-md-8 col-lg-8">
                     <div id="garment-grid-wrapper">
                         <div id="neck-tile">
                             <img id="neckline-round" class="img-fluid" src="assets/images/grid-tiles/neckline-tiles/tshirt-neck-round@3x.png" alt="Tshirt in 'round' neckline style">
@@ -102,65 +103,46 @@
                             <img id="sleeve-right-wide-short" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short@3x.png" alt="right-sleeve in 'wide/short' style">
                             <img id="sleeve-right-wide-short-rotate" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short-rotate@3x.png" alt="right-sleeve in 'wide/short' style with rotation">
                         </div>
-                        <div class="sizing-info">
-                            <div>
-                                <p><strong>garment length</strong></p>
-                                <span>
-                                    <p id="dimensionbodylength">50cm</p>
-                                </span>
-                                <p><strong>garment circumference</strong></p>
-                                <span>
-                                    <p id="dimensionbodycircumference">110cm</p>
-                                </span>
-                                <p><strong>sleeve circumference</strong></p>
-                                <span>
-                                <p id="dimensionsleevecircumference">50cm</p> 
-                                </span>
-                            <div>
-                        </div>
-                        <div>
-                            <p class="template-intro">Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will update how much fabric you need and display the pattern downloads required to make your chosen style.</p>
-                        </div>
                     </div>
-                        
 
-                        <!-- <div class="tablewrap">
-                            <div class="garment-sizing table">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Garment Length</th>
-                                            <th>Garment circum.</th>
-                                            <th>Sleeve circum.</th>  
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td id="dimensionbodylength">50cm</td>
-                                            <td id="dimensionbodycircumference">110cm</td>
-                                            <td id="dimensionsleevecircumference">50cm</td> 
-                                        </tr>
-                                    </tbody>            
-                                </table>                            
-                            </div>
-                        </div> -->
-                    
-                                <!-- ---------------custom input cells to add soon--------------------- -->
-                                <!-- <tr>
-                                    <td><input id="custominputbodylength" type="number" placeholder=" .......cm"></td>
-                                    <td><input id="custominputbodycircum" type="number" placeholder=" .......cm"></td>
-                                    <td><input id="custominputsleevecircum" type="number" placeholder=".......cm"></td>
-                                </tr> -->
-                            <!-- </tbody>
-                            </table> -->
-                        <!-- </div> -->
+                    <p class="template-intro row">Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will update how much fabric you need and display the pattern downloads required to make your chosen style.</p>
                     </div>
                     
+                    <div class="sizing-info row">
+                        <p> 
+                            <strong>Garment length:</strong><span id="dimensionbodylength">50cm</span>
+                            
+                            <strong>Garment circumference</strong><span id="dimensionbodycircumference">110cm</span>
+                            
+                            <strong>Sleeve circumference</strong><span id="dimensionsleevecircumference">50cm</span>
+                        </p>
+                        <p id="fabricRequired">Fabric Size Required: 110cm wide x 75cm long</p>
+                    </div>
+                    <!-- <div id="whatYouNeed" class="container-fluid col-10 col-md-6">
+                        <p>Click the collar, sleeve and body tiles of the garment to alter the fit and style. This updates fabric size and pattern template downloads required to make your chosen style.</p>
+                        <br>
+                        <p id="fabricRequired">Fabric needed: 110cm wide x 75cm long</p>
+                        
+                    </div> -->
+                    <!-- <div class="sizing-info row">
+                        <p><strong>garment length</strong></p>
+                        <span>
+                            <p id="dimensionbodylength">50cm</p>
+                        </span>
+                        <p><strong>garment circumference</strong></p>
+                        <span>
+                            <p id="dimensionbodycircumference">110cm</p>
+                        </span>
+                        <p><strong>sleeve circumference</strong></p>
+                        <span>
+                            <p id="dimensionsleevecircumference">50cm</p> 
+                        </span>
+                    </div> -->
                 </div>    
 
-                <div class="col-10 col-md-5 col-lg-8 mx-auto mr-md-auto">
+                <!-- <div class="col-10 col-md-5 col-lg-8 mx-auto mr-md-auto">
                     <p class="template-intro">Click the collar, sleeve and body tiles of the garment to alter the fit and style. This will update how much fabric you need and display the pattern downloads required to make your chosen style.</p>
-                </div>
+                </div> -->
 
                 <!-- <div class="tablewrap col-12 mr-lg-auto">
                     <table class="table-responsive-lg">
@@ -195,47 +177,47 @@
                                 <span><img id="tshirt-grid" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-grid.png" alt="Make/Use grid-template pattern, essential resource for making all variations of the MakeUse Crop-Tshirt."></span>
                             </a>
                         </div>
-                        <div id="thumb-neck-round" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-neck-round" class="pattern-thumb col-6 col-md-3">
                             <a class="pattern-link" id="pattern-neck-round" href="assets/downloads/print-template-neckline-round.pdf">
                                 <span><img id="neck-round" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-round.png" alt="Make/Use template pattern for round-neck version of Tshirt."></span>
                             </a>
                         </div>
-                        <div id="thumb-neck-collar" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-neck-collar" class="pattern-thumb col-6 col-md-3">
                             <a class="pattern-link" id="pattern-neck-collar" href="assets/downloads/print-template-neckline-collar.pdf">
                                 <span><img id="neck-collar" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png" alt="Make/Use template pattern for collar-neck version of Tshirt."></span>
                             </a>
                         </div>
-                        <div id="thumb-neck-wide" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-neck-wide" class="pattern-thumb col-6 col-md-3">
                             <a class="pattern-link" id="pattern-neck-wide" href="assets/downloads/print-template-neckline-wide.pdf">
                                 <span><img id="neck-wide" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-wide.png" alt="Make/Use template pattern for wide-neck version of Tshirt."></span>
                             </a>
                         </div>
-                        <div id="thumb-sleeve-cut-left" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-sleeve-cut-left" class="pattern-thumb col-6 col-md-3">
                             <a class="pattern-link" id="pattern-sleeve-cut-left" href="assets/downloads/print-template-sleeve-cut-left.pdf">
                                 <span><img id="sleeve-cut-left" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png" alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
                             </a>
                         </div>
-                        <div id="thumb-sleeve-cut-right" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-sleeve-cut-right" class="pattern-thumb col-6 col-md-3">
                             <a class="pattern-link" id="pattern-sleeve-cut-right" href="assets/downloads/print-template-sleeve-cut-right.pdf">
                                 <span><img id="sleeve-cut-right" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png" alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
                             </a>
                         </div>
-                        <div id="thumb-body-rotate-left" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-body-rotate-left" class="pattern-thumb col-6 col-md-3">
                             <a class="pattern-link" id="pattern-body-rotation-left" href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf">
                                 <span><img id="body-rotate-left" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png" alt="Make/Use template pattern for body rotation and sleeve swap modification - LEFT."></span>
                             </a>
                         </div>
-                        <div id="thumb-body-rotate-right" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-body-rotate-right" class="pattern-thumb col-6 col-md-3">
                             <a class="pattern-link" id="pattern-body-rotation-right" href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf">
                                 <span><img id="body-rotate-right" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png" alt="Make/Use template pattern for body rotation and sleeve swap modification - RIGHT."></span>
                             </a>
                         </div>
-                        <div id="thumb-elbow-rotate-left" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-elbow-rotate-left" class="pattern-thumb col-6 col-md-3">
                             <a class="pattern-link" id="pattern-elbow-rotation-left" href="assets/downloads/print-template-elbow-rotation-left.pdf">
                                 <span><img id="elbow-rotate-left" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png" alt="Make/Use template pattern for elbow rotation modification - LEFT."></span>
                             </a>
                         </div>
-                        <div id="thumb-elbow-rotate-right" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-elbow-rotate-right" class="pattern-thumb col-6 col-md-3">
                             <a class="pattern-link" id="pattern-elbow-rotation-right" href="assets/downloads/print-template-elbow-rotation-right.pdf">
                                 <span><img id="elbow-rotate-right" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png" alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
                             </a>
@@ -262,42 +244,6 @@
             </div>
         </div>
 
-        <!-- <section class="makeuse-tshirt container-lg">
-            <div class="row">
-                <div class="col-10 col-md-6 mx-auto" id="garmentgrid">
-                    <div id="leftsleevetile">
-                        <img id="leftsleevewideshort" src="assets/images/leftsleevewideshort.png" alt="">
-                        <img id="leftsleevewidelong" src="assets/images/leftsleevewidelong.png" alt="">
-                        <img id="leftsleevenarrowshort" src="assets/images/leftsleevenarrowshort.png" alt="">
-                        <img id="leftsleevenarrowlong" src="assets/images/leftsleevenarrowlong.png" alt="">
-                    </div>
-                    <div id="necktile">
-                        <img id="neckround" src="assets/images/neckround.png" alt="">
-                        <img id="neckroundHover" src="assets/images/neckroundhover.png" alt="">
-                        <img id="neckcollar" src="assets/images/neckcollar.png" alt="">
-                        <img id="neckcollarHover" src="assets/images/neckcollarhover.png" alt="">
-                        <img id="neckwide" src="assets/images/neckwide.png" alt="">
-                        <img id="neckwideHover" src="assets/images/neckwidehover.png" alt="">
-                    </div>
-                    <div id="rightsleevetile">
-                        <img id="rightsleevenarrowlong" src="assets/images/rightsleevenarrowlong.png" alt="">
-                        <img id="rightsleevenarrowshort" src="assets/images/rightsleevenarrowshort.png" alt="">
-                        <img id="rightsleevewidelong" src="assets/images/rightsleevewidelong.png" alt="">
-                        <img id="rightsleevewideshort" src="assets/images/rightsleevewideshort.png" alt="">
-                    </div>
-                    <div id="lowerlefttile">
-                        <span class="fabricsize"><h5 id="fabricrequired">Fabric needed: 110cm wide x 75cm long</h5></span>
-                    </div>
-                    <div id="bodytile">
-                        <img id="bodycropped" src="assets/images/bodycropped.png" alt="">
-                        <img id="bodyhip" src="assets/images/bodyhip.png" alt="">
-                        <img id="bodylong" src="assets/images/bodylong.png" alt="">
-                    </div>
-                    <div id="lowerrighttile"></div>
-                </div>
-
-            </div>
-        </section> -->
         
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
