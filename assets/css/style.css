@@ -53,12 +53,6 @@ html, body {
     padding: 0;
     left: 0;
     margin-bottom: 50px;
-    box-shadow: 
-        0 2px 1px rgba(0,0,0,0.09), 
-        0 4px 2px rgba(0,0,0,0.09), 
-        0 8px 4px rgba(0,0,0,0.09), 
-        0 16px 8px rgba(0,0,0,0.09),
-        0 32px 16px rgba(0,0,0,0.09);
 }
 
 nav {
@@ -87,6 +81,11 @@ nav {
 .navbar .navbar-brand {
     display: block;
     margin: auto;
+}
+
+#logo-hover {
+    display: none;
+    left: auto;
 }
 
 .navbar .navbar-brand img {
@@ -135,8 +134,6 @@ body {
     color: #ffb100;
 }
 
-
-
 /* \\---  Body Layout  ---// */
 
 
@@ -145,21 +142,21 @@ body {
 #garment-grid-wrapper {
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;   
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 150px;
     grid-gap: 2px;
     background-color: #e9e9e9;
     max-width: 684px;
-    margin: 0 0 -66px 0;
+    margin-bottom: -55px;
     padding: 18px 18px 66px 18px;
-    box-shadow: 
+    /* box-shadow: 
     0 2px 1px rgba(0,0,0,0.09), 
     0 4px 2px rgba(0,0,0,0.09), 
     0 8px 4px rgba(0,0,0,0.09), 
     0 16px 8px rgba(0,0,0,0.09),
-    0 32px 16px rgba(0,0,0,0.09);
+    0 32px 16px rgba(0,0,0,0.09); */
 }
 
-#necktile {
+#neck-tile {
     display: grid;
     grid-column: 2;
     grid-row: 1;
@@ -167,7 +164,7 @@ body {
     align-content: flex-end;
 }
 
-.tile-body {
+#body-tile {
     display: grid;
     grid-column: 2;
     grid-row: 2 / 4;
@@ -176,16 +173,15 @@ body {
     background-color: #b3b2b2;
 }
 
-.tile-sleevetestleft {
+#sleeve-tile-left {
     display: grid;
     grid-column: 1;
     grid-row: 1 / 3;
     justify-content: right;
-    /* background-color: #fda605; */
     background-color: #b7dadf;
 }
 
-.tile-sleevetestright {
+#sleeve-tile-right {
     display: grid;
     grid-column: 3;
     grid-row: 1 / 3;
@@ -198,19 +194,17 @@ body {
 
 #neckline-collar, #neckline-wide, #neckline-coat,
 
-#sleeve-left-narrow-long-rotate, #sleeve-left-narrow-short,
-#sleeve-left-narrow-short-rotate, #sleeve-left-wide-long,
-#sleeve-left-wide-long-rotate, #sleeve-left-wide-short,
+#sleeve-left-narrow-long, #sleeve-left-narrow-long-rotate, #sleeve-left-narrow-short,
+#sleeve-left-narrow-short-rotate, #sleeve-left-wide-long, #sleeve-left-wide-long-rotate,
 #sleeve-left-wide-short-rotate,
 
-#sleeve-right-narrow-long-rotate, #sleeve-right-narrow-short,
-#sleeve-right-narrow-short-rotate, #sleeve-right-wide-long,
-#sleeve-right-wide-long-rotate, #sleeve-right-wide-short,
+#sleeve-right-narrow-long, #sleeve-right-narrow-long-rotate, #sleeve-right-narrow-short, 
+#sleeve-right-narrow-short-rotate, #sleeve-right-wide-long, #sleeve-right-wide-long-rotate,
 #sleeve-right-wide-short-rotate,
 
-#tshirt-body-narrow-crop-rotate, #tshirt-body-narrow-hip,
-#tshirt-body-narrow-hip-rotate, #tshirt-body-narrow-long,
-#tshirt-body-narrow-long-rotate, #tshirt-body-wide-crop,
+#tshirt-body-narrow-crop, #tshirt-body-narrow-crop-rotate,
+#tshirt-body-narrow-hip, #tshirt-body-narrow-hip-rotate, 
+#tshirt-body-narrow-long, #tshirt-body-narrow-long-rotate,
 #tshirt-body-wide-crop-rotate, #tshirt-body-wide-hip,
 #tshirt-body-wide-hip-rotate, #tshirt-body-wide-long,
 #tshirt-body-wide-long-rotate,
@@ -252,10 +246,12 @@ body {
     color: #e9e7e7;
 }
 
-#pattern-thumb-wide,
-#pattern-thumb-collar,
-#pattern-neck-round > a,
-#pattern-neck-wide > a {
+#thumb-neck-collar,
+#thumb-neck-wide,
+#thumb-body-rotate-left,
+#thumb-body-rotate-right,
+#thumb-elbow-rotate-left,
+#thumb-elbow-rotate-right {
     display: none;
 }
 
@@ -274,15 +270,17 @@ body {
 .pattern-thumb a {
     display: inline-flex;
     padding: none;
-    /* background-color:#ffd066;
-    border: 1px solid #d4b467; */
+    background-color:#ffd066;
+    background-color: #e9e7e7;
+    border: 1px solid #d4b467;
+    border: 1px solid #e9e7e7;
     transition: ease-in-out 50ms;
-    box-shadow: 
+    /* box-shadow: 
         0 2px 1px rgba(0,0,0,0.09), 
         0 4px 2px rgba(0,0,0,0.09), 
         0 8px 4px rgba(0,0,0,0.09), 
         0 16px 8px rgba(0,0,0,0.09),
-        0 32px 16px rgba(0,0,0,0.09);
+        0 32px 16px rgba(0,0,0,0.09); */
 }
 
 .pattern-link {
@@ -304,12 +302,15 @@ h5 {
     padding-bottom: 15px;
     background-color: #888;
     margin: 77px 0 0 0;
-    max-width: 688px;
+    width: inherit;
     box-sizing: border-box;
+    display: grid;
+    grid-row: 3;
+    grid-column: 1 / 5;
 }
 
 .table {
-    width: auto;
+    /* width: auto; */
     margin: 0 auto;
     justify-content:space-between;
     /* align-content: center; */
@@ -349,16 +350,6 @@ input {
     margin-left: 30px;
     font-size: 18px;
 }
-
-/* #garmentInfoForm h5 {
-    color:#fffefe;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 34px;
-    margin: 0;
-    padding: 30px 0 20px 0;
-    display: flex;
-} */
 
 /* /////////////////////////////////////////////////////////// */
 

@@ -92,11 +92,11 @@ $("#custominputsleevecircum").keydown(function(event) {
 // key fabric measurements and pattern downloads for users.
 
 $(document).ready(function() {
-    $( "#neckround" ).click(function() {
-    $( "#neckround" ).toggle();    // Toggles off current neckline tile.
-    $( "#neckcollar" ).toggle();   // Toggles on next available neckline tile.
-    $(neckRound).toggle();    // Toggles off div containing download for current neckline. 
-    $(neckCollar).toggle();   // Toggles on div containing download for next style of neckline.
+    $( "#neckRound" ).click(function() {
+    $( "#neckRound" ).toggle();    // Toggles off current neckline tile.
+    $( "#neckCollar" ).toggle();   // Toggles on next available neckline tile.
+    $(neck-round).toggle();    // Toggles off div containing download for current neckline. 
+    $(neck-collar).toggle();   // Toggles on div containing download for next style of neckline.
     // $("#pattern-thumb-collar a").css("background-color", "#ffb100");
    });
 });
