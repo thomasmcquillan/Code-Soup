@@ -41,7 +41,7 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 // To calculate fabric size required for currently selected style.
 // $(".tiles").children().click(function() {
 $("#garment-grid-wrapper").children().click(function() {
-    $( "#fabricrequired" ).text(`Fabric required: ${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
+    $( "#fabricrequired" ).text(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm`);
 });
 
 // Function that calculates fabric size required to make 
@@ -53,7 +53,7 @@ $("#customInputbodylength").keydown(function(event) {
         (event.key === "Enter" || event.key == "Tab")) {
             if ($( "#customInputbodylength" ).val() > 0) {
             let customBodyLength = parseInt($( "#customInputbodylength" ).val(), 10);
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
         } else { 
             $(".fabricsize").text('Custom values will update fabric size required, but will not be updated in the illustration.');
             $("#bodytile img").css('filter', 'blur(3px) invert(8)');
@@ -67,7 +67,7 @@ $("#custominputbodycircum").keydown(function(event) {
 
             let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
 
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
         }
 });
 
@@ -75,7 +75,7 @@ $("#custominputbodycircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
             let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
         }
 });
 
@@ -83,7 +83,7 @@ $("#custominputsleevecircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
             let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + customBodyLength}cm long`);
+            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
         }
 });
 

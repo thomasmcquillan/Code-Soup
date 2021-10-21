@@ -1,4 +1,4 @@
-# MakeUse - Zero-Waste Fashion Design Assistant
+# MakeUse - Zero-Waste Fashion Studio Helper App
 
 [View the live website here.](https://thomasmcquillan.github.io/makeuse-fashiondesigntool/index.html)
 
