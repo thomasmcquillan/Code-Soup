@@ -40,7 +40,7 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 
 // To calculate fabric size required for currently selected style.
 // $(".tiles").children().click(function() {
-$("#garmentgrid").children().click(function() {
+$("#garment-grid-wrapper").children().click(function() {
     $( "#fabricrequired" ).text(`Fabric required: ${currentSleeveLength * 2}cm wide x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm long`);
 });
 
@@ -119,15 +119,11 @@ $( "#neckline-wide" ).click(function() {
 
 $( "#tshirt-body-wide-crop" ).click(function() {
     $( "#tshirt-body-wide-crop" ).toggle();
-    // $( "#tshirt-body-wide-hip" ).toggle();
-    
-    $( "#length" ).html(fabricLength);   
-    $( "#width" ).html(fabricWidth);    
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+    $( "#tshirt-body-wide-crop-rotate" ).toggle(); 
 });
 
-$( "#tshirt-body-wide-crop" ).click(function() {
-    $( "#tshirt-body-wide-crop" ).toggle();
+$( "#tshirt-body-wide-crop-rotate" ).click(function() {
+    $( "#tshirt-body-wide-crop-rotate" ).toggle();
     $( "#tshirt-body-wide-hip" ).toggle();
     currentBodyLength = bodyHip;    // Updates variable for current body-length with value assigned to bodyHip constant.
     $( "#length" ).html(fabricLength);    // Replaces fabric length requirement displayed on the page with 'fabricLength' variable.
@@ -135,27 +131,79 @@ $( "#tshirt-body-wide-crop" ).click(function() {
     $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionbodylength", replacing the contents of cell with value for currentBodyLength.
 });
 
-$( "#bodyhip" ).click(function() {
-    $( "#bodyhip" ).toggle();
-    $( "#bodylong" ).toggle();
+$( "#tshirt-body-wide-hip" ).click(function() {
+    $( "#tshirt-body-wide-hip" ).toggle();
+    $( "#tshirt-body-wide-hip-rotate" ).toggle();
+});
+
+$( "#tshirt-body-wide-hip-rotate" ).click(function() {
+    $( "#tshirt-body-wide-hip-rotate" ).toggle();
+    $( "#tshirt-body-wide-long" ).toggle();
     currentBodyLength = bodyLong;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
     $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
 });
 
-$( "#bodylong" ).click(function() {
-    $( "#bodylong" ).toggle();
-    $( "#bodycropped" ).toggle();
+$( "#tshirt-body-wide-long" ).click(function() {
+    $( "#tshirt-body-wide-long" ).toggle();
+    $( "#tshirt-body-wide-long-rotate" ).toggle();
+});
+
+$( "#tshirt-body-wide-long-rotate" ).click(function() {
+    $( "#tshirt-body-wide-long-rotate" ).toggle();
+    $( "#tshirt-body-narrow-crop" ).toggle();
     currentBodyLength = bodyCrop;
     $( "#length" ).html(fabricLength);
     $( "#width" ).html(fabricWidth);
     $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
 });
 
-$( "#leftsleevewideshort" ).click(function() {
-    $( "#leftsleevewideshort" ).toggle();
-    $( "#leftsleevewidelong" ).toggle();
+$( "#tshirt-body-narrow-crop" ).click(function() {
+    $( "#tshirt-body-narrow-crop" ).toggle();
+    $( "#tshirt-body-narrow-crop-rotate" ).toggle();
+});
+
+$( "#tshirt-body-narrow-crop-rotate" ).click(function() {
+    $( "#tshirt-body-narrow-crop-rotate" ).toggle();
+    $( "#tshirt-body-narrow-hip" ).toggle();
+    currentBodyLength = bodyHip;    
+    $( "#length" ).html(fabricLength);
+    $( "#width" ).html(fabricWidth);  
+    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+});
+
+$( "#tshirt-body-narrow-hip" ).click(function() {
+    $( "#tshirt-body-narrow-hip" ).toggle();
+    $( "#tshirt-body-narrow-hip-rotate" ).toggle();
+});
+
+$( "#tshirt-body-narrow-hip-rotate" ).click(function() {
+    $( "#tshirt-body-narrow-hip-rotate" ).toggle();
+    $( "#tshirt-body-narrow-long" ).toggle();
+    currentBodyLength = bodyLong;
+    $( "#length" ).html(fabricLength);
+    $( "#width" ).html(fabricWidth);
+    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+});
+
+$( "#tshirt-body-narrow-long" ).click(function() {
+    $( "#tshirt-body-narrow-long" ).toggle();
+    $( "#tshirt-body-narrow-long-rotate" ).toggle();
+});
+
+$( "#tshirt-body-narrow-long-rotate" ).click(function() {
+    $( "#tshirt-body-narrow-long-rotate" ).toggle();
+    $( "#tshirt-body-wide-crop" ).toggle();
+    currentBodyLength = bodyCrop;
+    $( "#length" ).html(fabricLength);
+    $( "#width" ).html(fabricWidth);
+    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+});
+
+$( "#sleeve-left-wide-short" ).click(function() {
+    $( "#sleeve-left-wide-short" ).toggle();
+    $( "#sleeve-left-wide-long" ).toggle();
     $( "#rightsleevewideshort" ).toggle();    // right sleeve tiles also toggled,
     $( "#rightsleevewidelong" ).toggle();     // so that both sleeves matches.
     currentSleeveLength = sleeveLong;
