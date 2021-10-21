@@ -3,6 +3,10 @@
 const neckRound = document.getElementById("pattern-thumb-neck-round");
 const neckCollar = document.getElementById("pattern-thumb-neck-collar");
 const neckWide = document.getElementById("pattern-thumb-neck-wide");
+const bodyRotateLeft = document.getElementById("pattern-thumb-body-rotate-left");
+const bodyRotateRight = document.getElementById("pattern-thumb-body-rotate-right");
+const elbowRotateLeft = document.getElementById("pattern-thumb-elbow-rotate-left");
+const elbowRotateRight = document.getElementById("pattern-thumb-elbow-rotate-left");
 
 // Declaring constant values for body-length, sleeve-width and sleeve length of supplied pattern options.
 
@@ -126,6 +130,8 @@ $( "#neckline-wide" ).click(function() {
 $( "#tshirt-body-wide-crop" ).click(function() {
     $( "#tshirt-body-wide-crop" ).toggle();
     $( "#tshirt-body-wide-crop-rotate" ).toggle();
+    $( "#body-rotate-left" ).toggle();
+    $( "#body-rotate-right" ).toggle();
 });
 
 $( "#tshirt-body-wide-crop-rotate" ).click(function() {
