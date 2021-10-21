@@ -42,6 +42,11 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 // $(".tiles").children().click(function() {
 $("#garment-grid-wrapper").children().click(function() {
     $( "#fabricrequired" ).text(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm`);
+    if ( $( "#grid-intro" ).is(":visible")) {
+       $( "#grid-intro" ).toggle();
+    } else {
+        return;
+    }
 });
 
 // Function that calculates fabric size required to make 
@@ -119,7 +124,7 @@ $( "#neckline-wide" ).click(function() {
 
 $( "#tshirt-body-wide-crop" ).click(function() {
     $( "#tshirt-body-wide-crop" ).toggle();
-    $( "#tshirt-body-wide-crop-rotate" ).toggle(); 
+    $( "#tshirt-body-wide-crop-rotate" ).toggle();
 });
 
 $( "#tshirt-body-wide-crop-rotate" ).click(function() {
