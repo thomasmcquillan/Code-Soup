@@ -50,13 +50,15 @@
                 
                 <div class="grid-outer-wrapper col-12 col-md-8 mr-auto">
                     <div id="garment-grid-wrapper">
-                        <div id="neck-tile">
+                        <div id="neck-tile" class="garment-tile">
                             <img id="neckline-round" class="img-fluid" src="assets/images/grid-tiles/neckline-tiles/tshirt-neck-round@3x.png" alt="Tshirt in 'round' neckline style">
                             <img id="neckline-collar" class="img-fluid" src="assets/images/grid-tiles/neckline-tiles/tshirt-neck-collar@3x.png" alt="Tshirt in 'collar' neckline style">
                             <img id="neckline-wide" class="img-fluid" src="assets/images/grid-tiles/neckline-tiles/tshirt-neck-wide@3x.png" alt="Tshirt in 'wide' neckline style">
                             <img id="neckline-coat" class="img-fluid" src="assets/images/grid-tiles/neckline-tiles/coat-neck-collar@3x.png" alt="Coat neckline collar">
+                            <img id="hover-swatch" class="img-fluid" src="assets/images/makeusecolorswatch.png"> 
                         </div>
-                        <div id="sleeve-tile-left">
+                        <div class="neck-bg"></div>
+                        <div id="sleeve-tile-left" class="garment-tile">
                             <img id="sleeve-left-wide-short" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-short-@3x.png" alt="Left-sleeve in 'wide/short' style">
                             <img id="sleeve-left-wide-short-rotate" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-short-rotate@3x.png" alt="Left-sleeve in 'wide/short' style with rotation">
                             <img id="sleeve-left-wide-long" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-long@3x.png" alt="Left-sleeve in 'wide/long' style">
@@ -66,7 +68,7 @@
                             <img id="sleeve-left-narrow-short" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-short@3x.png" alt="Left-sleeve in 'narrow/short' style">
                             <img id="sleeve-left-narrow-short-rotate" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-short-rotate@3x.png" alt="Left-sleeve in 'narrow/short' style with rotation">
                         </div>
-                        <div id="body-tile">
+                        <div id="body-tile" class="garment-tile">
                             <img id="tshirt-body-wide-crop" class="img-fluid" src="assets/images/grid-tiles/body-tiles/tshirt-body-wide-crop@3x.png" alt="Tshirt garment-body in 'wide/cropped' style">
                             <img id="tshirt-body-wide-crop-rotate" class="img-fluid" src="assets/images/grid-tiles/body-tiles/tshirt-body-wide-crop-rotate@3x.png" alt="Tshirt garment-body in 'wide/cropped' style with rotation">
                             <img id="tshirt-body-wide-hip" class="img-fluid" src="assets/images/grid-tiles/body-tiles/tshirt-body-wide-hip@3x.png" alt="Tshirt garment-body in 'wide/hip' style">
@@ -92,7 +94,7 @@
                             <img id="coat-body-wide-long" class="img-fluid" src="assets/images/grid-tiles/body-tiles/coat-body-wide-long@3x.png" alt="Coat garment-body in 'wide/long' style">
                             <img id="coat-body-wide-long-rotate" class="img-fluid" src="assets/images/grid-tiles/body-tiles/coat-body-wide-long-rotate@3x.png" alt="Coat garment-body in 'narrow/cropped' style with rotation">
                         </div>
-                        <div id="sleeve-tile-right">
+                        <div id="sleeve-tile-right" class="garment-tile">
                             <img id="sleeve-right-narrow-long" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-long@3x.png" alt="right-sleeve in 'narrow/long' style">
                             <img id="sleeve-right-narrow-long-rotate" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-long-rotate@3x.png" alt="right-sleeve in 'narrow/long' style with rotation">
                             <img id="sleeve-right-narrow-short" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-short@3x.png" alt="right-sleeve in 'narrow/short' style">
@@ -117,6 +119,8 @@
                         </div>
                     </div>
                 </div>    
+
+                <!-- <div class="grid-preview-panel"></div> -->
 
                 <div class="col-12 col-md-4">
                     
@@ -172,7 +176,7 @@
                             </a>
                         </div>
                     </div>
-                    <div id="downloads-vertical" class="d-none d-md-grid">
+                    <div id="downloads-vertical" class="d-none d-md-flex">
                         <div id="pattern-thumb-grid-tshirt" class="pattern-thumb">
                             <a class="pattern-link" id="pattern-tshirt-grid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
                                 <span><img id="tshirt-grid" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-grid.png" alt="Make/Use grid-template pattern, essential resource for making all variations of the MakeUse Crop-Tshirt."></span>
@@ -213,12 +217,12 @@
                                 <span><img id="body-rotate-right" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png" alt="Make/Use template pattern for body rotation and sleeve swap modification - RIGHT."></span>
                             </a>
                         </div>
-                        <div id="pattern-thumb-elbow-rotate-left" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-elbow-rotate-left" class="pattern-thumb">
                             <a class="pattern-link" id="pattern-elbow-rotation-left" href="assets/downloads/print-template-elbow-rotation-left.pdf">
                                 <span><img id="elbow-rotate-left" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png" alt="Make/Use template pattern for elbow rotation modification - LEFT."></span>
                             </a>
                         </div>
-                        <div id="pattern-thumb-elbow-rotate-right" class="pattern-thumb col-6 col-md-3">
+                        <div id="pattern-thumb-elbow-rotate-right" class="pattern-thumb">
                             <a class="pattern-link" id="pattern-elbow-rotation-right" href="assets/downloads/print-template-elbow-rotation-right.pdf">
                                 <span><img id="elbow-rotate-right" class="thumbs img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png" alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
                             </a>

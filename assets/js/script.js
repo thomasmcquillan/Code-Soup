@@ -43,7 +43,8 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 $("#garment-grid-wrapper").children().click(function() {
     $( "#fabricrequired" ).text(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm`);
     if ( $( "#grid-intro" ).is(":visible")) {
-       $( "#grid-intro" ).toggle();
+    //    $( "#grid-intro" ).toggle();
+    $( "#grid-intro" ).toggle();
     } else {
         return;
     }
@@ -370,3 +371,6 @@ $( "#makeuse-logo" ).mouseleave(function() {
     $( "#makeuse-logo" ).toggle();
     $( "#logo-hover" ).toggle();
 });
+
+// let p = document.getElementById("para1")
+// let p_prime = p.cloneNode(true)
