@@ -320,12 +320,80 @@ $( document ).ready(function() {
     });
 });
 
-// Pattern Preview hover function
+// Pattern Preview hover functions
 
 $( document ).ready(function() {
-    $( "#neck-round" ).hover(function() {
-        $( ".overlay-neckline" ).toggle();
+    $( "#tshirt-grid" ).hover(function() {
+        $( ".pattern-hover-overlay" ).toggle();
     }, function(){
-        $( ".overlay-neckline" ).toggle();
+        $( ".pattern-hover-overlay" ).toggle();
     });
 });
+
+$( document ).ready(function() {
+    $( ".neck-temp" ).hover(function() {
+        if ($("#neck-round").is(":visible")) {
+            $( ".overlay-neck-round" ).toggle();    
+        } else if (
+            $("#neck-collar").is(":visible")) {
+                $( ".overlay-neck-collar" ).toggle();
+            } else if ($("#neck-wide").is(":visible")){
+                $( ".overlay-neck-wide" ).toggle();}
+    });
+});
+
+$( document ).ready(function() {
+    $( ".sleeve-left-temp" ).hover(function() {
+        if ($("#sleeve-cut-left").is(":visible")) {
+            $( ".overlay-sleeve-left" ).toggle();    
+        } else if (
+            $("#body-rotate-left").is(":visible")) {
+                $( ".overlay-sleeve-body-rot-left" ).toggle();
+            } else if ($("#elbow-rotate-left").is(":visible")){
+                $( ".overlay-sleeve-left-elbow-rot" ).toggle();}
+    });
+});
+
+$( document ).ready(function() {
+    $( ".sleeve-right-temp" ).hover(function() {
+        if ($("#sleeve-cut-right").is(":visible")) {
+            $( ".overlay-sleeve-right" ).toggle();    
+        } else if (
+            $("#body-rotate-right").is(":visible")) {
+                $( ".overlay-sleeve-body-rot-right" ).toggle();
+            } else if ($("#elbow-rotate-right").is(":visible")){
+                $( ".overlay-sleeve-right-elbow-rot" ).toggle();}
+    });
+});
+
+$( document ).ready(function() {
+    $( ".body-temp" ).hover(function() {
+        $( ".neckline-over" ).toggle();
+    }, function(){
+        $( ".neckline-over" ).toggle();
+    });
+});
+
+$( document ).ready(function() {
+    $( "sleeve-left-temp" ).hover(function() {
+        $( ".pattern-hover-overlay" ).toggle();
+    }, function(){
+        $( ".pattern-hover-overlay" ).toggle();
+    });
+});
+// $( "#necktile" ).mouseenter(function() {
+    //     if($("#neckround").is(":visible")){
+    //         $( "#neckround" ).toggle();           
+    //         $( "#neckround" ).toggle();       
+    //     } else if (
+    //         ($("#neckcollar").is(":visible"))){
+    //             $( "#neckcollar" ).toggle();
+    //             $( "#neckcollar" ).toggle();
+    //     } else if (
+    //         ($("#neckwide").is(":visible"))){
+    //             $( "#neckwide" ).toggle();
+    //             $( "#neckwide" ).toggle();
+    //     } else {
+    //         return;
+    //     };
+    // });

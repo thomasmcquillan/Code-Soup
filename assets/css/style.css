@@ -181,38 +181,10 @@ p {
     background-color: #b7b3a7;
     align-content: flex-end;
 }
-/* ////// pattern preview testing */
 
-.pattern-hover-overlay {
-    display: none;
-    z-index: 50;
-    background-color: #b7b3a73a;
-}
-
-.overlay-neckline {
-    display: none;
-    grid-column: 2;
-    grid-row: 1;
-    z-index: 100000;
-    background-color:#ffb3003b;
-}
-
-.overlay-neckline {
-   display: none;
-}
-
-#neck {
-    display: grid;
-    grid-column: 2;
-    grid-row: 1;
-    z-index: 5000;
-    
-}
-
-/* ////////////////////////////// */
-/* .garment-tile:hover {
+.garment-tile:hover {
     filter: opacity(66%);
-} */
+}
 
 #body-tile {
     display: grid;
@@ -286,6 +258,55 @@ p {
 .neck-bg:hover {
     z-index: 9;
 }
+
+/* ////// pattern preview testing */
+
+.pattern-hover-overlay {
+    display: none;
+    z-index: 10;
+    /* background-color:#fffefe23;
+    filter: opacity(77%); */
+    
+}
+
+.pattern-hover-overlay > img {
+    /* filter: contrast(300%), grayscale(100%),sepia(95); */
+    background-color:#807e7e;
+    background-color:#807e7e88;
+    filter: saturation(300%), contrast(200%);
+}
+
+.overlay-grid-tshirt {
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
+    /* filter:url("assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png"); */
+}
+
+.neckline-over {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.body-over {
+    grid-column: 2;
+    grid-row: 2 / 4;
+}
+
+.sleeve-left-over {
+    grid-column: 1;
+    grid-row: 1 / 4;
+
+}
+
+.sleeve-right-over {
+    grid-column: 3;
+    grid-row: 1 / 4;
+
+}
+
+
+
+/* ////////////////////////////// */
 
 /* #hover-swatch {
     width: 100%;
