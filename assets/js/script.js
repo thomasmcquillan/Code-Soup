@@ -319,3 +319,43 @@ $( document ).ready(function() {
         $( this ).toggle();
     });
 });
+
+// Pattern Preview hover function
+
+$( document ).ready(function() {
+    $( "#neck-round" ).hover(function() {
+        let current = $( ".tile:visible" ).innerHTML();
+        $( ".tile:visible" ).toggle();
+        $( "#neck-round-preview" ).toggle();
+    }, function(){
+        $( current ).toggle();
+        $( "#neck-round-preview" ).toggle();
+    });
+});
+
+// $( "#necktile" ).mouseenter(function() {
+//     if($("#neckround").is(":visible")){
+//         $( "#neckround" ).toggle();           
+//         $( "#neckround" ).toggle();       
+//     } else if (
+//         ($("#neckcollar").is(":visible"))){
+//             $( "#neckcollar" ).toggle();
+//             $( "#neckcollar" ).toggle();
+//     } else if (
+//         ($("#neckwide").is(":visible"))){
+//             $( "#neckwide" ).toggle();
+//             $( "#neckwide" ).toggle();
+//     } else {
+//         return;
+//     };
+// });
+
+// $( document ).ready(function() {
+//     $( "#makeuse-logo" ).hover(function() {
+//         $( this ).toggle();
+//         $( "#logo-hover" ).toggle();
+//     }, function(){
+//         $( "#logo-hover" ).toggle();
+//         $( this ).toggle();
+//     });
+// });
