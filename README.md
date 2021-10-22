@@ -1,10 +1,10 @@
-# MakeUse - Zero-Waste Fashion Studio Helper App
+# MakeUse | Zero-Waste Fashion | Studio Helper App
 
-[View the live website here.](https://thomasmcquillan.github.io/makeuse-fashiondesigntool/index.html)
+[View the live website here.](https://thomasmcquillan.github.io/MakeUse/index.html)
 
-Created for makeuse.nz, this project is a radical redevelopment of a selected 'MAKE' page from their existing website. The Make/Use site is an online toolset and education hub for Zero-Waste Fashion, launched alongside an exhibition and workshop series. The website's 'MAKE' sub-pages each document the steps required to create your own variations of garments featured in the exhibition. Downloadable open-source pattern templates and guides are also provided. These resources are rich in detail but can take some effort for visitors to decipher exactly which downloads they need and how their finished garment may look. 
+Created for makeuse.nz, this project is a radical reimagining of the 'MAKE' pages from their existing website. The Make/Use site is an online toolset and education hub for Zero-Waste Fashion, launched alongside an exhibition and workshop series. The site's 'MAKE' pages each document the required steps, materials and patterns needed to create your own versions of garments featured in the exhibition. The resources are rich in detail but take some effort from users to decipher exactly what pattern pieces and downloads they need for their selected style - and how their finished garment may look. 
 
- This project streamlines the delivery of these resources to improve the user experience to further engage site visitors. Adopting the 'Cropped Tshirt' page as a pilot project, I supplement the text instructions and download links with interactive elements including a customisable model of the garment. Users click garment tiles to switch styles. As the garment changes, these changes are reflected in the stated fabric size requirements, and filtering the downloads to display only the files relevant to the selected design. Upon settling on a style, users may enter their email address to have a summary of their selection along with instructions and download links sent to their inbox.
+ The brief was to streamline the delivery of these resources to improve the user experience and further engage site visitors. Adopting the Make/Use 'Cropped Tshirt' and 'Coat' as pilot project, the new page supplements text instructions and download links with interactive elements. These include a customisable rendered model of the garment which allows users to switch the style of neckline, body and sleeve by clicking on garment tiles. Changes made by the user are reflected in the displayed fabric size required, and pattern downloads are filtered to display only those that are needed for the selected style. Upon settling on a style, users may enter their email address to have a summary of their selection along with instructions and download links sent to their inbox.
 
 <!-- Placeholder for mockup images of finished page:
 
@@ -109,7 +109,9 @@ Created for makeuse.nz, this project is a radical redevelopment of a selected 'M
 
 
 ## Features
-* The page has been stripped down and rebuilt from the ground up, considering the user's journey when setting out to make a given garment. This starts with the creation and implementation of a bespoke interactive garment model which changes appearance as the user clicks the garment's neckline, body or left/right sleeves. As the garment tiles change, so too does the stated fabric width and length requirement to account for the changes in pattern size and shape. In addition, the list of required pattern downloads is filtered to match the resources needed for the changing garment. This avoids overwhelming the user with a long list of (sometimes irrelevant) downloads to sort through, avoiding unnecessary confusion and reducing cognitive load. The applicable downloads are displayed as thumbnail images, rather than plain text-links for a lighter, more engaging experience. Clicking on the image tiles to change garment style will also provide users with key measurements relating to the garment style and proportion which they can compare with their needs. This will be sufficient for most users, but for the seasoned sewist it is now possible to enter custom values for the body length and body and arm circumference. Entering custom values won't be represented in the rendered garment model as the possible shapes are literally endless - however it WILL update the fabric width and length requirements.
+* The page has been stripped down and rebuilt from the ground up, considering the user's journey when setting out to make a given garment. This starts with the creation and implementation of a bespoke interactive garment model which changes appearance as the user clicks the garment's neckline, body or left/right sleeves. As the garment tiles change, so too does the stated fabric width and length requirement to account for the changes in pattern size and shape. In addition, the list of required pattern downloads is filtered to match the resources needed for the changing garment. This avoids overwhelming the user with a long list of downloads to sort through, avoiding confusion and reducing cognitive load. The relevant downloads are displayed as thumbnail images, rather than plain text-links for more visually descriptive and engaging experience. 
+
+Clicking on the image tiles to change garment style will also provide users with key measurements relating to the garment style and proportion which they can compare with their needs. This will be sufficient for most users, but for the seasoned sewist I have made it possible to enter custom values for the body length and body and arm circumference. Users are warned that when entering custom values, these values won't be represented in the rendered garment model as the possible variations are literally endless. However it will provide them with the fabric width and length requirements for their input values.
 
 Pending:  Upon settling on a given style, the user may, if desired, enter their email address. Upon clicking submit, they can be sent a summary of their selected options - providing them with the instructions, download links and fabric requirements needed to complete the construction.
 
@@ -122,7 +124,7 @@ Pending:  Upon settling on a given style, the user may, if desired, enter their 
 * [JQuery](https://en.wikipedia.org/wiki/JQuery)
 
 ### Frameworks, Libraries and Programs Used
-1. [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+1. [Bootstrap 5.1.3](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 * Bootstrap was used to style key page elements such as the navigation bar and for its responsive layout tools such as row and column classes.
 2. [Google Fonts](https://fonts.google.com/)
 * Google Fonts was used for typography across the site.

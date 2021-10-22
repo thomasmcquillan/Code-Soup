@@ -1,12 +1,12 @@
 // Declaring constants - targets divs for pattern download thumbnails.
 
-const neckRound = document.getElementById("pattern-thumb-neck-round");
-const neckCollar = document.getElementById("pattern-thumb-neck-collar");
-const neckWide = document.getElementById("pattern-thumb-neck-wide");
-const bodyRotateLeft = document.getElementById("pattern-thumb-body-rotate-left");
-const bodyRotateRight = document.getElementById("pattern-thumb-body-rotate-right");
-const elbowRotateLeft = document.getElementById("pattern-thumb-elbow-rotate-left");
-const elbowRotateRight = document.getElementById("pattern-thumb-elbow-rotate-left");
+const neckRound = document.getElementsByClassName("pattern-thumb-neck-round");
+const neckCollar = document.getElementsByClassName("pattern-thumb-neck-collar");
+const neckWide = document.getElementsByClassName("pattern-thumb-neck-wide");
+const bodyRotateLeft = document.getElementsByClassName("pattern-thumb-body-rotate-left");
+const bodyRotateRight = document.getElementsByClassName("pattern-thumb-body-rotate-right");
+const elbowRotateLeft = document.getElementsByClassName("pattern-thumb-elbow-rotate-left");
+const elbowRotateRight = document.getElementsByClassName("pattern-thumb-elbow-rotate-left");
 
 // Declaring constant values for body-length, sleeve-width and sleeve length of supplied pattern options.
 
@@ -130,8 +130,8 @@ $( "#neckline-wide" ).click(function() {
 $( "#tshirt-body-wide-crop" ).click(function() {
     $( "#tshirt-body-wide-crop" ).toggle();
     $( "#tshirt-body-wide-crop-rotate" ).toggle();
-    $( "#body-rotate-left" ).toggle();
-    $( "#body-rotate-right" ).toggle();
+    $(bodyRotateLeft).toggle();
+    $(bodyRotateRight).toggle();
 });
 
 $( "#tshirt-body-wide-crop-rotate" ).click(function() {
@@ -308,75 +308,14 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#dimensionsleevecircumference" ).html(`${sleeveWide}cm`);
 });
 
-// Listener function to trigger else/if conditional statement.
+// Make/Use site logo hover state
 
-// $( "#necktile" ).mouseenter(function() {
-//     if($("#neckround").is(":visible")){
-//         $( "#neckround" ).toggle();           
-//         $( "#neckround" ).toggle();       
-//     } else if (
-//         ($("#neckcollar").is(":visible"))){
-//             $( "#neckcollar" ).toggle();
-//             $( "#neckcollar" ).toggle();
-//     } else if (
-//         ($("#neckwide").is(":visible"))){
-//             $( "#neckwide" ).toggle();
-//             $( "#neckwide" ).toggle();
-//     } else {
-//         return;
-//     };
-// });
-
-// Else if mouse-leave function to restore neck-tile to unhovered state.
-
-// $( "#necktile" ).mouseleave(function() {
-//     if($("#neckroundHover").is(":visible")){       
-//         $( "#neckround" ).toggle();                
-//         $( "#neckroundHover" ).toggle();           
-//     } else if (                                    
-//         ($("#neckround").is(":visible"))){
-//             $( "#neckround" ).toggle();
-//             $( "#neckroundHover" ).toggle();
-//     } else if (
-//         ($("#neckcollarHover").is(":visible"))){
-//             $( "#neckcollar" ).toggle();
-//             $( "#neckcollarHover" ).toggle();
-//     }
-//     else if (
-//         ($("#neckcollar").is(":visible"))){
-//             $( "#neckcollar" ).toggle();
-//             $( "#neckcollarHover" ).toggle();
-//     } 
-//     else if (
-//         ($("#neckwideHover").is(":visible"))){
-//             $( "#neckwide" ).toggle();
-//             $( "#neckwideHover" ).toggle();
-//     } 
-//     else if (
-//         ($("#neckwide").is(":visible"))){
-//             $( "#neckwide" ).toggle();
-//             $( "#neckwideHover" ).toggle();
-//     }
-//     else {
-//         return;
-//     };
-// });
-
-// Site-logo hover the jquery way.
-
-$(document).ready(function() {
-    $( "#makeuse-logo" ).mouseenter(function() {
-    $( "#makeuse-logo" ).toggle();
-    $( "#logo-hover" ).toggle();
-   });
+$( document ).ready(function() {
+    $( "#makeuse-logo" ).hover(function() {
+        $( this ).toggle();
+        $( "#logo-hover" ).toggle();
+    }, function(){
+        $( "#logo-hover" ).toggle();
+        $( this ).toggle();
+    });
 });
-
-// And to return to unhovered state.
-
-$( "#makeuse-logo" ).mouseleave(function() {
-    $( "#makeuse-logo" ).toggle();
-    $( "#logo-hover" ).toggle();
-});
-
-// let p = document.getElementById("para1")
-// let p_prime = p.cloneNode(true)
