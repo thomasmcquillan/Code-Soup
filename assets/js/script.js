@@ -32,9 +32,9 @@ let bodyCircumference = currentSleeveLength * 2;
 
 // Declaring variables for custom input values.  
 
-let customInputSleeveCircum;
-let customInputBodylength;
-let customInputBodyCircum;
+// let customInputSleeveCircum;
+// let customInputBodylength;
+// let customInputBodyCircum;
 
 // Declaring variables for displaying the fabric width
 // and length required to make currently selected style.
@@ -47,7 +47,6 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 $("#garment-grid-wrapper").children().click(function() {
     $( "#fabricrequired" ).text(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm`);
     if ( $( "#grid-intro" ).is(":visible")) {
-    //    $( "#grid-intro" ).toggle();
     $( "#grid-intro" ).toggle();
     } else {
         return;

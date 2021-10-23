@@ -3,12 +3,9 @@
     <head>
         <!-- meta tags -->
         <meta charset="UTF-8">
+        <!-- display settings -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- apple-touch-icon -->
-        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-192x192.png">
-        <!-- favicon -->
-        <link rel="icon" type="image/gif" href="https://makeuse.nz/favicon.gif">
         <!-- theme color - light -->
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffd066">
         <!-- theme color - dark mode -->
@@ -17,11 +14,13 @@
         <meta name="description" content="Prototype Fashion Design Helper Tool">
         <!-- page author -->
         <meta name="author" content="Thomas McQuillan">
+        <!-- apple-touch-icon -->
+        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-192x192.png">
+        <!-- favicon -->
+        <link rel="icon" type="image/gif" href="https://makeuse.nz/favicon.gif">
         <!-- web app manifest -->
         <link rel="manifest" href="manifest.json">
-        <!-- Page title -->
-        <title>MakeUse | Crop T shirt</title>
-        <!-- Google Font Ubuntu link -->
+        <!-- Google Fonts 'Ubuntu' link -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -33,6 +32,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Local Javascript -->
         <script src="assets/js/script.js" defer></script>
+        <!-- Page title -->
+        <title>MakeUse | Make</title>
     </head>
 
     <body>
@@ -59,16 +60,24 @@
         </header>
 
         <div class="container-lg">
+            
             <div class="row">
-
+                <nav class="container quick-nav">
+                    <div>
+                        <a href="https://makeuse.nz/make/" class="nav-item">Home</a>
+                            <span class="tri-divider">◣</span>
+                        <a href="index.html" class="nav-item">Make</a>
+                        <span class="tri-divider">◣</span>
+                        <a href="makeuse-crop-tshirt.html" class="nav-item">Crop T shirt</a>
+                    </div>
+                </nav>
                 <section class="grid-outer-wrapper col-12 col-md-7 mr-auto">
-                    <div id="garment-grid-wrapper" class="fade-in-slow">
+                    <div id="garment-grid-wrapper" class="fade-in">
                         <div id="neck-tile" class="garment-tile">
                             <img id="neckline-round" class="tile img-fluid" src="assets/images/grid-tiles/neckline-tiles/tshirt-neck-round@3x.png" alt="Tshirt in 'round' neckline style">
                             <img id="neckline-collar" class="tile img-fluid" src="assets/images/grid-tiles/neckline-tiles/tshirt-neck-collar@3x.png" alt="Tshirt in 'collar' neckline style">
                             <img id="neckline-wide" class="tile img-fluid" src="assets/images/grid-tiles/neckline-tiles/tshirt-neck-wide@3x.png" alt="Tshirt in 'wide' neckline style">
                             <img id="neckline-coat" class="tile img-fluid" src="assets/images/grid-tiles/neckline-tiles/coat-neck-collar@3x.png" alt="Coat neckline collar">
-                            <!-- <img id="neck-round-preview" class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-round.png" alt="Make/Use template pattern for round-neck version of Tshirt."> -->
                         </div>
                         <div class="neck-bg"></div>
                         <div id="sleeve-tile-left" class="garment-tile">
@@ -117,37 +126,6 @@
                             <img id="sleeve-right-wide-short" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short@3x.png" alt="right-sleeve in 'wide/short' style">
                             <img id="sleeve-right-wide-short-rotate" class="img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short-rotate@3x.png" alt="right-sleeve in 'wide/short' style with rotation">
                         </div>
-                        <!-- Grid Template Pattern Overlays - visible on hover of pattern tiles -->
-                        <!-- <div class="overlay-grid-tshirt fade-in pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-grid.png">
-                        </div>
-                        <div class="overlay-neck-round fade-in neckline-over pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-round.png">
-                        </div>
-                        <div class="overlay-neck-collar fade-in neckline-over pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png">
-                        </div>
-                        <div class="overlay-neck-wide fade-in neckline-over pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-wide.png">
-                        </div>
-                        <div class="overlay-sleeve-left fade-in sleeve-left-over pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png">
-                        </div>
-                        <div class="overlay-sleeve-right fade-in sleeve-right-over pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png">
-                        </div>
-                        <div class="overlay-sleeve-body-rot-left fade-in sleeve-left-over pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png">
-                        </div>
-                        <div class="overlay-sleeve-body-rot-right fade-in sleeve-right-over pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png">
-                        </div>
-                        <div class="overlay-sleeve-left-elbow-rot fade-in sleeve-left-over pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png">
-                        </div>
-                        <div class="overlay-sleeve-right-elbow-rot fade-in sleeve-right-over pattern-hover-overlay">
-                            <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png">
-                        </div> -->
 
                         <div class="sizing-info">
                             <p> 

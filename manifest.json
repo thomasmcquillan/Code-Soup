@@ -15,7 +15,7 @@
     ],
     "start_url": "https://thomasmcquillan.github.io/MakeUse/index.html",
     "background_color": "##ffd066",
-    "display": "browser",
+    "display": "minimal-ui",
     "scope": "https://thomasmcquillan.github.io/MakeUse/index.html",
     "theme_color": "#ffd066",
     "description": "Zero-Waste Fashion Design Helper App",
