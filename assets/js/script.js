@@ -324,9 +324,9 @@ $( document ).ready(function() {
 
 $( document ).ready(function() {
     $( "#tshirt-grid" ).hover(function() {
-        $( ".pattern-hover-overlay" ).toggle();
+        $( ".overlay-grid-tshirt" ).toggle();
     }, function(){
-        $( ".pattern-hover-overlay" ).toggle();
+        $( ".overlay-grid-tshirt" ).toggle();
     });
 });
 
