@@ -54,6 +54,42 @@ html, body {
     background-color: #d46300;
 }
 
+/* \\---  Fonts  ---////////////////////////////// */
+
+body {
+    list-style-type: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.t-h1, h1 {
+    font-size: 90px;
+    margin-top: .5em;
+
+    margin-top: 1em;
+    margin-bottom: .4em;
+    line-height: 1.15em;
+}
+
+h2 {
+    display: block;
+    font-size: 58px;
+    /* margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+    font-weight: 700;
+    color: #fffefe;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #5c5c5c;
+}
+
 /* \\---  Header & Navigation  ---// */
 
 #makeuseheader {
@@ -108,31 +144,6 @@ nav {
     justify-self: right;
 }
 
-/* \\---  Fonts  ---////////////////////////////// */
-
-body {
-    list-style-type: none;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.t-h1, h1 {
-    font-size: 90px;
-    margin-top: .5em;
-
-    margin-top: 1em;
-    margin-bottom: .4em;
-    line-height: 1.15em;
-}
-
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    color: #5c5c5c;
-}
-
 /* \\---  Link Styles  ---////////////////////////////// */
 
 .navbar .nav-item a {
@@ -158,6 +169,8 @@ p {
     min-width: 100vw;
     height: 444px;
     background-color: #ffb100;
+    background-color: #d7d7d7;
+    background-color: #b7b3a7;
 }
 
 .grid-preview-panel {
@@ -281,16 +294,12 @@ p {
 .pattern-hover-overlay {
     display: none;
     z-index: 10;
-    /* background-color:#fffefe23;
-    filter: opacity(77%); */
-    
 }
 
 .pattern-hover-overlay > img {
     /* filter: contrast(300%), grayscale(100%),sepia(95); */
     background-color:#807e7e;
-    background-color:#807e7e9a;
-    background-color: rgba(40, 38, 39, 66%);
+    background-color: #b7b3a7;
     /* filter: saturation(300%) contrast(300%) opacity(30%); */
 }
 
@@ -301,24 +310,24 @@ p {
 }
 
 .neckline-over {
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
 }
 
 .body-over {
-    grid-column: 2;
-    grid-row: 2 / 4;
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
 }
 
 .sleeve-left-over {
-    grid-column: 1;
-    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
 
 }
 
 .sleeve-right-over {
-    grid-column: 3;
-    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
 
 }
 
@@ -451,8 +460,6 @@ input {
 .pattern-thumb a {
     display: inline-flex;
     padding: none;
-    /* background-color: #b7b3a7; */
-    /* border: 1px solid #d46300ab; */
     transition: ease-in-out 50ms;
 }
 
@@ -472,15 +479,9 @@ input {
 
 .pattern-thumb {
     width: 100%;
-    /* height: 100%; */
     justify-content: space-evenly;
-    /* max-height: 110px; */
-    /* display: grid; */
     padding: 0;
 }
-
-
-
 
 .pattern-link {
     padding: 4px 4px 4px 4px;
@@ -489,7 +490,7 @@ input {
 .thumbs {
     background-color: #b7b3a7;
 }
-/* #neck-tile >  */
+
 #neck-round-preview {
     display: none;
     z-index: 300;
@@ -512,6 +513,33 @@ h5 {
 /* /////////////////////////////////////////////////////////// */
 
 /* \\---  Animations  ---// */
+
+.fade-in {
+    animation: fadeIn 500ms;
+    -webkit-animation: fadeIn 500ms;
+    -moz-animation: fadeIn 500ms;
+    -o-animation: fadeIn 500ms;
+    -ms-animation: fadeIn 500ms;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
 /* \\---  Media Queries  ---// */
 
