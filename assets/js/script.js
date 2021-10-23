@@ -381,19 +381,3 @@ $( document ).ready(function() {
         $( ".pattern-hover-overlay" ).toggle();
     });
 });
-// $( "#necktile" ).mouseenter(function() {
-    //     if($("#neckround").is(":visible")){
-    //         $( "#neckround" ).toggle();           
-    //         $( "#neckround" ).toggle();       
-    //     } else if (
-    //         ($("#neckcollar").is(":visible"))){
-    //             $( "#neckcollar" ).toggle();
-    //             $( "#neckcollar" ).toggle();
-    //     } else if (
-    //         ($("#neckwide").is(":visible"))){
-    //             $( "#neckwide" ).toggle();
-    //             $( "#neckwide" ).toggle();
-    //     } else {
-    //         return;
-    //     };
-    // });
