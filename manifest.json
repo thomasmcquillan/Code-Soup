@@ -1,0 +1,29 @@
+{
+    "short_name": "Make/Use Imaginator",
+    "name": "A prototype web tool for aspiring Zero-Waste Fashion Sewists",
+    "icons": [
+      {
+        "src": "assets/images/apple-touch-icon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/icons-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "https://thomasmcquillan.github.io/MakeUse/index.html",
+    "background_color": "##ffd066",
+    "display": "browser",
+    "scope": "https://thomasmcquillan.github.io/MakeUse/index.html",
+    "theme_color": "#ffd066",
+    "description": "Zero-Waste Fashion Design Helper App",
+    "screenshots": [
+      {
+        "src": "assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png",
+        "type": "image/png",
+        "sizes": "600x600"
+      }
+    ]
+  }
