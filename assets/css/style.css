@@ -229,24 +229,28 @@ a {
     overflow: auto;
 }
 
-#neck-tile, #neck-tile-coat {
+.garment-tile {
+    z-index: 1000;
+}
+
+#neck-tile-longt, #neck-tile-cropt, #neck-tile-coat {
     display: grid;
     grid-column: 2;
     grid-row: 1;
     overflow: auto;
-    background-color: #ffd066;
+    /* background-color: #ffd066;
     background-color: rgb(255, 177, 0);
-    background-color: #b7b3a7;
+    background-color: #b7b3a7; */
     align-content: flex-end;
 }
 
-#body-tile, #body-tile-coat {
+#body-tile-cropt, #body-tile-longt, #body-tile-coat {
     display: grid;
     grid-column: 2;
     grid-row: 2 / 3;
     overflow: auto;
     align-content: flex-end;
-    background-color: #b7b3a7;
+    /* background-color: #b7b3a7; */
 }
 
 #sleeve-tile-left-cropt,
@@ -271,27 +275,51 @@ a {
 
 #sleeve-tile-left-cropt {
     background-color: #ffb100;
+    background-color: #ffb300a8;
+    background-color: #ffb300d5;
 }
 
 #sleeve-tile-right-cropt {
     background-color: #d46300;
+    background-color: #d46300a9;
+    background-color: #d46300d3;
+}
+
+#body-tile-cropt {
+    background-color: rgba(150, 148, 150, 0.76);
+    background-color: rgba(168, 158, 175, 0.76);
 }
 
 /* \\---  Long Tshirt specific styles  ---/////////////////////// */
 
 #sleeve-tile-left-longt {
-    background-color: rgba(158, 166, 175, 0.76);
+    background-color: rgba(206, 206, 206, 0.815);
+    background-color:rgba(184, 179, 189, 0.808);
+    background-color:rgba(218, 218, 218, 0.808);
 }
 
 #sleeve-tile-right-longt {
     background-color: rgba(168, 158, 175, 0.76);
-    background-color: rgba(150, 148, 150, 0.76)
+    background-color: rgba(150, 148, 150, 0.76);
+    background-color:rgba(218, 218, 218, 0.808);
 }
 
 #neck-tile-longt,
 #body-tile-longt {
     background-color: rgba(150, 148, 150, 0.76);
     background-color: rgba(168, 158, 175, 0.76);
+    background-color:rgba(184, 179, 189, 0.808);
+    background-color:rgba(184, 179, 179, 0.808);
+}
+
+.longt-grid-bg {
+    display: grid;
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    z-index: 40;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 /* \\---  Coat specific styles  ---/////////////////////// */
@@ -315,7 +343,6 @@ a {
     background-color: #d46300;
     background-color: rgba(136, 136, 136, 0.733);
     background-color: rgba(165, 152, 128, 0.733);
-    
 }
 
 /* \\---  Garment Grid-Tile Sequencing  ---/////////////////////// */
