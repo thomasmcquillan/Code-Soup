@@ -35,7 +35,7 @@ html, body {
     color: #4a494a;
 }
 
-nav__link:active {
+.nav__link:active {
     color: #ffd066;
 }
 
@@ -71,13 +71,6 @@ body {
     font-style: normal;
 }
 
-/* .nav-item {
-    color: #4a494a;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-} */
-
 .quick-nav .nav-item {
     color: #4a494a;
     text-transform: uppercase;
@@ -92,7 +85,6 @@ body {
 .t-h1, h1 {
     font-size: 90px;
     margin-top: .5em;
-
     margin-top: 1em;
     margin-bottom: .4em;
     line-height: 1.15em;
@@ -149,7 +141,6 @@ nav {
 .navbar .navbar-brand {
     display: block;
     margin: auto;
-    /* width: 185px; */
     height: auto;
     border: none;
 }
@@ -164,8 +155,6 @@ nav {
     padding-left: 15px;
     width: 200px;
     height: auto;
-    /* height: 78px; */
-    /* height: 78.3542px; */
 }
 
 .navbar .nav-item a {
@@ -179,8 +168,6 @@ nav {
     position: relative;
     display: block;
     margin: 38px auto 40px 20px;
-    /* left: 0;
-    top: 165px; */
     background: none;
 }
 
@@ -285,9 +272,6 @@ a {
     grid-column: 1;
     grid-row: 1 / 3;
     justify-content: right;
-    /* background-color: #ffd066;
-    background-color: #ffb100;
-    background-color: #b7b3a7; */
 }
 
 #sleeve-tile-right, #sleeve-tile-right-coat {
@@ -322,35 +306,31 @@ a {
 
 /* \\---  Garment Grid-Tile Sequencing  ---/////////////////////// */
 
-#neckline-collar, #neckline-wide, 
-/* #neckline-coat, */
+ #grid-wrapper-coat .tile-off {
+    display: none;
+}
 
-/* #sleeve-left-narrow-long,  */
-#sleeve-left-narrow-long-rotate, #sleeve-left-narrow-short,
+/* #neckline-collar, #neckline-wide, #neckline-coat,
+
+#sleeve-left-narrow-long, #sleeve-left-narrow-long-rotate, #sleeve-left-narrow-short,
 #sleeve-left-narrow-short-rotate, #sleeve-left-wide-long, #sleeve-left-wide-long-rotate,
 #sleeve-left-wide-short-rotate,
 
-/* #sleeve-right-narrow-long,  */
-#sleeve-right-narrow-long-rotate, #sleeve-right-narrow-short, 
+#sleeve-right-narrow-long, #sleeve-right-narrow-long-rotate, #sleeve-right-narrow-short, 
 #sleeve-right-narrow-short-rotate, #sleeve-right-wide-long, #sleeve-right-wide-long-rotate,
 #sleeve-right-wide-short-rotate,
 
-#tshirt-body-narrow-crop, #tshirt-body-narrow-crop-rotate,
-#tshirt-body-narrow-hip, #tshirt-body-narrow-hip-rotate, 
-#tshirt-body-narrow-long, #tshirt-body-narrow-long-rotate,
-#tshirt-body-wide-crop-rotate, #tshirt-body-wide-hip,
-#tshirt-body-wide-hip-rotate, #tshirt-body-wide-long,
-#tshirt-body-wide-long-rotate,
+#tshirt-body-narrow-crop, #tshirt-body-narrow-crop-rotate, #tshirt-body-narrow-hip, 
+#tshirt-body-narrow-hip-rotate, #tshirt-body-narrow-long, #tshirt-body-narrow-long-rotate,
+#tshirt-body-wide-crop-rotate, #tshirt-body-wide-hip, #tshirt-body-wide-hip-rotate, 
+#tshirt-body-wide-long, #tshirt-body-wide-long-rotate,
 
-#coat-body-narrow-crop, #coat-body-narrow-crop-rotate, 
-#coat-body-narrow-hip, #coat-body-narrow-hip-rotate,
-#coat-body-narrow-long, #coat-body-narrow-long-rotate,
-#coat-body-wide-crop, #coat-body-wide-crop-rotate,
-#coat-body-wide-hip, #coat-body-wide-hip-rotate,
-/* #coat-body-wide-long,  */
-#coat-body-wide-long-rotate {
+#coat-body-narrow-crop, #coat-body-narrow-crop-rotate, #coat-body-narrow-hip, 
+#coat-body-narrow-hip-rotate, #coat-body-narrow-long, #coat-body-narrow-long-rotate,
+#coat-body-wide-crop, #coat-body-wide-crop-rotate, #coat-body-wide-hip, 
+#coat-body-wide-hip-rotate, #coat-body-wide-long, #coat-body-wide-long-rotate {
     display: none;
-}
+} */
 
 .neck-bg {
     display: grid;
