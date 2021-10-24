@@ -145,7 +145,7 @@ nav {
 .navbar .navbar-brand {
     display: block;
     margin: auto;
-    width: 185px;
+    /* width: 185px; */
     height: auto;
     border: none;
 }
@@ -158,8 +158,9 @@ nav {
 .navbar .navbar-brand img {
     justify-self: center;
     padding-left: 15px;
-    width: 198.9px;
-    height: 78px;
+    width: 200px;
+    height: auto;
+    /* height: 78px; */
     /* height: 78.3542px; */
 }
 
