@@ -44,7 +44,7 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 
 // To calculate fabric size required for currently selected style.
 // $(".tiles").children().click(function() {
-$("#garment-grid-wrapper").children().click(function() {
+$(".garment-grid").children().click(function() {
     $( "#fabricrequired" ).text(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm`);
     if ( $( "#grid-intro" ).is(":visible")) {
     $( "#grid-intro" ).toggle();
@@ -393,10 +393,65 @@ $( document ).ready(function() {
     });
 });
 
-// ---------working on coat body tiles function --------------
+// --------- Coat body tile swap function --------------
 
 $( document ).ready(function() {
     $( "#body-tile-coat" ).click(function() {
+        if ($("#coat-body-wide-long-rotate").is(":visible")) {
+            $( "img:visible", this ).toggle();    
+            $( "#coat-body-wide-long" ).toggle();    
+        }   else if (
+            $("#coat-body-wide-long").is(":visible")) {
+                $( "img:visible", this ).toggle();
+                $( "#coat-body-wide-hip" ).toggle();
+            }   else if (
+                ($("#coat-body-wide-hip").is(":visible"))) {
+                    $( "img:visible", this ).toggle();
+                    $( "#coat-body-wide-hip-rotate" ).toggle();
+                }   else if (
+                    ($("#coat-body-wide-hip-rotate").is(":visible"))) {
+                        $( "img:visible", this ).toggle();
+                        $( "#coat-body-wide-crop" ).toggle();
+                    }   else if (
+                        ($("#coat-body-wide-crop").is(":visible"))) {
+                            $( "img:visible", this ).toggle();
+                            $( "#coat-body-wide-crop-rotate" ).toggle();
+                        }   else if (
+                            ($("#coat-body-wide-crop-rotate").is(":visible"))) {
+                                $( "img:visible", this ).toggle();
+                                $( "#coat-body-narrow-crop" ).toggle();
+                            }   else if (
+                                ($("#coat-body-narrow-crop").is(":visible"))) {
+                                    $( "img:visible", this ).toggle();
+                                    $( "#coat-body-narrow-crop-rotate" ).toggle();
+                                }   else if (
+                                    ($("#coat-body-narrow-crop-rotate").is(":visible"))) {
+                                        $( "img:visible", this ).toggle();
+                                        $( "#coat-body-narrow-hip" ).toggle();
+                                    }   else if (
+                                        ($("#coat-body-narrow-hip").is(":visible"))) {
+                                            $( "img:visible", this ).toggle();
+                                            $( "#coat-body-narrow-hip-rotate" ).toggle();
+                                        }   else if (
+                                            ($("#coat-body-narrow-hip-rotate").is(":visible"))) {
+                                                $( "img:visible", this ).toggle();
+                                                $( "#coat-body-narrow-long" ).toggle();
+                                            }   else if (
+                                                ($("#coat-body-narrow-long").is(":visible"))) {
+                                                    $( "img:visible", this ).toggle();
+                                                    $( "#coat-body-narrow-long-rotate" ).toggle();
+                                                }   else if (
+                                                    ($("#coat-body-narrow-long-rotate").is(":visible"))) {
+                                                        $( "img:visible", this ).toggle();
+                                                        $( "#coat-body-wide-long-rotate" ).toggle();
+                                                    }
+                                                });
+});
+
+// ---------------  Cropped Tshirt tile swap function
+
+$( document ).ready(function() {
+    $( "#-tile-coat" ).click(function() {
         if ($("#coat-body-wide-long-rotate").is(":visible")) {
             $( "img:visible", this ).toggle();    
             $( "#coat-body-wide-long" ).toggle();    
