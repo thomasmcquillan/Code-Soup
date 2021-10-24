@@ -10,11 +10,16 @@ html, body {
     margin: 0;
     flex-wrap: wrap;
     background-color:#fffefe;
+    /* background-color: #d7d7d7; */
     font-family: 'Ubuntu', sans-serif;
 }
 
-.row {
-    background-color: #fffefe;
+.mu-footer {
+    display: block;
+    width: 100%;
+    height: 290px;
+    padding: 40px 25px;
+    background-color: #4a494a;
 }
 
 /* \\---  Colors  ---///////////////////////////// */
@@ -68,6 +73,7 @@ body {
     list-style-type: none;
     font-family: 'Ubuntu', "sans-serif";
     font-weight: 400;
+    font-size: 14px;
     font-style: normal;
 }
 
@@ -192,7 +198,7 @@ a {
 
 /* \\---  Body Layout  ---// */
 
-.colorblock {
+/* .colorblock {
     display: grid;
     width: 100%;
     min-width: 100vw;
@@ -200,15 +206,7 @@ a {
     background-color: #ffb100;
     background-color: #d7d7d7;
     background-color: #b7b3a7;
-}
-
-.grid-preview-panel {
-    display: grid;
-    grid-template-columns: 3fr;
-    grid-template-rows: 3fr 1fr;
-    padding: 24px 18px 90px 18px;
-    z-index: -10;
-}
+} */
 
 /* \\---  Garment Grid  ---/////////////////////// */
 
@@ -306,31 +304,9 @@ a {
 
 /* \\---  Garment Grid-Tile Sequencing  ---/////////////////////// */
 
- #grid-wrapper-coat .tile-off {
+.tile-off {
     display: none;
 }
-
-/* #neckline-collar, #neckline-wide, #neckline-coat,
-
-#sleeve-left-narrow-long, #sleeve-left-narrow-long-rotate, #sleeve-left-narrow-short,
-#sleeve-left-narrow-short-rotate, #sleeve-left-wide-long, #sleeve-left-wide-long-rotate,
-#sleeve-left-wide-short-rotate,
-
-#sleeve-right-narrow-long, #sleeve-right-narrow-long-rotate, #sleeve-right-narrow-short, 
-#sleeve-right-narrow-short-rotate, #sleeve-right-wide-long, #sleeve-right-wide-long-rotate,
-#sleeve-right-wide-short-rotate,
-
-#tshirt-body-narrow-crop, #tshirt-body-narrow-crop-rotate, #tshirt-body-narrow-hip, 
-#tshirt-body-narrow-hip-rotate, #tshirt-body-narrow-long, #tshirt-body-narrow-long-rotate,
-#tshirt-body-wide-crop-rotate, #tshirt-body-wide-hip, #tshirt-body-wide-hip-rotate, 
-#tshirt-body-wide-long, #tshirt-body-wide-long-rotate,
-
-#coat-body-narrow-crop, #coat-body-narrow-crop-rotate, #coat-body-narrow-hip, 
-#coat-body-narrow-hip-rotate, #coat-body-narrow-long, #coat-body-narrow-long-rotate,
-#coat-body-wide-crop, #coat-body-wide-crop-rotate, #coat-body-wide-hip, 
-#coat-body-wide-hip-rotate, #coat-body-wide-long, #coat-body-wide-long-rotate {
-    display: none;
-} */
 
 .neck-bg {
     display: grid;
