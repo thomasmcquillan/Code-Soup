@@ -1,14 +1,14 @@
 {
-    "short_name": "Make/Use ZWD tool",
-    "name": "A prototype web tool for aspiring Zero-Waste Fashion Sewists",
+    "short_name": "Make/Use fashion design tool",
+    "name": "Prototype web tool for aspiring Zero-Waste Fashion Sewists",
     "icons": [
       {
-        "src": "assets/images/mu-icon-192x192.png",
+        "src": "assets/images/mu_icon_x192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "assets/images/mu-icon-512x512.png",
+        "src": "assets/images/mu_icon_x512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
@@ -21,10 +21,10 @@
     "description": "Zero-Waste Fashion Design Helper App",
     "screenshots": [
       {
-        "src": "assets/images/mu-icon-512x512.png",
+        "src": "assets/images/mu_icon_x512.png",
         "type": "image/png",
         "sizes": "512x512",
-        "purpose": "any maskable"
+        "purpose": "maskable"
       }
     ]
   }
