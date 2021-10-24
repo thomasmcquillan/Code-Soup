@@ -6,24 +6,19 @@
         "src": "assets/images/apple-touch-icon.png",
         "type": "image/png",
         "sizes": "192x192"
-      },
-      {
-        "src": "/images/icons-512.png",
-        "type": "image/png",
-        "sizes": "512x512"
       }
     ],
     "start_url": "https://thomasmcquillan.github.io/MakeUse/index.html",
-    "background_color": "##ffd066",
+    "background_color": "#4a494a",
     "display": "minimal-ui",
     "scope": "https://thomasmcquillan.github.io/MakeUse/index.html",
     "theme_color": "#ffd066",
     "description": "Zero-Waste Fashion Design Helper App",
     "screenshots": [
       {
-        "src": "assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png",
+        "src": "/assets/images/makeuse-zwd-tool.png",
         "type": "image/png",
-        "sizes": "600x600"
+        "sizes": "507x502"
       }
     ]
   }
