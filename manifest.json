@@ -1,5 +1,5 @@
 {
-    "short_name": "Make/Use Imaginator",
+    "short_name": "Make/Use ZWD tool",
     "name": "A prototype web tool for aspiring Zero-Waste Fashion Sewists",
     "icons": [
       {
@@ -13,10 +13,10 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "https://thomasmcquillan.github.io/MakeUse/index.html",
+    "start_url": "/index.html",
     "background_color": "#4a494a",
-    "display": "minimal-ui",
-    "scope": "https://thomasmcquillan.github.io/MakeUse/index.html",
+    "display": "standalone",
+    "scope": "/",
     "theme_color": "#ffd066",
     "description": "Zero-Waste Fashion Design Helper App",
     "screenshots": [
