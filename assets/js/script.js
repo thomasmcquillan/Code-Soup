@@ -380,3 +380,70 @@ $( document ).ready(function() {
         $( ".pattern-hover-overlay" ).toggle();
     });
 });
+
+$( document ).ready(function() {
+    $( ".sleeve-right-temp" ).hover(function() {
+        if ($("#sleeve-cut-right").is(":visible")) {
+            $( ".overlay-sleeve-right" ).toggle();    
+        } else if (
+            $("#body-rotate-right").is(":visible")) {
+                $( ".overlay-sleeve-body-rot-right" ).toggle();
+            } else if ($("#elbow-rotate-right").is(":visible")){
+                $( ".overlay-sleeve-right-elbow-rot" ).toggle();}
+    });
+});
+
+// ---------working on coat body tiles function --------------
+
+$( document ).ready(function() {
+    $( "#body-tile-coat" ).click(function() {
+        if ($("#coat-body-wide-long-rotate").is(":visible")) {
+            $( "img:visible", this ).toggle();    
+            $( "#coat-body-wide-long" ).toggle();    
+        }   else if (
+            $("#coat-body-wide-long").is(":visible")) {
+                $( "img:visible", this ).toggle();
+                $( "#coat-body-wide-hip" ).toggle();
+            }   else if (
+                ($("#coat-body-wide-hip").is(":visible"))) {
+                    $( "img:visible", this ).toggle();
+                    $( "#coat-body-wide-hip-rotate" ).toggle();
+                }   else if (
+                    ($("#coat-body-wide-hip-rotate").is(":visible"))) {
+                        $( "img:visible", this ).toggle();
+                        $( "#coat-body-wide-crop" ).toggle();
+                    }   else if (
+                        ($("#coat-body-wide-crop").is(":visible"))) {
+                            $( "img:visible", this ).toggle();
+                            $( "#coat-body-wide-crop-rotate" ).toggle();
+                        }   else if (
+                            ($("#coat-body-wide-crop-rotate").is(":visible"))) {
+                                $( "img:visible", this ).toggle();
+                                $( "#coat-body-narrow-crop" ).toggle();
+                            }   else if (
+                                ($("#coat-body-narrow-crop").is(":visible"))) {
+                                    $( "img:visible", this ).toggle();
+                                    $( "#coat-body-narrow-crop-rotate" ).toggle();
+                                }   else if (
+                                    ($("#coat-body-narrow-crop-rotate").is(":visible"))) {
+                                        $( "img:visible", this ).toggle();
+                                        $( "#coat-body-narrow-hip" ).toggle();
+                                    }   else if (
+                                        ($("#coat-body-narrow-hip").is(":visible"))) {
+                                            $( "img:visible", this ).toggle();
+                                            $( "#coat-body-narrow-hip-rotate" ).toggle();
+                                        }   else if (
+                                            ($("#coat-body-narrow-hip-rotate").is(":visible"))) {
+                                                $( "img:visible", this ).toggle();
+                                                $( "#coat-body-narrow-long" ).toggle();
+                                            }   else if (
+                                                ($("#coat-body-narrow-long").is(":visible"))) {
+                                                    $( "img:visible", this ).toggle();
+                                                    $( "#coat-body-narrow-long-rotate" ).toggle();
+                                                }   else if (
+                                                    ($("#coat-body-narrow-long-rotate").is(":visible"))) {
+                                                        $( "img:visible", this ).toggle();
+                                                        $( "#coat-body-wide-long-rotate" ).toggle();
+                                                    }
+                                                });
+});
