@@ -3,9 +3,14 @@
     "name": "A prototype web tool for aspiring Zero-Waste Fashion Sewists",
     "icons": [
       {
-        "src": "assets/images/apple-touch-icon.png",
+        "src": "assets/images/mu-icon-192x192.png",
         "type": "image/png",
         "sizes": "192x192"
+      },
+      {
+        "src": "assets/images/mu-icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
       }
     ],
     "start_url": "https://thomasmcquillan.github.io/MakeUse/index.html",
@@ -16,9 +21,10 @@
     "description": "Zero-Waste Fashion Design Helper App",
     "screenshots": [
       {
-        "src": "/assets/images/makeuse-zwd-tool.png",
+        "src": "assets/images/mu-icon-512x512.png",
         "type": "image/png",
-        "sizes": "507x502"
+        "sizes": "512x512",
+        "purpose": "any maskable"
       }
     ]
   }
