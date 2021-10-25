@@ -211,7 +211,7 @@ a {
 
 /* \\---  Garment Grid  ---/////////////////////// */
 
-#grid-outer-wrapper {
+.grid-outer-wrapper {
     display: grid;
     grid-template-columns: 3fr;
     grid-template-rows: 3fr 1fr;
@@ -292,58 +292,41 @@ a {
 /* \\---  Long Tshirt specific styles  ---/////////////////////// */
 
 #sleeve-tile-left-longt {
-    background-color: rgba(206, 206, 206, 0.815);
-    background-color:rgba(184, 179, 189, 0.808);
     background-color:rgba(218, 218, 218, 0.808);
 }
 
 #sleeve-tile-right-longt {
-    background-color: rgba(168, 158, 175, 0.76);
-    background-color: rgba(150, 148, 150, 0.76);
     background-color:rgba(218, 218, 218, 0.808);
 }
 
 #neck-tile-longt,
 #body-tile-longt {
-    background-color: rgba(150, 148, 150, 0.76);
-    background-color: rgba(168, 158, 175, 0.76);
-    background-color:rgba(184, 179, 189, 0.808);
+   
     background-color:rgba(184, 179, 179, 0.808);
 }
-
-/* .longt-grid-bg {
-    display: grid;
-    grid-column: 1 / 4;
-    grid-row: 1 / 4;
-    z-index: 40;
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-} */
-
-/* #grid-makeuse-long-t img {} */
 
 /* \\---  Coat specific styles  ---/////////////////////// */
 
 #neck-tile-coat,
 #body-tile-coat {
-    background-color: #888;
-    background-color: #d46300;
-    background-color: #d3711cce;
+    background-color: rgba(165, 152, 128, 0.733);
     background-color: rgba(136, 136, 136, 0.733);
+    background-color: rgba(165, 152, 128, 0.733);
 }
 
 #sleeve-tile-left-coat {
     background-color: #d3711cce;
-    background-color: rgba(136, 136, 136, 0.733);
     background-color: rgba(146, 133, 133, 0.733);
+    background-color: rgba(165, 152, 128, 0.733);
+    background-color: rgba(136, 136, 136, 0.733);
 }
 
 #sleeve-tile-right-coat {
     background-color: #d46300;
     background-color: #d46300;
     background-color: rgba(136, 136, 136, 0.733);
-    background-color: rgba(165, 152, 128, 0.733);
+    background-color: rgba(146, 133, 133, 0.733);
+    
 }
 
 /* \\---  Garment Grid-Tile Sequencing  ---/////////////////////// */
@@ -395,6 +378,10 @@ a {
     padding: 0 8px 0 12px;
     font-size: 1.2rem;
     color: #d46300;
+}
+
+.dimensions {
+    text-align: right;
 }
 
 /* .garment-length {
@@ -460,20 +447,6 @@ input {
     padding: none;
     transition: ease-in-out 50ms;
 }
-
-
-/* .downloadwrapper {
-    padding: 0;
-    display: grid;
-    grid-gap: 24px;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: auto;
-    justify-content: space-between;
-    align-content: flex-start;
-    max-height: 578px;
-    width: 100%;
-    margin: 22px auto 140px auto;
-} */
 
 .pattern-thumb {
     width: 100%;
@@ -600,7 +573,6 @@ h5 {
         margin: auto auto auto 0;
     }
     
-    /* .garment-grid { */
     #croptshirt-grid,
     #longtshirt-grid,
     #coat-grid {
@@ -618,17 +590,13 @@ h5 {
 @media (min-width: 768px) {
     
 
-    #grid-outer-wrapper {
+    .grid-outer-wrapper {
         display: grid;
         grid-template-columns: 512px 102.4px 409.6px;
         grid-template-rows: 512px;
-        /* padding: 24px 18px 30px 18px; */
         margin: auto auto;
         max-height: 512px;
         width: 1024px;
-
-        /* overflow: hidden; */
-        border: 1px solid salmon;
         padding: 0;
     }
     
@@ -641,7 +609,6 @@ h5 {
         grid-template-columns: 33.33% 33.33% 33.33%;
         grid-template-rows: 33.33% 66.66%;
         overflow: hidden;
-        border: 1px solid slategray;
     }
 
     /* ------------- reworking sizing info grid layout ----------- */
@@ -656,25 +623,21 @@ h5 {
         display: grid;
         grid-column: 3;
         grid-row: 1;
-        /* margin: 0 20px 10px 20px; */
-        /* width: inherit;
-        height: inherit; */
-        /* padding: 1rem; */
     }
     
     #grid-intro > p {
         color: #5c5c5c;
     }
     
-    .garment-sizing {
+    /* .garment-sizing {
         display: grid;
         justify-content: space-evenly;
-    }
+    } */
     
     .sizing-info {
         display: grid;
-        grid-column: 1;
-        grid-row: 3;
+        grid-column: 3 / 4;
+        grid-row: 1;
         width: 100%;
         text-align: center;
     }
@@ -707,33 +670,7 @@ h5 {
         margin: 0 auto;
     }
 
-    /* .downloadwrapper {
-        padding: 0;
-        display: grid;
-        grid-gap: 24px;
-        grid-template-columns: 45% 45%;
-        grid-template-rows: auto;
-        justify-content: space-between;
-        align-content: flex-start;
-        max-height: 578px;
-        width: 100%;
-        margin: 22px auto 140px auto;
-    } */
-
-    /* .downloadwrapper {
-        padding: 0;
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: 110px 110px;
-        grid-template-rows: 110px 110px 110px 110px 110px;
-        justify-content: right;
-        align-content: flex-start;
-        max-height: 578px;
-        width: 100%;
-        margin: 22px 24px auto auto;
-    } */
-
-    #grid-outer-wrapper .downloadwrapper {
+    .downloadwrapper {
         display: grid;
         grid-column: 2;
         grid-row: 1;
@@ -744,24 +681,13 @@ h5 {
         align-content: space-between;
         width: 102.4px;
         height: 512px;
-        /* max-height: 578px;
-        max-height: 50vw; */
-        /* width: 100%; */
-        /* margin: 22px 24px auto auto; */
         margin: 0;
         padding: 0;
-        border: 1px solid orange;
+        /* border: 1px solid orange; */
     }
-
-    /* .downloadwrapper .thumb-flex-wrap {
-        display: flex;
-        flex-direction: row;
-    } */
 
     .downloadwrapper .thumb-flex-wrap {
         display: flex;
-        /* display: grid; */
-
         flex-direction: column;
         justify-content: center;
         align-content: space-between;
@@ -792,14 +718,14 @@ h5 {
         background-color: #b7b3a7;
     }
     
-    /* .overlay-grid-tshirt,
+    .overlay-grid-tshirt,
     .neckline-over,
     .body-over,
     .sleeve-left-over,
     .sleeve-right-over {
         grid-column: 3 / 4;
         grid-row: 1 / 3;
-    } */
+    }
 
     .garment-tile:hover {
         filter: opacity(88%);
