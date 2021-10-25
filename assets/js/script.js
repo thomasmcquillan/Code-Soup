@@ -73,16 +73,6 @@ $("#customInputbodylength").keydown(function(event) {
 $("#custominputbodycircum").keydown(function(event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-
-            let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
-
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
-        }
-});
-
-$("#custominputbodycircum").keydown(function(event) {
-    if (
-        (event.key === "Enter" || event.key == "Tab")) {
             let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
             $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
         }
@@ -307,6 +297,20 @@ $( "#rightsleevenarrowlong" ).click(function() {
     $( "#dimensionsleevecircumference" ).html(`${sleeveWide}cm`);
 });
 
+// ----------  Hover functions ------------- //
+
+$( "#neckline-coat" ).hover(function() {
+    $("#pattern-thumb-wide a").css("background-color", "#ffd066");
+});
+
+$( document ).ready(function() {
+    $( "#neckline-coat" ).hover(function() {
+        $("#neck-collar").css("background-color", "#ffd066");
+    }, function(){
+        $("#neck-collar").css("background-color", "#b7b3a7");
+    });
+});
+
 // Make/Use site logo hover state
 
 $( document ).ready(function() {
@@ -365,21 +369,19 @@ $( document ).ready(function() {
     });
 });
 
-$( document ).ready(function() {
-    $( ".body-temp" ).hover(function() {
-        $( ".neckline-over" ).toggle();
-    }, function(){
-        $( ".neckline-over" ).toggle();
-    });
+
+// $( ".body-temp" ).hover(function() {
+//     $( ".neckline-over" ).toggle();
+// }, function(){
+//     $( ".neckline-over" ).toggle();
+// });
+
+$( "sleeve-left-temp" ).hover(function() {
+    $( ".pattern-hover-overlay" ).toggle();
+}, function(){
+    $( ".pattern-hover-overlay" ).toggle();
 });
 
-$( document ).ready(function() {
-    $( "sleeve-left-temp" ).hover(function() {
-        $( ".pattern-hover-overlay" ).toggle();
-    }, function(){
-        $( ".pattern-hover-overlay" ).toggle();
-    });
-});
 
 $( document ).ready(function() {
     $( ".sleeve-right-temp" ).hover(function() {
