@@ -310,7 +310,7 @@ a {
     background-color:rgba(184, 179, 179, 0.808);
 }
 
-.longt-grid-bg {
+/* .longt-grid-bg {
     display: grid;
     grid-column: 1 / 4;
     grid-row: 1 / 4;
@@ -318,7 +318,9 @@ a {
     max-width: 100%;
     max-height: 100%;
     overflow: hidden;
-}
+} */
+
+/* #grid-makeuse-long-t img {} */
 
 /* \\---  Coat specific styles  ---/////////////////////// */
 
@@ -440,21 +442,12 @@ input {
     color: #e9e7e7;
 }
 
-/* .pattern-thumb-neck-collar,
-.pattern-thumb-neck-wide,
-.pattern-thumb-body-rotate-left,
-.pattern-thumb-body-rotate-right,
-.pattern-thumb-elbow-rotate-left,
-.pattern-thumb-elbow-rotate-right {
-    display: none;
-} */
+.pattern-thumb {
+    padding: 0 20px 38px 20px;
+}
 
 .pattern-thumb img {
     padding: 10px;
-}
-
-.pattern-thumb {
-    padding: 0 20px 38px 20px;
 }
 
 .pattern-thumb:hover img {
