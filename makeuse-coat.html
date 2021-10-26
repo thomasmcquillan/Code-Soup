@@ -66,10 +66,10 @@
                         <a href="makeuse-crop-tshirt.html" class="nav-item">Coat</a>
                     </div>
                 </nav>
-                <section class="grid-outer-wrapper col-12 col-md-7 mr-auto">
+                <section class="grid-outer-wrapper col-12 col-md-7">
                     <div id="grid-makeuse-coat" class="garment-grid fade-in">
                         <div id="neck-tile-coat" class="garment-tile">
-                            <img id="neckline-coat" class="og img-fluid" src="assets/images/grid-tiles/neckline-tiles/coat-neck-collar@3x.png" alt="Coat neckline collar">
+                            <img id="neckline-coat" class="img-fluid" src="assets/images/grid-tiles/neckline-tiles/coat-neck-collar@3x.png" alt="Coat neckline collar">
                         </div>
                         <div id="body-tile-coat" class="garment-tile">
                             <img id="coat-body-wide-long-rotate" class="img-fluid" src="assets/images/grid-tiles/body-tiles/coat-body-wide-long-rotate@3x.png" alt="Coat garment-body in 'narrow/cropped' style with rotation">
@@ -105,28 +105,45 @@
                             <img id="sleeve-right-narrow-long" class="tile-off img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-long@3x.png" alt="right-sleeve in 'narrow/long' style">
                             <img id="sleeve-right-narrow-long-rotate" class="tile-off img-fluid" src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-long-rotate@3x.png" alt="right-sleeve in 'narrow/long' style with rotation">
                         </div>
-
-                        <div class="sizing-info">
-                            <p> 
-                                Garment length<span id="dimensionbodylength"><strong>50cm</strong></span>
-                                Garment circum.<span id="dimensionbodycircumference"><strong>110cm</strong></span>
-                                Sleeve circum.<span id="dimensionsleevecircumference"><strong>50cm</strong></span>
-                            </p>
-                            <p class="fabric-span">Fabric Required<span id="fabricrequired"><strong>110cm x 75cm</strong></span></p>
-                        </div>
-                        <div class="sizing-info" id="grid-intro">
-                            <p class="sizing-info">Click the collar, sleeve and body tiles of the garment to alter the fit and style. 
-                                This will update how much fabric you need and display the pattern downloads required to make your chosen style.
-                            </p>
-                        </div>
+        
                     </div>
+                    
+                    <table class="sizing-info-table">
+                        <tbody>
+                            <tr>
+                                <td data-title="Garment circumference"><span id="dimensionbodycircumference"><strong>110cm</strong></span></td>
+                                <td data-title="Garment Length"><span id="dimensionbodylength"><strong>50cm</strong></span></td>
+                                <td data-title="Sleeve circumference"><span id="dimensionsleevecircumference"><strong>50cm</strong></span></td>
+                            </tr>
+                            <tr>
+                                <td class="fabric-data d-md-none" data-title="Fabric Required"><span id="fabricrequired"><strong>110cm x 75cm</strong></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
 
-                <div class="col-12 col-md-5">
+                <div id="grid-intro" class="col-12 col-md-5">
+                    <p>The Make/Use Coat can be modified in a number of ways to suit your preferences. Click on the sleeve and body tiles 
+                        to cycle through the various styles. Your selections will be used to display garment sizing and to determine the fabric 
+                        size requirements.
+                        <br>
+                        <br>
+                        The pattern templates required for your chosen garment will also be displayed.  Hover over pattern pieces to see them closer. 
+                        To download and print the original full-sized templates, please click on the link provided. 
+                    </p>
+                </div>
 
-                    <div class="triangle-orange"></div>
-                   
-                    <div class="downloadwrapper" class="row">
+                <div class="downloadwrapper col-12 col-md-5">
+                    
+                    <!-- <div class="downloadwrapper" class="row"> -->
+                    <!-- <div class="downloadwrapper row"> -->
+                        <table class="sizing-info-table">
+                            <tbody>
+                                <tr>
+                                    <td class="fabric-data" data-title="Fabric Required"><span id="fabricrequired"><strong>110cm x 75cm</strong></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <div class="pattern-thumb-grid-tshirt pattern-thumb">
                             <a class="pattern-link" id="pattern-tshirt-grid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
                                 <span><img id="tshirt-grid" class="thumbs fade-in img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-grid.png" alt="Make/Use grid-template pattern, essential resource for making all variations of the MakeUse Crop-Tshirt."></span>
@@ -194,7 +211,8 @@
                             <img class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png">
                         </div>
                         
-                    </div>
+                    <!-- </div> -->
+                    
                 </div>
             
                 <div class="instructions my-4 mx-3 px-3 col-10 col-md-8">
