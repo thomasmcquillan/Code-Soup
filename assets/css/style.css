@@ -117,21 +117,20 @@ p {
     color: #5c5c5c;
 }
 
-.t-sub {
-    font-size: 28px;
-    line-height: 1.4em;
-    color: #5c5c5c;
-    font-size: 24px;
-    margin: auto 10px 14px 20px;
-}
-
 .garment-intro p {
-    width: 100%;
     margin: 0;
     padding: 0;
     font-size: 16px;
     color: #5c5c5c;
-    margin: auto 10px 88px 20px;
+    margin: auto 10px 44px 10px;
+}
+
+.t-sub {
+    line-height: 1.4em;
+    color: #5c5c5c;
+    font-size: 24px;
+    margin: auto 10px 14px 16px;
+    justify-content: flex-start;
 }
 
 .garment-intro strong {
@@ -202,11 +201,17 @@ nav {
 
 /* \\---  Quick Nav Links  ---////////////////////////////// */
 
-.quick-nav {
-    position: relative;
-    display: block;
+.quick-nav ul {
+    position: fixed;
+    left: 200px;
+    top: 180px;
+    display: flex;
+    width: 200px;
+    height: 40px;
+    flex-direction: row;
     margin: 38px auto 40px 20px;
     background: none;
+    list-style-type: none;
 }
 
 .tri-divider {
@@ -229,6 +234,10 @@ a {
     font-size: 14px;
 }
 
+.nav-item > a:active {
+    color: #d46300 !important;
+}
+
 /* \\---  Body Layout  ---////////////////////////////// */
 
 /* .colorblock {
@@ -240,8 +249,13 @@ a {
     background-color: #d7d7d7;
     background-color: #b7b3a7;
 } */
-#make-coat-from-template {
-    margin-top: 55px;
+/* #make-coat-from-template {
+    margin-top: 44px auto auto auto;
+    padding: 0;
+} */
+
+#coat-from-template {
+    justify-content: center;
 }
 
 .mu-footer {
@@ -409,10 +423,10 @@ a {
     line-height: 1.5rem;
 }
 
-b,
+/* b,
 strong {
     color: #ffb100;
-}
+} */
 
 /* -------table testing ------ */
 
