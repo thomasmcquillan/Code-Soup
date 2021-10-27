@@ -44,10 +44,10 @@ var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 
 // To calculate fabric size required for currently selected style.
 // $(".tiles").children().click(function() {
-$(".garment-grid").children().click(function() {
-    $( "#fabricrequired" ).text(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm`);
-    if ( $( "#grid-intro" ).is(":visible")) {
-    $( "#grid-intro" ).toggle();
+$(".garment-grid").children().click(function () {
+    $("#fabricrequired").text(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm`);
+    if ($("#grid-intro").is(":visible")) {
+        $("#grid-intro").toggle();
     } else {
         return;
     }
@@ -57,450 +57,360 @@ $(".garment-grid").children().click(function() {
 // garment based on the custom values input by user.
 // Triggered by Enter/Tab keys in custom body length input.
 
-$("#customInputbodylength").keydown(function(event) {
+$("#customInputbodylength").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            if ($( "#customInputbodylength" ).val() > 0) {
-            let customBodyLength = parseInt($( "#customInputbodylength" ).val(), 10);
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
-        } else { 
+        if ($("#customInputbodylength").val() > 0) {
+            let customBodyLength = parseInt($("#customInputbodylength").val(), 10);
+            $("#fabricrequired").html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
+        } else {
             $(".fabricsize").text('Custom values will update fabric size required, but will not be updated in the illustration.');
             $("#bodytile img").css('filter', 'blur(3px) invert(8)');
-            }
         }
-    });
-
-$("#custominputbodycircum").keydown(function(event) {
-    if (
-        (event.key === "Enter" || event.key == "Tab")) {
-            let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
-        }
+    }
 });
 
-$("#custominputsleevecircum").keydown(function(event) {
+$("#custominputbodycircum").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            let customBodyCircum = parseInt($( "#custominputbodycircum" ).val(), 10);
-            $( "#fabricrequired" ).html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
-        }
+        let customBodyCircum = parseInt($("#custominputbodycircum").val(), 10);
+        $("#fabricrequired").html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
+    }
+});
+
+$("#custominputsleevecircum").keydown(function (event) {
+    if (
+        (event.key === "Enter" || event.key == "Tab")) {
+        let customBodyCircum = parseInt($("#custominputbodycircum").val(), 10);
+        $("#fabricrequired").html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
+    }
 });
 
 // Following functions, when clicked, cycle to next image of their type
 // (neckline/body/sleeves), and update variables required for displaying 
 // key fabric measurements and pattern downloads for users.
 
-$(document).ready(function() {
-    $( "#neckline-round" ).click(function() {
-    $( "#neckline-round" ).toggle();    // Toggles off current neckline tile.
-    $( "#neckline-collar" ).toggle();   // Toggles on next available neckline tile.
-    $(neckRound).toggle();    // Toggles off div containing download for current neckline. 
-    $(neckCollar).toggle();   // Toggles on div containing download for next style of neckline.
-    // $("#pattern-thumb-collar a").css("background-color", "#ffb100");
-   });
+$(document).ready(function () {
+    $("#neckline-round").click(function () {
+        $("#neckline-round").toggle(); // Toggles off current neckline tile.
+        $("#neckline-collar").toggle(); // Toggles on next available neckline tile.
+        $(neckRound).toggle(); // Toggles off div containing download for current neckline. 
+        $(neckCollar).toggle(); // Toggles on div containing download for next style of neckline.
+        // $("#pattern-thumb-collar a").css("background-color", "#ffb100");
+    });
 });
 
-$( "#neckline-collar" ).click(function() {
-        $( "#neckline-collar" ).toggle();
-        $( "#neckline-wide" ).toggle();
-        $(neckCollar).toggle();
-        $(neckWide).toggle();
-        // $("#pattern-thumb-wide a").css("background-color", "#ffd066");
+$("#neckline-collar").click(function () {
+    $("#neckline-collar").toggle();
+    $("#neckline-wide").toggle();
+    $(neckCollar).toggle();
+    $(neckWide).toggle();
+    // $("#pattern-thumb-wide a").css("background-color", "#ffd066");
 });
 
-$( "#neckline-wide" ).click(function() {
-    $( "#neckline-wide" ).toggle();
-    $( "#neckline-round" ).toggle();
+$("#neckline-wide").click(function () {
+    $("#neckline-wide").toggle();
+    $("#neckline-round").toggle();
     $(neckWide).toggle();
     $(neckRound).toggle();
     // $("#pattern-thumb-round a").css("background-color", "#d46300");
 });
 
-$( "#tshirt-body-wide-crop" ).click(function() {
-    $( "#tshirt-body-wide-crop" ).toggle();
-    $( "#tshirt-body-wide-crop-rotate" ).toggle();
+$("#tshirt-body-wide-crop").click(function () {
+    $("#tshirt-body-wide-crop").toggle();
+    $("#tshirt-body-wide-crop-rotate").toggle();
     $(bodyRotateLeft).toggle();
     $(bodyRotateRight).toggle();
 });
 
-$( "#tshirt-body-wide-crop-rotate" ).click(function() {
-    $( "#tshirt-body-wide-crop-rotate" ).toggle();
-    $( "#tshirt-body-wide-hip" ).toggle();
-    currentBodyLength = bodyHip;    // Updates variable for current body-length with value assigned to bodyHip constant.
-    $( "#length" ).html(fabricLength);    // Replaces fabric length requirement displayed on the page with 'fabricLength' variable.
-    $( "#width" ).html(fabricWidth);    // Replaces fabric width requirement displayed on the page with 'fabricWidth' variable.
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);  // Targets table data cell with ID "#dimensionbodylength", replacing the contents of cell with value for currentBodyLength.
+$("#tshirt-body-wide-crop-rotate").click(function () {
+    $("#tshirt-body-wide-crop-rotate").toggle();
+    $("#tshirt-body-wide-hip").toggle();
+    currentBodyLength = bodyHip; // Updates variable for current body-length with value assigned to bodyHip constant.
+    $("#length").html(fabricLength); // Replaces fabric length requirement displayed on the page with 'fabricLength' variable.
+    $("#width").html(fabricWidth); // Replaces fabric width requirement displayed on the page with 'fabricWidth' variable.
+    $("#dimensionbodylength").html(`${currentBodyLength}cm`); // Targets table data cell with ID "#dimensionbodylength", replacing the contents of cell with value for currentBodyLength.
 });
 
-$( "#tshirt-body-wide-hip" ).click(function() {
-    $( "#tshirt-body-wide-hip" ).toggle();
-    $( "#tshirt-body-wide-hip-rotate" ).toggle();
+$("#tshirt-body-wide-hip").click(function () {
+    $("#tshirt-body-wide-hip").toggle();
+    $("#tshirt-body-wide-hip-rotate").toggle();
 });
 
-$( "#tshirt-body-wide-hip-rotate" ).click(function() {
-    $( "#tshirt-body-wide-hip-rotate" ).toggle();
-    $( "#tshirt-body-wide-long" ).toggle();
+$("#tshirt-body-wide-hip-rotate").click(function () {
+    $("#tshirt-body-wide-hip-rotate").toggle();
+    $("#tshirt-body-wide-long").toggle();
     currentBodyLength = bodyLong;
-    $( "#length" ).html(fabricLength);
-    $( "#width" ).html(fabricWidth);
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+    $("#length").html(fabricLength);
+    $("#width").html(fabricWidth);
+    $("#dimensionbodylength").html(`${currentBodyLength}cm`);
 });
 
-$( "#tshirt-body-wide-long" ).click(function() {
-    $( "#tshirt-body-wide-long" ).toggle();
-    $( "#tshirt-body-wide-long-rotate" ).toggle();
+$("#tshirt-body-wide-long").click(function () {
+    $("#tshirt-body-wide-long").toggle();
+    $("#tshirt-body-wide-long-rotate").toggle();
 });
 
-$( "#tshirt-body-wide-long-rotate" ).click(function() {
-    $( "#tshirt-body-wide-long-rotate" ).toggle();
-    $( "#tshirt-body-narrow-crop" ).toggle();
+$("#tshirt-body-wide-long-rotate").click(function () {
+    $("#tshirt-body-wide-long-rotate").toggle();
+    $("#tshirt-body-narrow-crop").toggle();
     currentBodyLength = bodyCrop;
-    $( "#length" ).html(fabricLength);
-    $( "#width" ).html(fabricWidth);
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+    $("#length").html(fabricLength);
+    $("#width").html(fabricWidth);
+    $("#dimensionbodylength").html(`${currentBodyLength}cm`);
 });
 
-$( "#tshirt-body-narrow-crop" ).click(function() {
-    $( "#tshirt-body-narrow-crop" ).toggle();
-    $( "#tshirt-body-narrow-crop-rotate" ).toggle();
+$("#tshirt-body-narrow-crop").click(function () {
+    $("#tshirt-body-narrow-crop").toggle();
+    $("#tshirt-body-narrow-crop-rotate").toggle();
 });
 
-$( "#tshirt-body-narrow-crop-rotate" ).click(function() {
-    $( "#tshirt-body-narrow-crop-rotate" ).toggle();
-    $( "#tshirt-body-narrow-hip" ).toggle();
-    currentBodyLength = bodyHip;    
-    $( "#length" ).html(fabricLength);
-    $( "#width" ).html(fabricWidth);  
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+$("#tshirt-body-narrow-crop-rotate").click(function () {
+    $("#tshirt-body-narrow-crop-rotate").toggle();
+    $("#tshirt-body-narrow-hip").toggle();
+    currentBodyLength = bodyHip;
+    $("#length").html(fabricLength);
+    $("#width").html(fabricWidth);
+    $("#dimensionbodylength").html(`${currentBodyLength}cm`);
 });
 
-$( "#tshirt-body-narrow-hip" ).click(function() {
-    $( "#tshirt-body-narrow-hip" ).toggle();
-    $( "#tshirt-body-narrow-hip-rotate" ).toggle();
+$("#tshirt-body-narrow-hip").click(function () {
+    $("#tshirt-body-narrow-hip").toggle();
+    $("#tshirt-body-narrow-hip-rotate").toggle();
 });
 
-$( "#tshirt-body-narrow-hip-rotate" ).click(function() {
-    $( "#tshirt-body-narrow-hip-rotate" ).toggle();
-    $( "#tshirt-body-narrow-long" ).toggle();
+$("#tshirt-body-narrow-hip-rotate").click(function () {
+    $("#tshirt-body-narrow-hip-rotate").toggle();
+    $("#tshirt-body-narrow-long").toggle();
     currentBodyLength = bodyLong;
-    $( "#length" ).html(fabricLength);
-    $( "#width" ).html(fabricWidth);
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+    $("#length").html(fabricLength);
+    $("#width").html(fabricWidth);
+    $("#dimensionbodylength").html(`${currentBodyLength}cm`);
 });
 
-$( "#tshirt-body-narrow-long" ).click(function() {
-    $( "#tshirt-body-narrow-long" ).toggle();
-    $( "#tshirt-body-narrow-long-rotate" ).toggle();
+$("#tshirt-body-narrow-long").click(function () {
+    $("#tshirt-body-narrow-long").toggle();
+    $("#tshirt-body-narrow-long-rotate").toggle();
 });
 
-$( "#tshirt-body-narrow-long-rotate" ).click(function() {
-    $( "#tshirt-body-narrow-long-rotate" ).toggle();
-    $( "#tshirt-body-wide-crop" ).toggle();
+$("#tshirt-body-narrow-long-rotate").click(function () {
+    $("#tshirt-body-narrow-long-rotate").toggle();
+    $("#tshirt-body-wide-crop").toggle();
     currentBodyLength = bodyCrop;
-    $( "#length" ).html(fabricLength);
-    $( "#width" ).html(fabricWidth);
-    $( "#dimensionbodylength" ).html(`${currentBodyLength}cm`);
+    $("#length").html(fabricLength);
+    $("#width").html(fabricWidth);
+    $("#dimensionbodylength").html(`${currentBodyLength}cm`);
 });
 
-$( "#sleeve-left-wide-short" ).click(function() {
-    $( "#sleeve-left-wide-short" ).toggle();
-    $( "#sleeve-left-wide-long" ).toggle();
-    $( "#rightsleevewideshort" ).toggle();    // right sleeve tiles also toggled,
-    $( "#rightsleevewidelong" ).toggle();     // so that both sleeves matches.
+$("#sleeve-left-wide-short").click(function () {
+    $("#sleeve-left-wide-short").toggle();
+    $("#sleeve-left-wide-long").toggle();
+    $("#rightsleevewideshort").toggle(); // right sleeve tiles also toggled,
+    $("#rightsleevewidelong").toggle(); // so that both sleeves matches.
     currentSleeveLength = sleeveLong;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $("#dimensionbodycircumference").html(`${currentSleeveLength * 2}cm`);
 });
 
-// Triggered when 'wide and long' left sleeve tile is clicked. 
-
-$( "#leftsleevewidelong" ).click(function() {
-    $( "#leftsleevewidelong" ).toggle();
-    $( "#leftsleevenarrowshort" ).toggle();
-    $( "#rightsleevewidelong" ).toggle();
-    $( "#rightsleevenarrowshort" ).toggle();
+$("#leftsleevewidelong").click(function () {
+    $("#leftsleevewidelong").toggle();
+    $("#leftsleevenarrowshort").toggle();
+    $("#rightsleevewidelong").toggle();
+    $("#rightsleevenarrowshort").toggle();
     currentSleeveWidth = sleeveNarrow;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionsleevecircumference" ).html(`${sleeveNarrow}cm`);
+    $("#dimensionbodycircumference").html(`${currentSleeveLength * 2}cm`);
+    $("#dimensionsleevecircumference").html(`${sleeveNarrow}cm`);
 });
 
-// Triggered when 'narrow and short' left sleeve tile is clicked. 
-
-$( "#leftsleevenarrowshort" ).click(function() {
-    $( "#leftsleevenarrowshort" ).toggle();
-    $( "#leftsleevenarrowlong" ).toggle();
-    $( "#rightsleevenarrowshort" ).toggle();
-    $( "#rightsleevenarrowlong" ).toggle();
+$("#leftsleevenarrowshort").click(function () {
+    $("#leftsleevenarrowshort").toggle();
+    $("#leftsleevenarrowlong").toggle();
+    $("#rightsleevenarrowshort").toggle();
+    $("#rightsleevenarrowlong").toggle();
     currentSleeveLength = sleeveLong;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $("#dimensionbodycircumference").html(`${currentSleeveLength * 2}cm`);
 });
 
-// Triggered when 'narrow and long' left sleeve tile is clicked.
-
-$( "#leftsleevenarrowlong" ).click(function() {
-    $( "#leftsleevenarrowlong" ).toggle();
-    $( "#leftsleevewideshort" ).toggle();
-    $( "#rightsleevenarrowlong" ).toggle();
-    $( "#rightsleevewideshort" ).toggle();
+$("#leftsleevenarrowlong").click(function () {
+    $("#leftsleevenarrowlong").toggle();
+    $("#leftsleevewideshort").toggle();
+    $("#rightsleevenarrowlong").toggle();
+    $("#rightsleevewideshort").toggle();
     currentSleeveWidth = sleeveWide;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionsleevecircumference" ).html(`${sleeveWide}cm`);
+    $("#dimensionbodycircumference").html(`${currentSleeveLength * 2}cm`);
+    $("#dimensionsleevecircumference").html(`${sleeveWide}cm`);
 });
 
-// Triggered when 'wide and short' right sleeve tile is clicked.
-
-$( "#rightsleevewideshort" ).click(function() {
-    $( "#leftsleevewideshort" ).toggle();
-    $( "#leftsleevewidelong" ).toggle();
-    $( "#rightsleevewideshort" ).toggle();
-    $( "#rightsleevewidelong" ).toggle();
+$("#rightsleevewideshort").click(function () {
+    $("#leftsleevewideshort").toggle();
+    $("#leftsleevewidelong").toggle();
+    $("#rightsleevewideshort").toggle();
+    $("#rightsleevewidelong").toggle();
     currentSleeveLength = sleeveLong;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $("#dimensionbodycircumference").html(`${currentSleeveLength * 2}cm`);
 });
 
-// Triggered when 'wide and long' right sleeve tile is clicked.
-
-$( "#rightsleevewidelong" ).click(function() {
-    $( "#leftsleevewidelong" ).toggle();
-    $( "#leftsleevenarrowshort" ).toggle();
-    $( "#rightsleevewidelong" ).toggle();
-    $( "#rightsleevenarrowshort" ).toggle();
+$("#rightsleevewidelong").click(function () {
+    $("#leftsleevewidelong").toggle();
+    $("#leftsleevenarrowshort").toggle();
+    $("#rightsleevewidelong").toggle();
+    $("#rightsleevenarrowshort").toggle();
     currentSleeveWidth = sleeveNarrow;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionsleevecircumference" ).html(`${sleeveNarrow}cm`);
+    $("#dimensionbodycircumference").html(`${currentSleeveLength * 2}cm`);
+    $("#dimensionsleevecircumference").html(`${sleeveNarrow}cm`);
 });
 
-// Triggered when 'narrow and short' right sleeve tile is clicked.
-
-$( "#rightsleevenarrowshort" ).click(function() {
-    $( "#leftsleevenarrowshort" ).toggle();
-    $( "#leftsleevenarrowlong" ).toggle();
-    $( "#rightsleevenarrowshort" ).toggle();
-    $( "#rightsleevenarrowlong" ).toggle();
+$("#rightsleevenarrowshort").click(function () {
+    $("#leftsleevenarrowshort").toggle();
+    $("#leftsleevenarrowlong").toggle();
+    $("#rightsleevenarrowshort").toggle();
+    $("#rightsleevenarrowlong").toggle();
     currentSleeveWidth = sleeveNarrow;
     currentSleeveLength = sleeveLong;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
+    $("#dimensionbodycircumference").html(`${currentSleeveLength * 2}cm`);
 });
 
-// Triggered when 'narrow and long' right sleeve tile is clicked.
-
-$( "#rightsleevenarrowlong" ).click(function() {
-    $( "#leftsleevenarrowlong" ).toggle();
-    $( "#leftsleevewideshort" ).toggle();
-    $( "#rightsleevenarrowlong" ).toggle();
-    $( "#rightsleevewideshort" ).toggle();
+$("#rightsleevenarrowlong").click(function () {
+    $("#leftsleevenarrowlong").toggle();
+    $("#leftsleevewideshort").toggle();
+    $("#rightsleevenarrowlong").toggle();
+    $("#rightsleevewideshort").toggle();
     currentSleeveWidth = sleeveWide;
     currentSleeveLength = sleeveShort;
-    $( "#dimensionbodycircumference" ).html(`${currentSleeveLength * 2}cm`);
-    $( "#dimensionsleevecircumference" ).html(`${sleeveWide}cm`);
+    $("#dimensionbodycircumference").html(`${currentSleeveLength * 2}cm`);
+    $("#dimensionsleevecircumference").html(`${sleeveWide}cm`);
 });
 
 // ----------  Hover functions ------------- //
 
-$( "#neckline-coat" ).hover(function() {
-    $("#pattern-thumb-wide a").css("background-color", "#ffd066");
-});
-
-$( document ).ready(function() {
-    $( "#neckline-coat" ).hover(function() {
-        $("#neck-collar").css("background-color", "#ffd066");
-    }, function(){
+$(document).ready(function () {
+    $("#neckline-coat").hover(function () {
+        $("#neck-collar").css("background-color", "#ffb3009d");
+    }, function () {
         $("#neck-collar").css("background-color", "#b7b3a7");
     });
 });
 
 // Make/Use site logo hover state
 
-$( document ).ready(function() {
-    $( "#makeuse-logo" ).hover(function() {
-        $( this ).toggle();
-        $( "#logo-hover" ).toggle();
-    }, function(){
-        $( "#logo-hover" ).toggle();
-        $( this ).toggle();
-    });
-});
-
-// Pattern Preview hover functions
-
-$( document ).ready(function() {
-    $( "#tshirt-grid" ).hover(function() {
-        $( ".overlay-grid-tshirt" ).toggle();
-    }, function(){
-        $( ".overlay-grid-tshirt" ).toggle();
-    });
-});
-
-$( document ).ready(function() {
-    $( ".neck-temp" ).hover(function() {
-        if ($("#neck-round").is(":visible")) {
-            $( ".overlay-neck-round" ).toggle();    
-        } else if (
-            $("#neck-collar").is(":visible")) {
-                $( ".overlay-neck-collar" ).toggle();
-            } else if ($("#neck-wide").is(":visible")){
-                $( ".overlay-neck-wide" ).toggle();}
-    });
-});
-
-$( document ).ready(function() {
-    $( ".sleeve-left-temp" ).hover(function() {
-        if ($("#sleeve-cut-left").is(":visible")) {
-            $( ".overlay-sleeve-left" ).toggle();    
-        } else if (
-            $("#body-rotate-left").is(":visible")) {
-                $( ".overlay-sleeve-body-rot-left" ).toggle();
-            } else if ($("#elbow-rotate-left").is(":visible")){
-                $( ".overlay-sleeve-left-elbow-rot" ).toggle();}
-    });
-});
-
-$( document ).ready(function() {
-    $( ".sleeve-right-temp" ).hover(function() {
-        if ($("#sleeve-cut-right").is(":visible")) {
-            $( ".overlay-sleeve-right" ).toggle();    
-        } else if (
-            $("#body-rotate-right").is(":visible")) {
-                $( ".overlay-sleeve-body-rot-right" ).toggle();
-            } else if ($("#elbow-rotate-right").is(":visible")){
-                $( ".overlay-sleeve-right-elbow-rot" ).toggle();}
-    });
-});
-
-
-// $( ".body-temp" ).hover(function() {
-//     $( ".neckline-over" ).toggle();
-// }, function(){
-//     $( ".neckline-over" ).toggle();
-// });
-
-$( "sleeve-left-temp" ).hover(function() {
-    $( ".pattern-hover-overlay" ).toggle();
-}, function(){
-    $( ".pattern-hover-overlay" ).toggle();
-});
-
-
-$( document ).ready(function() {
-    $( ".sleeve-right-temp" ).hover(function() {
-        if ($("#sleeve-cut-right").is(":visible")) {
-            $( ".overlay-sleeve-right" ).toggle();    
-        } else if (
-            $("#body-rotate-right").is(":visible")) {
-                $( ".overlay-sleeve-body-rot-right" ).toggle();
-            } else if ($("#elbow-rotate-right").is(":visible")){
-                $( ".overlay-sleeve-right-elbow-rot" ).toggle();}
+$(document).ready(function () {
+    $("#makeuse-logo").hover(function () {
+        $(this).toggle();
+        $("#logo-hover").toggle();
+    }, function () {
+        $("#logo-hover").toggle();
+        $(this).toggle();
     });
 });
 
 // --------- Coat body tile swap function --------------
 
-$( document ).ready(function() {
-    $( "#body-tile-coat" ).click(function() {
+$(document).ready(function () {
+    $("#body-long-coat").click(function () {
         if ($("#coat-body-wide-long-rotate").is(":visible")) {
-            $( "img:visible", this ).toggle();    
-            $( "#coat-body-wide-long" ).toggle();    
-        }   else if (
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-long").toggle();
+        } else if (
             $("#coat-body-wide-long").is(":visible")) {
-                $( "img:visible", this ).toggle();
-                $( "#coat-body-wide-hip" ).toggle();
-            }   else if (
-                ($("#coat-body-wide-hip").is(":visible"))) {
-                    $( "img:visible", this ).toggle();
-                    $( "#coat-body-wide-hip-rotate" ).toggle();
-                }   else if (
-                    ($("#coat-body-wide-hip-rotate").is(":visible"))) {
-                        $( "img:visible", this ).toggle();
-                        $( "#coat-body-wide-crop" ).toggle();
-                    }   else if (
-                        ($("#coat-body-wide-crop").is(":visible"))) {
-                            $( "img:visible", this ).toggle();
-                            $( "#coat-body-wide-crop-rotate" ).toggle();
-                        }   else if (
-                            ($("#coat-body-wide-crop-rotate").is(":visible"))) {
-                                $( "img:visible", this ).toggle();
-                                $( "#coat-body-narrow-crop" ).toggle();
-                            }   else if (
-                                ($("#coat-body-narrow-crop").is(":visible"))) {
-                                    $( "img:visible", this ).toggle();
-                                    $( "#coat-body-narrow-crop-rotate" ).toggle();
-                                }   else if (
-                                    ($("#coat-body-narrow-crop-rotate").is(":visible"))) {
-                                        $( "img:visible", this ).toggle();
-                                        $( "#coat-body-narrow-hip" ).toggle();
-                                    }   else if (
-                                        ($("#coat-body-narrow-hip").is(":visible"))) {
-                                            $( "img:visible", this ).toggle();
-                                            $( "#coat-body-narrow-hip-rotate" ).toggle();
-                                        }   else if (
-                                            ($("#coat-body-narrow-hip-rotate").is(":visible"))) {
-                                                $( "img:visible", this ).toggle();
-                                                $( "#coat-body-narrow-long" ).toggle();
-                                            }   else if (
-                                                ($("#coat-body-narrow-long").is(":visible"))) {
-                                                    $( "img:visible", this ).toggle();
-                                                    $( "#coat-body-narrow-long-rotate" ).toggle();
-                                                }   else if (
-                                                    ($("#coat-body-narrow-long-rotate").is(":visible"))) {
-                                                        $( "img:visible", this ).toggle();
-                                                        $( "#coat-body-wide-long-rotate" ).toggle();
-                                                    }
-                                                });
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-hip").toggle();
+        } else if (
+            ($("#coat-body-wide-hip").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-hip-rotate").toggle();
+        } else if (
+            ($("#coat-body-wide-hip-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-crop").toggle();
+        } else if (
+            ($("#coat-body-wide-crop").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-crop-rotate").toggle();
+        } else if (
+            ($("#coat-body-wide-crop-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-crop").toggle();
+        } else if (
+            ($("#coat-body-narrow-crop").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-crop-rotate").toggle();
+        } else if (
+            ($("#coat-body-narrow-crop-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-hip").toggle();
+        } else if (
+            ($("#coat-body-narrow-hip").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-hip-rotate").toggle();
+        } else if (
+            ($("#coat-body-narrow-hip-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-long").toggle();
+        } else if (
+            ($("#coat-body-narrow-long").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-long-rotate").toggle();
+        } else if (
+            ($("#coat-body-narrow-long-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-long-rotate").toggle();
+        }
+    });
 });
 
 // ---------------  Cropped Tshirt tile swap function
 
-$( document ).ready(function() {
-    $( "#-tile-coat" ).click(function() {
+$(document).ready(function () {
+    $("#body-long-tshirt").click(function () {
         if ($("#coat-body-wide-long-rotate").is(":visible")) {
-            $( "img:visible", this ).toggle();    
-            $( "#coat-body-wide-long" ).toggle();    
-        }   else if (
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-long").toggle();
+        } else if (
             $("#coat-body-wide-long").is(":visible")) {
-                $( "img:visible", this ).toggle();
-                $( "#coat-body-wide-hip" ).toggle();
-            }   else if (
-                ($("#coat-body-wide-hip").is(":visible"))) {
-                    $( "img:visible", this ).toggle();
-                    $( "#coat-body-wide-hip-rotate" ).toggle();
-                }   else if (
-                    ($("#coat-body-wide-hip-rotate").is(":visible"))) {
-                        $( "img:visible", this ).toggle();
-                        $( "#coat-body-wide-crop" ).toggle();
-                    }   else if (
-                        ($("#coat-body-wide-crop").is(":visible"))) {
-                            $( "img:visible", this ).toggle();
-                            $( "#coat-body-wide-crop-rotate" ).toggle();
-                        }   else if (
-                            ($("#coat-body-wide-crop-rotate").is(":visible"))) {
-                                $( "img:visible", this ).toggle();
-                                $( "#coat-body-narrow-crop" ).toggle();
-                            }   else if (
-                                ($("#coat-body-narrow-crop").is(":visible"))) {
-                                    $( "img:visible", this ).toggle();
-                                    $( "#coat-body-narrow-crop-rotate" ).toggle();
-                                }   else if (
-                                    ($("#coat-body-narrow-crop-rotate").is(":visible"))) {
-                                        $( "img:visible", this ).toggle();
-                                        $( "#coat-body-narrow-hip" ).toggle();
-                                    }   else if (
-                                        ($("#coat-body-narrow-hip").is(":visible"))) {
-                                            $( "img:visible", this ).toggle();
-                                            $( "#coat-body-narrow-hip-rotate" ).toggle();
-                                        }   else if (
-                                            ($("#coat-body-narrow-hip-rotate").is(":visible"))) {
-                                                $( "img:visible", this ).toggle();
-                                                $( "#coat-body-narrow-long" ).toggle();
-                                            }   else if (
-                                                ($("#coat-body-narrow-long").is(":visible"))) {
-                                                    $( "img:visible", this ).toggle();
-                                                    $( "#coat-body-narrow-long-rotate" ).toggle();
-                                                }   else if (
-                                                    ($("#coat-body-narrow-long-rotate").is(":visible"))) {
-                                                        $( "img:visible", this ).toggle();
-                                                        $( "#coat-body-wide-long-rotate" ).toggle();
-                                                    }
-                                                });
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-hip").toggle();
+        } else if (
+            ($("#coat-body-wide-hip").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-hip-rotate").toggle();
+        } else if (
+            ($("#coat-body-wide-hip-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-crop").toggle();
+        } else if (
+            ($("#coat-body-wide-crop").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-crop-rotate").toggle();
+        } else if (
+            ($("#coat-body-wide-crop-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-crop").toggle();
+        } else if (
+            ($("#coat-body-narrow-crop").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-crop-rotate").toggle();
+        } else if (
+            ($("#coat-body-narrow-crop-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-hip").toggle();
+        } else if (
+            ($("#coat-body-narrow-hip").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-hip-rotate").toggle();
+        } else if (
+            ($("#coat-body-narrow-hip-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-long").toggle();
+        } else if (
+            ($("#coat-body-narrow-long").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-narrow-long-rotate").toggle();
+        } else if (
+            ($("#coat-body-narrow-long-rotate").is(":visible"))) {
+            $("img:visible", this).toggle();
+            $("#coat-body-wide-long-rotate").toggle();
+        }
+    });
 });

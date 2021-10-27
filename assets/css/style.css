@@ -10,25 +10,16 @@ body {
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
-    background-color: #fffefe;
     background-color: #fcfcfc;
     font-family: 'Ubuntu', sans-serif;
+    color: #4a494a;
     box-sizing: border-box;
 }
 
-html {
-    font-size: 14px;
-  }
-  @media (max-width: 767px) {
-    html {
-      font-size: 12px;
-    }
-  }
-  
-  p {
-    font-size: 1.6rem;
-    padding: 1rem;
-  }
+.menu-make {
+    width: 100vw;
+    height: 100vh;
+}
 
 /* \\---  Colors  ---///////////////////////////// */
 
@@ -36,8 +27,8 @@ html {
     color: #ffb100;
 }
 
-.navbar .nav-item a:active {
-    color: #ffd066;
+.navbar .nav-item .nav-link:active {
+    color: pink;
 }
 
 /* \\---  Fonts  ---////////////////////////////// */
@@ -281,6 +272,14 @@ a {
     width: 210px;
 }
 
+/* \\---  Images  ---////////////////////////////// */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* \\---  Make Menu / index.html   ---/////////////////////// */
 
 .menu-make ul {
@@ -295,7 +294,6 @@ a {
     flex-direction: row;
     justify-content: space-evenly;
     left: 0;
-    /* border: 1px solid pink; */
     padding:0;
 }
 
@@ -335,9 +333,9 @@ a {
     z-index: 1000;
 }
 
-#neck-tile-longt,
-#neck-tile-cropt,
-#neck-tile-coat {
+#neck-crop-tshirt,
+#neck-long-tshirt,
+#neck-long-coat {
     display: grid;
     grid-column: 2;
     grid-row: 1;
@@ -345,9 +343,9 @@ a {
     align-content: flex-end;
 }
 
-#body-tile-cropt,
-#body-tile-longt,
-#body-tile-coat {
+#body-crop-tshirt,
+#body-long-tshirt,
+#body-long-coat {
     display: grid;
     grid-column: 2;
     grid-row: 2 / 3;
@@ -356,18 +354,18 @@ a {
 
 }
 
-#sleeve-tile-left-cropt,
-#sleeve-tile-left-longt,
-#sleeve-tile-left-coat {
+#sleeve-left-crop-tshirt,
+#sleeve-left-long-tshirt,
+#sleeve-left-long-coat {
     display: grid;
     grid-column: 1;
     grid-row: 1 / 3;
     justify-content: right;
 }
 
-#sleeve-tile-right-cropt,
-#sleeve-tile-right-longt,
-#sleeve-tile-right-coat {
+#sleeve-right-crop-tshirt,
+#sleeve-right-long-tshirt,
+#sleeve-right-long-coat {
     display: grid;
     grid-column: 3;
     grid-row: 1 / 3;
@@ -376,76 +374,52 @@ a {
 
 /* \\---  Cropped Tshirt specific styles  ---/////////////////////// */
 
-#sleeve-tile-left-cropt {
+/* #sleeve-left-crop-tshirt {
     background-color: #ffb100;
-    background-color: #ffb300a8;
-    background-color: #ddbd71c5;
-    background-color: #ffb30086;
+    background-color: #9c9c9c73;
 }
 
-#sleeve-tile-right-cropt {
+#sleeve-right-crop-tshirt {
     background-color: #d46300;
-    background-color: #d46300a9;
-    background-color: #d46300d3;
-    background-color: #9c9c9cc4;
-    background-color: #d4630085;
+    background-color: #9c9c9c67;
 }
 
-#neck-tile-cropt,
-#body-tile-cropt {
+#neck-crop-tshirt,
+#body-crop-tshirt {
     background-color: rgba(150, 148, 150, 0.76);
     background-color: #b7b3a7;
-    background-color: #c9c6c0d5;
-}
+    background-color: #c9c6c075;
+} */
 
 /* \\---  Long Tshirt specific styles  ---/////////////////////// */
 
-#sleeve-tile-left-longt {
-    background-color: rgba(206, 206, 206, 0.815);
-    background-color: rgba(184, 179, 189, 0.808);
+/* #sleeve-left-long-tshirt {
     background-color: rgba(218, 218, 218, 0.808);
 }
 
-#sleeve-tile-right-longt {
-    background-color: rgba(168, 158, 175, 0.76);
-    background-color: rgba(150, 148, 150, 0.76);
+#sleeve-right-long-tshirt {
     background-color: rgba(218, 218, 218, 0.808);
 }
 
-#neck-tile-longt,
-#body-tile-longt {
-    background-color: rgba(150, 148, 150, 0.76);
-    background-color: rgba(168, 158, 175, 0.76);
-    background-color: rgba(184, 179, 189, 0.808);
+#neck-long-tshirt,
+#body-long-tshirt {
     background-color: rgba(184, 179, 179, 0.808);
-}
-
-/* .longt-grid-bg {
-    display: grid;
-    grid-column: 1 / 4;
-    grid-row: 1 / 4;
-    z-index: 40;
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
 } */
-
-/* #grid-makeuse-long-t img {} */
 
 /* \\---  Coat specific styles  ---/////////////////////// */
 
-#neck-tile-coat,
-#body-tile-coat {
+/* #neck-long-coat,
+#body-long-coat {
     background-color: rgba(136, 136, 136, 0.733);
 }
 
-#sleeve-tile-left-coat {
+#sleeve-left-long-coat {
     background-color: rgba(146, 133, 133, 0.733);
 }
 
-#sleeve-tile-right-coat {
+#sleeve-right-long-coat {
     background-color: rgba(165, 152, 128, 0.733);
-}
+} */
 
 /* \\---  Garment Grid-Tile Sequencing  ---/////////////////////// */
 
@@ -455,7 +429,6 @@ a {
 
 #grid-intro {
     display: inline-flex;
-    color: #4a494a;
     font-weight: 400;
     font-size: 14px;
     text-align: left;
@@ -601,6 +574,10 @@ input {
     padding: 0;
 }
 
+.pattern-thumb span {
+    background-color: #b7b3a7;
+}
+
 .pattern-hover {
     display: none;
     z-index: 10;
@@ -735,34 +712,46 @@ h5 {
     .downloadwrapper {
         padding: 0;
         margin: 10px 0 0 0;
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-content: space-between;
-        align-items: flex-start;
-        height: 200px;
+        /* align-content: flex-end; */
+        align-items: flex-end;
+        /* height: 200px; */
         max-height: 240px;
         width: 100%;
     }
 
+    .downloadwrapper {
+        display: grid;
+        grid-auto-flow: row;
+    }
+
     .pattern-thumb {
-        width: 98px;
+        /* width: 98px; */
+        max-width: 99px;
+        height: auto;
         padding: 0;
+    }
+
+    .pattern-thumb img {
+        max-width: 99px;
+        height: auto;
     }
 
     .pattern-hover > img {
         background-color: #b7b3a7;
     }
 
-    /* .overlay-grid-tshirt,
+    .overlay-grid-tshirt,
     .neckline-over,
     .body-over,
     .sleeve-left-over,
     .sleeve-right-over {
         grid-column: 1 / 3;
         grid-row: 3 / 5;
-    } */
+    }
 
     .garment-tile:hover {
         filter: opacity(88%);
