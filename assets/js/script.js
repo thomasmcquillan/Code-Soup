@@ -305,11 +305,52 @@ $(document).ready(function () {
     });
 });
 
+// --------- Long Tshirt tile swap function --------------
+
+$(document).ready(function () {
+    $("#body-long-tshirt").click(function () {
+        if (
+            $("#long-t-body-wide-hip-rotate").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#long-t-body-wide-hip").toggle();
+        } else if (
+            $("#long-t-body-wide-hip").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#long-t-body-wide-long").toggle();
+        } else if (
+            $("#long-t-body-wide-long").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#long-t-body-wide-long-rotate").toggle();
+        } else if (
+            $("#long-t-body-wide-long-rotate").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#long-t-body-narrow-hip").toggle();
+        } else if (
+            $("#long-t-body-narrow-hip").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#long-t-body-narrow-hip-rotate").toggle();
+        } else if (
+            $("#long-t-body-narrow-hip-rotate").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#long-t-body-narrow-long").toggle();
+        } else if (
+            $("#long-t-body-narrow-long").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#long-t-body-narrow-long-rotate").toggle();
+        } else if (
+            $("#long-t-body-narrow-long-rotate").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#long-t-body-wide-hip-rotate").toggle();
+        } 
+    });
+});
+
 // --------- Coat body tile swap function --------------
 
 $(document).ready(function () {
     $("#body-long-coat").click(function () {
-        if ($("#coat-body-wide-long-rotate").is(":visible")) {
+        if (
+            $("#coat-body-wide-long-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-wide-long").toggle();
         } else if (
@@ -317,43 +358,43 @@ $(document).ready(function () {
             $("img:visible", this).toggle();
             $("#coat-body-wide-hip").toggle();
         } else if (
-            ($("#coat-body-wide-hip").is(":visible"))) {
+            $("#coat-body-wide-hip").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-wide-hip-rotate").toggle();
         } else if (
-            ($("#coat-body-wide-hip-rotate").is(":visible"))) {
+            $("#coat-body-wide-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-wide-crop").toggle();
         } else if (
-            ($("#coat-body-wide-crop").is(":visible"))) {
+            $("#coat-body-wide-crop").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-wide-crop-rotate").toggle();
         } else if (
-            ($("#coat-body-wide-crop-rotate").is(":visible"))) {
+            $("#coat-body-wide-crop-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-narrow-crop").toggle();
         } else if (
-            ($("#coat-body-narrow-crop").is(":visible"))) {
+            $("#coat-body-narrow-crop").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-narrow-crop-rotate").toggle();
         } else if (
-            ($("#coat-body-narrow-crop-rotate").is(":visible"))) {
+            $("#coat-body-narrow-crop-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-narrow-hip").toggle();
         } else if (
-            ($("#coat-body-narrow-hip").is(":visible"))) {
+            $("#coat-body-narrow-hip").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-narrow-hip-rotate").toggle();
         } else if (
-            ($("#coat-body-narrow-hip-rotate").is(":visible"))) {
+            $("#coat-body-narrow-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-narrow-long").toggle();
         } else if (
-            ($("#coat-body-narrow-long").is(":visible"))) {
+            $("#coat-body-narrow-long").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-narrow-long-rotate").toggle();
         } else if (
-            ($("#coat-body-narrow-long-rotate").is(":visible"))) {
+            $("#coat-body-narrow-long-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-wide-long-rotate").toggle();
         }
@@ -362,55 +403,78 @@ $(document).ready(function () {
 
 // ---------------  Cropped Tshirt tile swap function
 
-$(document).ready(function () {
-    $("#body-long-tshirt").click(function () {
-        if ($("#coat-body-wide-long-rotate").is(":visible")) {
+$(document).ready(function() {
+    $("#body-crop-tshirt").click(function() {
+        if (
+            $("#tshirt-body-wide-crop-rotate").is(":visible")) {
             $("img:visible", this).toggle();
-            $("#coat-body-wide-long").toggle();
+            $("#tshirt-body-wide-crop").toggle();
         } else if (
-            $("#coat-body-wide-long").is(":visible")) {
+            $("#tshirt-body-wide-crop").is(":visible")) {
             $("img:visible", this).toggle();
-            $("#coat-body-wide-hip").toggle();
+            $("#tshirt-body-wide-hip-rotate").toggle();
         } else if (
-            ($("#coat-body-wide-hip").is(":visible"))) {
+            $("#tshirt-body-wide-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
-            $("#coat-body-wide-hip-rotate").toggle();
+            $("#tshirt-body-wide-hip").toggle();
         } else if (
-            ($("#coat-body-wide-hip-rotate").is(":visible"))) {
+            $("#tshirt-body-wide-hip").is(":visible")) {
             $("img:visible", this).toggle();
-            $("#coat-body-wide-crop").toggle();
+            $("#tshirt-body-narrow-crop-rotate").toggle();
         } else if (
-            ($("#coat-body-wide-crop").is(":visible"))) {
+            $("#tshirt-body-narrow-crop-rotate").is(":visible")) {
             $("img:visible", this).toggle();
-            $("#coat-body-wide-crop-rotate").toggle();
+            $("#tshirt-body-narrow-crop").toggle();
         } else if (
-            ($("#coat-body-wide-crop-rotate").is(":visible"))) {
+            $("#tshirt-body-narrow-crop").is(":visible")) {
             $("img:visible", this).toggle();
-            $("#coat-body-narrow-crop").toggle();
+            $("#tshirt-body-narrow-hip-rotate").toggle();
         } else if (
-            ($("#coat-body-narrow-crop").is(":visible"))) {
+            $("#tshirt-body-narrow-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
-            $("#coat-body-narrow-crop-rotate").toggle();
+            $("#tshirt-body-narrow-hip").toggle();
         } else if (
-            ($("#coat-body-narrow-crop-rotate").is(":visible"))) {
+            $("#tshirt-body-narrow-hip").is(":visible")) {
             $("img:visible", this).toggle();
-            $("#coat-body-narrow-hip").toggle();
-        } else if (
-            ($("#coat-body-narrow-hip").is(":visible"))) {
-            $("img:visible", this).toggle();
-            $("#coat-body-narrow-hip-rotate").toggle();
-        } else if (
-            ($("#coat-body-narrow-hip-rotate").is(":visible"))) {
-            $("img:visible", this).toggle();
-            $("#coat-body-narrow-long").toggle();
-        } else if (
-            ($("#coat-body-narrow-long").is(":visible"))) {
-            $("img:visible", this).toggle();
-            $("#coat-body-narrow-long-rotate").toggle();
-        } else if (
-            ($("#coat-body-narrow-long-rotate").is(":visible"))) {
-            $("img:visible", this).toggle();
-            $("#coat-body-wide-long-rotate").toggle();
+            $("#tshirt-body-wide-crop-rotate").toggle();
         }
     });
 });
+
+// $(document).ready(function () {
+//     $("#body-crop-tshirt").click(function () {
+//         if (
+//             $("#tshirt-body-wide-crop-rotate").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-wide-crop").toggle();
+//         } else if (
+//             $("#tshirt-body-wide-crop").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-wide-hip-rotate").toggle();
+//         } else if (
+//             $("#tshirt-body-wide-hip-rotate").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-wide-hip").toggle();
+//         } else if (
+//             $("#tshirt-body-wide-hip").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-narrow-crop-rotate").toggle();
+//         } else if (
+//             $("#tshirt-body-narrow-crop-rotate").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-narrow-crop").toggle();
+//         } else if (
+//             $("#tshirt-body-narrow-crop").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-narrow-hip-rotate").toggle();
+//         } else if (
+//             $("#tshirt-body-narrow-hip-rotate").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-narrow-hip").toggle();
+//         } else if (
+//             $("#tshirt-body-narrow-hip").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-wide-crop-rotate").toggle();
+//         }; 
+//     });
+// });
