@@ -50,15 +50,6 @@ h6 {
     line-height: 1.15em;
 }
 
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-    margin-top: 0;
-}
-
 h1 {
     font-size: 90px;
     margin-top: .5em;
@@ -260,8 +251,8 @@ a {
 .mu-footer {
     display: flex;
     width: 100%;
-    height: 420px;
-    padding: 50px 30px 0 30px;
+    /* height: 420px; */
+    padding: 70px 30px 90px 30px;
     background-color: #4a494a;
     margin-top: 100px;
     position: absolute;
@@ -507,21 +498,6 @@ table td span {
 
 /* ------table testing end --------- */
 
-/* .garment-length {
-    display: grid;
-    grid-row: 2;
-    grid-column: 1;
-    justify-content: flex-start;
-} */
-
-/* .garment-circum {
-    display: inline-grid;
-    grid-column: 2;
-    grid-row: 2;
-    justify-content: center;
-    align-content: flex-start;
-} */
-
 input {
     border: none;
     text-align: center;
@@ -597,12 +573,6 @@ h5 {
     margin-left: 30px;
     font-size: 18px;
 }
-
-/* /////////////////////////////////////////////////////////// */
-
-/* ////// pattern preview testing */
-
-
 
 /* \\---  Media Queries  ---// */
 

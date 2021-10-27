@@ -32,18 +32,17 @@ let bodyCircumference = currentSleeveLength * 2;
 
 // Declaring variables for custom input values.  
 
-// let customInputSleeveCircum;
-// let customInputBodylength;
-// let customInputBodyCircum;
+let customInputSleeveCircum;
+let customInputBodylength;
+let customInputBodyCircum;
 
-// Declaring variables for displaying the fabric width
-// and length required to make currently selected style.
+// Declaring variables for displaying the fabric width and length required to make currently selected style.
 
 var fabricWidth = (currentSleeveLength * 2);
 var fabricLength = (currentSleeveWidth * 0.5) + currentBodyLength;
 
 // To calculate fabric size required for currently selected style.
-// $(".tiles").children().click(function() {
+
 $(".garment-grid").children().click(function () {
     $("#fabricrequired").text(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + currentBodyLength}cm`);
     if ($("#grid-intro").is(":visible")) {
@@ -53,8 +52,7 @@ $(".garment-grid").children().click(function () {
     }
 });
 
-// Function that calculates fabric size required to make 
-// garment based on the custom values input by user.
+// Function that calculates fabric size required to make garment based on the custom values input by user.
 // Triggered by Enter/Tab keys in custom body length input.
 
 $("#customInputbodylength").keydown(function (event) {
@@ -86,7 +84,7 @@ $("#custominputsleevecircum").keydown(function (event) {
     }
 });
 
-// Following functions, when clicked, cycle to next image of their type
+// Following functions cycle to next image of their type
 // (neckline/body/sleeves), and update variables required for displaying 
 // key fabric measurements and pattern downloads for users.
 
@@ -219,7 +217,7 @@ $(document).ready(function () {
     });
 });
 
-// --------- Long Tshirt tile swap function --------------
+// --------- Long Tshirt body tile sequencing function -------------- //
 
 
 $(document).ready(function () {
@@ -228,14 +226,13 @@ $(document).ready(function () {
             $("#tshirt-body-wide-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#tshirt-body-wide-hip").toggle();
-            currentBodyLength = bodyLong;
-            $("#length").html(fabricLength);
-            $("#width").html(fabricWidth);
-            $("#dimensionbodylength").html(`${currentBodyLength}cm`);
         } else if (
             $("#tshirt-body-wide-hip").is(":visible")) {
             $("img:visible", this).toggle();
             $("#tshirt-body-wide-long").toggle();
+            currentBodyLength = bodyLong;
+            $("#length").html(fabricLength);
+            $("#dimensionbodylength").html(`${currentBodyLength}cm`);
         } else if (
             $("#tshirt-body-wide-long").is(":visible")) {
             $("img:visible", this).toggle();
@@ -264,7 +261,7 @@ $(document).ready(function () {
     });
 });
 
-// --------- Coat body tile swap function --------------
+// ---------------- Coat body tile sequencing function --------------- //
 
 $(document).ready(function () {
     $("#body-long-coat").click(function () {
@@ -276,6 +273,7 @@ $(document).ready(function () {
             $("#coat-body-wide-long").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-wide-hip").toggle();
+            bodyHip;
         } else if (
             $("#coat-body-wide-hip").is(":visible")) {
             $("img:visible", this).toggle();
@@ -284,6 +282,7 @@ $(document).ready(function () {
             $("#coat-body-wide-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-wide-crop").toggle();
+            bodyCrop;
         } else if (
             $("#coat-body-wide-crop").is(":visible")) {
             $("img:visible", this).toggle();
@@ -300,6 +299,7 @@ $(document).ready(function () {
             $("#coat-body-narrow-crop-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-narrow-hip").toggle();
+            bodyHip;
         } else if (
             $("#coat-body-narrow-hip").is(":visible")) {
             $("img:visible", this).toggle();
@@ -308,6 +308,7 @@ $(document).ready(function () {
             $("#coat-body-narrow-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
             $("#coat-body-narrow-long").toggle();
+            bodyLong;
         } else if (
             $("#coat-body-narrow-long").is(":visible")) {
             $("img:visible", this).toggle();
@@ -320,7 +321,24 @@ $(document).ready(function () {
     });
 });
 
-// ---------------  Cropped Tshirt tile swap function
+// const bodyRotateLeft = document.getElementsByClassName("pattern-thumb-body-rotate-left");
+// const bodyRotateRight = document.getElementsByClassName("pattern-thumb-body-rotate-right");
+// const elbowRotateLeft = document.getElementsByClassName("pattern-thumb-elbow-rotate-left");
+// const elbowRotateRight = document.getElementsByClassName("pattern-thumb-elbow-rotate-left");
+
+// const sleeveWide = 50;
+// const sleeveNarrow = 35;
+
+// const sleeveShort = 55;
+// const sleeveLong = 75;
+
+// let currentBodyLength = 50;
+// let currentSleeveWidth = 50;
+// let currentSleeveLength = 55;
+
+
+// ------- Cropped Tshirt body tile sequencing function  --------//
+
 
 $(document).ready(function() {
     $("#body-crop-tshirt").click(function() {
@@ -332,6 +350,7 @@ $(document).ready(function() {
             $("#tshirt-body-wide-crop").is(":visible")) {
             $("img:visible", this).toggle();
             $("#tshirt-body-wide-hip-rotate").toggle();
+            bodyHip;
         } else if (
             $("#tshirt-body-wide-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
@@ -340,6 +359,7 @@ $(document).ready(function() {
             $("#tshirt-body-wide-hip").is(":visible")) {
             $("img:visible", this).toggle();
             $("#tshirt-body-narrow-crop-rotate").toggle();
+            bodyCrop;
         } else if (
             $("#tshirt-body-narrow-crop-rotate").is(":visible")) {
             $("img:visible", this).toggle();
@@ -348,6 +368,7 @@ $(document).ready(function() {
             $("#tshirt-body-narrow-crop").is(":visible")) {
             $("img:visible", this).toggle();
             $("#tshirt-body-narrow-hip-rotate").toggle();
+            bodyHip;
         } else if (
             $("#tshirt-body-narrow-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
@@ -356,6 +377,7 @@ $(document).ready(function() {
             $("#tshirt-body-narrow-hip").is(":visible")) {
             $("img:visible", this).toggle();
             $("#tshirt-body-wide-crop-rotate").toggle();
+            bodyCrop;
         }
         else return;
     });
