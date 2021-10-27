@@ -16,6 +16,20 @@ body {
     box-sizing: border-box;
 }
 
+html {
+    font-size: 14px;
+  }
+  @media (max-width: 767px) {
+    html {
+      font-size: 12px;
+    }
+  }
+  
+  p {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
 /* \\---  Colors  ---///////////////////////////// */
 
 .navbar .nav-item a:hover {
@@ -587,11 +601,7 @@ input {
     padding: 0;
 }
 
-.thumbs {
-    background-color: #b7b3a7;
-}
-
-.pattern-hover-overlay {
+.pattern-hover {
     display: none;
     z-index: 10;
     padding: 5px;
@@ -741,7 +751,7 @@ h5 {
         padding: 0;
     }
 
-    .pattern-hover-overlay > img {
+    .pattern-hover > img {
         background-color: #b7b3a7;
     }
 
@@ -780,7 +790,6 @@ h5 {
 
 @media (max-width:479px) {
     h1 {
-        font-size: 60px;
         font-size: 17vw;
     }
 
