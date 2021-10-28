@@ -493,7 +493,7 @@ table td span {
 #sleeve-circum,
 #fabric-required {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     color: #d46300;
     margin: 0 auto;
     justify-content: center;
@@ -526,10 +526,10 @@ input {
     justify-content: center;
 }
 
-.fabricsize {
+/* .fabricsize {
     margin-top: 20px;
     color: #e9e7e7;
-}
+} */
 
 .pattern-thumb {
     padding: 0 20px 38px 20px;
@@ -685,43 +685,39 @@ h5 {
         margin-bottom: 10px;
     }
 
-    .downloadwrapper {
+    /* .downloadwrapper {
         padding: 0;
         margin: 10px 0 0 0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        /* align-content: flex-end; */
         align-items: flex-end;
         justify-items: flex-end;
         height: 200px;
         width: 360px;
-        
-    }
+    } */
 
     .downloadwrapper {
         display: grid;
-        grid-auto-flow: row;
         justify-content: space-between;
-        /* width: 100%; */
+        align-content: space-between;
+        flex-wrap: wrap-reverse;
         grid-template-columns: 66px 66px 66px 66px;
-        grid-template-rows: 66px 66px 66px 66px;
+        grid-template-rows: 66px 66px 66px;
         grid-auto-flow: row;
-        /* border: 1px solid pink; */
         grid-auto-flow: row;
-        align-items: flex-end;
-        align-content: flex-end;
-        justify-content: end;
-        margin-right: 40px;
-        width: 400px;
+        justify-items: flex-end;
+        height: 220px;
+        width: 300px;
+        margin-top: auto;
     }
 
     .pattern-thumb {
-        /* width: 98px; */
-        max-width: 66px;
+        width: 77px;
+        height: 77px;
         height: auto;
-        margin: 16px;
+        margin: 10px;
     }
 
     .pattern-thumb img {
