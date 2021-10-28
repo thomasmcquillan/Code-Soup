@@ -494,7 +494,7 @@ table td span {
 #fabric-required {
     font-size: 16px;
     font-weight: 500;
-    color: #d46300;
+    color: #7a3900;
     margin: 0 auto;
     justify-content: center;
     text-align: center;
@@ -517,7 +517,7 @@ input {
 }
 
 .custom-input-info {
-    color: #888;
+    color: #5c5c5c;
     font-weight: 300;
 }
 
