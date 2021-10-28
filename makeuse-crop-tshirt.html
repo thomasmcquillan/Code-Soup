@@ -144,72 +144,72 @@
                                 alt="Tshirt garment-body in 'narrow/hip' style with rotation">
                         </div>
                         
-                        <div id="sleeve-left-crop-tshirt" class="garment-tile">
+                        <div id="sleeve-left-crop-tshirt" class="garment-tile sleeve-left">
 
-                            <img id="sleeve-left-wide-short-rotate" class="tile-on"
+                            <img class="sleeve-left-wide-short-rotate tile-on"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-short-rotate@3x.png"
                                 alt="Left-sleeve in 'wide/short' style with rotation">
 
-                            <img id="sleeve-left-wide-short"
+                            <img class="sleeve-left-wide-short"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-short-@3x.png"
                                 alt="Left-sleeve in 'wide/short' style">
 
-                            <img id="sleeve-left-wide-long-rotate"
+                            <img class="sleeve-left-wide-long-rotate"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-long-rotate@3x.png"
                                 alt="Left-sleeve in 'wide/long' style with rotation">
 
-                            <img id="sleeve-left-wide-long"
+                            <img class="sleeve-left-wide-long"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-long@3x.png"
                                 alt="Left-sleeve in 'wide/long' style">
 
-                            <img id="sleeve-left-narrow-long-rotate"
+                            <img class="sleeve-left-narrow-long-rotate"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-long-rotate@3x.png"
                                 alt="Left-sleeve in 'narrow/long' style with rotation">
                                 
-                            <img id="sleeve-left-narrow-long"
+                            <img class="sleeve-left-narrow-long"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-long@3x.png"
                                 alt="Left-sleeve in 'narrow/long' style">
 
-                            <img id="sleeve-left-narrow-short-rotate"
+                            <img class="sleeve-left-narrow-short-rotate"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-short-rotate@3x.png"
                                 alt="Left-sleeve in 'narrow/short' style with rotation">
                                 
-                            <img id="sleeve-left-narrow-short"
+                            <img class="sleeve-left-narrow-short"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-short@3x.png"
                                 alt="Left-sleeve in 'narrow/short' style">
                         </div>
 
-                        <div id="sleeve-right-crop-tshirt" class="garment-tile">
+                        <div id="sleeve-right-crop-tshirt" class="garment-tile sleeve-right">
 
-                            <img id="sleeve-right-wide-short-rotate" class="tile-on"
+                            <img class="sleeve-right-wide-short-rotate tile-on"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short-rotate@3x.png"
                                 alt="right-sleeve in 'wide/short' style with rotation">
 
-                            <img id="sleeve-right-wide-short"
+                            <img class="sleeve-right-wide-short"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short@3x.png"
                                 alt="right-sleeve in 'wide/short' style">
 
-                            <img id="sleeve-right-wide-long-rotate"
+                            <img class="sleeve-right-wide-long-rotate"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-long-rotate@3x.png"
                                 alt="right-sleeve in 'wide/long' style with rotation">
 
-                            <img id="sleeve-right-wide-long"
+                            <img class="sleeve-right-wide-long"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-long@3x.png"
                                 alt="right-sleeve in 'wide/long' style">
 
-                            <img id="sleeve-right-narrow-long-rotate"
+                            <img class="sleeve-right-narrow-long-rotate"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-long-rotate@3x.png"
                                 alt="right-sleeve in 'narrow/long' style with rotation">
 
-                            <img id="sleeve-right-narrow-long"
+                            <img class="sleeve-right-narrow-long"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-long@3x.png"
                                 alt="right-sleeve in 'narrow/long' style">
 
-                            <img id="sleeve-right-narrow-short-rotate"
+                            <img class="sleeve-right-narrow-short-rotate"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-short-rotate@3x.png"
                                 alt="right-sleeve in 'narrow/short' style with rotation">
 
-                            <img id="sleeve-right-narrow-short"
+                            <img class="sleeve-right-narrow-short"
                                 src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-short@3x.png"
                                 alt="right-sleeve in 'narrow/short' style">
                         </div>
@@ -218,16 +218,24 @@
                     <table class="sizing-info-table">
                         <tbody>
                             <tr>
-                                <td data-title="Garment circumference"><span
-                                        id="garment-circum"><strong>110cm</strong></span></td>
-                                <td data-title="Garment length"><span
-                                        id="garment-length"><strong>50cm</strong></span></td>
-                                <td data-title="Sleeve circumference"><span
-                                        id="sleeve-circum"><strong>50cm</strong></span></td>
+                                <td class="fabric-data" data-title="Fabric Required"><span
+                                        id="fabric-required">110cm x 75cm</span></td>
                             </tr>
                             <tr>
-                                <td class="fabric-data d-md-none" data-title="Fabric Required"><span
-                                        id="fabric-required"><strong>110cm x 75cm</strong></span></td>
+                                <td data-title="Garment circumference"><span
+                                        id="garment-circum">110cm</span></td>
+                                <td data-title="Garment length"><span id="garment-length">50cm</span>
+                                </td>
+                                <td data-title="Sleeve circumference"><span
+                                        id="sleeve-circum">50cm</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="t-grey" text-align="center" width="100%">Or enter custom values below to calculate fabric requirements. <em>Note that custom inputs will not be reflected in the garment model.</em></th>
+                            </tr>
+                            <tr>
+                                <td><input id="custom-garment-circum" type="number" placeholder="______cm"></td>
+                                <td><input id="custom-garment-length" type="number" placeholder="______cm"></td>
+                                <td><input id="custom-sleeve-circum" type="number" placeholder="______cm"></td>
                             </tr>
                         </tbody>
                     </table>
