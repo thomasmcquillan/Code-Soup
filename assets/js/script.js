@@ -113,9 +113,7 @@ $("#neckline-wide").click(function () {
     // $("#pattern-thumb-round a").css("background-color", "#d46300");
 });
 
-// long sleeve = large garment bodyCircumference
-
-// short sleeve = narrow body bodyCircumference
+// left sleeve tile function for WIDE sleeves
 
 $(document).ready(function () {
     $(".sleeve-left").click(function () {
@@ -146,6 +144,8 @@ $(document).ready(function () {
         }
     });
 });
+
+// right sleeve tile function for WIDE sleeves
 
 $(document).ready(function () {
     $(".sleeve-right").click(function () {
