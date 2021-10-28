@@ -510,6 +510,17 @@ input {
     background-color: #e9e7e7;
 }
 
+.alert-box {
+    display:block;
+    color: red;
+    background-color:#b7b3a7;
+}
+
+.custom-input-info {
+    color: #888;
+    font-weight: 300;
+}
+
 /* \\---  Pattern Template Downloads  ---////////////////////////////// */
 
 .downloadwrapper>.row {

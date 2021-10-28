@@ -31,9 +31,9 @@ let bodyCircumference = currentSleeveLength * 2;
 
 // Declaring variables for custom input values.  
 
-let customInputSleeveCircum;
-let customInputBodylength;
-let customInputBodyCircum = document.getElementsByClassName("pattern-thumb-elbow-rotate-left");
+let customSleeveCircum = document.getElementById("custom-sleeve-circum");
+let customGarmentLength = document.getElementById("custom-garment-length");
+let customGarmentCircum = document.getElementById("custom-garment-circum");
 
 // Declaring variables for displaying the fabric width and length required to make currently selected style.
 
@@ -54,32 +54,37 @@ $(".garment-grid").children().click(function () {
 // Function that calculates fabric size required to make garment based on the custom values input by user.
 // Triggered by Enter/Tab keys in custom body length input.
 
-$("#customInputbodylength").keydown(function (event) {
+$("#custom-garment-length").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-        if ($("#customInputbodylength").val() > 0) {
-            let customBodyLength = parseInt($("#customInputbodylength").val(), 10);
-            $("#fabric-required").html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
+        if ($("#custom-garment-length").val() > 0) {
+            let customGarmentLength = parseInt($("#custom-garment-length").val(), 10);
+            $("#fabric-required").html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customGarmentLength}cm`);
         } else {
-            $(".fabricsize").text('Custom values will update fabric size required, but will not be updated in the illustration.');
-            $("#bodytile img").css('filter', 'blur(3px) invert(8)');
+            // $("#grid-intro").text('Custom values will update fabric size required, but will not be updated in the illustration.');
+            // $(".garment-grid").css('filter', 'blur(3px) opacity(44%)');
+            alert('Please enter a positive number in "cm" to determine your fabric requirements');
+            $("#custom-garment-length").val('');
+            event.preventDefault();
         }
     }
 });
 
-$("#custominputbodycircum").keydown(function (event) {
+// Custom values will update fabric size required, but will not be updated in the illustration.
+
+$("#custom-garment-circum").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-        let customBodyCircum = parseInt($("#custominputbodycircum").val(), 10);
-        $("#fabric-required").html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
+        let customGarmentCircum = parseInt($("#custom-garment-circum").val(), 10);
+        $("#fabric-required").html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customGarmentLength}cm`);
     }
 });
 
-$("#custominputsleevecircum").keydown(function (event) {
+$("#custom-sleeve-circum").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-        let customBodyCircum = parseInt($("#custominputbodycircum").val(), 10);
-        $("#fabric-required").html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customBodyLength}cm`);
+        let customGarmentCircum = parseInt($("#custom-garment-circum").val(), 10);
+        $("#fabric-required").html(`${currentSleeveLength * 2}cm x ${(currentSleeveWidth * 0.5) + customGarmentLength}cm`);
     }
 });
 
@@ -375,6 +380,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#body-long-tshirt").click(function () {
+        $("#custom-garment-length").val('');
+
         if (
             $("#tshirt-body-wide-hip-rotate").is(":visible")) {
             $("img:visible", this).toggle();
@@ -462,6 +469,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#body-long-coat").click(function () {
+        $("#custom-garment-length").val('');
+
         if (
             $("#coat-body-wide-long-rotate").is(":visible")) {
             $("img:visible", this).toggle();
@@ -574,6 +583,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#body-crop-tshirt").click(function () {
+        $("#custom-garment-length").val('');
+
         if (
             $("#tshirt-body-wide-crop-rotate").is(":visible")) {
             $("img:visible", this).toggle();
