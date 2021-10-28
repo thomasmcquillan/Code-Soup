@@ -697,20 +697,31 @@ h5 {
         justify-items: flex-end;
         height: 200px;
         width: 360px;
-        background: yellow;
+        
     }
-/* 
+
     .downloadwrapper {
         display: grid;
         grid-auto-flow: row;
         justify-content: space-between;
-    } */
+        /* width: 100%; */
+        grid-template-columns: 66px 66px 66px 66px;
+        grid-template-rows: 66px 66px 66px 66px;
+        grid-auto-flow: row;
+        /* border: 1px solid pink; */
+        grid-auto-flow: row;
+        align-items: flex-end;
+        align-content: flex-end;
+        justify-content: end;
+        margin-right: 40px;
+        width: 400px;
+    }
 
     .pattern-thumb {
         /* width: 98px; */
-        max-width: 80px;
+        max-width: 66px;
         height: auto;
-        margin: 18px;
+        margin: 16px;
     }
 
     .pattern-thumb img {
@@ -720,6 +731,10 @@ h5 {
 
     .pattern-hover > img {
         background-color: #b7b3a7;
+    }
+    
+    .tile-on {
+        display: grid;
     }
 
     /* .overlay-grid-tshirt,

@@ -196,13 +196,49 @@ $("#rightsleevenarrowlong").click(function() {
 
 // ----------  Hover functions ------------- //
 
+// $(document).ready(function() {
+//     $("#neckline-coat").hover(function() {
+//         $("#neck-collar").css("background-color", "#ffb3009d");
+//     }, function() {
+//         $("#neck-collar").css("background-color", "#b7b3a7");
+//     });
+// });
+
 $(document).ready(function() {
-    $("#neckline-coat").hover(function() {
+    $("#neck-long-coat").hover(function() {
         $("#neck-collar").css("background-color", "#ffb3009d");
     }, function() {
         $("#neck-collar").css("background-color", "#b7b3a7");
     });
 });
+
+$(document).ready(function() {
+    $("#body-long-coat").hover(function() {
+        $("#body-rotate-right").css("background-color", "#ffb3009d");
+        $("#body-rotate-left").css("background-color", "#ffb3009d");
+    }, function() {
+        $("#body-rotate-right").css("background-color", "#b7b3a7");
+        $("#body-rotate-left").css("background-color", "#b7b3a7");
+    });
+});
+
+// $(document).ready(function() {
+//     $("#sleeve-left-long-coat").hover(function() {
+//         $("#neck-collar").css("background-color", "#ffb3009d");
+//     }, function() {
+//         $("#neck-collar").css("background-color", "#b7b3a7");
+//     });
+// });
+
+// $(document).ready(function() {
+//     $("#sleeve-right-long-coat").hover(function() {
+//         $("#neck-collar").css("background-color", "#ffb3009d");
+//     }, function() {
+//         $("#neck-collar").css("background-color", "#b7b3a7");
+//     });
+// });
+
+
 
 // Make/Use site logo hover state
 
