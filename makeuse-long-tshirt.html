@@ -241,15 +241,21 @@
                                 <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter custom values below to calculate fabric requirements.</th>
                             </tr>
                             <tr>
-                                <td><input id="custom-garment-circum" type="number" placeholder="______cm"></td>
-                                <td><input id="custom-garment-length" type="number" placeholder="______cm"></td>
-                                <td><input id="custom-sleeve-circum" type="number" placeholder="______cm"></td>
+                                <td><input id="custom-garment-circum" type="number" placeholder="_____cm"></td>
+                                <td><input id="custom-garment-length" type="number" placeholder="_____cm"></td>
+                                <td><input id="custom-sleeve-circum" type="number" placeholder="_____cm"></td>
                             </tr>
                             <tr>
                                 <th class="fabric-size"></th>
                             </tr>
                         </tbody>
                     </table>
+                    <div id="alert-input-error">
+                        <div id="alert-user">Please enter a positive number value in "cm" to determine your fabric size requirements</div>
+                        <br>
+                        <button class="okay">OK</button>
+                     </div>
+                     <input type="button" id="input-error-button" class="d-none"/>
                 </div>
 
                 <div id="grid-intro" class="col-12 col-md-5">
@@ -379,13 +385,7 @@
 
                 <div class="instructions col-10 col-md-8">
 
-                    <p>Each Make/Use garment made in this method is unique to both the fabric and the user.&nbsp; The
-                        length of a Make/Use Long Tshirt can be altered to suit an individual's height or taste; a
-                        favourite
-                        fabric can be used to make the Long Tshirt and drastically alter its appearance; new iterations
-                        can be
-                        created by combining templates in ways dreamt up by the maker/user. The possibilities are
-                        literally endless.</p>
+                    <p>Each Make/Use garment made in this method is unique to both the fabric and the user.&nbsp; The length of a Make/Use Long Tshirt can be altered to suit an individual's height or taste; a favourite fabric can be used to make the Long Tshirt and drastically alter its appearance; new iterations can be created by combining templates in ways dreamt up by the maker/user. The possibilities are literally endless.</p>
                     <ul>
                         <li>Using the Long Tshirt Grid file as a guide, mark half way between edges of fabric for Fabric
                             Centre Line and ¼ Fabric Width (A) either side of this.</li>
@@ -401,9 +401,7 @@
                             Sleeve swap can be placed anywhere between Shoulder Line and the top cut of garment flat.
                         </li>
                     </ul>
-                    <p>Print: Print out using a standard printer the files only A4 and/or A3 paper or card and cut out
-                        the dotted fill. Follow the instructions on the pages<br>Lasercut: Download files and have laser
-                        cut on 2mm card according to lasercutter specifications.</p>
+                    <p>Print: Print out using a standard printer the files only A4 and/or A3 paper or card and cut out the dotted fill. Follow the instructions on the pages<br>Lasercut: Download files and have laser cut on 2mm card according to lasercutter specifications.</p>
                     <ul>
                         <li>Line up desired templates with grid and follow instructions printed on them. Mark horizontal
                             and vertical lines with tailors chalk.</li>

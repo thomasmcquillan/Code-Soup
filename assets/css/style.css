@@ -510,10 +510,29 @@ input {
     background-color: #e9e7e7;
 }
 
-.alert-box {
-    display:block;
-    color: red;
-    background-color:#b7b3a7;
+#alert-input-error {
+    display: none;
+    background-color:#fffefe;
+    color: #4a494a;
+    border: 1px solid #ffb100;
+    position: fixed;
+    text-align: center;
+    width: 400px;
+    height: 120px;
+    left: 40%;
+    top: 40%;
+    box-sizing: border-box;
+}
+
+#input-error-button {
+    display: inline-block;
+    border: 2px solid #d46300;
+    background-color: #fffefe;
+    padding: 6px;
+    text-align: center;
+    width: 55px;
+    cursor: pointer;
+    border-radius: 8px;
 }
 
 .custom-input-info {

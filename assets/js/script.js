@@ -87,12 +87,27 @@ $("#custom-sleeve-circum").keydown(function (event) {
             $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-sleeve-circum").val('');
         } else {
-            alert('Please enter a positive value in "cm" to determine your fabric requirements');
+            // alert('Please enter a positive value in "cm" to determine your fabric requirements');
+            alertMsg();
             $("#custom-sleeve-circum").val('');
             // event.preventDefault();
         }
     }
 });
+
+// Function to alert user if they enter a negative number value. 
+// Code Snippet courtesy of Arpit Anand @ https:www.tutorialspoint.com/How-to-create-and-apply-CSS-to-JavaScript-Alert-box
+// Modified and styled for the projects' needs.
+
+function alertMsg(alertMessage, okay) {
+    let alertBox = $("#alert-input-error");
+    alertBox.find("#alert-user").text(alertMessage);
+    alertBox.find(".okay").unbind().click(function() {
+        alertBox.hide();
+    });
+    alertBox.find(".okay").click(okay);
+    alertBox.show();
+}
 
 // Following functions cycle to next image of their type
 // (neckline/body/sleeves), and update variables required for displaying 
