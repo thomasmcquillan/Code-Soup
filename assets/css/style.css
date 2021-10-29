@@ -512,27 +512,56 @@ input {
 
 #alert-input-error {
     display: none;
-    background-color:#fffefe;
+    background-color:#fffefebb;
     color: #4a494a;
-    border: 1px solid #ffb100;
     position: fixed;
     text-align: center;
-    width: 400px;
-    height: 120px;
-    left: 40%;
-    top: 40%;
+    z-index: 1000;
     box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    left: 0;
+    top: 0;
+}
+
+#alert-input-error p {
+    background-color: #fffefe;
+    padding: 20px;
 }
 
 #input-error-button {
     display: inline-block;
-    border: 2px solid #d46300;
+    display: flex;
     background-color: #fffefe;
     padding: 6px;
     text-align: center;
-    width: 55px;
+    width: 88px;
+    height: 22px;
     cursor: pointer;
+    border: 4px solid #d46300;
+    border-radius: 30px;
+    z-index: 4000;
+    justify-items: center;
+}
+
+.okay {
+    width: 66px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border: 2px solid #ffb100;
     border-radius: 8px;
+    margin-top: 16px;
+}
+
+#alert-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
 }
 
 .custom-input-info {

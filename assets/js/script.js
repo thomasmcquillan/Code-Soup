@@ -55,9 +55,8 @@ $("#custom-garment-length").keydown(function (event) {
         } else {
             // $("#grid-intro").text('Custom values will update fabric size required, but will not be updated in the illustration.');
             // $(".garment-grid").css('filter', 'blur(3px) opacity(44%)');
-            alert('Please enter a positive value in "cm" to determine your fabric requirements');
+            alertMsg();
             $("#custom-garment-length").val('');
-            // event.preventDefault();
         }
     }
 });
@@ -72,9 +71,8 @@ $("#custom-garment-circum").keydown(function (event) {
             $("#fabric-required").text(`${currentGarmentCircum}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-garment-circum").val('');
         } else {
-            alert('Please enter a positive value in "cm" to determine your fabric requirements');
+            alertMsg();
             $("#custom-garment-circum").val('');
-            // event.preventDefault();
         }
     }
 });
@@ -87,10 +85,8 @@ $("#custom-sleeve-circum").keydown(function (event) {
             $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-sleeve-circum").val('');
         } else {
-            // alert('Please enter a positive value in "cm" to determine your fabric requirements');
             alertMsg();
             $("#custom-sleeve-circum").val('');
-            // event.preventDefault();
         }
     }
 });
