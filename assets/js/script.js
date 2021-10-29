@@ -49,7 +49,6 @@ $("#custom-garment-length").keydown(function (event) {
         (event.key === "Enter" || event.key == "Tab")) {
         if ($("#custom-garment-length").val() > 0) {
             currentGarmentLength = parseInt($("#custom-garment-length").val(), 10);
-            // $("#fabric-required").html(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentCircum}cm`);
             $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
             $("#custom-garment-length").val('');
         } else {
