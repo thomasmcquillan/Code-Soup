@@ -10,7 +10,10 @@ body {
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
-    background-color: #fcfcfc;
+    /* background-color: #fcfcfc; */
+
+    /* to match background of iframe 3d model: */
+    background-color: #f6f6f6;
     font-family: 'Ubuntu', sans-serif;
     color: #4a494a;
     box-sizing: border-box;
@@ -125,12 +128,17 @@ p {
     line-height: 1.4em;
     color: #5c5c5c;
     font-size: 24px;
-    margin: auto 10px 14px 16px;
+    margin: 36px 10px 14px 22px;
     justify-content: flex-start;
 }
 
+
 .garment-intro strong {
-    line-height: 2rem;
+    line-height: 2.4rem;
+}
+
+.garment-intro {
+    margin-bottom: 18px;
 }
 
 .mu-footer p,
@@ -307,6 +315,7 @@ img {
     grid-template-rows: 3fr 1fr;
     padding: 24px 18px 30px 18px;
     background-color: #fffefe;
+    background-color: #f6f6f6;
 }
 
 .garment-grid {
@@ -317,6 +326,7 @@ img {
     grid-template-rows: 1fr 2fr;
     grid-gap: 5px;
     background-color: #fffefe;
+    background-color: #f6f6f6;
     overflow: auto;
 }
 
@@ -864,6 +874,80 @@ h5 {
 
 /* \\---  Animations  ---// */
 
+/* iframe MakeUse 3d garment model styling */
+
+/* .iframe-holder {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 400px;
+    width: 100vw;
+    justify-content: flex-end;
+} */
+
+.iframe-makeuse {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+    height: 412px;
+    background: transparent;
+    z-index: 0;
+    right: 15%;
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    top: 466px;
+    width: 20%;
+}
+
+.row {
+    z-index: 1;
+}
+
+iframe {
+    background: black;
+}
+/* 
+ style="position: absolute; bottom: 16px; left: 16px; z-index: 1;"><img src="https://static.vntana.com/assets/images/vntana_logo_blue.png" alt="VNTANA Logo" width="120px"></a> */
+
+/* .white-block {
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    background-color: white;
+    width: 120px;
+    height: 10px;
+} */
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+    }
+    
+    #enterFullscreen {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    background: #dbdbdb url(‘https://storage.googleapis.com/vntana-viewer/assets/images/enter_fullscreen_icon.svg’) no-repeat center;
+    background-size: 25px auto;
+    cursor: pointer;
+    }
+    
+    #exitFullscreen {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    background: #dbdbdb url(‘https://storage.googleapis.com/vntana-viewer/assets/images/exit_fullscreen_icon.svg’) no-repeat center;
+    background-size: 25px auto;
+    display: none;
+    cursor: pointer;
+    }
+
 .fade-in,
 .garment-tile img {
     animation: fadeIn ease-in-out 200ms;
@@ -877,7 +961,6 @@ h5 {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -887,7 +970,6 @@ h5 {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -897,7 +979,6 @@ h5 {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -907,7 +988,6 @@ h5 {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
