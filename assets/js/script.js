@@ -37,9 +37,11 @@ var fabricLength = (currentSleeveCircum * 0.5) + currentGarmentLength;
 
 // To calculate fabric size required for currently selected style.
 
-$(".garment-grid").children().click(function () {
-    $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
-});
+function updateFabric() {
+    $(".garment-grid").children().click(function () {
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+    })
+};
 
 // Function that calculates fabric size required to make garment based on the custom values input by user.
 // Triggered by Enter/Tab keys in custom body length input.
@@ -59,8 +61,6 @@ $("#custom-garment-length").keydown(function (event) {
         }
     }
 });
-
-// Custom values will update fabric size required, but will not be updated in the illustration.
 
 $("#custom-garment-circum").keydown(function (event) {
     if (
@@ -92,46 +92,47 @@ $("#custom-sleeve-circum").keydown(function (event) {
 
 // Function to alert user if they enter a negative number value. 
 // Code Snippet courtesy of Arpit Anand @ https:www.tutorialspoint.com/How-to-create-and-apply-CSS-to-JavaScript-Alert-box
-// Modified and styled for the projects' needs.
+// Modified and styled to suit the projects' needs and aesthetic.
 
 function alertMsg(alertMessage, okay) {
     let alertBox = $("#alert-input-error");
     alertBox.find("#alert-user").text(alertMessage);
-    alertBox.find(".okay").unbind().click(function() {
+    alertBox.find(".okay").unbind().click(function () {
         alertBox.hide();
     });
     alertBox.find(".okay").click(okay);
     alertBox.show();
 }
 
-// Following functions cycle to next image of their type
-// (neckline/body/sleeves), and update variables required for displaying 
-// key fabric measurements and pattern downloads for users.
+// Next several functions use if/else to check which image tile is currently
+// displayed in a specific grid area. Cycles to next image of their type, updating 
+// variables used to display fabric size and pattern downloads required for given style.
 
 $(document).ready(function () {
-    $("#neckline-round").click(function () {
-        $("#neckline-round").toggle(); // Toggles off current neckline tile.
-        $("#neckline-collar").toggle(); // Toggles on next available neckline tile.
-        $(neckRound).toggle(); // Toggles off div containing download for current neckline. 
-        $(neckCollar).toggle(); // Toggles on div containing download for next style of neckline.
-        // $("#pattern-thumb-collar a").css("background-color", "#ffb100");
+    $("#neck-tile").click(function () {
+        if (
+            $("#neckline-collar").is(":visible")) {
+            $("img:visible", this).toggle(); // Toggle off current neckline tile.
+            $("#neckline-wide").toggle(); // Toggle on next available neckline tile.
+            $(neckCollar).toggle(); // Toggle off div with download for current neckline. 
+            $(neckWide).toggle(); // Toggle on div with download for next neckline.
+            $("#pattern-thumb-wide a").css("background-color", "#ffb100"); // Pattern tile for new neckline changes color to alert user.
+        } else if (
+            $("#neckline-wide").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#neckline-round").toggle();
+            $(neckWide).toggle();
+            $(neckRound).toggle();
+            $("#pattern-thumb-round a").css("background-color", "#d46300");
+        } else if (
+            $("#neckline-round").is(":visible")) {
+            $("img:visible", this).toggle();
+            $("#neckline-collar").toggle();
+            $(neckRound).toggle();
+            $(neckCollar).toggle();
+            $("#pattern-thumb-collar a").css("background-color", "#d46300");
+        }
     });
-});
-
-$("#neckline-collar").click(function () {
-    $("#neckline-collar").toggle();
-    $("#neckline-wide").toggle();
-    $(neckCollar).toggle();
-    $(neckWide).toggle();
-    // $("#pattern-thumb-wide a").css("background-color", "#ffd066");
-});
-
-$("#neckline-wide").click(function () {
-    $("#neckline-wide").toggle();
-    $("#neckline-round").toggle();
-    $(neckWide).toggle();
-    $(neckRound).toggle();
-    // $("#pattern-thumb-round a").css("background-color", "#d46300");
 });
 
 // left sleeve tile function for WIDE sleeves
@@ -230,11 +231,6 @@ $(document).ready(function () {
 
 // --------- Long Tshirt body tile sequencing function -------------- //
 
-// `${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
-
-// $("#garment-circum").html(`${currentSleeveLength * 2}cm`);
-// $("#garment-circum").html(`${sleeveWide}cm`);
-
 $(document).ready(function () {
     $("#body-long-tshirt").click(function () {
         $("#custom-garment-length").val('');
@@ -274,7 +270,6 @@ $(document).ready(function () {
             $(bodyRotateRight).toggle();
             currentGarmentLength = bodyHip;
 
-
             $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
         } else if (
             $("#tshirt-body-narrow-hip").is(":visible")) {
@@ -313,7 +308,6 @@ $(document).ready(function () {
 });
 
 // ---------------- Coat body tile sequencing function --------------- //
-
 
 $(document).ready(function () {
     $("#body-long-coat").click(function () {
@@ -411,7 +405,6 @@ $(document).ready(function () {
 });
 
 // ------- Cropped Tshirt body tile sequencing function  --------//
-
 
 $(document).ready(function () {
     $("#body-crop-tshirt").click(function () {
