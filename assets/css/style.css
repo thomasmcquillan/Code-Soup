@@ -640,6 +640,12 @@ input {
 
 /* \\---  Media Queries  ---// */
 
+@media (max-width: 400px) {
+    .row {
+        max-width: 95vw;
+        overflow: hidden;
+    }
+}
 
 @media (min-width: 576px) {
 
