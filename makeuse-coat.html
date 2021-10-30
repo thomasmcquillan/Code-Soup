@@ -35,7 +35,7 @@
 
 <body>
 
-    <header class="container-lg" id="makeuseheader">
+    <header class="container-fluid" id="makeuseheader">
         <nav class="navbar navbar-custom">
             <a class="navbar-brand" href="https://makeuse.nz/">
                 <span class="navbar-brand"><img id="makeuse-logo" src="assets/images/makeuse-logo.png"
@@ -59,27 +59,16 @@
     <!-- <div class="row"> -->
         <nav class="container-fluid quick-nav">
             <div>
-                <a href="https://makeuse.nz/make/" class="nav-item project-exit-alert">Home</a>
+                <a href="https://makeuse.nz/make/" class="nav-item project-exit-alert" target="_blank" rel="noopener" rel="noreferrer">Home</a>
                 <span class="tri-divider">◢</span>
                 <a href="index.html" class="nav-item">Make</a>
                 <span class="tri-divider">◢</span>
                 <a href="makeuse-coat.html" class="nav-item">Long Coat</a>
             </div>
         </nav>
-    <!-- </div> -->
+
     <main id="makeuse-the-long-coat" class="container-lg">
 
-        <!-- <div class="row">
-            <nav class="container quick-nav">
-                <div>
-                    <a href="https://makeuse.nz/make/" class="nav-item project-exit-alert">Home</a>
-                    <span class="tri-divider">◢</span>
-                    <a href="index.html" class="nav-item">Make</a>
-                    <span class="tri-divider">◢</span>
-                    <a href="makeuse-coat.html" class="nav-item">Long Coat</a>
-                </div>
-            </nav>
-        </div> -->
         <section id="coat-from-template" class="row">
             <div class="col-12 col-md-10 mx-3">
                 <h2>
@@ -89,16 +78,7 @@
                     Tshirt. The only deviation is collar/neckline selection. Once you understand the Tshirt, this coat
                     is easy!
                 </h3>
-            <!-- </div> -->
-            <!-- <iframe title="3D animated rendering of MakeUse Long Coat" class="iframe-makeuse d-none d-md-flex" id="iframe-coat"
-                frameBorder="0" 
-                src="https://embed.vntana.com?productUuid=4b670890-821a-400a-b5a9-71a998c0b6f9&clientSlug=phd&organizationSlug=holly-mcquillan"
-                allow="fullscreen">
-            </iframe> -->
 
-            <!-- <div class="row"> -->
-
-            <!-- <div class="col-12 mx-3"> -->
                 <p><strong>Considerations</strong><br>
                     The width of the cloth is approximately the circumference of the garment around the body.
                     If you want a more voluminous form or are a larger size go for a wider cloth, likewise with
@@ -113,7 +93,6 @@
                     house paint, all joins are needle felted and the form is modified through the body rotation.
                     The shirt in the photo uses 140cm of 155cm wide Wool Melton. The model is a NZ size 10</em>
                 </p>
-            <!-- </div>
 
             <div class="col-12 mx-1 "> -->
                 <h2 class="t-h3 py-3">Making the Long Coat
@@ -159,6 +138,13 @@
                 </p>
             </div>
             <div class="col-12 col-md-10 mx-2">
+
+                <iframe title="3D animated rendering of MakeUse Long Coat" class="iframe-makeuse d-none d-md-flex" id="iframe-coat"
+                frameBorder="0" 
+                src="https://embed.vntana.com?productUuid=4b670890-821a-400a-b5a9-71a998c0b6f9&clientSlug=phd&organizationSlug=holly-mcquillan"
+                allow="fullscreen">
+                </iframe>
+
                 <h3>
                     Making the Long Coat using Templates
                 </h3>
@@ -353,154 +339,131 @@
                         <button class="okay">OK</button>
                     </div>
                     <br>
-                    </div>
+                </div>
                 <input type="button" id="input-error-button" class="d-none"/>
             </div>
 
-                <!-- <div id="grid-intro" class="col-12 col-md-5"> -->
-                     <!-- <div class="grid-introduction">
-                        <p>
-                            The Make/Use Long Coat has a fixed style of neckline but can be easily modified, with a large selection 
-                            of sleeve and body styles to choose from. To preview the options, click on the body and sleeve tiles. 
-                            Your selections will be used to update garment sizing and let you know the amount of fabric required.
-                        <br>
-                        <br>
-                            Selecting new styles will also filter the patterns needed for your chosen garment. Hover over pattern
-                            template thumbnails for a larger preview. Once settled on a style, click on the link provided to download
-                            the required pattern template files.
-                        </p>
-                    </div> -->
-                    <div class="downloadwrapper d-md-flex container-flex tile-on">
-                        <div class="pattern-thumb-grid-tshirt pattern-thumb">
-                            <a id="pattern-tshirt-grid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
-                                <span><img id="tshirt-grid" class="fade-in"
-                                        src="assets/images/pattern-thumbs/pattern-tshirt-grid.png"
-                                        alt="Make/Use grid-template pattern, essential resource for making all variations of the MakeUse Crop-Tshirt."></span>
-                            </a>
-                        </div>
-                        <div class="pattern-thumb-neck-collar pattern-thumb tile-on">
-                            <a id="pattern-neck-collar" href="assets/downloads/print-template-neckline-collar.pdf">
-                                <span><img id="neck-collar" class="fade-in"
-                                        src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png"
-                                        alt="Make/Use template pattern for collar-neck version of Tshirt."></span>
-                            </a>
-                        </div>
-                        <div class="pattern-thumb-sleeve-cut-left pattern-thumb tile-on">
-                            <a id="pattern-sleeve-cut-left" href="assets/downloads/print-template-sleeve-cut-left.pdf">
-                                <span><img id="sleeve-cut-left" class="fade-in"
-                                        src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png"
-                                        alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
-                            </a>
-                        </div>
-                        <div class="pattern-thumb-sleeve-cut-right pattern-thumb tile-on">
-                            <a id="pattern-sleeve-cut-right"
-                                href="assets/downloads/print-template-sleeve-cut-right.pdf">
-                                <span><img id="sleeve-cut-right" class="fade-in"
-                                        src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png"
-                                        alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
-                            </a>
-                        </div>
-                        <div class="pattern-thumb-body-rotate-left pattern-thumb tile-on">
-                            <a id="pattern-body-rotation-left"
-                                href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf">
-                                <span><img id="body-rotate-left" class="fade-in"
-                                        src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png"
-                                        alt="Make/Use template pattern for body rotation and sleeve swap modification - LEFT."></span>
-                            </a>
-                        </div>
-                        <div class="pattern-thumb-body-rotate-right pattern-thumb tile-on">
-                            <a id="pattern-body-rotation-right"
-                                href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf">
-                                <span><img id="body-rotate-right" class="fade-in"
-                                        src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png"
-                                        alt="Make/Use template pattern for body rotation and sleeve swap modification - RIGHT."></span>
-                            </a>
-                        </div>
-                        <div class="pattern-thumb-elbow-rotate-left pattern-thumb tile-on">
-                            <a id="pattern-elbow-rotation-left"
-                                href="assets/downloads/print-template-elbow-rotation-left.pdf">
-                                <span><img id="elbow-rotate-left" class="fade-in"
-                                        src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png"
-                                        alt="Make/Use template pattern for elbow rotation modification - LEFT."></span>
-                            </a>
-                        </div>
-                        <div class="pattern-thumb-elbow-rotate-right pattern-thumb tile-on">
-                            <a id="pattern-elbow-rotation-right"
-                                href="assets/downloads/print-template-elbow-rotation-right.pdf">
-                                <span><img id="elbow-rotate-right" class="fade-in"
-                                        src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png"
-                                        alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
-                            </a>
-                        </div>
-
-                        <div class="overlay-grid-tshirt fade-in pattern-hover">
-                            <img src="assets/images/pattern-thumbs/pattern-tshirt-grid.png">
-                        </div>
-                        <div class="overlay-neck-collar fade-in neckline-over pattern-hover">
-                            <img src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png">
-                        </div>
-                        <div class="overlay-sleeve-left fade-in sleeve-left-over pattern-hover">
-                            <img src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png">
-                        </div>
-                        <div class="overlay-sleeve-right fade-in sleeve-right-over pattern-hover">
-                            <img src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png">
-                        </div>
-                        <div class="overlay-sleeve-body-rot-left fade-in sleeve-left-over pattern-hover">
-                            <img src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png">
-                        </div>
-                        <div class="overlay-sleeve-body-rot-right fade-in sleeve-right-over pattern-hover">
-                            <img src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png">
-                        </div>
-                        <div class="overlay-sleeve-left-elbow-rot fade-in sleeve-left-over pattern-hover">
-                            <img src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png">
-                        </div>
-                        <div class="overlay-sleeve-right-elbow-rot fade-in sleeve-right-over pattern-hover">
-                            <img src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png">
-                        </div>
-                    </div>
-                    <!-- <p>The Make/Use Coat can be modified in a number of ways to suit your preferences. Click on the
-                        sleeve garment and body tiles to cycle through the various styles. Your selections will be
-                        used to display sizing and to determine the fabric size requirements.
-                        <br>
-                        <br>
-                        The pattern templates required for your chosen garment will also be displayed. Hover over
-                        pattern pieces to enlarge. To download and print the original full-sized templates, please
-                        click on the link provided.
-                    </p> -->
+            <div class="downloadwrapper d-flex container-flex tile-on">
+                <div class="pattern-thumb-grid-tshirt pattern-thumb">
+                    <a id="pattern-tshirt-grid" href="assets/downloads/tshirt-pattern-with-grid.pdf">
+                        <span><img id="tshirt-grid" class="fade-in"
+                                src="assets/images/pattern-thumbs/pattern-tshirt-grid.png"
+                                alt="Make/Use grid-template pattern, essential resource for making all variations of the MakeUse Crop-Tshirt."></span>
+                    </a>
+                </div>
+                <div class="pattern-thumb-neck-collar pattern-thumb tile-on">
+                    <a id="pattern-neck-collar" href="assets/downloads/print-template-neckline-collar.pdf">
+                        <span><img id="neck-collar" class="fade-in"
+                                src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png"
+                                alt="Make/Use template pattern for collar-neck version of Tshirt."></span>
+                    </a>
+                </div>
+                <div class="pattern-thumb-sleeve-cut-left pattern-thumb tile-on">
+                    <a id="pattern-sleeve-cut-left" href="assets/downloads/print-template-sleeve-cut-left.pdf">
+                        <span><img id="sleeve-cut-left" class="fade-in"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png"
+                                alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
+                    </a>
+                </div>
+                <div class="pattern-thumb-sleeve-cut-right pattern-thumb tile-on">
+                    <a id="pattern-sleeve-cut-right"
+                        href="assets/downloads/print-template-sleeve-cut-right.pdf">
+                        <span><img id="sleeve-cut-right" class="fade-in"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png"
+                                alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
+                    </a>
+                </div>
+                <div class="pattern-thumb-body-rotate-left pattern-thumb tile-on">
+                    <a id="pattern-body-rotation-left"
+                        href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf">
+                        <span><img id="body-rotate-left" class="fade-in"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png"
+                                alt="Make/Use template pattern for body rotation and sleeve swap modification - LEFT."></span>
+                    </a>
+                </div>
+                <div class="pattern-thumb-body-rotate-right pattern-thumb tile-on">
+                    <a id="pattern-body-rotation-right"
+                        href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf">
+                        <span><img id="body-rotate-right" class="fade-in"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png"
+                                alt="Make/Use template pattern for body rotation and sleeve swap modification - RIGHT."></span>
+                    </a>
+                </div>
+                <div class="pattern-thumb-elbow-rotate-left pattern-thumb tile-on">
+                    <a id="pattern-elbow-rotation-left"
+                        href="assets/downloads/print-template-elbow-rotation-left.pdf">
+                        <span><img id="elbow-rotate-left" class="fade-in"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png"
+                                alt="Make/Use template pattern for elbow rotation modification - LEFT."></span>
+                    </a>
+                </div>
+                <div class="pattern-thumb-elbow-rotate-right pattern-thumb tile-on">
+                    <a id="pattern-elbow-rotation-right"
+                        href="assets/downloads/print-template-elbow-rotation-right.pdf">
+                        <span><img id="elbow-rotate-right" class="fade-in"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png"
+                                alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
+                    </a>
                 </div>
 
-                <div class="instructions col-10 col-md-6 ml-2">
-                    <br>
-                    <p>Each Make/Use garment made in this method is unique to both the fabric and the user. The length
-                        of a Make/Use Long Coat can be altered to suit an individual's height or taste; a favourite
-                        fabric can be used to make the Long Coat and drastically alter its appearance; new iterations can be
-                        created bycombining templates in ways dreamt up by the maker/user. The possibilities are literally
-                        endless.
-                    </p>
-                    <ul>
-                        <li>Using the Long Coat Grid file as a guide, mark half way between edges of fabric for Fabric
-                            Centre Line and ¼ Fabric Width (A) either side of this.</li>
-                        <li>Measure on your body the desired depth of sleeve (B) from your own shoulder down - this
-                            begins to determine how wide your sleeve is on your garment</li>
-                        <li>Measure on your fabric 1 x B to Shoulder Line, and 1 x B from Shoulder Line to Sleeve Depth.
-                        </li>
-                        <li>Finally measure from shoulder to finished desired length and then minus B, for C.</li>
-                        <li>Mark out C to determine finished length of Tshirt </li>
-                        <li>The intersections of Fabric Centre Line and Shoulder Line, as well as ¼ fabric width and
-                            Sleeve Depth are key anchors for placing the templates.</li>
-                        <li>Body Rotation template can be placed any where between Sleeve Depth and hem of garment.
-                            Sleeve swap can be placed anywhere between Shoulder Line and the top cut of garment flat.
-                        </li>
-                    </ul>
-                    <p>Print: Print out using a standard printer the files only A4 and/or A3 paper or card and cut out
-                        the dotted fill. Follow the instructions on the pages<br> Lasercut: Download files and have
-                        laser cut on 2mm card according to lasercutter specifications.</p>
-                    <ul>
-                        <li>Line up desired templates with grid and follow instructions printed on them. Mark horizontal
-                            and vertical lines with tailors chalk.</li>
-                    </ul>
+                <div class="overlay-grid-tshirt fade-in pattern-hover">
+                    <img src="assets/images/pattern-thumbs/pattern-tshirt-grid.png">
                 </div>
-            <!-- </div> -->
+                <div class="overlay-neck-collar fade-in neckline-over pattern-hover">
+                    <img src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png">
+                </div>
+                <div class="overlay-sleeve-left fade-in sleeve-left-over pattern-hover">
+                    <img src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png">
+                </div>
+                <div class="overlay-sleeve-right fade-in sleeve-right-over pattern-hover">
+                    <img src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png">
+                </div>
+                <div class="overlay-sleeve-body-rot-left fade-in sleeve-left-over pattern-hover">
+                    <img src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png">
+                </div>
+                <div class="overlay-sleeve-body-rot-right fade-in sleeve-right-over pattern-hover">
+                    <img src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png">
+                </div>
+                <div class="overlay-sleeve-left-elbow-rot fade-in sleeve-left-over pattern-hover">
+                    <img src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png">
+                </div>
+                <div class="overlay-sleeve-right-elbow-rot fade-in sleeve-right-over pattern-hover">
+                    <img src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png">
+                </div>
+            </div>
+
+            <div class="instructions col-10 col-md-6 ml-2">
+                <br>
+                <p>Each Make/Use garment made in this method is unique to both the fabric and the user. The length
+                    of a Make/Use Long Coat can be altered to suit an individual's height or taste; a favourite
+                    fabric can be used to make the Long Coat and drastically alter its appearance; new iterations can be
+                    created bycombining templates in ways dreamt up by the maker/user. The possibilities are literally
+                    endless.
+                </p>
+                <ul>
+                    <li>Using the Long Coat Grid file as a guide, mark half way between edges of fabric for Fabric
+                        Centre Line and ¼ Fabric Width (A) either side of this.</li>
+                    <li>Measure on your body the desired depth of sleeve (B) from your own shoulder down - this
+                        begins to determine how wide your sleeve is on your garment</li>
+                    <li>Measure on your fabric 1 x B to Shoulder Line, and 1 x B from Shoulder Line to Sleeve Depth.
+                    </li>
+                    <li>Finally measure from shoulder to finished desired length and then minus B, for C.</li>
+                    <li>Mark out C to determine finished length of Tshirt </li>
+                    <li>The intersections of Fabric Centre Line and Shoulder Line, as well as ¼ fabric width and
+                        Sleeve Depth are key anchors for placing the templates.</li>
+                    <li>Body Rotation template can be placed any where between Sleeve Depth and hem of garment.
+                        Sleeve swap can be placed anywhere between Shoulder Line and the top cut of garment flat.
+                    </li>
+                </ul>
+                <p>Print: Print out using a standard printer the files only A4 and/or A3 paper or card and cut out
+                    the dotted fill. Follow the instructions on the pages<br> Lasercut: Download files and have
+                    laser cut on 2mm card according to lasercutter specifications.</p>
+                <ul>
+                    <li>Line up desired templates with grid and follow instructions printed on them. Mark horizontal
+                        and vertical lines with tailors chalk.</li>
+                </ul>
+            </div>
+           
         </section>
     </main>
 
