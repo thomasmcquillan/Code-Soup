@@ -12,10 +12,8 @@ const elbowRotateRight = document.getElementsByClassName("pattern-thumb-elbow-ro
 const bodyCrop = 50;
 const bodyHip = 75;
 const bodyLong = 100;
-
 const sleeveWide = 50;
 const sleeveNarrow = 35;
-
 const sleeveShort = 55;
 const sleeveLong = 75;
 
@@ -43,9 +41,9 @@ let fabricLength = (currentSleeveCircum * 0.5) + currentGarmentLength;
 //     $("#fabric-required").text(updateFabric);
 // };
 
-$(".garment-grid").children().click(function () {
-        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
-})
+// $(".garment-grid").children().click(function () {
+//         $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+// })
 
 // Function that calculates fabric size required to make garment based on the custom values input by user.
 // Triggered by Enter/Tab keys in custom body length input.
@@ -133,7 +131,7 @@ $(document).ready(function () {
             $(neckRound).toggle();
             $(neckCollar).toggle();
         }
-        $("#fabric-required").text(updateFabric);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
     });
 });
 
@@ -227,7 +225,7 @@ $(document).ready(function () {
             $(".pattern-thumb-elbow-rotate-right").toggle();
             currentSleeveLength = sleeveLong;
         }
-        $("#fabric-required").text(updateFabric);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
     });
 });
 
@@ -352,7 +350,7 @@ $(document).ready(function () {
             currentGarmentLength = bodyHip;
 
         }
-        $("#fabric-required").text(updateFabric);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
     });
 });
 
@@ -437,7 +435,7 @@ $(document).ready(function () {
             $("img:visible", this).toggle();
             $("#coat-body-wide-long-rotate").toggle();
         }
-        $("#fabric-required").text(updateFabric);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
     });
 });
 
@@ -502,6 +500,6 @@ $(document).ready(function () {
             $(bodyRotateRight).toggle();
             currentGarmentLength = bodyCrop;
         }
-        $("#fabric-required").text(updateFabric);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
     });
 });
