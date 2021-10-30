@@ -7,13 +7,8 @@
 html,
 body {
     overflow: auto;
-    padding: 0;
-    margin: 0;
     flex-wrap: wrap;
-    /* background-color: #fcfcfc; */
-
-    /* to match background of iframe 3d model: */
-    background-color: #f6f6f6;
+    background-color: #fcfcfc;
     font-family: 'Ubuntu', sans-serif;
     color: #4a494a;
     box-sizing: border-box;
@@ -34,28 +29,30 @@ body {
     color: pink;
 }
 
+.nav-item:hover {
+    color: #ffb100;
+}
+
 /* \\---  Fonts  ---////////////////////////////// */
-
-li:first-child,
-p:first-child,
-ul:first-child {
-    margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 1em;
-    margin-bottom: .4em;
-    line-height: 1.15em;
-}
 
 h1 {
     font-size: 90px;
     margin-top: .5em;
+}
+
+h2 {
+    display: block;
+    font-size: 58px;
+    font-weight: 700;
+    color: #fffefe;
+    color: #5c5c5c;
+    /* margin: 24px 0 28px 20px; */
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 42px;
+    color: #4a494a;
 }
 
 h5 {
@@ -79,66 +76,51 @@ body {
     font-weight: 700;
 }
 
-.nav-item:hover {
-    color: #ffb100;
-}
 
-h1 {
-    font-size: 90px;
-    margin-top: .5em;
-    margin-top: 1em;
-    margin-bottom: .4em;
-    line-height: 1.15em;
-}
-
-h2 {
-    display: block;
-    font-size: 58px;
-    font-weight: 700;
-    color: #fffefe;
-    color: #5c5c5c;
-    margin-left: 20px;
-}
-
-h3 {
-    font-weight: 400;
-    font-size: 42px;
-    color: #4a494a;
-    color: #888;
-}
 
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     color: #5c5c5c;
-}
-
-.garment-intro p {
-    margin: 0;
-    padding: 0;
+    line-height: 1.5rem;
     font-size: 16px;
-    color: #5c5c5c;
-    margin: auto 10px 44px 10px;
 }
 
 .t-sub {
     line-height: 1.4em;
     color: #5c5c5c;
-    font-size: 24px;
-    margin: 36px 10px 14px 22px;
-    justify-content: flex-start;
+    font-size: 28px;
+    /* margin-left: 20px; */
+    margin-top: 20px;
+    /* margin: 36px 10px 14px 22px; */
 }
 
+.h3-sub {
+    color: #5c5c5c;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    margin-bottom: .4em;
+    line-height: 1.4em;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.t-h3, h3 {
+    font-weight: 400;
+    font-size: 42px;
+}
 
 .garment-intro strong {
     line-height: 2.4rem;
 }
 
 .garment-intro {
-    margin-bottom: 18px;
+    margin: 30px 40px 30px 30px;
+    padding: 0 40px 0 36px;
+}
+
+.garment-intro p {
+    font-size: 16px;
+    color: #5c5c5c;
 }
 
 .mu-footer p,
@@ -247,13 +229,9 @@ a {
     background-color: #d7d7d7;
     background-color: #b7b3a7;
 } */
-/* #make-coat-from-template {
-    margin-top: 44px auto auto auto;
+#make-coat-from-template {
+    margin-top: 88px auto auto auto;
     padding: 0;
-} */
-
-#coat-from-template {
-    justify-content: center;
 }
 
 .mu-footer {
@@ -317,8 +295,8 @@ img {
     grid-template-rows: 3fr 1fr;
     padding: 24px 18px 30px 18px;
     background-color: #fffefe;
-    background-color: #f6f6f6;
-    margin-top: 80px;
+    background-color: #fcfcfc;
+    margin-top: 20px;
 }
 
 .garment-grid {
@@ -329,7 +307,7 @@ img {
     grid-template-rows: 1fr 2fr;
     grid-gap: 5px;
     background-color: #fffefe;
-    background-color: #f6f6f6;
+    background-color: #fcfcfc;
     /* background-color: lightblue; */
     overflow: auto;
 }
@@ -451,16 +429,16 @@ img {
     margin-top: 218px;
 }
 
-#grid-intro p,
+/* #grid-intro p,
 .grid-introduction p {
     line-height: 1.5rem;
-}
+} */
 
 
-.grid-introduction {
-    display: grid;
-
-}
+/* .grid-introduction {
+    margin: 0 60px 20px 26px;
+    padding: 0 30px 0 18px;
+} */
 
 /* -------table testing ------ */
 
@@ -593,13 +571,13 @@ input {
 
 /* \\---  Pattern Template Downloads  ---////////////////////////////// */
 
-.downloadwrapper>.row {
+/* .downloadwrapper>.row {
     padding: none;
     justify-content: center;
     display: flex;
     align-content: center;
     width: 100vw;
-}
+} */
 
 .downloadwrapper {
     display: flex;
@@ -756,7 +734,8 @@ h5 {
 
     .row {
         max-width: 930px;
-        margin: 0 auto;
+        max-width: 1024px;
+        margin: auto;
     }
 
     #grid-intro {
