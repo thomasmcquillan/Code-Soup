@@ -348,39 +348,36 @@
                 <table class="sizing-info-table">
                     <tbody>
                         <tr>
-                            <td class="fabric-data" 
-                                data-title="Fabric Required"><span
-                                id="fabric-required">110cm wide x 75cm long</span></td>
+                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm wide x 75cm long</span></td>
                         </tr>
                         <tr>
-                            <td data-title="Garment circumference"><span
-                                id="garment-circum">110cm</span></td>
-
-                            <td data-title="Garment length"><span 
-                                id="garment-length">50cm</span></td>
-
-                            <td data-title="Sleeve circumference"><span
-                                id="sleeve-circum">50cm</span></td>
+                            <td data-title="Garment Circum."><span id="garment-circum">110cm</span></td>
+                            <td data-title="Garment length"><span id="garment-length">50cm</span></td>
+                            <td data-title="Sleeve Circum."><span id="sleeve-circum">50cm</span></td>
                         </tr>
                         <tr>
-                            <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter custom values below to calculate fabric requirements.</th>
+                            <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter
+                                custom values below to calculate fabric requirements.</th>
                         </tr>
                         <tr>
-                            <td><input id="custom-garment-circum" type="number" placeholder="_____cm"></td>
-                            <td><input id="custom-garment-length" type="number" placeholder="_____cm"></td>
-                            <td><input id="custom-sleeve-circum" type="number" placeholder="_____cm"></td>
+                            <td><input id="custom-garment-circum" type="number" placeholder="custom"></td>
+                            <td><input id="custom-garment-length" type="number" placeholder="custom"></td>
+                            <td><input id="custom-sleeve-circum" type="number" placeholder="custom"></td>
                         </tr>
                         <tr>
                             <th class="fabric-size"></th>
                         </tr>
                     </tbody>
                 </table>
-                <div id="alert-input-error">
-                    <div id="alert-user">
-                        <p>Please enter a valid number value calculate your fabric requirements</p>
-                        <button class="okay">OK</button>
+                <div class="alert-wrapper">
+                    <div id="alert-input-error">
+                        <div id="alert-user">
+                            <p>Please enter a positive number value in 'cm' to determine your fabric size requirements
+                            </p>
+                            <button class="okay">OK</button>
+                        </div>
+                        <br>
                     </div>
-                    <br>
                 </div>
                 <input type="button" id="input-error-button" class="d-none"/>
             </div>

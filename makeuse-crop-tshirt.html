@@ -100,7 +100,7 @@
             </div>
         </section>
         
-        <section id="crop-t-methods" class="row">
+        <section id="crop-tshirt-methods" class="row">
             <div class="col-12 col-md-11 mx-3">
                 <h2 class="t-h3 py-3">
                     Making the Cropped Tshirt
@@ -128,6 +128,50 @@
                     This is a modular system that enables a Make/Use garment to be made from any width fabric. Low cost if using 
                     printed method, great for students of all ages and home sewers.
                 </p>
+            </div>
+        </section>
+
+        <section id="crop-tshirt-from-templates" class="row">
+            <div class="col-12 col-md-11 mx-3 my-3">
+                <h3>
+                    Making the Cropped Tshirt using Templates
+                </h3>
+                <p class="t-sub">
+                    You will need a fabric of your choice, approximately 80cm long. A4/A3 printer or Lasercutter, Paper or card.
+                </p>
+            </div>
+            <div class="col-12 col-md-6 mx-3 py-2">
+                <p>
+                    Each Make/Use garment made in this method is unique to both the fabric and the user.  The length of a 
+                    Make/Use cropped Tshirt can be altered to suit an individual's height or taste; a favourite fabric can be 
+                    used to make the Cropped Tshirt and drastically alter its appearance; new iterations can be created by 
+                    combining templates in ways dreamt up by the maker/user. The possibilities are literally endless.
+                </p>
+                <ul>
+                    <li>Using the Cropped Tshirt Grid file as a guide, mark half way between edges of fabric for
+                        Fabric Centre Line and ¼ Fabric Width (A) either side of this.
+                    </li>
+                    <li>Measure on your body the desired depth of sleeve (B) from your own shoulder down - this
+                        begins to determine how wide your sleeve is on your garment.
+                    </li>
+                    <li>Measure on your fabric 1 x B to Shoulder Line, and 1 x B from Shoulder Line to Sleeve Depth.
+                    </li>
+                    <li>Finally measure from shoulder to finished desired length and then minus B, for C.
+                    </li>
+                    <li>Mark horizontal and vertical lines with tailors chalk.
+                    </li>
+                    <li>The intersections of Fabric Centre Line and Shoulder Line, as well as ¼ fabric width and
+                        Sleeve Depth are key anchors for placing the templates.
+                    </li>
+                    <li>Print: Print out using a standard printer the files only A4 and/or A3 paper or card and cut
+                        out the dotted fill. Follow the instructions on the pages.
+                    </li>
+                    <li>Lasercut: Download files and have laser cut on 2mm card according to lasercutter
+                        specifications.
+                    </li>
+                    <li>Line up desired templates with grid and follow instructions printed on them.
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -260,32 +304,33 @@
                                 <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm wide x 75cm long</span></td>
                             </tr>
                             <tr>
-                                <td data-title="Garment circumference"><span id="garment-circum">110cm</span></td>
-                                <td data-title="Garment length"><span id="garment-length">50cm</span>
-                                </td>
-                                <td data-title="Sleeve circumference"><span id="sleeve-circum">50cm</span></td>
+                                <td data-title="Garment Circum."><span id="garment-circum">110cm</span></td>
+                                <td data-title="Garment length"><span id="garment-length">50cm</span></td>
+                                <td data-title="Sleeve Circum."><span id="sleeve-circum">50cm</span></td>
                             </tr>
                             <tr>
                                 <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter
                                     custom values below to calculate fabric requirements.</th>
                             </tr>
                             <tr>
-                                <td><input id="custom-garment-circum" type="number" placeholder="______cm"></td>
-                                <td><input id="custom-garment-length" type="number" placeholder="______cm"></td>
-                                <td><input id="custom-sleeve-circum" type="number" placeholder="______cm"></td>
+                                <td><input id="custom-garment-circum" type="number" placeholder="custom"></td>
+                                <td><input id="custom-garment-length" type="number" placeholder="custom"></td>
+                                <td><input id="custom-sleeve-circum" type="number" placeholder="custom"></td>
                             </tr>
                             <tr>
                                 <th class="fabric-size"></th>
                             </tr>
                         </tbody>
                     </table>
-                    <div id="alert-input-error">
-                        <div id="alert-user">
-                            <p>Please enter a positive number value in 'cm' to determine your fabric size requirements
-                            </p>
-                            <button class="okay">OK</button>
+                    <div class="alert-wrapper">
+                        <div id="alert-input-error">
+                            <div id="alert-user">
+                                <p>Please enter a positive number value in 'cm' to determine your fabric size requirements
+                                </p>
+                                <button class="okay">OK</button>
+                            </div>
+                            <br>
                         </div>
-                        <br>
                     </div>
                     <input type="button" id="input-error-button" class="d-none"/>
                 </div>
