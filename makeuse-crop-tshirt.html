@@ -35,9 +35,9 @@
 
 <body>
 
-    <header class="container-lg" id="makeuseheader">
+    <header class="container-fluid" id="makeuseheader">
         <nav class="navbar navbar-custom">
-            <a class="navbar-brand" href="https://makeuse.nz/">
+            <a class="navbar-brand" href="https://makeuse.nz/" target="_blank" rel="noopener" rel="noreferrer">
                 <span class="navbar-brand"><img id="makeuse-logo" src="assets/images/makeuse-logo.png"
                         alt="Make/Use Logo">
                     <img id="logo-hover" src="assets/images/makeuse-logo-hover.png">
@@ -45,58 +45,93 @@
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://makeuse.nz/make/">make</a>
+                    <a class="nav-link" href="https://makeuse.nz/make/" target="_blank" rel="noopener" rel="noreferrer">make</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://makeuse.nz/about/">about</a>
+                    <a class="nav-link" href="https://makeuse.nz/about/" target="_blank" rel="noopener" rel="noreferrer">about</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://makeuse.nz/articles/">articles</a>
+                    <a class="nav-link" href="https://makeuse.nz/articles/" target="_blank" rel="noopener" rel="noreferrer">articles</a>
                 </li>
             </ul>
         </nav>
     </header>
+    
+        <nav class="container-fluid quick-nav">
+            <div>
+                <a href="https://makeuse.nz/make/" class="nav-item project-exit-alert" target="_blank" rel="noopener" rel="noreferrer">Home</a>
+                <span class="tri-divider">◢</span>
+                <a href="index.html" class="nav-item">Make</a>
+                <span class="tri-divider">◢</span>
+                <a href="makeuse-crop-tshirt.html" class="nav-item">Crop Tshirt</a>
+            </div>
+        </nav>
 
-    <main class="container-lg">
+    <main id="makeuse-cropped-tshirt" class="container-lg">
 
-        <div class="row">
-            <nav class="container quick-nav">
-                <div>
-                    <a href="https://makeuse.nz/make/" class="nav-item">Home</a>
-                    <span class="tri-divider">◢</span>
-                    <a href="index.html" class="nav-item">Make</a>
-                    <span class="tri-divider">◢</span>
-                    <a href="makeuse-crop-tshirt.html" class="nav-item">Cropped Tshirt</a>
-                </div>
-            </nav>
-        </div>
-        <section id="cropt-from-template" class="row">
-            <div class="col-12">
+        <section id="crop-tshirt-intro" class="row">
+            <div class="col-12 col-md-11 mx-3">
                 <h2>
                     Cropped Tshirt
                 </h2>
-                <p class="t-sub">The Cropped Tshirt is derived from a danish bronze age pattern.</p>
+                <h3 class="t-sub">
+                    The Cropped Tshirt is derived from a danish bronze age pattern.
+                </h3>
+                <p>
+                <strong>Considerations</strong>
+                <br>
+                    The width of the cloth is approximately the circumference of the garment around the body. If you
+                    want a more voluminous form or are a larger size go for a wider cloth, likewise with you want a
+                    more fitted silhouette.
+                <br>
+                <strong>Recommendations</strong>
+                <br>
+                    The drape or stiffness of the cloth will alter dramatically the final look of the garment. For a
+                    fluid drapey look, go for a chiffon, crepe de chine, or other soft fabric, for something more
+                    architectural chose a stiffer fabric or even something padded!
+                <br><br>
+                <em>
+                    The Cropped Tshirt in the photo has been screen printed and its form modified using
+                    the elbow and body rotations. It uses the round neck, has has all edges pre-finished using
+                    acrylic house paint to arrest fraying and has been constructed using an insertion stitch for
+                    all joins. It uses 80cm of 112cm wide silk crepe de chine. The model is a NZ size 10.
+                </em>
+                </p>
             </div>
-            <iframe title="3D animated rendering of MakeUse Cropped Tshirt" class="iframe-makeuse d-none d-md-flex"
-                id="iframe-crop-tshirt" frameBorder="0"
-                src="https://embed.vntana.com?productUuid=3ebd272a-49dc-491d-b198-1c7e041127ef&clientSlug=phd&organizationSlug=holly-mcquillan"
-                allow="fullscreen"></iframe>
-            <div class="row">
-                <div class="col-10 col-md-7 garment-intro">
-                    <p><strong>Considerations</strong><br>
-                        The width of the cloth is approximately the circumference of the garment around the body. If you
-                        want a more voluminous form or are a larger size go for a wider cloth, likewise with you want a
-                        more fitted silhouette.
-                        <br><strong>Recommendations</strong><br>
-                        The drape or stiffness of the cloth will alter dramatically the final look of the garment. For a
-                        fluid drapey look, go for a chiffon, crepe de chine, or other soft fabric, for something more
-                        architectural chose a stiffer fabric or even something padded!
-                        <br><br><em>The Cropped Tshirt in the photo has been screen printed and its form modified using
-                            the elbow and body rotations. It uses the round neck, has has all edges pre-finished using
-                            acrylic house paint to arrest fraying and has been constructed using an insertion stitch for
-                            all joins. It uses 80cm of 112cm wide silk crepe de chine. The model is a NZ size 10.</em>
-                    </p>
-                </div>
+        </section>
+        
+        <section id="crop-t-methods" class="row">
+            <div class="col-12 col-md-11 mx-3">
+                <h2 class="t-h3 py-3">
+                    Making the Cropped Tshirt
+                </h2>
+                <h3 class="t-sub pb-3">
+                    There are three methods of using the Make/Use system - Pattern, Print or Template:
+                </h3>
+                <p>
+                <strong>Pattern</strong>
+                <br>
+                    Simple line diagram to print onto paper at full scale – the closest to using a traditional dressmaking 
+                    pattern. Good if you have fabric at the exact width or know how to use software to change the pattern to 
+                    fit. Available as ai file (Adobe illustrator/Inkscape for modifications), or pdf. Print tiled and stick 
+                    together, or take to a large format printer.
+                <br>
+                <strong>Print</strong>
+                <br>
+                    Screen printing or digital printing files to put the patterns directly onto fabric. Good if you want a 
+                    printed garment. Some of the guide for making the garments are embedded in the print file to enable an 
+                    easier understanding of the making process. Can be expensive.
+                <br>
+                <strong>Templates</strong>
+                <br>
+                    Lasercut templates printed onto rigid paper or card that allow a maker to draw required patterns onto fabric. 
+                    This is a modular system that enables a Make/Use garment to be made from any width fabric. Low cost if using 
+                    printed method, great for students of all ages and home sewers.
+                </p>
+            </div>
+        </section>
+
+        <section id="crop-t-from-template">
                 <div class="grid-outer-wrapper col-12 col-md-7">
                     <div id="grid-crop-tshirt" class="garment-grid fade-in">
                         <div class="neck-tile garment-tile">
