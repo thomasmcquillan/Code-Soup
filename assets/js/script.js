@@ -69,7 +69,7 @@ $("#custom-garment-circum").keydown(function (event) {
         (event.key === "Enter" || event.key == "Tab")) {
         if ($("#custom-garment-circum").val() > 0) {
             currentGarmentCircum = parseInt($("#custom-garment-circum").val(), 10);
-            $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+            $("#fabric-required").text(`${currentGarmentCircum}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
             $("#custom-garment-circum").val('');
         } else {
             alertMsg();
