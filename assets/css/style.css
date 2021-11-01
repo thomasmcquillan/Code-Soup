@@ -25,11 +25,40 @@ body {
     color: #ffb100;
 }
 
-.navbar .nav-item .nav-link:active {
-    color: pink;
+.nav-item:hover {
+    color: #ffb100;
 }
 
-.nav-item:hover {
+
+
+.bg--slate {
+    background-color: #4a494a;
+}
+.bg--silver {
+    background-color: #d7d7d7;
+}
+.bg--sand {
+    background-color: #b7b3a7;
+}
+.bg--orange {
+    background-color: #d46300;
+}
+.bg--gold {
+    background-color: #ffb100;
+}
+.color--slate {
+    color: #4a494a;
+}
+.color--silver {
+    color: #d7d7d7;
+}
+.color--sand {
+    color: #b7b3a7;
+}
+.color--orange {
+    color: #d46300;
+}
+.color--gold {
     color: #ffb100;
 }
 
@@ -263,23 +292,33 @@ li {
 
 /* Cards */
 
-.card img {
+.card {
+    background-color: #f0f0f0;
+    margin-bottom: 30px;
+}
+
+/* .card img {
     padding: 4%;
+} */
+
+/* .card h3 {
+    text-size-adjust: auto;
 }
 
 .card-body p,
 .card-body h3 {
-    margin: 12px 12px 24px 12px;
+    margin: 12px 12px 14px 10px;
 }
 
 .card-body > p {
     margin: 1.8rem auto 2rem auto;
 }
 
-.making-template p {
+.card p {
     text-align: justify;
-    word-break:break-all;
-}
+    word-break: keep-all;
+    font-size: 15px;
+} */
 
 /* \\---  Images  ---////////////////////////////// */
 
@@ -287,30 +326,6 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-/* \\---  Make Menu / index.html   ---/////////////////////// */
-
-/* .menu-make {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    left: 0;
-    padding:0;
-}
-
-.make-coat, 
-.make-cropt, 
-.make-longt {
-    display: block;
-    max-width: 200px;
-    height: auto;
-}
-
-.menu-make img {
-    max-width: 200px;
-    height: auto;
-} */
 
 /* \\---  Garment Grid  ---/////////////////////// */
 
