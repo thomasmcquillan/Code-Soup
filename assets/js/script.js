@@ -35,9 +35,9 @@ let fabricLength = (currentSleeveCircum * 0.5) + currentGarmentLength;
 
 // To calculate fabric size required for currently selected style.
 
+// sleeve-circum =
 
-
-// $("#garment-circum").text(`${currentSleeveLength * 2}cm`);
+// $("#sleeve-circum").text(`${currentSleeveLength * 2}cm`);
 
 // $("#garment-length").text(`${currentGarmentLength}cm`);
 
@@ -176,6 +176,48 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    $(".sleeve-left").click(function () {
+        if (
+            $(".sleeve-left-narrow-long").is(":visible")) {
+            $("img:visible", this).toggle();
+            $(".sleeve-right-narrow-long").toggle();
+            $(".sleeve-left-narrow-long-rotate").toggle();
+            $(".sleeve-right-narrow-long-rotate").toggle();
+            $(".pattern-thumb-elbow-rotate-left").toggle();
+            $(".pattern-thumb-elbow-rotate-right").toggle();
+        } else if (
+            $(".sleeve-left-narrow-long-rotate").is(":visible")) {
+            $("img:visible", this).toggle();
+            $(".sleeve-right-narrow-long-rotate").toggle();
+            $(".sleeve-left-narrow-short").toggle();
+            $(".sleeve-right-narrow-short").toggle();
+            $(".pattern-thumb-elbow-rotate-left").toggle();
+            $(".pattern-thumb-elbow-rotate-right").toggle();
+            currentSleeveLength = sleeveShort;
+        } else if (
+            $(".sleeve-left-narrow-short").is(":visible")) {
+            $("img:visible", this).toggle();
+            $(".sleeve-right-narrow-short").toggle();
+            $(".sleeve-left-narrow-short-rotate").toggle();
+            $(".sleeve-right-narrow-short-rotate").toggle();
+            $(".pattern-thumb-elbow-rotate-left").toggle();
+            $(".pattern-thumb-elbow-rotate-right").toggle();
+        } else if (
+            $(".sleeve-left-narrow-short-rotate").is(":visible")) {
+            $("img:visible", this).toggle();
+            $(".sleeve-right-narrow-short-rotate").toggle();
+            $(".sleeve-left-narrow-long").toggle();
+            $(".sleeve-right-narrow-long").toggle();
+            $(".pattern-thumb-elbow-rotate-left").toggle();
+            $(".pattern-thumb-elbow-rotate-right").toggle();
+            currentSleeveLength = sleeveLong;
+            }
+            $("#garment-circum").text(`${currentSleeveLength * 2}cm`);
+            $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+        });
+});
+
+$(document).ready(function () {
     $(".neck-tile").hover(function () {
         $("#neck-round").css("background-color", "#ffb3009d");
     }, function () {
@@ -218,6 +260,48 @@ $(document).ready(function () {
             $(".sleeve-left-wide-short-rotate").toggle();
             $(".sleeve-left-wide-long").toggle();
             $(".sleeve-right-wide-long").toggle();
+            $(".pattern-thumb-elbow-rotate-left").toggle();
+            $(".pattern-thumb-elbow-rotate-right").toggle();
+            currentSleeveLength = sleeveLong;
+        }
+        $("#garment-circum").text(`${currentSleeveLength * 2}cm`);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+    });
+});
+
+$(document).ready(function () {
+    $(".sleeve-right").click(function () {
+        if (
+            $(".sleeve-right-narrow-long").is(":visible")) {
+            $("img:visible", this).toggle();
+            $(".sleeve-left-narrow-long").toggle();
+            $(".sleeve-left-narrow-long-rotate").toggle();
+            $(".sleeve-right-narrow-long-rotate").toggle();
+            $(".pattern-thumb-elbow-rotate-left").toggle();
+            $(".pattern-thumb-elbow-rotate-right").toggle();
+        } else if (
+            $(".sleeve-right-narrow-long-rotate").is(":visible")) {
+            $("img:visible", this).toggle();
+            $(".sleeve-left-narrow-long-rotate").toggle();
+            $(".sleeve-left-narrow-short").toggle();
+            $(".sleeve-right-narrow-short").toggle();
+            $(".pattern-thumb-elbow-rotate-left").toggle();
+            $(".pattern-thumb-elbow-rotate-right").toggle();
+            currentSleeveLength = sleeveShort;
+        } else if (
+            $(".sleeve-right-narrow-short").is(":visible")) {
+            $("img:visible", this).toggle();
+            $(".sleeve-left-narrow-short").toggle();
+            $(".sleeve-left-narrow-short-rotate").toggle();
+            $(".sleeve-right-narrow-short-rotate").toggle();
+            $(".pattern-thumb-elbow-rotate-left").toggle();
+            $(".pattern-thumb-elbow-rotate-right").toggle();
+        } else if (
+            $(".sleeve-right-narrow-short-rotate").is(":visible")) {
+            $("img:visible", this).toggle();
+            $(".sleeve-left-narrow-short-rotate").toggle();
+            $(".sleeve-left-narrow-long").toggle();
+            $(".sleeve-right-narrow-long").toggle();
             $(".pattern-thumb-elbow-rotate-left").toggle();
             $(".pattern-thumb-elbow-rotate-right").toggle();
             currentSleeveLength = sleeveLong;
@@ -299,8 +383,6 @@ $(document).ready(function () {
             $("#tshirt-body-wide-hip").is(":visible")) {
             $("img:visible", this).toggle();
             $("#tshirt-body-wide-long").toggle();
-            $(bodyRotateLeft).toggle();
-            $(bodyRotateRight).toggle();
             currentGarmentLength = bodyLong;
         } else if (
             $("#tshirt-body-wide-long").is(":visible")) {
@@ -311,32 +393,6 @@ $(document).ready(function () {
         } else if (
             $("#tshirt-body-wide-long-rotate").is(":visible")) {
             $("img:visible", this).toggle();
-            $("#tshirt-body-narrow-hip").toggle();
-            $(bodyRotateLeft).toggle();
-            $(bodyRotateRight).toggle();
-            currentGarmentLength = bodyHip;
-        } else if (
-            $("#tshirt-body-narrow-hip").is(":visible")) {
-            $("img:visible", this).toggle();
-            $("#tshirt-body-narrow-hip-rotate").toggle();
-            $(bodyRotateLeft).toggle();
-            $(bodyRotateRight).toggle();
-        } else if (
-            $("#tshirt-body-narrow-hip-rotate").is(":visible")) {
-            $("img:visible", this).toggle();
-            $("#tshirt-body-narrow-long").toggle();
-            $(bodyRotateLeft).toggle();
-            $(bodyRotateRight).toggle();
-            currentGarmentLength = bodyLong;
-        } else if (
-            $("#tshirt-body-narrow-long").is(":visible")) {
-            $("img:visible", this).toggle();
-            $("#tshirt-body-narrow-long-rotate").toggle();
-            $(bodyRotateLeft).toggle();
-            $(bodyRotateRight).toggle();
-        } else if (
-            $("#tshirt-body-narrow-long-rotate").is(":visible")) {
-            $("img:visible", this).toggle();
             $("#tshirt-body-wide-hip-rotate").toggle();
             currentGarmentLength = bodyHip;
         }
@@ -344,6 +400,66 @@ $(document).ready(function () {
         $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
     });
 });
+
+// $(document).ready(function () {
+//     $("#body-long-tshirt").click(function () {
+//         $("#custom-garment-length").val('');
+//         if (
+//             $("#tshirt-body-wide-hip-rotate").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-wide-hip").toggle();
+//             $(bodyRotateLeft).toggle();
+//             $(bodyRotateRight).toggle();
+//             currentGarmentLength = bodyHip;
+//         } else if (
+//             $("#tshirt-body-wide-hip").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-wide-long").toggle();
+//             $(bodyRotateLeft).toggle();
+//             $(bodyRotateRight).toggle();
+//             currentGarmentLength = bodyLong;
+//         } else if (
+//             $("#tshirt-body-wide-long").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-wide-long-rotate").toggle();
+//             $(bodyRotateLeft).toggle();
+//             $(bodyRotateRight).toggle();
+//         } else if (
+//             $("#tshirt-body-wide-long-rotate").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-narrow-hip").toggle();
+//             $(bodyRotateLeft).toggle();
+//             $(bodyRotateRight).toggle();
+//             currentGarmentLength = bodyHip;
+//         } else if (
+//             $("#tshirt-body-narrow-hip").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-narrow-hip-rotate").toggle();
+//             $(bodyRotateLeft).toggle();
+//             $(bodyRotateRight).toggle();
+//         } else if (
+//             $("#tshirt-body-narrow-hip-rotate").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-narrow-long").toggle();
+//             $(bodyRotateLeft).toggle();
+//             $(bodyRotateRight).toggle();
+//             currentGarmentLength = bodyLong;
+//         } else if (
+//             $("#tshirt-body-narrow-long").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-narrow-long-rotate").toggle();
+//             $(bodyRotateLeft).toggle();
+//             $(bodyRotateRight).toggle();
+//         } else if (
+//             $("#tshirt-body-narrow-long-rotate").is(":visible")) {
+//             $("img:visible", this).toggle();
+//             $("#tshirt-body-wide-hip-rotate").toggle();
+//             currentGarmentLength = bodyHip;
+//         }
+//         $("#garment-length").text(`${currentGarmentLength}cm`);
+//         $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+//     });
+// });
 
 // ---------------- Coat body tile sequencing function --------------- //
 

@@ -15,9 +15,9 @@ body {
     max-width: 100%;
 }
 
-* {
+/* * {
     outline: solid 1px grey;
-}
+} */
 
 /* \\---  Colors  ---///////////////////////////// */
 
@@ -582,7 +582,7 @@ input {
 }
 
 .pattern-thumb a {
-    display: inline-flex;
+    /* display: inline-flex; */
     padding: none;
     transition: ease-in-out 50ms;
 }
@@ -739,6 +739,7 @@ input {
         height: auto;
         margin: 8%;
         place-items: center;
+        background-color: #c9c5b9;
     }
 
     .pattern-thumb img {
@@ -930,10 +931,14 @@ model-viewer {
     width: auto;
     padding: 10px;
     max-height: 66px;
-    justify-self: center;
+    background-color: #b7b3a7;
 }
 
-.grid-resources {
+.pattern-thumb span {
+    background-color: #b7b3a7;
+}
+
+/* .grid-resources {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -941,7 +946,7 @@ model-viewer {
     padding: 0;
     background-color: #fcfcfc;
     overflow: hidden;
-}
+} */
 
 .grid-resources {
     grid-column: 3 / 4;
@@ -960,4 +965,18 @@ model-viewer {
     grid-row-start: 1;
     grid-column-start: 2;
    
+}
+
+/* --------- grid-tile tweaking ----------------- */
+
+#sleeve-left-long-tshirt {
+    padding-top: 6px;
+}
+
+#tshirt-body-narrow-hip {
+    width: 180%;
+}
+
+#tshirt-body-narrow-hip > img#body-long-tshirt {
+    width: 150%;
 }
