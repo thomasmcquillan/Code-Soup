@@ -136,6 +136,12 @@ h3 {
     /* margin: 40px auto 20px auto; */
 }
 
+h4 {
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: .8rem;
+}
+
 .garment-intro strong {
     line-height: 2.4rem;
 }
@@ -293,24 +299,20 @@ li {
 /* Cards */
 
 .card {
-    background-color: #f0f0f0;
     margin-bottom: 30px;
-    margin: 12px 6px 30px 6px;
+    background-color: #fcfcfc;
+    border: none;
 }
 
 .card h3 {
-    text-size-adjust: auto;
+    font-size: 24px;
 }
 
 .card-body p,
 .card-body h3 {
-    margin: 12px 12px 14px 10px;
+    margin: 18px 16px 24px 16px;
     display: flex;
     flex-direction: row;
-}
-
-.card-body > p {
-    margin: 1.8rem auto 2rem auto;
 }
 
 .card p {
@@ -322,7 +324,10 @@ li {
 .card-body {
     padding: 0;
     margin: 0;
+}
 
+.cropped-t-instructions p {
+    margin: 2rem;
 }
 
 /* \\---  Images  ---////////////////////////////// */
