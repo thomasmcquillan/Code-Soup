@@ -272,8 +272,13 @@ li {
     margin: 12px 12px 24px 12px;
 }
 
-.card {
+.card-body > p {
     margin: 1.8rem auto 2rem auto;
+}
+
+.making-template p {
+    text-align: justify;
+    word-break:break-all;
 }
 
 /* \\---  Images  ---////////////////////////////// */
