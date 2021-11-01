@@ -295,19 +295,18 @@ li {
 .card {
     background-color: #f0f0f0;
     margin-bottom: 30px;
+    margin: 12px 6px 30px 6px;
 }
 
-/* .card img {
-    padding: 4%;
-} */
-
-/* .card h3 {
+.card h3 {
     text-size-adjust: auto;
 }
 
 .card-body p,
 .card-body h3 {
     margin: 12px 12px 14px 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .card-body > p {
@@ -318,7 +317,13 @@ li {
     text-align: justify;
     word-break: keep-all;
     font-size: 15px;
-} */
+}
+
+.card-body {
+    padding: 0;
+    margin: 0;
+
+}
 
 /* \\---  Images  ---////////////////////////////// */
 
@@ -530,8 +535,8 @@ input {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     justify-content: center;
     align-content: center;
 }
