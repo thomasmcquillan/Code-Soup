@@ -612,3 +612,41 @@ $(document).ready(function () {
         $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
     });
 });
+
+/* Code for fullscreen video with overlaid elements borrowed from Dudley Storey then modified, first 
+read about at CSS Tricks, https://codepen.io/dudleystorey/pen/knqyK , https://css-tricks.com/full-page-background-video-styles/ */
+
+var vid = document.getElementById("bgvid");
+// var pauseButton = document.querySelector("#polina button");
+var pauseButton = document.querySelector(".logo-landing");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+// vid.addEventListener('ended', function()
+// {
+
+// vid.pause();
+
+// vidFade();
+// }); 
+
+
+// pauseButton.addEventListener("click", function() {
+//   vid.classList.toggle("stopfade");
+//   if (vid.paused) {
+//     vid.play();
+//     pauseButton.innerHTML = "Pause";
+//   } else {
+//     vid.pause();
+//     pauseButton.innerHTML = "Paused";
+//   }
+// })
+
