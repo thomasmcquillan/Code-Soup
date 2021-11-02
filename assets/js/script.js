@@ -292,21 +292,11 @@ $(document).ready(function () {
     });
 });
 
-// $("#neck-long-coat").hover(function () {
-
 $(document).ready(function () {
     $(".neck-tile").hover(function () {
         $("#neck-collar").css("background-color", "#ffb3009d");
     }, function () {
         $("#neck-collar").css("background-color", "#b7b3a7");
-    });
-});
-
-$(document).ready(function () {
-    $(".neck-tile").hover(function () {
-        $("#neck-round").css("background-color", "#ffb3009d");
-    }, function () {
-        $("#neck-round").css("background-color", "#b7b3a7");
     });
 });
 
@@ -315,14 +305,6 @@ $(document).ready(function () {
         $("#neck-wide").css("background-color", "#ffb3009d");
     }, function () {
         $("#neck-wide").css("background-color", "#b7b3a7");
-    });
-});
-
-$(document).ready(function () {
-    $("#neck-tile-coat").hover(function () {
-        $("#neck-collar").css("background-color", "#ffb3009d");
-    }, function () {
-        $("#neck-collar").css("background-color", "#b7b3a7");
     });
 });
 
