@@ -1,12 +1,3 @@
-// const neckRound = document.getElementById("neck-round");
-// const neckCollar = document.getElementById("neck-collar");
-// const neckWide = document.getElementById("neck-wide");
-// const bodyRotateLeft = document.getElementById("body-rotate-left");
-// const bodyRotateRight = document.getElementById("body-rotate-right");
-// const elbowRotateLeft = document.getElementById("elbow-rotate-left");
-// const elbowRotateRight = document.getElementById("elbow-rotate-left");
-
-
 // Declaring constants - targets divs for pattern download thumbnails.
 const neckRound = document.getElementById("pattern-neck-round");
 const neckCollar = document.getElementById("pattern-neck-collar");
@@ -54,7 +45,7 @@ $("#custom-garment-length").keydown(function (event) {
         (event.key === "Enter" || event.key == "Tab")) {
         if ($("#custom-garment-length").val() > 0) {
             currentGarmentLength = parseInt($("#custom-garment-length").val(), 10);
-            $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+            $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-garment-length").val('');
         } else {
             // $("#grid-intro").text('Custom values will update fabric size required, but will not be updated in the illustration.');
@@ -70,7 +61,7 @@ $("#custom-garment-circum").keydown(function (event) {
         (event.key === "Enter" || event.key == "Tab")) {
         if ($("#custom-garment-circum").val() > 0) {
             currentGarmentCircum = parseInt($("#custom-garment-circum").val(), 10);
-            $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+            $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-garment-circum").val('');
         } else {
             alertMsg();
@@ -84,7 +75,7 @@ $("#custom-sleeve-circum").keydown(function (event) {
         (event.key === "Enter" || event.key == "Tab")) {
         if ($("#custom-sleeve-circum").val() > 0) {
             currentSleeveCircum = parseInt($("#custom-sleeve-circum").val(), 10);
-            $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+            $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-sleeve-circum").val('');
         } else {
             alertMsg();
@@ -132,7 +123,7 @@ $(document).ready(function () {
             $(neckRound).toggle();
             $(neckCollar).toggle();
         }
-        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
 
@@ -212,7 +203,7 @@ $(document).ready(function () {
         }
         $("#sleeve-circum").text(`${currentSleeveCircum}cm`);
         $("#garment-circum").text(`${currentSleeveLength * 2}cm`);
-        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
 
@@ -291,7 +282,7 @@ $(document).ready(function () {
         }
         $("#sleeve-circum").text(`${currentSleeveCircum}cm`);
         $("#garment-circum").text(`${currentSleeveLength * 2}cm`);
-        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
 
@@ -399,7 +390,7 @@ $(document).ready(function () {
             currentGarmentLength = bodyHip;
         }
         $("#garment-length").text(`${currentGarmentLength}cm`);
-        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
 
@@ -484,7 +475,7 @@ $(document).ready(function () {
             $("#coat-body-wide-long-rotate").toggle();
         }
         $("#garment-length").text(`${currentGarmentLength}cm`);
-        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
 
@@ -550,7 +541,7 @@ $(document).ready(function () {
             currentGarmentLength = bodyCrop;
         }
         $("#garment-length").text(`${currentGarmentLength}cm`);
-        $("#fabric-required").text(`${currentSleeveLength * 2}cm wide x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm long`);
+        $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
 
@@ -561,15 +552,15 @@ var vid = document.getElementById("bgvid");
 // var pauseButton = document.querySelector("#polina button");
 var pauseButton = document.querySelector(".logo-landing");
 
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
-    vid.removeAttribute("autoplay");
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-}
+// if (window.matchMedia('(prefers-reduced-motion)').matches) {
+//     vid.removeAttribute("autoplay");
+//     vid.pause();
+//     pauseButton.innerHTML = "Paused";
+// }
 
-function vidFade() {
-  vid.classList.add("stopfade");
-}
+// function vidFade() {
+//   vid.classList.add("stopfade");
+// }
 
 // vid.addEventListener('ended', function()
 // {
