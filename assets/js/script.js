@@ -1,11 +1,22 @@
+// const neckRound = document.getElementById("neck-round");
+// const neckCollar = document.getElementById("neck-collar");
+// const neckWide = document.getElementById("neck-wide");
+// const bodyRotateLeft = document.getElementById("body-rotate-left");
+// const bodyRotateRight = document.getElementById("body-rotate-right");
+// const elbowRotateLeft = document.getElementById("elbow-rotate-left");
+// const elbowRotateRight = document.getElementById("elbow-rotate-left");
+
+
 // Declaring constants - targets divs for pattern download thumbnails.
-const neckRound = document.getElementById("neck-round");
-const neckCollar = document.getElementById("neck-collar");
-const neckWide = document.getElementById("neck-wide");
-const bodyRotateLeft = document.getElementById("body-rotate-left");
-const bodyRotateRight = document.getElementById("body-rotate-right");
-const elbowRotateLeft = document.getElementById("elbow-rotate-left");
-const elbowRotateRight = document.getElementById("elbow-rotate-left");
+const neckRound = document.getElementById("pattern-neck-round");
+const neckCollar = document.getElementById("pattern-neck-collar");
+const neckWide = document.getElementById("pattern-neck-wide");
+const sleeveCutLeft = document.getElementById("pattern-sleeve-cut-left");
+const sleeveCutRight = document.getElementById("pattern-sleeve-cut-right");
+const bodyRotateLeft = document.getElementById("pattern-body-rotate-left");
+const bodyRotateRight = document.getElementById("pattern-body-rotate-right");
+const elbowRotateLeft = document.getElementById("pattern-elbow-rotate-left");
+const elbowRotateRight = document.getElementById("patternelbow-rotate-left");
 
 // Declaring constant values for body-length, sleeve-width and sleeve length of supplied pattern options.
 
