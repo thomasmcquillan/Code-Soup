@@ -1,3 +1,10 @@
+// not sure yet if I need to keep these first 4
+
+const serviceID = 'makeuse';
+const coatTemplateID = 'coat-instructions';
+const TemplateID = 'tshirt-instructions';
+const btn = document.getElementById('form-button');
+
 // Declaring constants for toggling pattern download thumbnails.
 
 const neckRound = document.getElementById("pattern-neck-round");
@@ -26,10 +33,6 @@ let currentGarmentLength = 50;
 let currentGarmentCircum = 110;
 let currentSleeveLength = 55;
 let currentSleeveCircum = 50;
-
-// Setting variable to calculate body circumference of currently selected style.
-
-// let currentGarmentCircum = currentSleeveLength * 2;
 
 // Function that calculates fabric size required to make garment based on the custom values input by user.
 // Triggered by Enter/Tab keys in custom body length input.

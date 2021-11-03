@@ -37,8 +37,6 @@
     <script type="text/javascript">
         (function(){
             emailjs.init("user_wMriEHAEyY3weYxVF1Sjw");
-            emailjs.send("makeuse", "tshirt-instructions", {from_name: "contactForm.name.value", from_email: "contactForm.emailaddress.value", message: "contactForm.downloadlist.value"
-    });
         })();
     </script>
 </head>
@@ -46,7 +44,10 @@
 <body>
 
     <div class="center-form">
-        <form id="contact-form" onsubmit="return sendMail(this);">
+
+        <form id="contact-form">
+
+            <input type="hidden" name="contact_number">
     
             <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
     
@@ -54,13 +55,10 @@
     
             <textarea rows="4" name="message" class="form-control" id="downloadlist" placeholder="Resources" required></textarea>
     
-            <button type="submit" id="form-button" onclick="sendMail()" value="Send" class="btn-dark">Send</button>
-    
-        </form>
-    </div>
+            <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
+
 
 <script src="assets/js/sendEmail.js"></script>
-
 
 </body>
 
