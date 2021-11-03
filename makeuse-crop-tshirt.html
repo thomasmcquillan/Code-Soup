@@ -294,8 +294,8 @@
                 </p>
             </div>
         </section>
-
-        <section id="garment-grid-crop-tshirt" class="grid mx-auto">
+ 
+        <section id="garment-grid-crop-tshirt" class="grid">
             <div class="grid-outer-wrapper">
                 <div id="grid-crop-tshirt" class="garment-grid">
 
@@ -418,8 +418,43 @@
                             alt="right-sleeve in 'narrow/short' style">
                     </div>
                 </div>
-                
-                <div class="downloadwrapper">
+                <table class="sizing-info-table">
+                    <tbody>
+                        <tr>
+                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm wide x 75cm long</span></td>
+                        </tr>
+                        <tr>
+                            <td data-title="Garment Circum."><span id="garment-circum">110cm</span></td>
+                            <td data-title="Garment length"><span id="garment-length">50cm</span></td>
+                            <td data-title="Sleeve Circum."><span id="sleeve-circum">50cm</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter
+                                custom values below to calculate fabric requirements.</th>
+                        </tr>
+                        <tr>
+                            <td><input id="custom-garment-circum" type="number" placeholder="........"></td>
+                            <td><input id="custom-garment-length" type="number" placeholder="........"></td>
+                            <td><input id="custom-sleeve-circum" type="number" placeholder="........"></td>
+                        </tr>
+                        <tr>
+                            <th class="fabric-size"></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert-wrapper">
+                    <div id="alert-input-error">
+                        <div id="alert-user">
+                            <p>Please enter a positive number value in 'cm' to determine your fabric size requirements
+                            </p>
+                            <button class="okay">OK</button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <input type="button" id="input-error-button" class="d-none"/>
+
+                <div class="downloadwrapper-alt pattern-thumbs-md-lg-alt">
                     <div class="pattern-tshirt-grid pattern-thumb tile-on">
                         <a href="assets/downloads/tshirt-pattern-with-grid.pdf">
                             <span><img id="tshirt-grid" class="pattern-thumb tile-on"
@@ -499,126 +534,96 @@
                                     alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
                         </a>
                     </div>
-                </div>
-            </div>
-            <div class="garment-info-panel">
-                <!-- <div>
-                    <p>Fabric Required</p>
-                    <p>
-                        <strong><span id="fabric-required">110cm x 75cm</span></strong>
-                        <br><br><br>
-                    </p>
-                </div> -->
-                <div>
-                    <p>Sleeve Length</p>
-            
-                    <p>
-                        <strong><span id="sleeve-circum">50cm</span></strong>
-                    </p>
-                </div>
-                <div>
-                    <p>Garment Length</p>
-            
-                    <p>
-                        <strong><span id="garment-length">50cm</span></strong>
-                        <br><br><br>
-                    </p>
-                </div>
-                <div>
-            
-                    <p>Garment Circum.</p>
-                        <p>
-                        <strong><span id="garment-circum">110cm</strong>
-                        <br><br><br>
-                    </p>
                 </div>
             </div>
         </section>
+
         <section class="downloads">
 
-                <!-- <div class="downloadwrapper">
-                    <div class="pattern-tshirt-grid pattern-thumb tile-on">
-                        <a href="assets/downloads/tshirt-pattern-with-grid.pdf">
-                            <span><img id="tshirt-grid" class="pattern-thumb tile-on"
-                                    src="assets/images/pattern-thumbs/pattern-tshirt-grid.png"
-                                    alt="Make/Use grid, essential for making the MakeUse Cropped Tshirt using templates."></span>
-                        </a>
-                    </div>
+            <div class="downloadwrapper pattern-thumbs-md-lg d-none d-md-grid">
+                <div class="pattern-tshirt-grid pattern-thumb tile-on">
+                    <a href="assets/downloads/tshirt-pattern-with-grid.pdf">
+                        <span><img id="tshirt-grid" class="pattern-thumb tile-on"
+                                src="assets/images/pattern-thumbs/pattern-tshirt-grid.png"
+                                alt="Make/Use grid, essential for making the MakeUse Cropped Tshirt using templates."></span>
+                    </a>
+                </div>
+                
+                <div class="pattern-neck-collar pattern-thumb">
+                    <a href="assets/downloads/print-template-neckline-collar.pdf">
+                        <span><img id="neck-collar" class="pattern-thumb"
+                                src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png"
+                                alt="Make/Use template pattern for collar-neck version of Tshirt."></span>
+                    </a>
+                </div>
+
+                <div class="pattern-neck-round pattern-thumb tile-on">
+                    <a href="assets/downloads/print-template-neckline-round.pdf">
+                        <span><img id="neck-round" class="pattern-thumb tile-on"
+                                src="assets/images/pattern-thumbs/pattern-tshirt-neckline-round.png"
+                                alt="Make/Use template pattern for round-neck version of Tshirt."></span>
+                    </a>
+                </div>
                     
-                    <div class="pattern-neck-collar pattern-thumb">
-                        <a href="assets/downloads/print-template-neckline-collar.pdf">
-                            <span><img id="neck-collar" class="pattern-thumb"
-                                    src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png"
-                                    alt="Make/Use template pattern for collar-neck version of Tshirt."></span>
-                        </a>
-                    </div>
-    
-                    <div class="pattern-neck-round pattern-thumb tile-on">
-                        <a href="assets/downloads/print-template-neckline-round.pdf">
-                            <span><img id="neck-round" class="pattern-thumb tile-on"
-                                    src="assets/images/pattern-thumbs/pattern-tshirt-neckline-round.png"
-                                    alt="Make/Use template pattern for round-neck version of Tshirt."></span>
-                        </a>
-                    </div>
-                        
-                    <div class="pattern-neck-wide pattern-thumb">
-                        <a href="assets/downloads/print-template-neckline-wide.pdf">
-                            <span><img id="neck-wide" class="pattern-thumb"
-                                    src="assets/images/pattern-thumbs/pattern-tshirt-neckline-wide.png"
-                                    alt="Make/Use template pattern for wide-neck version of Tshirt."></span>
-                        </a>
-                    </div>
-    
-                    <div class="pattern-sleeve-cut-left pattern-thumb tile-on">
-                        <a href="assets/downloads/print-template-sleeve-cut-left.pdf">
-                            <span><img id="sleeve-cut-left" class="pattern-thumb tile-on"
-                                    src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png"
-                                    alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
-                        </a>
-                    </div>
+                <div class="pattern-neck-wide pattern-thumb">
+                    <a href="assets/downloads/print-template-neckline-wide.pdf">
+                        <span><img id="neck-wide" class="pattern-thumb"
+                                src="assets/images/pattern-thumbs/pattern-tshirt-neckline-wide.png"
+                                alt="Make/Use template pattern for wide-neck version of Tshirt."></span>
+                    </a>
+                </div>
+
+                <div class="pattern-sleeve-cut-left pattern-thumb tile-on">
+                    <a href="assets/downloads/print-template-sleeve-cut-left.pdf">
+                        <span><img id="sleeve-cut-left" class="pattern-thumb tile-on"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png"
+                                alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
+                    </a>
+                </div>
+                
+                <div class="pattern-sleeve-cut-right pattern-thumb tile-on">
+                    <a href="assets/downloads/print-template-sleeve-cut-right.pdf">
+                        <span><img id="sleeve-cut-right" class="pattern-thumb tile-on"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png"
+                                alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
+                    </a>
+                </div>
+                
+                <div class="pattern-body-rotation-left pattern-thumb tile-on">
+                    <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf">
+                        <span><img id="body-rotate-left" class="pattern-thumb tile-on"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png"
+                                alt="Make/Use template pattern for body rotation and sleeve swap modification - LEFT."></span>
+                    </a>
+                </div>
                     
-                    <div class="pattern-sleeve-cut-right pattern-thumb tile-on">
-                        <a href="assets/downloads/print-template-sleeve-cut-right.pdf">
-                            <span><img id="sleeve-cut-right" class="pattern-thumb tile-on"
-                                    src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png"
-                                    alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
-                        </a>
-                    </div>
-                    
-                    <div class="pattern-body-rotation-left pattern-thumb tile-on">
-                        <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf">
-                            <span><img id="body-rotate-left" class="pattern-thumb tile-on"
-                                    src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png"
-                                    alt="Make/Use template pattern for body rotation and sleeve swap modification - LEFT."></span>
-                        </a>
-                    </div>
-                        
-                    <div class="pattern-body-rotation-right pattern-thumb tile-on">
-                        <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf">
-                            <span><img id="body-rotate-right" class="pattern-thumb tile-on"
-                                    src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png"
-                                    alt="Make/Use template pattern for body rotation and sleeve swap modification - RIGHT."></span>
-                        </a>
-                    </div>
-    
-                    <div class="pattern-elbow-rotation-left pattern-thumb tile-on">
-                        <a href="assets/downloads/print-template-elbow-rotation-left.pdf">
-                            <span><img id="elbow-rotate-left" class="pattern-thumb tile-on"
-                                    src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png"
-                                    alt="Make/Use template pattern for elbow rotation modification - LEFT."></span>
-                        </a>
-                    </div>
-    
-                    <div class="pattern-elbow-rotation-right pattern-thumb tile-on">
-                        <a href="assets/downloads/print-template-elbow-rotation-right.pdf">
-                            <span><img id="elbow-rotate-right" class="pattern-thumb tile-on"
-                                    src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png"
-                                    alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
-                        </a>
-                    </div>
-                </div> -->
-                <!-- <div class="garment-info-panel">
-                    <div>
+                <div class="pattern-body-rotation-right pattern-thumb tile-on">
+                    <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf">
+                        <span><img id="body-rotate-right" class="pattern-thumb tile-on"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png"
+                                alt="Make/Use template pattern for body rotation and sleeve swap modification - RIGHT."></span>
+                    </a>
+                </div>
+
+                <div class="pattern-elbow-rotation-left pattern-thumb tile-on">
+                    <a href="assets/downloads/print-template-elbow-rotation-left.pdf">
+                        <span><img id="elbow-rotate-left" class="pattern-thumb tile-on"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png"
+                                alt="Make/Use template pattern for elbow rotation modification - LEFT."></span>
+                    </a>
+                </div>
+
+                <div class="pattern-elbow-rotation-right pattern-thumb tile-on">
+                    <a href="assets/downloads/print-template-elbow-rotation-right.pdf">
+                        <span><img id="elbow-rotate-right" class="pattern-thumb tile-on"
+                                src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png"
+                                alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+                    <!-- <div>
                         <p>Fabric Required</p>
                         <p>
                             <strong><span id="fabric-required">110cm x 75cm</span></strong>
@@ -647,11 +652,93 @@
                             <strong><span id="garment-circum">110cm</strong>
                             <br><br><br>
                         </p>
+                    </div> -->
+
+                <!-- <div class="downloadwrapper">
+
+                    <div class="pattern-tshirt-grid pattern-thumb tile-on">
+                        <a href="assets/downloads/tshirt-pattern-with-grid.pdf">
+                            <span><img id="tshirt-grid" class="pattern-thumb tile-on"
+                                    src="assets/images/pattern-thumbs/pattern-tshirt-grid.png"
+                                    alt="Make/Use grid, essential for making the MakeUse Cropped Tshirt using templates."></span>
+                        </a>
+                    </div>
+                    
+                    <div class="pattern-neck-collar pattern-thumb">
+                        <a href="assets/downloads/print-template-neckline-collar.pdf">
+                            <span><img id="neck-collar" class="pattern-thumb"
+                                    src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png"
+                                    alt="Make/Use template pattern for collar-neck version of Tshirt."></span>
+                        </a>
+                    </div>
+    
+                    <div class="pattern-neck-round pattern-thumb tile-on">
+                        <a href="assets/downloads/print-template-neckline-round.pdf">
+                            <span><img id="neck-round" class="pattern-thumb tile-on"
+                                    src="assets/images/pattern-thumbs/pattern-tshirt-neckline-round.png"
+                                    alt="Make/Use template pattern for round-neck version of Tshirt."></span>
+                        </a>
+                    </div>
+                        
+                    <div class="pattern-neck-wide pattern-thumb">
+                        <a href="assets/downloads/print-template-neckline-wide.pdf">
+                            <span><img id="neck-wide" class="pattern-thumb"
+                                    src="assets/images/pattern-thumbs/pattern-tshirt-neckline-wide.png"
+                                    alt="Make/Use template pattern for wide-neck version of Tshirt."></span>
+                        </a>
+                    </div>
+    
+                    <div class="pattern-sleeve-cut-left pattern-thumb tile-on">
+                        <a href="assets/downloads/print-template-sleeve-cut-left.pdf">
+                            <span><img id="sleeve-cut-left" class="pattern-thumb tile-on"
+                                    src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png"
+                                    alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
+                        </a>
+                    </div>
+                    
+                    <div class="pattern-sleeve-cut-right pattern-thumb tile-on">
+                        <a href="assets/downloads/print-template-sleeve-cut-right.pdf">
+                            <span><img id="sleeve-cut-right" class="pattern-thumb tile-on"
+                                    src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png"
+                                    alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
+                        </a>
+                    </div>
+                    
+                    <div class="pattern-body-rotation-left pattern-thumb tile-on">
+                        <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf">
+                            <span><img id="body-rotate-left" class="pattern-thumb tile-on"
+                                    src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png"
+                                    alt="Make/Use template pattern for body rotation and sleeve swap modification - LEFT."></span>
+                        </a>
+                    </div>
+                        
+                    <div class="pattern-body-rotation-right pattern-thumb tile-on">
+                        <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf">
+                            <span><img id="body-rotate-right" class="pattern-thumb tile-on"
+                                    src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png"
+                                    alt="Make/Use template pattern for body rotation and sleeve swap modification - RIGHT."></span>
+                        </a>
+                    </div>
+    
+                    <div class="pattern-elbow-rotation-left pattern-thumb tile-on">
+                        <a href="assets/downloads/print-template-elbow-rotation-left.pdf">
+                            <span><img id="elbow-rotate-left" class="pattern-thumb tile-on"
+                                    src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png"
+                                    alt="Make/Use template pattern for elbow rotation modification - LEFT."></span>
+                        </a>
+                    </div>
+    
+                    <div class="pattern-elbow-rotation-right pattern-thumb tile-on">
+                        <a href="assets/downloads/print-template-elbow-rotation-right.pdf">
+                            <span><img id="elbow-rotate-right" class="pattern-thumb tile-on"
+                                    src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png"
+                                    alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
+                        </a>
                     </div>
                 </div> -->
-            </div>
-        </section>
-            <!-- <div class="pattern-overlays">
+
+                <!-- <div class="garment-info-panel">
+        <div class="pattern-overlays">
                 <div class="overlay-grid-tshirt pattern-hover">
                     <img src="assets/images/pattern-thumbs/pattern-tshirt-grid.png">
                 </div>
@@ -720,6 +807,8 @@
 
     </main>
 
+
+    
     <footer class="mu-footer container-fluid">
         <div class="footer-row row">
             <div class="col-12 col-md-4">
