@@ -648,11 +648,11 @@ input {
     filter: opacity(88%);
 }
 
-.pattern-thumb a {
+/* .pattern-thumb a {
 
     padding: none;
     transition: ease-in-out 50ms;
-}
+} */
 
 .pattern-thumb {
     width: 100%;
@@ -983,9 +983,9 @@ video {
     left: 0;
 }
 
-.stopfade { 
+/* .stopfade { 
     opacity: .5;
-}
+} */
 
 #logo-landing { 
     display: flex;
@@ -1003,10 +1003,18 @@ video {
 }
 
 a {
+    color: #4a494a; 
+}
+
+a:hover {
+    color: #d46300;
+}
+
+/* a {
     display: inline-block;
     transition: .6s;
     height: auto;
-}
+} */
 
 /* a:hover{
     background:rgba(0,0,0,0.9);
