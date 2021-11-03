@@ -32,54 +32,35 @@
     <script src="assets/js/script.js" defer></script>
     <!-- Page title -->
     <title>MakeUse | Contact</title>
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('user_wMriEHAEyY3weYxVF1Sjw');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('coat-instructions').addEventListener('submit', function(event) {
-                event.preventDefault();
-                this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script> -->
-
+    <!-- emailJS script -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
             emailjs.init("user_wMriEHAEyY3weYxVF1Sjw");
-            emailjs.send("makeuse-project", "coat-instructions",{name: "thom", notes: "testing testing"});
+            emailjs.send("makeuse", "tshirt-instructions", {from_name: "contactForm.name.value", from_email: "contactForm.emailaddress.value", message: "contactForm.downloadlist.value"
+    });
         })();
     </script>
 </head>
 
 <body>
 
-<div class="center-form">
-
-    <form id="contact-form" onsubmit="return sendMail(this);">
-
-        <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-
-        <input type="text" name="user_address" class="form-control" id="emailaddress" placeholder="Email" required/>
-
-        <textarea rows="4" name="garment_method" class="form-control" id="garmentmethod" placeholder="Resources" required></textarea>
-
-        <button type="submit" onclick="sendMail()" value="Send" class="btn-dark">Send me the Resources</button>
-
-    </form>
-</div>
+    <div class="center-form">
+        <form id="contact-form" onsubmit="return sendMail(this);">
+    
+            <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+    
+            <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+    
+            <textarea rows="4" name="message" class="form-control" id="downloadlist" placeholder="Resources" required></textarea>
+    
+            <button type="submit" id="form-button" onclick="sendMail()" value="Send" class="btn-dark">Send</button>
+    
+        </form>
+    </div>
 
 <script src="assets/js/sendEmail.js"></script>
+
 
 </body>
 

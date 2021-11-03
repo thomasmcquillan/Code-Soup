@@ -1,35 +1,4 @@
-const serviceID = 'makeuse-ms2';
-const coatTemplateID = 'coat-instructions';
-const tShirtTemplateID = 'tshirt-instructions';
-
-const btn = document.getElementById('button');
-
-function sendMail() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    btn.value = "Sending...";
-
-    emailjs.sendForm("makeuse-ms2", "coat-instructions", {
-        "from_name": contactForm.name.value,
-        "from_email": contactForm.emailaddress.value,
-        "project_request": contactForm.garmentmethod.value
-    })
-    .then(function(response) {
-            console.log("SUCCESS");
-        let success = document.getElementById("sendButton");
-        let contactForm = document.getElementById('contact-form');
-        contactForm.reset();
-        success.innerHTML = "Thanks! Your instructions are on their way - happy sewing!";
-        success.style.backgroundColor="orange";
-        setInterval(() => window.location.reload(true), 3000)
-        },
-        function(error) {
-            console.log("FAILED", error);
-        });
-    return false;
-});
-
-// Declaring constants - targets divs for pattern download thumbnails.
+// Declaring constants for toggling pattern download thumbnails.
 
 const neckRound = document.getElementById("pattern-neck-round");
 const neckCollar = document.getElementById("pattern-neck-collar");
@@ -60,14 +29,7 @@ let currentSleeveCircum = 50;
 
 // Setting variable to calculate body circumference of currently selected style.
 
-let bodyCircumference = currentSleeveLength * 2;
-
-// Declaring variables for displaying the fabric width and length required to make currently selected style.
-
-let fabricWidth = (currentSleeveLength * 2);
-let fabricLength = (currentSleeveCircum * 0.5) + currentGarmentLength;
-
-// To calculate fabric size required for currently selected style.
+// let currentGarmentCircum = currentSleeveLength * 2;
 
 // Function that calculates fabric size required to make garment based on the custom values input by user.
 // Triggered by Enter/Tab keys in custom body length input.
@@ -77,6 +39,7 @@ $("#custom-garment-length").keydown(function (event) {
         (event.key === "Enter" || event.key == "Tab")) {
         if ($("#custom-garment-length").val() > 0) {
             currentGarmentLength = parseInt($("#custom-garment-length").val(), 10);
+            // To calculate fabric size required for currently selected style.
             $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-garment-length").val('');
         } else {
@@ -580,9 +543,9 @@ $(document).ready(function () {
 /* Code for fullscreen video with overlaid elements borrowed from Dudley Storey then modified, first 
 read about at CSS Tricks, https://codepen.io/dudleystorey/pen/knqyK , https://css-tricks.com/full-page-background-video-styles/ */
 
-var vid = document.getElementById("bgvid");
+// var vid = document.getElementById("bgvid");
 // var pauseButton = document.querySelector("#polina button");
-var pauseButton = document.querySelector(".logo-landing");
+// var pauseButton = document.querySelector(".logo-landing");
 
 // if (window.matchMedia('(prefers-reduced-motion)').matches) {
 //     vid.removeAttribute("autoplay");
@@ -614,3 +577,7 @@ var pauseButton = document.querySelector(".logo-landing");
 //   }
 // })
 
+// function validateEmail(email) {
+    //     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //     return re.test(String(email).toLowerCase());
+    // }
