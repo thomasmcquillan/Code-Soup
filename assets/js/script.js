@@ -1,4 +1,36 @@
+const serviceID = 'makeuse-ms2';
+const coatTemplateID = 'coat-instructions';
+const tShirtTemplateID = 'tshirt-instructions';
+
+const btn = document.getElementById('button');
+
+function sendMail() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    btn.value = "Sending...";
+
+    emailjs.sendForm("makeuse-ms2", "coat-instructions", {
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.emailaddress.value,
+        "project_request": contactForm.garmentmethod.value
+    })
+    .then(function(response) {
+            console.log("SUCCESS");
+        let success = document.getElementById("sendButton");
+        let contactForm = document.getElementById('contact-form');
+        contactForm.reset();
+        success.innerHTML = "Thanks! Your instructions are on their way - happy sewing!";
+        success.style.backgroundColor="orange";
+        setInterval(() => window.location.reload(true), 3000)
+        },
+        function(error) {
+            console.log("FAILED", error);
+        });
+    return false;
+});
+
 // Declaring constants - targets divs for pattern download thumbnails.
+
 const neckRound = document.getElementById("pattern-neck-round");
 const neckCollar = document.getElementById("pattern-neck-collar");
 const neckWide = document.getElementById("pattern-neck-wide");

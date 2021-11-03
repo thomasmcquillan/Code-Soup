@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <!-- display settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- theme colors - light & dark -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffd066">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4a494a">
+    <!-- page description -->
+    <meta name="description" content="Prototype Fashion Design Helper Tool">
+    <!-- page author -->
+    <meta name="author" content="Thomas McQuillan in consultation with Make/Use.">
+    <!-- apple-touch-icon -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-192x192.png">
+    <!-- favicon -->
+    <link rel="icon" type="image/gif" href="assets/images/favicon.gif">
+    <!-- web app manifest -->
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Local Javascript -->
+    <script src="assets/js/script.js" defer></script>
+    <!-- Page title -->
+    <title>MakeUse | Contact</title>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('user_wMriEHAEyY3weYxVF1Sjw');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('coat-instructions').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script> -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_wMriEHAEyY3weYxVF1Sjw");
+            emailjs.send("makeuse-project", "coat-instructions",{name: "thom", notes: "testing testing"});
+        })();
+    </script>
+</head>
+
+<body>
+
+<div class="center-form">
+
+    <form id="contact-form" onsubmit="return sendMail(this);">
+
+        <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+
+        <input type="text" name="user_address" class="form-control" id="emailaddress" placeholder="Email" required/>
+
+        <textarea rows="4" name="garment_method" class="form-control" id="garmentmethod" placeholder="Resources" required></textarea>
+
+        <button type="submit" onclick="sendMail()" value="Send" class="btn-dark">Send me the Resources</button>
+
+    </form>
+</div>
+
+<script src="assets/js/sendEmail.js"></script>
+
+</body>
+
+</html>
