@@ -40,14 +40,12 @@ let currentSleeveCircum = 50;
 $("#custom-garment-length").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            $(".alert-wrapper").toggle();
         if ($("#custom-garment-length").val() > 0) {
             currentGarmentLength = parseInt($("#custom-garment-length").val(), 10);
-            // To calculate fabric size required for currently selected style.
             $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-garment-length").val('');
         } else {
-            // $("#grid-intro").text('Custom values will update fabric size required, but will not be updated in the illustration.');
+            $(".alert-wrapper").toggle();
             alertMsg();
             $("#custom-garment-length").val('');
         }
@@ -57,12 +55,12 @@ $("#custom-garment-length").keydown(function (event) {
 $("#custom-garment-circum").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            $(".alert-wrapper").toggle();
         if ($("#custom-garment-circum").val() > 0) {
             currentGarmentCircum = parseInt($("#custom-garment-circum").val(), 10);
             $("#fabric-required").text(`${currentGarmentCircum}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-garment-circum").val('');
         } else {
+            $(".alert-wrapper").toggle();
             alertMsg();
             $("#custom-garment-circum").val('');
         }
@@ -72,12 +70,12 @@ $("#custom-garment-circum").keydown(function (event) {
 $("#custom-sleeve-circum").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
-            $(".alert-wrapper").toggle();
         if ($("#custom-sleeve-circum").val() > 0) {
             currentSleeveCircum = parseInt($("#custom-sleeve-circum").val(), 10);
             $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
             $("#custom-sleeve-circum").val('');
         } else {
+            $(".alert-wrapper").toggle();
             alertMsg();
             $("#custom-sleeve-circum").val('');
         }
