@@ -383,7 +383,6 @@ img {
 }
 
 .neck-tile {
-    /* display: grid; */
     display: flex;
     grid-column: 2;
     grid-row: 1;
@@ -552,72 +551,85 @@ input {
     text-align: center;
     border-radius: 3px;
     background-color: #c8c5b5;
-    background-color: #e9e7e7;
+    background-color: #f5f3f3;
+    place-content: end;
 }
 
+/* .alert-group {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -500;
+    display: grid;
+    place-items: center;
+} */
+
 .alert-wrapper {
-    display: flex;
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
-    /* width: 100vw;
-    height: 100vh; */
-    justify-content: center;
-    align-content: center;
+    width: 100%;
+    height: 100%;
+    place-content: center;
 }
 
 #alert-input-error {
-    display: none;
-    background-color:#fffefe;
+    display: grid;
     color: #4a494a;
     position: fixed;
     text-align: center;
     z-index: 1000;
     box-sizing: border-box;
-    place-self: center;
-    width: 330px;
-    height: 200px;
+    place-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 #alert-input-error p {
-    padding: 32px;
+    font-size: .9rem;
+    margin: auto 3rem;
+    color: #4a494a;
 }
 
 #input-error-button {
-    display: inline-block;
     display: flex;
     padding: 6px;
     text-align: center;
     width: 120px;
     height: 32px;
     cursor: pointer;
-    border: 1px solid #d46300;
     align-content: space-evenly;
-    border-radius: 20px;
-    z-index: 4000;
+    border-radius: 16px;
+    z-index: 100;
     justify-items: center;
 }
 
 .okay {
-    width: 66px;
-    height: auto;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-self: center;
-    border: 1px solid #d46300;
-    border-radius: 8px;
+    font-weight: 400;
+    background-color: #e6e6e6;
     margin-bottom: 34px;
+    padding: .2rem 1rem;
+    border-radius: 4px;
+    border: none;
 }
 
 #alert-user {
     display: flex;
     flex-direction: column;
     align-items: space-evenly;
-    justify-content: center;
-    border: 1px solid #d46300;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
+    justify-content: space-evenly;
+    border: .8px solid #888;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 8px;
+    width: 300px;
+    height: 200px;
+    background-color:#fffefe;
 }
 
 .custom-input-info {

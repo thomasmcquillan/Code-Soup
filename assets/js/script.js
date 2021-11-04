@@ -40,6 +40,7 @@ let currentSleeveCircum = 50;
 $("#custom-garment-length").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
+            $(".alert-wrapper").toggle();
         if ($("#custom-garment-length").val() > 0) {
             currentGarmentLength = parseInt($("#custom-garment-length").val(), 10);
             // To calculate fabric size required for currently selected style.
@@ -47,7 +48,6 @@ $("#custom-garment-length").keydown(function (event) {
             $("#custom-garment-length").val('');
         } else {
             // $("#grid-intro").text('Custom values will update fabric size required, but will not be updated in the illustration.');
-            // $(".garment-grid").css('filter', 'blur(3px) opacity(44%)');
             alertMsg();
             $("#custom-garment-length").val('');
         }
@@ -57,6 +57,7 @@ $("#custom-garment-length").keydown(function (event) {
 $("#custom-garment-circum").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
+            $(".alert-wrapper").toggle();
         if ($("#custom-garment-circum").val() > 0) {
             currentGarmentCircum = parseInt($("#custom-garment-circum").val(), 10);
             $("#fabric-required").text(`${currentGarmentCircum}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
@@ -71,6 +72,7 @@ $("#custom-garment-circum").keydown(function (event) {
 $("#custom-sleeve-circum").keydown(function (event) {
     if (
         (event.key === "Enter" || event.key == "Tab")) {
+            $(".alert-wrapper").toggle();
         if ($("#custom-sleeve-circum").val() > 0) {
             currentSleeveCircum = parseInt($("#custom-sleeve-circum").val(), 10);
             $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
@@ -91,6 +93,7 @@ function alertMsg(alertMessage, okay) {
     alertBox.find("#alert-user").text(alertMessage);
     alertBox.find(".okay").unbind().click(function () {
         alertBox.hide();
+        $(".alert-wrapper").toggle();
     });
     alertBox.find(".okay").click(okay);
     alertBox.show();
