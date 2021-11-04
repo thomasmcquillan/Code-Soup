@@ -4,10 +4,6 @@
 
 /* \\---  Global variables  ---// */
 
-/* #landing html {
-    background: url('../images/poster-mu.png') #000 no-repeat center center fixed;
-} */
-
 html,
 body {
     overflow: auto;
@@ -32,8 +28,6 @@ body {
 .nav-item:hover {
     color: #ffb100;
 }
-
-
 
 .bg--slate {
     background-color: #4a494a;
@@ -227,6 +221,7 @@ nav {
 .quick-nav {
     position: static;
     display: flex;
+    top: 120px;
     margin: 40px auto 20px auto;
     justify-content: left;
     background: none;
@@ -251,10 +246,6 @@ a {
     margin-right: 5px;
     font-size: 14px;
 }
-
-/* .nav-item > a:active {
-    color: #d46300 !important;
-} */
 
 /* \\---  Body Layout  ---////////////////////////////// */
 
@@ -290,15 +281,6 @@ li {
     width: 210px;
 }
 
-/* #grid-intro {
-    display: inline-flex;
-    font-weight: 400;
-    font-size: 14px;
-    text-align: left;
-    margin-top: 18px;
-    margin-top: 218px;
-} */
-
 /* Cards */
 
 .card {
@@ -307,10 +289,6 @@ li {
     border: none;
 }
 
-
-/* #long-shirt-intro h3,
-#crop-shirt-intro h3,
-#coat-intro h3  */
 .card h3,
 strong {
     font-size: 1.15rem;
@@ -353,6 +331,7 @@ strong {
 img {
     max-width: 100%;
     height: auto;
+    transition: fade ease-in 1s;
 }
 
 .long-t-intro-img {
@@ -364,21 +343,9 @@ img {
 }
 
 .img-3d-render a span caption {
-    /* margin: 2rem auto; */
     padding: 1.4rem;
     width: minmax (50vw, 230px);
 }
-
-/* \\---  Garment Grid  ---///////////////////////
-
-#garment-grid-crop-tshirt > .row {
-    margin: 0;
-    padding: 0;
-}
-
-/* .row {
-    min-width: 400px;
-} */
 
 #garment-grid-crop-tshirt > .row {
     margin: 0;
@@ -400,7 +367,7 @@ img {
 }
 
 .neck-tile {
-    display: flex;
+    display: grid;
     grid-column: 2;
     grid-row: 1;
     overflow: auto;
@@ -410,7 +377,7 @@ img {
 #body-crop-tshirt,
 #body-long-tshirt,
 #body-long-coat {
-    display: flex;
+    display: grid;
     grid-column: 2;
     grid-row: 2 / 3;
     overflow: auto;
@@ -451,7 +418,6 @@ img {
 /* \\---  Cropped Tshirt specific styles  ---/////////////////////// */
 
 #sleeve-left-crop-tshirt {
-    background-color: #ffb30091;
     background-color: #d4d4d473;
 }
 
@@ -462,14 +428,11 @@ img {
 
 #grid-crop-tshirt .neck-tile,
 #body-crop-tshirt {
-    background-color: rgba(150, 148, 150, 0.76);
-    background-color: #b7b3a7;
     background-color: #bebebe75;
 }
 
 /* \\---  Coat specific styles  ---/////////////////////// */
 
-/* #neck-long-coat, */
 .neck-tile,
 #body-long-coat,
 .garment-tile {
@@ -486,10 +449,7 @@ img {
 
 /* \\---  Long Tshirt specific styles  ---/////////////////////// */
 
-#sleeve-left-long-tshirt {
-    background-color: rgba(218, 218, 218, 0.808);
-}
-
+#sleeve-left-long-tshirt,
 #sleeve-right-long-tshirt {
     background-color: rgba(218, 218, 218, 0.808);
 }
@@ -547,7 +507,6 @@ table td span {
     grid-column: 1 / 4;
 }
 
-
 #garment-length,
 #garment-circum,
 #sleeve-circum,
@@ -571,15 +530,6 @@ input {
     background-color: #f5f3f3;
     place-content: end;
 }
-
-/* .alert-group {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: -500;
-    display: grid;
-    place-items: center;
-} */
 
 .alert-wrapper {
     display: none;
@@ -677,21 +627,12 @@ input {
     filter: opacity(88%);
 }
 
-/* .pattern-thumb a {
-
-    padding: none;
-    transition: ease-in-out 50ms;
-} */
-
 .pattern-thumb {
     width: 100%;
+    height: auto;
     justify-content: space-evenly;
     padding: 0;
 }
-
-/* .pattern-thumb span {
-    background-color: #b7b3a7;
-} */
 
 .pattern-hover {
     display: none;
@@ -700,16 +641,6 @@ input {
     margin: 5px;
     background-color: #b7b3a7;
 }
-
-/* \\---  Media Queries  ---// */
-
-/* @media (max-width: 765px) {
-    .row {
-        padding-right: 20px;
-        overflow: hidden;
-        word-wrap:break-word;
-    }
-} */
 
 @media (min-width: 576px) {
 
@@ -764,7 +695,6 @@ input {
     .navbar .navbar-brand {
         margin: auto auto auto 0;
     }
-
 }
 
 @media (min-width: 768px) {
@@ -784,13 +714,6 @@ input {
         max-width: 1024px;
         margin: auto;
     }
-
-    /* #grid-intro {
-        display: inline-flex;
-        flex-direction: column;
-        height: fit-content;
-        margin-bottom: 10px;
-    } */
 
     .pattern-thumb img {
         max-width:100%;
@@ -812,10 +735,7 @@ input {
     .mu-footer {
         height: 320px;
     }
-    
 }
-
-/* Font scaling based on Make/Use styles */
 
 @media (max-width:959px) {
 
@@ -852,56 +772,6 @@ input {
 }
 
 /* \\---  Animations  ---// */
-
-/* iframe MakeUse 3d garment model styling */
-
-.iframe-makeuse {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-self: flex-end;
-    width: auto;
-    align-self: flex-end;
-    width: 1fr;
-    height: 500px;
-    margin: 80px 0;
-}
-
-.row {
-    z-index: 1;
-}
-
-#iframe-coat {
-    margin-top: 12px;
-}
-
-model-viewer {
-    width: 100%;
-    height: 100%;
-    }
-    
-    #enterFullscreen {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-    width: 40px;
-    height: 40px;
-    background: #dbdbdb url(‘https://storage.googleapis.com/vntana-viewer/assets/images/enter_fullscreen_icon.svg’) no-repeat center;
-    background-size: 25px auto;
-    cursor: pointer;
-    }
-    
-    #exitFullscreen {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-    width: 40px;
-    height: 40px;
-    background: #dbdbdb url(‘https://storage.googleapis.com/vntana-viewer/assets/images/exit_fullscreen_icon.svg’) no-repeat center;
-    background-size: 25px auto;
-    display: none;
-    cursor: pointer;
-    }
 
 .fade-in,
 .garment-tile img {
@@ -1026,7 +896,7 @@ video {
     transition: .3s;
   }
 
-#logo-landing :hover { 
+#logo-landing:hover { 
     background: rgba(0,0,0,0.5);
     background: #d46300;
 }
@@ -1034,20 +904,6 @@ video {
 a {
     color: #4a494a; 
 }
-
-a:hover {
-    color: #d46300;
-}
-
-/* a {
-    display: inline-block;
-    transition: .6s;
-    height: auto;
-} */
-
-/* a:hover{
-    background:rgba(0,0,0,0.9);
-} */
 
 .landing-nav {
     position: absolute;
@@ -1060,7 +916,6 @@ a:hover {
     background: none;
     align-items: center;
     justify-content: space-between;
-   
   }
 
   .make-grid {
@@ -1093,24 +948,6 @@ a:hover {
     align-content: center;
 }
 
-/* .downloadwrapper {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto 0 auto;
-    width: auto;
-    padding: auto 5vw;
-    align-items: flex-end;
-    grid-row: 3;
-    grid-column: 1 / 4;
-    justify-content: start;
-    align-items: center;
-
-    display: grid;
-    grid-row: 1 / 5;
-    grid-column: 4;
-    flex-direction: column;
-} */
-
 .patternThumb:hover img {
     filter: opacity(44%);
 }
@@ -1123,13 +960,11 @@ a:hover {
     width: 13%;
 }
 
-
 .tile-on {
     display: flex;
 }
 
 /* \\---  Garment Grid  ---/////////////////////// */
-
 
 .garment-info-panel {
     grid-column: 1 / 4;
@@ -1162,12 +997,6 @@ a:hover {
     font-size: 18px;
 }
 
-/* image styles ------------- //// */
-
-img {
-    transition: fade ease-in 1s;
-}
-
 /* p { 
     font-size: clamp(1.1rem, 0.7153rem + 1.6368vw, 1.5rem);
 } */
@@ -1176,8 +1005,6 @@ img {
 
     color:#d46300;
 }
-
-
 
 /* -----make --------- */
 
@@ -1195,10 +1022,6 @@ img {
     top: 0;
     left: 0;
 }
-
-
-
-
 
 /* ------- rebuild ----------- */
 
@@ -1238,7 +1061,6 @@ img {
     filter: opacity(55%);
 }
 
-
 .pattern-thumb {
     display: none;
     width: 77px;
@@ -1251,12 +1073,6 @@ img {
 .tile-on {
     display: flex;
 }
-
-
-
-
-
-
 
 /* .downloadwrapper {
     display: grid;
