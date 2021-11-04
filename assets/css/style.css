@@ -142,8 +142,8 @@ h4 {
     padding-bottom: .8rem;
 }
 
-.garment-intro strong {
-    line-height: 2.4rem;
+.intro-sub {
+    line-height: 2.6rem;
 }
 
 .garment-intro {
@@ -342,6 +342,10 @@ strong {
 
 /* \\---  Images  ---////////////////////////////// */
 
+.img-3d-render {
+    margin: 2rem auto;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -355,9 +359,13 @@ img {
     padding-top: 0;
 }
 
+.img-3d-render a span caption {
+    /* margin: 2rem auto; */
+    padding: 1.4rem;
+    width: minmax (50vw, 240px);
+}
+
 /* \\---  Garment Grid  ---///////////////////////
-
-
 
 #garment-grid-crop-tshirt > .row {
     margin: 0;
@@ -367,6 +375,11 @@ img {
 /* .row {
     min-width: 400px;
 } */
+
+#garment-grid-crop-tshirt > .row {
+    margin: 0;
+    padding: 0;
+}
 
 .garment-tile {
     z-index: 100;
