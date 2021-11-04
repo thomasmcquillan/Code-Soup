@@ -366,7 +366,7 @@ img {
 .img-3d-render a span caption {
     /* margin: 2rem auto; */
     padding: 1.4rem;
-    width: minmax (50vw, 240px);
+    width: minmax (50vw, 230px);
 }
 
 /* \\---  Garment Grid  ---///////////////////////
@@ -1048,28 +1048,19 @@ a:hover {
 /* a:hover{
     background:rgba(0,0,0,0.9);
 } */
-/* @media screen and (max-width: 500px) { 
-    div{width:70%;} 
-}
-@media screen and (max-device-width: 800px) {
-    html { 
-        background: url('../images/poster-mu.png') #000 no-repeat center center fixed; 
-    }
-    #bgvid-makeuse { 
-        display: none; 
-    }
-} */
 
-
-.landing-nav{
-    position: relative;
+.landing-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 200px;
     width: 100%;
-    background: transparent;
     text-align: center;
     display: flex;
+    background: none;
     align-items: center;
     justify-content: space-between;
+   
   }
 
   .make-grid {
