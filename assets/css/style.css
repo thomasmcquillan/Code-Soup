@@ -4,6 +4,10 @@
 
 /* \\---  Global variables  ---// */
 
+/* #landing html {
+    background: url('../images/poster-mu.png') #000 no-repeat center center fixed;
+} */
+
 html,
 body {
     overflow: auto;
@@ -1044,7 +1048,7 @@ a:hover {
 /* a:hover{
     background:rgba(0,0,0,0.9);
 } */
-@media screen and (max-width: 500px) { 
+/* @media screen and (max-width: 500px) { 
     div{width:70%;} 
 }
 @media screen and (max-device-width: 800px) {
@@ -1054,7 +1058,7 @@ a:hover {
     #bgvid-makeuse { 
         display: none; 
     }
-}
+} */
 
 
 .landing-nav{
@@ -1128,10 +1132,6 @@ a:hover {
     width: 13%;
 }
 
-.pattern-thumb > img {
-    /* height: auto;
-    width: 13%; */
-}
 
 .tile-on {
     display: flex;
@@ -1313,8 +1313,6 @@ img {
     grid-gap: .4rem;
     overflow: hidden;
     /* width: minmax(60vw, 700px); */
-}
-
 }
 
 /* .grid-downloads {
