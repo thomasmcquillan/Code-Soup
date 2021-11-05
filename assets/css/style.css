@@ -325,6 +325,11 @@ strong {
     margin-top: 20px;
 }
 
+.card-img-mobile {
+    margin: 1.2em auto 1em auto;
+    padding: .2rem;
+}
+
 .card p {
     text-align: justify;
     word-break: keep-all;
@@ -345,6 +350,14 @@ strong {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+}
+
+.tshirt-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: stretch; */
+    margin: 0 auto;
 }
 
 .coat-cards img {
@@ -1136,7 +1149,7 @@ h3 {
     color: #5c5c5c;
     box-sizing: inherit;
     margin-bottom: 1.2em;
-    margin: 1.rem auto .8em auto;
+    margin: 1em auto .8em auto;
     line-height: 1.3em;
     font-size: 38px;
 }
@@ -1145,9 +1158,10 @@ h3 {
     font-size: 32px;
 }
 
-h4 {
+h4,
+.h4-sub {
     font-size: 24px;
-    margin: auto auto 1.2em auto;
+    margin: .2em auto .5em auto;
 }
 
 h5 {
