@@ -4,6 +4,10 @@
 
 /* \\---  Global variables  ---// */
 
+/* #landing html {
+    background: url('../images/poster-mu.png') #000 no-repeat center center fixed;
+} */
+
 html,
 body {
     overflow: auto;
@@ -163,7 +167,6 @@ h4 {
 /* \\---  Header & Navigation  ---// */
 
 #makeuseheader {
-    width: 100%;
     background-color: #4a494a;
     display: flex;
     height: 153px;
@@ -197,6 +200,7 @@ nav {
 .navbar .navbar-brand {
     display: block;
     margin: auto;
+    width: 200px;
     height: auto;
     border: none;
 }
@@ -646,6 +650,15 @@ input {
 
 @media (min-width: 576px) {
 
+    #makeuseheader {
+        background-color: #4a494a;
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        height: 153px;
+        justify-content: center;
+    }
+
     nav {
         display: flex;
         flex-direction: row;
@@ -687,6 +700,7 @@ input {
 
     .navbar .navbar-brand {
         margin: auto auto auto 0;
+        padding-top: 6.5px;
     }
 }
 
@@ -846,7 +860,7 @@ input {
 https://codepen.io/dudleystorey/pen/knqyK , https://css-tricks.com/full-page-background-video-styles/ */
 
 
-body {
+/* body {
     margin: 0;
     }
 
@@ -873,7 +887,7 @@ video {
     position: fixed;
     top: 0;
     left: 0;
-}
+} */
 
 /* .stopfade { 
     opacity: .5;
@@ -898,9 +912,7 @@ a {
 }
 
 .landing-nav {
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
     height: 200px;
     width: 100%;
     text-align: center;
