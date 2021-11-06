@@ -287,77 +287,87 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $(".neck-tile").hover(function () {
-        $("#neck-round").css("background-color", "#ffb3009d");
+        $("#neck-round").css("background-color", "var(--mu-sand)");
     }, function () {
-        $("#neck-round").css("background-color", "#b7b3a7");
+        $("#neck-round").css("background-color", "var(--mu-silver)");
     });
 });
 
 $(document).ready(function () {
     $(".neck-tile").hover(function () {
-        $("#neck-collar").css("background-color", "#ffb3009d");
+        $("#neck-collar").css("background-color", "var(--mu-sand)");
     }, function () {
-        $("#neck-collar").css("background-color", "#b7b3a7");
+        $("#neck-collar").css("background-color", "var(--mu-silver)");
     });
 });
 
 $(document).ready(function () {
     $(".neck-tile").hover(function () {
-        $("#neck-wide").css("background-color", "#ffb3009d");
+        $("#neck-wide").css("background-color", "var(--mu-sand)");
     }, function () {
-        $("#neck-wide").css("background-color", "#b7b3a7");
+        $("#neck-wide").css("background-color", "var(--mu-silver)");
     });
 });
 
 $(document).ready(function () {
     $("#neck-tile-coat").hover(function () {
-        $("#neck-collar").css("background-color", "#ffb3009d");
+        $("#neck-collar").css("background-color", "var(--mu-sand)");
     }, function () {
-        $("#neck-collar").css("background-color", "#b7b3a7");
+        $("#neck-collar").css("background-color", "var(--mu-silver)");
     });
 });
 
 $(document).ready(function () {
-    $("#body-long-coat").hover(function () {
-        $("#pattern-body-rotation-right").css("background-color", "#ffb3009d");
-        $("#pattern-body-rotation-left").css("background-color", "#ffb3009d");
+    $(".body-rotate").hover(function () {
+        $("#body-rotate-right").css("background-color", "var(--mu-sand)");
+        $("#body-rotate-left").css("background-color", "var(--mu-sand)");
     }, function () {
-        $("#pattern-body-rotation-right").css("background-color", "#b7b3a7");
-        $("#pattern-body-rotation-left").css("background-color", "#b7b3a7");
+        $("#body-rotate-right").css("background-color", "var(--mu-silver)");
+        $("#body-rotate-left").css("background-color", "var(--mu-silver)");
     });
 });
 
 $(document).ready(function () {
-    $("#body-long-coat").hover(function () {
-        $("#elbow-rotate-right").css("background-color", "#ffb3009d");
-        $("#pattern-elbow-rotation-left").css("background-color", "#ffb3009d");
+    $(".body-regular").hover(function () {
+        $("#elbow-rotate-right").css("background-color", "var(--mu-sand)");
+        $("#elbow-rotate-left").css("background-color", "var(--mu-sand)");
     }, function () {
-        $("#elbow-rotate-right").css("background-color", "#b7b3a7");
-        $("#pattern-elbow-rotation-left").css("background-color", "#b7b3a7");
+        $("#elbow-rotate-right").css("background-color", "var(--mu-silver)");
+        $("#elbow-rotate-left").css("background-color", "var(--mu-silver)");
     });
 });
 
 $(document).ready(function () {
-    $("#body-long-coat").hover(function () {
-        $("#sleeve-cut-right").css("background-color", "#ffb3009d");
-        $("#sleeve-cut-left").css("background-color", "#ffb3009d");
+    $(".sleeve-regular").hover(function () {
+        $("#sleeve-cut-right").css("background-color", "var(--mu-sand)");
+        $("#sleeve-cut-left").css("background-color", "var(--mu-sand)");
     }, function () {
-        $("#sleeve-cut-right").css("background-color", "#b7b3a7");
-        $("#sleeve-cut-left").css("background-color", "#b7b3a7");
+        $("#sleeve-cut-right").css("background-color", "var(--mu-silver)");
+        $("#sleeve-cut-left").css("background-color", "var(--mu-silver)");
+    });
+});
+
+$(document).ready(function () {
+    $(".sleeve-rotate").hover(function () {
+        $("#elbow-rotate-left").css("background-color", "var(--mu-sand)");
+        $("#elbow-rotate-right").css("background-color", "var(--mu-sand)");
+    }, function () {
+        $("#elbow-rotate-left").css("background-color", "var(--mu-silver)");
+        $("#elbow-rotate-right").css("background-color", "var(--mu-silver)");
     });
 });
 
 // Make/Use site logo hover state
 
-$(document).ready(function () {
-    $("#makeuse-logo").hover(function () {
-        $(this).toggle();
-        $("#logo-hover").toggle();
-    }, function () {
-        $("#logo-hover").toggle();
-        $(this).toggle();
-    });
-});
+// $(document).ready(function () {
+//     $("#makeuse-logo").hover(function () {
+//         $(this).toggle();
+//         $("#logo-hover").toggle();
+//     }, function () {
+//         $("#logo-hover").toggle();
+//         $(this).toggle();
+//     });
+// });
 
 // --------- Long Tshirt body tile sequencing function -------------- //
 
@@ -543,45 +553,3 @@ $(document).ready(function () {
         $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
-
-/* Code for fullscreen video with overlaid elements borrowed from Dudley Storey then modified, first 
-read about at CSS Tricks, https://codepen.io/dudleystorey/pen/knqyK , https://css-tricks.com/full-page-background-video-styles/ */
-
-// var vid = document.getElementById("bgvid");
-// var pauseButton = document.querySelector("#polina button");
-// var pauseButton = document.querySelector(".logo-landing");
-
-// if (window.matchMedia('(prefers-reduced-motion)').matches) {
-//     vid.removeAttribute("autoplay");
-//     vid.pause();
-//     pauseButton.innerHTML = "Paused";
-// }
-
-// function vidFade() {
-//   vid.classList.add("stopfade");
-// }
-
-// vid.addEventListener('ended', function()
-// {
-
-// vid.pause();
-
-// vidFade();
-// }); 
-
-
-// pauseButton.addEventListener("click", function() {
-//   vid.classList.toggle("stopfade");
-//   if (vid.paused) {
-//     vid.play();
-//     pauseButton.innerHTML = "Pause";
-//   } else {
-//     vid.pause();
-//     pauseButton.innerHTML = "Paused";
-//   }
-// })
-
-// function validateEmail(email) {
-    //     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //     return re.test(String(email).toLowerCase());
-    // }
