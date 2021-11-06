@@ -942,9 +942,11 @@ img {
 .downloadwrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 900px;
-    height: 20vw;
+    height: 80px;
+    padding-bottom: 24px;
 }
 
 .pattern-thumb {
@@ -1039,6 +1041,15 @@ img {
 
     .mu-footer {
         height: 320px;
+    }
+
+    .downloadwrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 900px;
+        height: 80px;
+        padding-bottom: 24px;
     }
 }
 

@@ -328,12 +328,12 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".body-regular").hover(function () {
-        $("#elbow-rotate-right").css("background-color", "var(--mu-sand)");
-        $("#elbow-rotate-left").css("background-color", "var(--mu-sand)");
+    $(".body-straight").hover(function () {
+        $("#tshirt-grid").css("background-color", "var(--mu-sand)");
+        $("#coat-grid").css("background-color", "var(--mu-sand)");
     }, function () {
-        $("#elbow-rotate-right").css("background-color", "var(--mu-silver)");
-        $("#elbow-rotate-left").css("background-color", "var(--mu-silver)");
+        $("#tshirt-grid").css("background-color", "var(--mu-silver)");
+        $("#coat-grid").css("background-color", "var(--mu-silver)");
     });
 });
 
