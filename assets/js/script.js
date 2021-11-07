@@ -542,3 +542,40 @@ $(document).ready(function () {
         $("#logo-hover").toggle();
     });
 });
+
+// working on dynamic downloads list for pattern templates:
+
+// let templateDownloads = {
+//     coatgrid: "<a href='https://thomasmcquillan.github.io/MakeUse/assets/downloads/coat-pattern-with-grid.pdf'>TshirtGrid</a>",
+//     tshirtgrid: "<a href='https://thomasmcquillan.github.io/MakeUse/assets/images/pattern-thumbs/pattern-tshirt-grid.png'>CoatGrid</a>",
+//     sleevecutleft: "https://thomasmcquillan.github.io/MakeUse/assets/images/pattern-thumbs/pattern-tshirt-grid.png"
+// };
+
+let tempLink;
+
+let dLoadList = document.getElementById('downloadlist');
+
+    const files = document.getElementById('file-downloads');
+    const coatText = "Coat Template Grid";
+
+// $(document).ready(function () {
+
+//     $("#body-crop-tshirt").click(function () {
+//         $("#file-tshirt-grid").show();
+//     });
+// });
+
+$(document).ready(function () {
+        if ($("tshirt-body-wide-hip").is(':visible')) {
+            $("#file-tshirt-grid").toggle();
+        }
+});
+
+
+
+
+
+
+//     $("#body-crop-tshirt").click(function () {
+//         $("#file-coat-grid").appendTo(files);
+//     });

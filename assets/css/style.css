@@ -4,10 +4,6 @@
 
 /* \\---  Global variables  ---// */
 
-/* #landing {
-    background: url('../assets/images/lc-bg-poster.jpeg') #000 no-repeat center center fixed;
-} */
-
 :root {
     --mu-silver: #d7d7d7;
     --mu-slate: #4a494a;
@@ -23,14 +19,20 @@
 
 html,
 body {
-    background-color: var(--mu-white);
     color: var(--mu-slate);
     overflow: auto;
     flex-wrap: wrap;
-    font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
+    font-family:'Ubuntu', "sans-serif";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8rem;
+    list-style-type: none;
+    color: var(--mu-dark);
     line-height: 1.6;
     max-width: 100%;
+    background-color: var(--mu-white);
 }
 
 /* \\---  Colors  ---///////////////////////////// */
@@ -63,7 +65,6 @@ p, h1, h2, h3, h4 {
 }
 
 #logo-hover {
-    /* display: inline-grid; */
     position: absolute;
     cursor: pointer;
     transition: .3s;
@@ -1067,7 +1068,7 @@ img {
     display: grid;
     grid-template-rows: minmax(10px, 2fr) minmax(20px, 4fr);
     grid-template-columns: minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr);
-    grid-gap: clamp(2px, .35rem, 7px);
+    grid-gap: clamp(1px, .28rem, 5px);
     overflow: hidden;
 }
 
@@ -1081,6 +1082,7 @@ img {
     grid-template-rows: minmax(10px, 2fr) minmax(20px, 4fr), minmax(10px, 2fr);
     grid-template-columns: minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr);
     /* background-color: var(--mu-silver); */
+    /* grid-gap: 2px; */
 }
 
 .maker-garment-grid {
@@ -1090,7 +1092,7 @@ img {
     grid-template-columns: minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr);
     
     /* grid-gap: clamp(2px, .25rem, 6px); */
-    grid-gap: clamp(1px, .2rem, 6px);
+    /* grid-gap: clamp(1px, 2px, 3px); */
 
     overflow: hidden;
 
@@ -1100,7 +1102,7 @@ img {
 
 #long-coat-maker {
     height: 100vh;
-    background-color: #222;
+    background-color: var(--mu-silver);
 }
 
 /* \\---  Coat specific styles  ---/////////////////////// */
@@ -1133,6 +1135,38 @@ img {
     background-color: rgba(218, 218, 218, 0.808);
 }
 
-#sleeve-right-long-coat > img.sleeve-right-wide-long-rotate.sleeve-rotate.tile-on {
-    padding-top: 1rem;
+#grid-long-coat .tile-on, #grid-crop-tshirt .tile-on, #grid-long-tshirt .tile-on {
+    display: grid;
+    place-items: end;
+}
+
+#file-downloads,
+#file-downloads-long-tshirt,
+#file-downloads-crop-tshirt {
+    width: 50%;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid orange;  
+}
+
+#file-downloads a,
+#file-downloads-long-tshirt a,
+#file-downloads-crop-tshirt a {
+    /* transition: ease-in 1s all; */
+    display: none;
+    color: var(--mu-slate);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+#file-downloads-coat > a,
+#file-downloads-crop-tshirt > a,
+#file-downloads-long-tshirt a {
+    color: var(--mu-slate);
+    text-decoration: none;
+}
+
+#downloadlist {
+    color: black;
 }
