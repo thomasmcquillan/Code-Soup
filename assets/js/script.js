@@ -1,10 +1,3 @@
-// not sure yet if I need to keep these first 4
-
-const serviceID = 'makeuse';
-const coatTemplateID = 'coat-instructions';
-const TemplateID = 'tshirt-instructions';
-const btn = document.getElementById('form-button');
-
 // Declaring constants for toggling pattern download thumbnails.
 
 const neckRound = document.getElementById("pattern-neck-round");
@@ -357,18 +350,6 @@ $(document).ready(function () {
     });
 });
 
-// Make/Use site logo hover state
-
-// $(document).ready(function () {
-//     $("#makeuse-logo").hover(function () {
-//         $(this).toggle();
-//         $("#logo-hover").toggle();
-//     }, function () {
-//         $("#logo-hover").toggle();
-//         $(this).toggle();
-//     });
-// });
-
 // --------- Long Tshirt body tile sequencing function -------------- //
 
 $(document).ready(function () {
@@ -551,5 +532,17 @@ $(document).ready(function () {
         }
         $("#garment-length").text(`${currentGarmentLength}cm`);
         $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
+    });
+});
+
+// ----- Animations -------//
+
+// Make/Use site logo hover state
+
+$(document).ready(function () {
+    $(".navbar-brand").hover(function () {
+        $("#logo-hover").toggle();
+    }, function () {
+        $("#logo-hover").toggle();
     });
 });

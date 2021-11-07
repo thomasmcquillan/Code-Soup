@@ -43,10 +43,6 @@ a {
     color: var(--mu-gold);
 }
 
-#logo-landing:hover { 
-    background-color: var(--mu-orange);
-}
-
 p, h1, h2, h3, h4 {
     color: var(--mu-dark);
 }
@@ -55,18 +51,26 @@ p, h1, h2, h3, h4 {
     color: var(--mu-orange);
 }
 
+#makeuse-logo-wrap {
+    display: flex;
+    place-self: center;
+    place-items: center;
+    position: absolute;
+    left: 15px;
+    top: 27px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#logo-hover {
+    /* display: inline-grid; */
+    position: absolute;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 10000;
+}
+
 /* \\---  Fonts  ---////////////////////////////// */
-
-
-/* body {
-    list-style-type: none;
-    font-family:'Ubuntu', "sans-serif";
-    font-weight: 400;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 1.8rem;
-} */
-
 
 html {
     font-family:'Ubuntu', "sans-serif";
@@ -100,18 +104,18 @@ h2 {
 h3 {
     margin: 30px auto;
     line-height: 1.4em;
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 500;
     box-sizing: inherit;
     margin: 1em auto .8em auto;
 }
    
 h4 {
-    font-size: 24px;
+    font-size: 20px;
     margin: .2em auto .5em auto;
     padding-bottom: .8rem;
     line-height: 1.4em;
-    font-size: 28px;
+    font-size: 26px;
 }
 
 h5 {
@@ -130,7 +134,6 @@ h5 {
 .quick-nav .nav-item {
     color: var(--mu-slate);
     text-transform: uppercase;
-    /* font-size: 12px; */
 }
 
 .intro-sub {
@@ -146,10 +149,14 @@ h5 {
 /* \\---  Header & Navigation  ---// */
 
 #makeuseheader {
+    width: 100%;
+
     display: flex;
     height: 153px;
     padding: 0;
     left: 0;
+
+    height: 160px;
 }
 
 nav {
@@ -160,7 +167,7 @@ nav {
     top: 0;
     max-width: 100%;
     margin: 0 auto;
-    background-color: #4a494a;
+    background-color: transparent;
 }
 
 .navbar-nav {
@@ -175,21 +182,16 @@ nav {
     max-width: 100%;
 }
 
-.navbar .navbar-brand {
-    display: block;
-    margin: auto;
-    width: 200px;
-    height: auto;
-    border: none;
+nav .navbar .navbar-custom {
+    justify-self: center;
 }
 
-#logo-hover {
-    display: none;
-    left: 15px;
-    top: 30px;
-    position: absolute;
-    cursor: pointer;
-    transition: .3s;
+.navbar .navbar-brand {
+    display: flex;
+    margin: auto;
+    height: auto;
+    border: none;
+    justify-self: center;
 }
 
 .navbar .navbar-brand img {
@@ -235,9 +237,53 @@ a {
     font-size: 14px;
 }
 
+/* \\---  Landing Page  ---/////////////////////////// */
+
+#logo-hover {
+    display: none;
+    transition: .3s;
+}
+
+.landing-nav {
+    position: absolute;
+    top: 0;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    background: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#makeuse-logo-wrap {
+    display: grid;
+    position: absolute;
+    height: 76px;
+    place-items: center;
+
+    display: flex;
+    justify-self: center;
+}
+
+#makeuseheader,
+#makeuseheader-landing {
+    background-color: var(--mu-slate);
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    height: 153px;
+    justify-content: center;
+    flex-direction: row;
+    justify-items: center;
+    height: 160px;
+}
+
+#makeuseheader-landing {
+    background: none;
+}
+
 /* \\---  Body Layout  ---////////////////////////////// */
-
-
 
 ul {
     padding-left: 0;
@@ -640,8 +686,6 @@ input {
     background-color: var(--mu-sand);
 }
 
-
-
 #pattern-templates {
     display: flex;
     flex-direction: row;
@@ -672,9 +716,9 @@ input {
 /* Code for fullscreen video with overlaid elements borrowed from Dudley Storey, first read about at CSS Tricks,
 https://codepen.io/dudleystorey/pen/knqyK , https://css-tricks.com/full-page-background-video-styles/ */
 
-body {
+/* body {
     margin: 0;
-    }
+} */
 
 video {
     object-fit: cover;
@@ -684,52 +728,6 @@ video {
     top: 0;
     left: 0;
 }
-
-#logo-landing { 
-    display: flex;
-    width: 200px;
-    height: auto;
-    margin: 1rem auto; 
-    color: var(--mu-white);
-    cursor: pointer;
-    transition: .3s;
-  }
-
-.landing-nav {
-    position: relative;
-    height: 200px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    background: none;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .make-grid {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-}
-
-/* -------  pattern thumbnail rebuild ------------ */
-
-/* #downloadwrapper > .row {
-    width: 1fr;
-    padding: 30px 20px 30px 20px;
-    position: absolute;
-    left: 0;
-    top: 153.24px;
-    justify-content: center;
-    display: flex;
-    align-content: center;
-} */
 
 .patternThumb:hover img {
     filter: opacity(44%);
@@ -814,23 +812,6 @@ video {
 
 /* --- rebuild -------- */
 
-/* .downloadwrapper {
-    display: grid;
-    grid-row: 1;
-    grid-column: 1;
-    display: grid;
-    grid-template-columns: repeat(minmax(10px, 1fr));
-    background-color: var(--mu-white);
-}
-
-.downloadwrapper {
-    display: grid;
-    grid-template-rows: minmax(20px, 1fr);
-    grid-template-columns: 10(minmax(20px, 1fr));
-    background-color: #fcfcfc;
-    margin-bottom: 1rem;
-} */
-
 .sizing-info-table {
     grid-row: 3;
     grid-column: 1 / 4;
@@ -862,11 +843,11 @@ video {
 .fade-in,
 .garment-tile img,
 img {
-    animation: fadeIn ease-in 400ms;
-    -webkit-animation: fadeIn ease-in-out 400ms;
-    -moz-animation: fadeIn ease-in-out 400ms;
-    -o-animation: fadeIn ease-in-out 400ms;
-    -ms-animation: fadeIn ease-in-out 400ms;
+    animation: fadeIn ease-in 50ms;
+    -webkit-animation: fadeIn ease-in-out 50ms;
+    -moz-animation: fadeIn ease-in-out 50ms;
+    -o-animation: fadeIn ease-in-out 50ms;
+    -ms-animation: fadeIn ease-in-out 50ms;
 }
 
 @keyframes fadeIn {
@@ -902,15 +883,41 @@ img {
 
 @media (min-width: 576px) {
 
-    #makeuseheader {
+    #makeuseheader,
+    #makeuseheader-landing {
         background-color: var(--mu-slate);
         display: flex;
         width: 100%;
         margin: 0 auto;
         height: 153px;
         justify-content: center;
+
+        height: 160px;
     }
 
+    .landing-nav {
+        /* position: absolute; */
+        top: 0;
+        /* height: 200px; */
+        width: 100%;
+        text-align: center;
+        display: flex;
+        background: none;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+    }
+
+    /* #makeuseheader {
+        position: relative;
+        height: 200px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        background: none;
+        align-items: center;
+        justify-content: space-between;
+    } */
+    
     nav {
         display: flex;
         flex-direction: row;
@@ -923,6 +930,7 @@ img {
         display: flex;
         width: 100%;
         height: 153px;
+        height: 160px;
         left: 0;
         padding: 20px 15px 50px 15px;
         margin: 0 auto;
@@ -952,18 +960,34 @@ img {
 }
 
 @media (min-width: 768px) {
-
+    
+    h2 {
+        font-size: 54px;
+    }
+    
     h3 {
         font-size: 38px;
     }
+       
+    h4 {
+        font-size: 23px;
+    }
+    
+    h5 {
+        font-size: 20px;
+    }
+
+    .card > h3 {
+        font-size: 24px;
+    }
 
     .navbar-custom {
-        /* max-width: 930px; */
         max-width: 999px;
     }
 
     .row {
         max-width: 1024px;
+        max-width: 999px;
         margin: auto;
     }
 
@@ -984,17 +1008,17 @@ img {
     }
 
     .mu-footer {
-        height: 320px;
+        height: 300px;
     }
 
-    .downloadwrapper {
+    /* .downloadwrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         max-width: 900px;
         height: 80px;
         padding-bottom: 24px;
-    }
+    } */
 }
 
 .tile-on {
@@ -1008,21 +1032,6 @@ img {
     height: auto;
     margin: 0;
     padding: 0;
-}
-
-#logo-landing { 
-    display: flex;
-    width: 200px;
-    height: auto;
-    margin: 1rem auto; 
-    color: #fff;
-    cursor: pointer;
-    transition: .3s;
-  }
-
-#logo-landing:hover { 
-    background: rgba(0,0,0,0.5);
-    background: #d46300;
 }
 
 /* -----make --------- */
