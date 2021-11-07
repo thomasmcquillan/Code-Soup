@@ -32,8 +32,8 @@
     <!-- Media Query specific to landing page -->
     <style>
         @media  screen and (max-width: 500px) {         div{width:70%;}}
-        @media  screen and (max-device-width: 800px) {  html{background: url('assets/images/poster-mu.png') #000 no-repeat center center fixed;}
-                                                        #bgvid-makeuse {display: none; }}
+        @media  screen and (max-device-width: 800px) {  html{background: url('assets/images/lc-bg-poster.jpeg') #000 no-repeat center center fixed;}}
+                                                        /* #bgvid-makeuse {display: none; }} */
     </style>
     <!-- Page title -->
     <title>MakeUse | Home</title>
@@ -41,14 +41,14 @@
 
 <body>
 
-    <video id="bgvid-makeuse" playsinline autoplay muted loop poster="assets/images/poster-mu.png">
+    <video id="bgvid-makeuse" playsinline autoplay muted loop poster="assets/images/lc-bg-poster.jpeg">
         <source src="assets/video/makeuse-landing.mov" type="video/mp4">
     </video>
 
     <header id="makeuseheader-landing" class="container-fluid landing-nav">
         <nav class="navbar navbar-custom">
                 <a class="navbar-brand" href="https://makeuse.nz/" target="_blank" rel="noopener" rel="noreferrer">
-                    <span id="logo-span" class="navbar-brand">
+                    <span id="logo-span" class="navbar-brand fade-in">
                         <img    id="makeuse-logo"
                                 src="assets/images/makeuse-logo.png"
                                 alt="Make/Use Home">
@@ -78,10 +78,8 @@
     </script>
     <!---- bootstrap min ---->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
-    crossorigin="anonymous"></script>
-    <!---- emailjs script ---->
-    <script src="assets/js/sendEmail.js"></script>
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous"></script>
 
 </body>
 

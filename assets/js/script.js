@@ -535,16 +535,6 @@ $(document).ready(function () {
     });
 });
 
-// Make/Use site logo hover state
-
-// $(document).ready(function () {
-//     $(".navbar-brand").hover(function () {
-//         $("#logo-hover").toggle();
-//     }, function () {
-//         $("#logo-hover").toggle();
-//     });
-// });
-
 $(document).ready(function () {
     $("#logo-span").hover(function () {
         $("#logo-hover").toggle();
