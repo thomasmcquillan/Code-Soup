@@ -62,7 +62,8 @@ a {
     color: var(--mu-slate);
 }
 
-.navbar .nav-item a:hover {
+.navbar .nav-item a:hover,
+nav .nav-item:hover {
     color: var(--mu-gold);
 }
 
