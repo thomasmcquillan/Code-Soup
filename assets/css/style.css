@@ -883,6 +883,7 @@ video {
 .three-d-hover:hover,
 .about-hover:hover {
     opacity: 88%;
+    filter: brightness(77%);
 }
 
 .fade-in,
