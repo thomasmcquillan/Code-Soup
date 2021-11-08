@@ -35,6 +35,27 @@ body {
     background-color: var(--mu-white);
 }
 
+.four-0-four-header,
+#fourzerofour {
+    background: none;
+}
+
+.back-to-makeuse {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    align-items: center;
+    margin: 8vh auto;
+    width: 100%;
+    height: 100%;
+}
+
+.mu-button {
+    height: 110px;
+    width: 140px;
+    font-size: 18px;
+}
+
 /* \\---  Colors  ---///////////////////////////// */
 
 a {
