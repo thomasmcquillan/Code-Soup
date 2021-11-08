@@ -1185,11 +1185,6 @@ img {
 
 /* \\---  Long Tshirt specific styles  ---/////////////////////// */
 
-#sleeve-left-long-tshirt,
-#sleeve-right-long-tshirt {
-    background-color: rgba(218, 218, 218, 0.808);
-}
-
 #grid-long-coat .tile-on, #grid-crop-tshirt .tile-on, #grid-long-tshirt .tile-on {
     display: grid;
     place-items: end;
@@ -1197,7 +1192,8 @@ img {
 
 #file-downloads,
 #file-downloads-long-tshirt,
-#file-downloads-crop-tshirt {
+#file-downloads-crop-tshirt,
+#file-downloads-long-coat {
     width: 100%;
     height: 366px;
     display: flex;
@@ -1209,7 +1205,8 @@ img {
 
 #file-downloads a,
 #file-downloads-long-tshirt a,
-#file-downloads-crop-tshirt a {
+#file-downloads-crop-tshirt a,
+#file-downloads-long-coat a {
     transition: ease-in 1s all;
     display: none;
     color: var(--mu-slate);
@@ -1235,7 +1232,21 @@ img {
 #file-downloads-crop-tshirt #dl-sleeve-cut-left,
 #file-downloads-crop-tshirt #dl-sleeve-cut-left,
 #file-downloads-crop-tshirt #dl-elb-rot-left,
-#file-downloads-crop-tshirt #dl-elb-rot-right {
+#file-downloads-crop-tshirt #dl-elb-rot-right,
+
+#file-downloads-long-tshirt #dl-tshirt-grid,
+#file-downloads-long-tshirt #dl-neck-round,
+#file-downloads-long-tshirt #dl-sleeve-cut-left,
+#file-downloads-long-tshirt #dl-sleeve-cut-left,
+#file-downloads-long-tshirt #dl-elb-rot-left,
+#file-downloads-long-tshirt #dl-elb-rot-right,
+
+#file-downloads-long-coat #dl-coat-grid,
+#file-downloads-long-coat #dl-neck-collar,
+#file-downloads-long-coat #dl-sleeve-cut-left,
+#file-downloads-long-coat #dl-sleeve-cut-left,
+#file-downloads-long-coat #dl-elb-rot-left,
+#file-downloads-long-coat #dl-elb-rot-right {
     display: inline;
 }
 
@@ -1246,3 +1257,9 @@ img {
 #dl-neck-collar {
     display: flex;
 }
+
+/* #crop-tshirt-downloads,
+#long-tshirt-downloads,
+#coat-downloads {
+
+} */
