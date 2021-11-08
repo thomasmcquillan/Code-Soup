@@ -462,6 +462,10 @@ img {
     align-content: flex-end;
 }
 
+#tshirt-body-wide-hip img {
+    display: flex;
+}
+
 #body-crop-tshirt,
 #body-long-tshirt,
 #body-long-coat {
@@ -1194,16 +1198,19 @@ img {
 #file-downloads,
 #file-downloads-long-tshirt,
 #file-downloads-crop-tshirt {
-    width: 50%;
-    height: 100px;
-    display: inline-block;
-    border: 1px solid orange;  
+    width: 100%;
+    height: 366px;
+    display: flex;
+    padding: 18px 24px;
+    border: 1px solid grey;
+    flex-wrap: no-wrap;
+    padding-bottom: auto;
 }
 
 #file-downloads a,
 #file-downloads-long-tshirt a,
 #file-downloads-crop-tshirt a {
-    /* transition: ease-in 1s all; */
+    transition: ease-in 1s all;
     display: none;
     color: var(--mu-slate);
     text-decoration: none;
@@ -1218,6 +1225,24 @@ img {
     text-decoration: none;
 }
 
-#downloadlist {
+#downloadlist,
+.file-links {
     color: black;
+}
+
+#file-downloads-crop-tshirt #dl-tshirt-grid,
+#file-downloads-crop-tshirt #dl-neck-round,
+#file-downloads-crop-tshirt #dl-sleeve-cut-left,
+#file-downloads-crop-tshirt #dl-sleeve-cut-left,
+#file-downloads-crop-tshirt #dl-elb-rot-left,
+#file-downloads-crop-tshirt #dl-elb-rot-right {
+    display: inline;
+}
+
+#file-downloads-crop-tshirt {
+    flex-direction: column;
+}
+
+#dl-neck-collar {
+    display: flex;
 }

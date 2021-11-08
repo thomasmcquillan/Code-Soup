@@ -10,6 +10,23 @@ const bodyRotateRight = document.getElementById("pattern-body-rotate-right");
 const elbowRotateLeft = document.getElementById("pattern-elbow-rotate-left");
 const elbowRotateRight = document.getElementById("patternelbow-rotate-right");
 
+// Declaring template download anchor links.
+
+const dlCoatGrid = document.getElementById("dl-coat-grid");
+const dlTshirtGrid = document.getElementById("dl-coat-grid");
+const dlSleeveSwapLeft = document.getElementById("dl-sleeve-swap-left");
+const dlSleeveSwapRight = document.getElementById("dl-sleeve-swap-right");
+const dlNeckRound = document.getElementById("dl-neck-round");
+const dlNeckCollar = document.getElementById("dl-neck-collar");
+const dlNeckWide = document.getElementById("dl-neck-wide");
+const dlSleeveCutLeft = document.getElementById("dl-sleeve-cut-left");
+const dlSleeveCutRight = document.getElementById("dl-sleeve-cut-right");
+const dlElbowRotLeft = document.getElementById("dl-elb-rot-left");
+const dlElbowRotRight = document.getElementById("dl-elb-rot-right");
+
+// const dlSleeveSwapLeft = document.getElementById("dl-sleeve-swap-left");
+// const dlSleeveSwapRight = document.getElementById("dl-sleeve-swap-right");
+
 // Declaring constant values for body-length, sleeve-width and sleeve length of supplied pattern options.
 
 const bodyCrop = 50;
@@ -102,23 +119,28 @@ $(document).ready(function () {
             $("#neckline-wide").toggle(); // Toggle on next available neckline tile.
             $(neckCollar).toggle(); // Toggle off div with download for current neckline. 
             $(neckWide).toggle(); // Toggle on div with download for next neckline.
+            $(dlNeckCollar).toggle();
+            $(dlNeckWide).toggle();
         } else if (
             $("#neckline-wide").is(":visible")) {
             $("img:visible", this).toggle();
             $("#neckline-round").toggle();
             $(neckWide).toggle();
             $(neckRound).toggle();
+            $(dlNeckWide).toggle();
+            $(dlNeckRound).toggle();
         } else if (
             $("#neckline-round").is(":visible")) {
             $("img:visible", this).toggle();
             $("#neckline-collar").toggle();
             $(neckRound).toggle();
             $(neckCollar).toggle();
+            $(dlNeckRound).toggle();
+            $(dlNeckCollar).toggle();
         }
         $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
-
 
 $(document).ready(function () {
     $(".sleeve-left").click(function () {
@@ -130,6 +152,8 @@ $(document).ready(function () {
             $(".sleeve-right-wide-long-rotate").toggle();
             $(".pattern-elbow-rotation-left").toggle();
             $(".pattern-elbow-rotation-right").toggle();
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-left-wide-long-rotate").is(":visible")) {
             $("img:visible", this).toggle();
@@ -139,6 +163,8 @@ $(document).ready(function () {
             $(".pattern-elbow-rotation-left").toggle();
             $(".pattern-elbow-rotation-right").toggle();
             currentSleeveLength = sleeveShort;
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-left-wide-short").is(":visible")) {
             $("img:visible", this).toggle();
@@ -147,6 +173,8 @@ $(document).ready(function () {
             $(".sleeve-right-wide-short-rotate").toggle();
             $(".pattern-elbow-rotation-left").toggle();
             $(".pattern-elbow-rotation-right").toggle();
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-left-wide-short-rotate").is(":visible")) {
             $("img:visible", this).toggle();
@@ -165,6 +193,8 @@ $(document).ready(function () {
             $(".pattern-elbow-rotation-left").toggle();
             $(".pattern-elbow-rotation-right").toggle();
             currentSleeveLength = sleeveLong;
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-left-narrow-long").is(":visible")) {            
             $("img:visible", this).toggle();
@@ -182,6 +212,8 @@ $(document).ready(function () {
             $(".pattern-elbow-rotation-left").toggle();
             $(".pattern-elbow-rotation-right").toggle();
             currentSleeveLength = sleeveShort;
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-left-narrow-short").is(":visible")) {
             $("img:visible", this).toggle();
@@ -209,6 +241,8 @@ $(document).ready(function () {
             $(".sleeve-left-wide-long-rotate").toggle();
             $(".pattern-elbow-rotation-right").toggle();
             $(".pattern-elbow-rotation-left").toggle();
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-right-wide-long-rotate").is(":visible")) {
             $("img:visible", this).toggle();
@@ -218,6 +252,8 @@ $(document).ready(function () {
             $(".pattern-elbow-rotation-right").toggle();
             $(".pattern-elbow-rotation-left").toggle();
             currentSleeveLength = sleeveShort;
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-right-wide-short").is(":visible")) {
             $("img:visible", this).toggle();
@@ -226,6 +262,8 @@ $(document).ready(function () {
             $(".sleeve-left-wide-short-rotate").toggle();
             $(".pattern-elbow-rotation-right").toggle();
             $(".pattern-elbow-rotation-left").toggle();
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-right-wide-short-rotate").is(":visible")) {
             $("img:visible", this).toggle();
@@ -244,6 +282,8 @@ $(document).ready(function () {
             $(".pattern-elbow-rotation-right").toggle();
             $(".pattern-elbow-rotation-left").toggle();
             currentSleeveLength = sleeveLong;
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-right-narrow-long").is(":visible")) {            
             $("img:visible", this).toggle();
@@ -261,6 +301,8 @@ $(document).ready(function () {
             $(".pattern-elbow-rotation-right").toggle();
             $(".pattern-elbow-rotation-left").toggle();
             currentSleeveLength = sleeveShort;
+            $(dlElbowRotLeft).toggle();
+            $(dlElbowRotRight).toggle();
         } else if (
             $(".sleeve-right-narrow-short").is(":visible")) {
             $("img:visible", this).toggle();
@@ -362,6 +404,7 @@ $(document).ready(function () {
             $(bodyRotateLeft).toggle();
             $(bodyRotateRight).toggle();
             currentGarmentLength = bodyHip;
+
         } else if (
             $("#tshirt-body-wide-hip").is(":visible")) {
             $("img:visible", this).toggle();
@@ -545,37 +588,15 @@ $(document).ready(function () {
 
 // working on dynamic downloads list for pattern templates:
 
-// let templateDownloads = {
-//     coatgrid: "<a href='https://thomasmcquillan.github.io/MakeUse/assets/downloads/coat-pattern-with-grid.pdf'>TshirtGrid</a>",
-//     tshirtgrid: "<a href='https://thomasmcquillan.github.io/MakeUse/assets/images/pattern-thumbs/pattern-tshirt-grid.png'>CoatGrid</a>",
-//     sleevecutleft: "https://thomasmcquillan.github.io/MakeUse/assets/images/pattern-thumbs/pattern-tshirt-grid.png"
-// };
+// let tempLink;
 
-let tempLink;
+// let dLoadList = document.getElementById('downloadlist');
 
-let dLoadList = document.getElementById('downloadlist');
-
-    const files = document.getElementById('file-downloads');
-    const coatText = "Coat Template Grid";
+//     const files = document.getElementById('file-downloads');
+//     const coatText = "Coat Template Grid";
 
 // $(document).ready(function () {
-
-//     $("#body-crop-tshirt").click(function () {
-//         $("#file-tshirt-grid").show();
-//     });
+//         if ($("tshirt-body-wide-hip").is(':visible')) {
+//             $("#file-tshirt-grid").toggle();
+//         }
 // });
-
-$(document).ready(function () {
-        if ($("tshirt-body-wide-hip").is(':visible')) {
-            $("#file-tshirt-grid").toggle();
-        }
-});
-
-
-
-
-
-
-//     $("#body-crop-tshirt").click(function () {
-//         $("#file-coat-grid").appendTo(files);
-//     });
