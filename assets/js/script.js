@@ -378,16 +378,6 @@ $(document).ready(function () {
     });
 });
 
-// $(document).ready(function () {
-//     $("#body-crop-tshirt").hover(function () {
-//         $("#t-shirt-grid").css("background-color", "var(--mu-sand)");
-//         $("#coat-grid").css("background-color", "var(--mu-sand)");
-//     }, function () {
-//         $("#t-shirt-grid").css("background-color", "var(--mu-silver)");
-//         $("#coat-grid").css("background-color", "var(--mu-silver)");
-//     });
-// });
-
 $(document).ready(function () {
     $(".sleeve-regular").hover(function () {
         $("#sleeve-cut-right").css("background-color", "var(--mu-sand)");
