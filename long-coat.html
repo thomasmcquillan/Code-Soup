@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <!-- display settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <!-- theme colors - light & dark -->
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffd066">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4a494a">
@@ -29,12 +28,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Local Javascript -->
     <script src="assets/js/script.js" defer></script>
-    <!-- emailJS script -->
+    <!-- emailJS script - specific to Coat Page, for sending instructions to user -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
             emailjs.init("user_wMriEHAEyY3weYxVF1Sjw");
-        })();
+                window.onload = function() {
+                    document.getElementById('contact-form-coat').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    emailjs.send("makeuse", "coat-instructions", {
+                        "from_name": contactFormCoat.from_name.value,
+                        "from_email": contactFormCoat.from_email.value})
+                    .then (    
+                        function(response)
+                            {console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);});return false;});}})();
     </script>
     <!-- Page title -->
     <title>MakeUse | Long Coat</title>
