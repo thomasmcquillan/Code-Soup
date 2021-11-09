@@ -6,6 +6,7 @@
 
 :root {
     --mu-silver: #d7d7d7;
+    --mu-lightsilver: #f5f3f3;
     --mu-slate: #4a494a;
     --mu-sand: #b7b3a7;
     --mu-orange: #d46300;
@@ -166,6 +167,11 @@ h5 {
     text-transform: uppercase;
 }
 
+.navbar .nav-item a, a {
+    font-weight: 700;
+    font-size: 14px;
+}    
+
 .intro-sub {
     line-height: 2.6rem;
 }
@@ -173,7 +179,7 @@ h5 {
 .mu-footer p,
 .mu-footer-cc a {
     font-size: 11px;
-    color: #fffefe;
+    color: var(--mu-white);
 }
 
 /* \\---  Header & Navigation  ---// */
@@ -246,7 +252,7 @@ nav .navbar .navbar-custom {
 }
 
 .tri-divider {
-    color: #ffb100;
+    color: var(--mu-gold);
     font-size: 13px;
     padding-right: 8px;
 }
@@ -256,12 +262,10 @@ nav .navbar .navbar-custom {
 .navbar .nav-item a,
 a {
     text-decoration: none;
-    background-color: transparent;
+    background: none;
     cursor: pointer;
     transition: color .2s ease-in-out;
-    font-weight: 700;
     color: var(--mu-white);
-    font-size: 14px;
 }
 
 /* \\---  Landing Page  ---/////////////////////////// */
@@ -426,6 +430,14 @@ img {
 
 .garment-tile {
     z-index: 100;
+    /* filter: saturate(130%) hue-rotate(114deg) brightness(44%); */
+    /* filter: invert(33) saturate(20%) opacity(66); */
+    /* filter: saturate(55%) opacity(66); */
+}
+
+.maker-bg {
+    /* background-color: var(--mu-sand);
+    background-color: rgba(0, 0, 0, 0.88); */
 }
 
 .garment-grid img {
@@ -458,7 +470,6 @@ img {
     grid-row: 2 / 3;
     overflow: auto;
     align-content:flex-start;
-
 }
 
 #sleeve-left-crop-tshirt,
@@ -565,7 +576,7 @@ input {
     border: none;
     text-align: center;
     border-radius: 3px;
-    background-color: #f5f3f3;
+    background-color: var(--mu-lightsilver);
     place-content: end;
 }
 
@@ -594,7 +605,7 @@ input {
 #alert-input-error p {
     font-size: .9rem;
     margin: auto 3rem;
-    color: #4a494a;
+    color: var(--mu-dark);
 }
 
 #input-error-button {
@@ -616,7 +627,7 @@ input {
     justify-content: center;
     align-self: center;
     font-weight: 400;
-    background-color: #e6e6e6;
+    background-color:var(--mu-white);
     margin-bottom: 34px;
     padding: .2rem 1rem;
     border-radius: 4px;
@@ -961,40 +972,6 @@ img {
     height: 100px;
 }
 
-/* .downloadwrapper-test {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row-start: 1;
-    align-items: flex-end;
-    width: 100%;
-    background-color: rgba(212, 212, 212, 0.444);
-    margin-bottom: clamp(1px, .28rem, 5px);
-    align-items: center;
-    justify-items: center;
-} */
-
-/* --------------maker page grid ------------- */
-
-/* .maker-grid-outer-wrapper {
-    display: grid;
-    grid-template-rows: minmax(10px, 2fr) minmax(20px, 4fr), minmax(10px, 2fr);
-    grid-template-columns: minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr);
-}
-
-.maker-garment-grid {
-    grid-column: 1 / 4;
-    grid-row: 1 / 3;
-    overflow: hidden;
-    grid-template-rows: minmax(10px, 2fr) minmax(20px, 4fr);
-    grid-template-columns: minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr);
-} */
-
-/* #long-coat-maker {
-    height: 100vh;
-    background-color: var(--mu-silver);
-} */
-
 #file-downloads a,
 #file-downloads-long-tshirt a,
 #file-downloads-crop-tshirt a,
@@ -1006,7 +983,9 @@ img {
     font-weight: 400;
 }
 
-#grid-long-coat .tile-on, #grid-crop-tshirt .tile-on, #grid-long-tshirt .tile-on {
+#grid-long-coat .tile-on,
+#grid-crop-tshirt .tile-on, 
+#grid-long-tshirt .tile-on {
     display: grid;
     place-items: end;
 }
@@ -1015,8 +994,6 @@ img {
 #file-downloads-long-tshirt,
 #file-downloads-crop-tshirt,
 #file-downloads-long-coat {
-    /* height: 180px; */
-    /* padding: 18px 24px; */
     padding-bottom: 18px;
     padding-bottom: auto;
     display: grid;
@@ -1080,12 +1057,9 @@ img {
     opacity: 77%;
 }
 
-/* #crop-tshirt-downloads a,
-#long-tshirt-downloads a,
-#coat-downloads a {
-    color: var(--mu-slate);
-    text-decoration: none;
-} */
+#crop-tshirt-downloads {
+    justify-content: center;
+}
 
 #file-downloads, 
 #file-downloads-long-tshirt, 
@@ -1099,12 +1073,6 @@ img {
     align-content: start;
     justify-items: start;
     align-items: start;
-}
-
-/* #makeuse-cropped-tshirt */
-
-.maker-bg {
-    background-color: rgba(235, 235, 235, 0.562);
 }
 
 #crop-tshirt-downloads a, #long-tshirt-downloads a, #coat-downloads > a {

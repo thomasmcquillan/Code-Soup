@@ -33,22 +33,22 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <!-- emailJS custom script to fetch tshirt instructions -->
     <script type="text/javascript">
-    (function(){
-        emailjs.init("user_wMriEHAEyY3weYxVF1Sjw");
-            window.onload = function() {
-                document.getElementById('contact-form-tshirt').addEventListener('submit', function(event) {
-                event.preventDefault();
-                emailjs.send("makeuse", "tshirt-instructions", {
-                    "from_name": contactFormTshirt.from_name.value,
-                    "from_email": contactFormTshirt.from_email.value})
-                .then (    
-                    function(response)
-                        {console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);});return false;});}})();
-    </script>
+        (function(){
+            emailjs.init("user_wMriEHAEyY3weYxVF1Sjw");
+                window.onload = function() {
+                    document.getElementById('contact-form-tshirt').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    emailjs.send("makeuse", "tshirt-instructions", {
+                        "from_name": contactFormTshirt.from_name.value,
+                        "from_email": contactFormTshirt.from_email.value})
+                    .then (    
+                        function(response)
+                            {console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);});return false;});}})();
+        </script>
     <!-- Page title -->
-    <title>MakeUse 'Maker' | Crop T shirt</title>
+    <title>MakeUse | Long Coat</title>
 </head>
 
 <header id="makeuseheader" class="container-fluid">
@@ -80,24 +80,24 @@
 
 <div>
     <nav class="container-fluid quick-nav">
-        <a href="index.html" class="nav-item" target="_blank" rel="noopener"
+        <a href="https://makeuse.nz/make/" class="nav-item" target="_blank" rel="noopener"
             rel="noreferrer">Home</a>
         <span class="tri-divider">◢</span>
-        <a href="make.html" class="nav-item">Make</a>
+        <a href="index.html" class="nav-item">Make</a>
         <span class="tri-divider">◢</span>
-        <a href="cropped-tshirt-maker.html" class="nav-item">Cropped Tshirt</a>
+        <a href="makeuse-coat.html" class="nav-item">Long Coat</a>
     </nav>
 </div>
 
 <body class="maker-bg">
 
-    <main id="makeuse-cropped-tshirt" class="container-lg">
-        
-        <section id="garment-grid-crop-tshirt" class="row my-3">
-                
+    <main id="makeuse-long-coat" class="container-lg">
+
+        <section id="garment-grid-long-tshirt" class="row my-3">
+
             <div class="grid-outer-wrapper col-10 mx-auto">
-        
-                <div id="grid-crop-tshirt" class="garment-grid">
+
+                <div id="grid-long-tshirt" class="garment-grid">
 
                     <div class="neck-tile garment-tile">
 
@@ -113,16 +113,7 @@
                             alt="Tshirt in 'wide' neckline style">
                     </div>
 
-                    <div id="body-crop-tshirt" class="garment-tile body-tile">
-                        <img id="tshirt-body-wide-crop-rotate" class="tile-on"
-                            src="assets/images/grid-tiles/body-tiles/tshirt-body-wide-crop-rotate@3x.png"
-                            alt="Tshirt garment-body in 'wide/cropped' style with rotation"
-                            class="body-rotate">
-
-                        <img id="tshirt-body-wide-crop"
-                            src="assets/images/grid-tiles/body-tiles/tshirt-body-wide-crop@3x.png"
-                            alt="Tshirt garment-body in 'wide/cropped' style"
-                            class="body-straight">
+                    <div id="body-long-tshirt" class="garment-tile">
 
                         <img id="tshirt-body-wide-hip-rotate"
                             src="assets/images/grid-tiles/body-tiles/tshirt-body-wide-hip-rotate@3x.png"
@@ -133,15 +124,19 @@
                             src="assets/images/grid-tiles/body-tiles/tshirt-body-wide-hip@3x.png"
                             alt="Tshirt garment-body in 'wide/hip' style"
                             class="body-straight">
-                        <img id="tshirt-body-narrow-crop-rotate"
-                            src="assets/images/grid-tiles/body-tiles/tshirt-body-narrow-crop-rotate@3x.png"
-                            alt="Tshirt garment-body in 'narrow/cropped' style with rotation"
-                            class="body-rotate">
 
-                        <img id="tshirt-body-narrow-crop"
-                            src="assets/images/grid-tiles/body-tiles/tshirt-body-narrow-crop@3x.png"
-                            alt="Tshirt garment-body in 'narrow/cropped' style"
+                        <img id="tshirt-body-wide-long"
+                            src="assets/images/grid-tiles/body-tiles/tshirt-body-wide-long@3x.png"
+                            alt="Tshirt garment-body in 'wide/long' style"
                             class="body-straight">
+
+                        <img id="tshirt-body-wide-long-rotate" class="tile-on body-rotate"
+                            src="assets/images/grid-tiles/body-tiles/tshirt-body-wide-long-rotate@3x.png"
+                            alt="Tshirt garment-body in 'wide/long' style">
+                        
+                    <!-- </div>
+                    <div id="body-long-tshirt-narrow" class="garment-tile"> -->
+
                         <img id="tshirt-body-narrow-hip-rotate"
                             src="assets/images/grid-tiles/body-tiles/tshirt-body-narrow-hip-rotate@3x.png"
                             alt="Tshirt garment-body in 'narrow/hip' style with rotation"
@@ -149,88 +144,96 @@
 
                         <img id="tshirt-body-narrow-hip"
                             src="assets/images/grid-tiles/body-tiles/tshirt-body-narrow-hip@3x.png"
-                            alt="Tshirt garment-body in 'narrow/hip' style."
+                            alt="Tshirt garment-body in 'narrow/hip' style"
                             class="body-straight">
+
+                        <img id="tshirt-body-narrow-long"
+                            src="assets/images/grid-tiles/body-tiles/tshirt-body-narrow-long@3x.png"
+                            alt="Tshirt garment-body in 'narrow/long' style"
+                            class="body-straight">
+
+                        <img id="tshirt-body-narrow-long-rotate"
+                            src="assets/images/grid-tiles/body-tiles/tshirt-body-narrow-long-rotate@3x.png"
+                            alt="Tshirt garment-body in 'narrow/long' style with rotation"
+                            class="body-rotate">
                     </div>
 
-                    <div id="sleeve-left-crop-tshirt" class="garment-tile sleeve-left">
-
-                        <img class="sleeve-left-wide-short-rotate sleeve-rotate tile-on"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-short-rotate@3x.png"
-                            alt="Left-sleeve in 'wide/short' style with rotation">
-
-                        <img class="sleeve-left-wide-short sleeve-regular"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-short-@3x.png"
-                            alt="Left-sleeve in 'wide/short' style">
-
-                        <img class="sleeve-left-wide-long-rotate sleeve-rotate"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-long-rotate@3x.png"
-                            alt="Left-sleeve in 'wide/long' style with rotation">
+                    <div id="sleeve-left-long-tshirt" class="garment-tile sleeve-left">
 
                         <img class="sleeve-left-wide-long sleeve-regular"
                             src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-long@3x.png"
                             alt="Left-sleeve in 'wide/long' style">
 
-                        <img class="sleeve-left-narrow-long-rotate sleeve-rotate"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-long-rotate@3x.png"
-                            alt="Left-sleeve in 'narrow/long' style with rotation">
+                        <img class="sleeve-left-wide-long-rotate tile-on sleeve-rotate"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-long-rotate@3x.png"
+                            alt="Left-sleeve in 'wide/long' style with rotation">
+
+                        <img class="sleeve-left-wide-short sleeve-regular"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-short-@3x.png"
+                            alt="Left-sleeve in 'wide/short' style">
+
+                        <img class="sleeve-left-wide-short-rotate sleeve-rotate"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-short-rotate@3x.png"
+                            alt="Left-sleeve in 'wide/short' style with rotation">
 
                         <img class="sleeve-left-narrow-long sleeve-regular"
                             src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-long@3x.png"
                             alt="Left-sleeve in 'narrow/long' style">
 
-                        <img class="sleeve-left-narrow-short-rotate sleeve-rotate"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-short-rotate@3x.png"
-                            alt="Left-sleeve in 'narrow/short' style with rotation">
+                        <img class="sleeve-left-narrow-long-rotate sleeve-rotate"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-long-rotate@3x.png"
+                            alt="Left-sleeve in 'narrow/long' style with rotation">
 
                         <img class="sleeve-left-narrow-short sleeve-regular"
                             src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-short@3x.png"
                             alt="Left-sleeve in 'narrow/short' style">
+
+                        <img class="sleeve-left-narrow-short-rotate sleeve-rotate"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-short-rotate@3x.png"
+                            alt="Left-sleeve in 'narrow/short' style with rotation">
                     </div>
-
-                    <div id="sleeve-right-crop-tshirt" class="garment-tile sleeve-right">
-
-                        <img class="sleeve-right-wide-short-rotate sleeve-rotate tile-on"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short-rotate@3x.png"
-                            alt="right-sleeve in 'wide/short' style with rotation">
-
-                        <img class="sleeve-right-wide-short sleeve-regular"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short@3x.png"
-                            alt="right-sleeve in 'wide/short' style">
-
-                        <img class="sleeve-right-wide-long-rotate sleeve-rotate"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-long-rotate@3x.png"
-                            alt="right-sleeve in 'wide/long' style with rotation">
+                    <div id="sleeve-right-long-tshirt" class="garment-tile sleeve-right">
 
                         <img class="sleeve-right-wide-long sleeve-regular"
                             src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-long@3x.png"
                             alt="right-sleeve in 'wide/long' style">
 
-                        <img class="sleeve-right-narrow-long-rotate sleeve-rotate"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-long-rotate@3x.png"
-                            alt="right-sleeve in 'narrow/long' style with rotation">
+                        <img class="sleeve-right-wide-long-rotate tile-on sleeve-rotate"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-long-rotate@3x.png"
+                            alt="right-sleeve in 'wide/long' style with rotation">
+
+                        <img class="sleeve-right-wide-short sleeve-regular"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short@3x.png"
+                            alt="right-sleeve in 'wide/short' style">
+
+                        <img class="sleeve-right-wide-short-rotate sleeve-rotate"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-short-rotate@3x.png"
+                            alt="right-sleeve in 'wide/short' style with rotation">
 
                         <img class="sleeve-right-narrow-long sleeve-regular"
                             src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-long@3x.png"
                             alt="right-sleeve in 'narrow/long' style">
 
-                        <img class="sleeve-right-narrow-short-rotate sleeve-rotate"
-                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-short-rotate@3x.png"
-                            alt="right-sleeve in 'narrow/short' style with rotation">
+                        <img class="sleeve-right-narrow-long-rotate sleeve-rotate"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-long-rotate@3x.png"
+                            alt="right-sleeve in 'narrow/long' style with rotation">
 
                         <img class="sleeve-right-narrow-short sleeve-regular"
                             src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-short@3x.png"
                             alt="right-sleeve in 'narrow/short' style">
+
+                        <img class="sleeve-right-narrow-short-rotate sleeve-rotate"
+                            src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-narrow-short-rotate@3x.png"
+                            alt="right-sleeve in 'narrow/short' style with rotation">
                     </div>
                 </div>
             </div>
-
         </section>
 
         <section class="thumb-wrapper row">
 
-            <div class="downloadwrapper-test col-10 mx-auto">
-
+            <div class="downloadwrapper-test col-11 col-md-8 mx-auto">
+        
                 <div class="pattern-tshirt-grid pattern-thumb tile-on">
                     <a href="assets/downloads/tshirt-pattern-with-grid.pdf" target="_blank">
                         <span><img id="tshirt-grid" class="pattern-thumb tile-on"
@@ -267,18 +270,18 @@
                     <a href="assets/downloads/print-template-sleeve-cut-left.pdf" target="_blank">
                         <span><img id="sleeve-cut-left" class="pattern-thumb tile-on"
                                 src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png"
-                                alt="Make/Use template pattern for left-sleeve of Tshirt."></span>
+                                alt="Make/Use template pattern for left-sleeve of Long Coat."></span>
                     </a>
                 </div>
-
+                
                 <div class="pattern-sleeve-cut-right pattern-thumb tile-on">
                     <a href="assets/downloads/print-template-sleeve-cut-right.pdf" target="_blank">
                         <span><img id="sleeve-cut-right" class="pattern-thumb tile-on"
                                 src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png"
-                                alt="Make/Use template pattern for right-sleeve of Tshirt."></span>
+                                alt="Make/Use template pattern for right-sleeve of Long Coat."></span>
                     </a>
                 </div>
-
+                
                 <div class="pattern-body-rotation-left pattern-thumb tile-on">
                     <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" target="_blank">
                         <span><img id="body-rotate-left" class="pattern-thumb tile-on"
@@ -286,7 +289,7 @@
                                 alt="Make/Use template pattern for body rotation and sleeve swap modification - LEFT."></span>
                     </a>
                 </div>
-
+                    
                 <div class="pattern-body-rotation-right pattern-thumb tile-on">
                     <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" target="_blank">
                         <span><img id="body-rotate-right" class="pattern-thumb tile-on"
@@ -310,11 +313,14 @@
                                 alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
                     </a>
                 </div>
+
             </div>
         </section>
 
         <section class="sizing-info">
+
             <div class="col-10 mx-auto">
+
                 <table class="table-borderless mx-auto my-2">
                     <tbody>
                         <tr>
@@ -349,22 +355,22 @@
                         </div>
                     </div>
                 </div>
-                <input type="button" id="input-error-button" class="d-none" />
+                <input type="button" id="input-error-button" class="d-none"/>
             </div>
         </section>
 
-        <section id="crop-tshirt-downloads" class="row my-3 mx-auto pb-2">
+        <section id="coat-downloads" class="row my-3 mx-auto pb-2">
 
             <div class="d-block col-10 col-md-5">
 
                 <strong class="mx-1 pb-3">
                     Template Downloads</strong>
-                
-                <div id="file-downloads-crop-tshirt" class="mx-1 pt-4">
+               
+                <div id="long-tshirt-downloads" class="mx-1 pt-4">
                     <a href="assets/downloads/tshirt-pattern-with-grid.pdf" id="dl-tshirt-grid" title="Download Template" download="tshirt-grid">Tshirt Grid</a>
                     <a href="assets/downloads/print-template-neckline-round.pdf" id="dl-neck-round" title="Download Template" download="round_neckline_template.pdf">Round Neckline</a>
                     <a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Collar Neckline</a>
-                    <a href="assets/downloads/print-template-neckline-wide.pdf" id="dl-neck-wide" title="Download Template" download="wide_neckline_template.pdf">Wide Neckline</a>
+                    <a href="assets/downloads/print-template-neckline-wide.pdf" id="dl-neck-wide" title="Download Template" download="wide_neckline_template.pdf">Template download - Wide Neckline</a>
                     <a href="assets/downloads/print-template-sleeve-cut-left.pdf" id="dl-sleeve-cut-left" title="Download Template" download="sleeve_cut_left_template.pdf">Sleeve Cut - Left</a>
                     <a href="assets/downloads/print-template-sleeve-cut-right.pdf" id="dl-sleeve-cut-right" title="Download Template" download="sleeve_cut_right_template.pdf">Sleeve Cut - Right</a>
                     <a href="assets/downloads/print-template-elbow-rotation-left.pdf" id="dl-elb-rot-left" title="Download Template" download="elbow_rotation_left_template.pdf">Elbow Rotation - Left</a>
@@ -373,18 +379,18 @@
                     <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Body Rotation & Sleeve Swap - Right</a>
                 </div>
             </div>
-
+                
             <div class="col-10 col-md-5 mt-2">
                 <p class="px-2">
-                    To receive tshirt template instructions please enter your email address.
+                    To receive coat template instructions please enter your email address.
                 </p>
-
+           
                 <form id="contact-form-tshirt" class="pt-4">
                     <div class="field">
-                        <input type="text" name="from_name" class="form-control" id="from_name" placeholder="Your Name" required/>
+                        <input type="text" name="from_name" class="form-control" id="from_name" placeholder="name" required/>
                     </div>
                     <div class="field">
-                        <input type="email" name="from_email" class="form-control" id="from_email" placeholder="Your email" required/>
+                        <input type="email" name="from_email" class="form-control" id="from_email" placeholder="email" required/>
                     </div>
                     <div class="field">
                         <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
@@ -393,7 +399,7 @@
             </div>
             
         </section>
-    
+
     </main>
 
     <!---- jquery script ---->
