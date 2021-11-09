@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <!-- display settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- theme colors - light & dark -->
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffd066">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4a494a">
@@ -23,11 +24,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css"/>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Local Javascript -->
     <script src="assets/js/script.js" defer></script>
+    <!-- emailJS script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <!-- emailJS custom script to fetch coat instructions -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -46,229 +49,59 @@
                             console.log('FAILED...', error);});return false;});}})();
     </script>
     <!-- Page title -->
-    <title>MakeUse | Long Coat</title>
+    <title>MakeUse-Maker | Long Coat</title>
 </head>
 
-<body>
+<header id="makeuseheader" class="container-fluid">
+    <nav class="navbar navbar-custom">
+        <a class="navbar-brand" href="https://makeuse.nz/" target="_blank" rel="noopener" rel="noreferrer">
+            <span id="logo-span" class="navbar-brand">
+                <img    id="makeuse-logo"
+                        src="assets/images/makeuse-logo.png"
+                        alt="Make/Use Home">
 
-    <header id="makeuseheader" class="container-fluid">
-        <nav class="navbar navbar-custom">
-            <a class="navbar-brand" href="https://makeuse.nz/" target="_blank" rel="noopener" rel="noreferrer">
-                <span id="logo-span" class="navbar-brand">
-                    <img    id="makeuse-logo"
-                            src="assets/images/makeuse-logo.png"
-                            alt="Make/Use Home">
+                <img    id="logo-hover"
+                        src="assets/images/makeuse-logo-hover.png" 
+                        alt="Make/Use Home">
+            </span>
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" target="_blank" rel="noopener" rel="noreferrer">make</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html" target="_blank" rel="noopener" rel="noreferrer">about</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html" target="_blank" rel="noopener"rel="noreferrer">articles</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-                    <img    id="logo-hover"
-                            src="assets/images/makeuse-logo-hover.png" 
-                            alt="Make/Use Home">
-                </span>
-            </a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html" target="_blank" rel="noopener" rel="noreferrer">make</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html" target="_blank" rel="noopener" rel="noreferrer">about</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html" target="_blank" rel="noopener"rel="noreferrer">articles</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<div>
+    <nav class="container-fluid quick-nav">
+        <a href="https://makeuse.nz/make/" class="nav-item" target="_blank" rel="noopener"
+            rel="noreferrer">Home</a>
+        <span class="tri-divider">◢</span>
+        <a href="index.html" class="nav-item">Make</a>
+        <span class="tri-divider">◢</span>
+        <a href="makeuse-coat.html" class="nav-item">Long Coat</a>
+    </nav>
+</div>
 
-    <div>
-        <nav class="container-fluid quick-nav">
-            <a href="https://makeuse.nz/make/" class="nav-item" target="_blank" rel="noopener"
-                rel="noreferrer">Home</a>
-            <span class="tri-divider">◢</span>
-            <a href="index.html" class="nav-item">Make</a>
-            <span class="tri-divider">◢</span>
-            <a href="makeuse-coat.html" class="nav-item">Long Coat</a>
-        </nav>
-    </div>
+<body class="maker-bg">
 
-    <main id="makeuse-the-long-coat" class="container-lg">
-
-        <section id="long-coat-intro" class="row">
-
-            <div class="col-11 mx-3">
-                <h2>
-                    Long Coat</h2>  
-                <h3>
-                    The Long Coat is based on the same pattern as both the Cropped Tshirt and the Long Tshirt. 
-                    The only deviation is collar/neckline selection. Once you understand the Tshirt, this coat is easy!
-                </h3>
-            </div>
-
-            <div class="col-11 col-md-6 mx-3">
-                <h4>
-                    Considerations</h4>
-                <p>
-                    The width of the cloth is approximately the circumference of the garment around the body.
-                    If you want a more voluminous form or are a larger size go for a wider cloth, likewise with
-                    you want a more fitted silhouette.</p>
-                <h4>
-                    Recommendations</h4>
-                <p>
-                    The drape or stiffness of the cloth will alter dramatically the final look of the garment. 
-                    You can use a softer cloth such as a silk twill to achieve a fluid drapey look, similar to 
-                    a kimono, or use a firmer fabric such as a heavy linen or wool.
-                </p><br>
-                <div class="d-none d-md-inline mx-3">
-                    <caption>
-                        The image to the right shows a 3D render of the Make/Use Long Coat, created in Clo3D. Click on 
-                        the image to explore an interactive 3D model of the coat and even experience it in your environment 
-                        it in augmented reality. (viewing in AR requires a smartphone)
-                    </caption>
-                </div>
-            </div>
-
-            <div class="d-flex d-md-none col-11 mx-3 my-3">
-                <caption>
-                        The image below shows a 3D render of the Make/Use Long Coat, created in Clo3D. Click on 
-                        the image to explore an interactive 3D model of the Long Coat and even experience it in your environment 
-                        it in augmented reality.  (viewing in AR requires a smartphone)
-                </caption>
-            </div>
-
-            <div class="img-3d-render col-10 col-md-5 my-3">
-                <a href="https://embed.vntana.com?productUuid=4b670890-821a-400a-b5a9-71a998c0b6f9&clientSlug=phd&organizationSlug=holly-mcquillan"
-                    target="_blank" rel="noopener" rel="noreferrer">
-                    <span class="three-d-hover">
-                        <img    src="assets/images/intro-coat-3d.png"
-                                class="img-fluid"
-                                alt="3d-rendered model of the Make/Use Long Coat">
-                    </span>
-                </a>
-            </div>
-        </section>
-
-        <section id="methods-md-xl-viewports" class="d-none d-md-flex my-2 row">
-            <div class="col-11 mx-3">
-                <h3>
-                    Making the Long Coat</h3>
-                <h4>
-                    There are two methods for making the Make/Use Long Coat - Pattern or Template
-                </h4>
-            </div>
-
-            <div class="coat-cards">
-                <div class="card col-6">
-                    <div class="image">
-                        <img    src="assets/images/cards/card-coat-pattern-lighter.png" 
-                                class="card-img"
-                                alt="Make Use Long Coat sewing pattern"/>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-header my-2">
-                            <h4>Pattern</h4>
-                        </div>
-                        <div>
-                            <p> Simple line diagram to print onto paper at full scale – the closest to using a
-                                traditional dressmaking pattern. Good if you have fabric at the exact width or know 
-                                how to use software to change the pattern to fit. Available as ai file (Adobe 
-                                illustrator/Inkscape for modifications), or pdf. Print tiled and stick
-                                together, or take to a large format printer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card col-6">
-                    <div class="image">
-                        <img    src="assets/images/cards/card-pattern-coat.png"
-                                class="card-img"
-                                alt="Pattern template for the Make/Use Long Coat"/>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-header my-2">
-                            <h4>Template</h4>
-                        </div>
-                        <div>
-                            <p> 
-                                Lasercut templates printed onto rigid paper or card that allow a maker to draw required
-                                patterns onto fabric. This is a modular system that enables a Make/Use garment to be made 
-                                from any width fabric. Low cost if using printed method, great for students of all ages 
-                                and home sewers.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main id="makeuse-long-coat" class="container-lg">
         
-        <section class="methods-mobile-viewports my-3 row d-md-none">
-            <div class="col-11 col-md-7 mx-3">
-                <h3>
-                    Making the Long Coat</h3>
-                <h4>
-                    There are three methods of using the Make/Use system - Pattern, Print or Template
-                </h4>
+        <section id="garment-grid-coat" class="row my-3">
 
-                <img    src="assets/images/cards/card-coat-pattern-lighter.png"
-                        class="card-img-mobile py-3" 
-                        alt="Digital fabric print of the Make/Use Long Coat"/>
-                
-                <h4>Pattern</h4>
-                <p>
-                    Simple line diagram to print onto paper at full scale – the closest to using a traditional dressmaking
-                    pattern. Good if you have fabric at the exact width or know how to use software to change the pattern to
-                    fit. Available as ai file (Adobe illustrator/Inkscape for modifications), or pdf. Print tiled and stick
-                    together, or take to a large format printer.
-                <em>
-                    The Long Coat does not have a print file provided, but you could make your own.</em>
-                </p>
-           
-                <img class="card-img py-4" src="assets/images/cards/card-pattern-coat.png"
-                        alt="Pattern template for the Make/Use Long Coat" />
+            <div class="grid-outer-wrapper col-10 mx-auto">
 
-                <h4>Templates</h4>
-                <p>
-                    Lasercut templates printed onto rigid paper or card that allow a maker to draw required patterns onto fabric.
-                    This is a modular system that enables a Make/Use garment to be made from any width fabric. Low cost if using
-                    printed method, great for students of all ages and home sewers.
-                </p>
-            </div>
-        </section>
-
-        <section id="coat-from-templates" class="row">
-            <div class="col-11 mx-3 my-3">
-                <h3>
-                    Making the Long Coat using Templates
-                </h3>
-                <h4>
-                    You will need a fabric of your choice, approximately 140cm long. A4/A3 printer or Lasercutter, 
-                    Paper or card for making templates.
-                </h4>
-            </div>
-            <div class="col-11 col-md-10 mx-3">
-                <p>
-                    Each Make/Use garment made in this method is unique to both the fabric and the user. The length of a
-                    Make/Use Long Coat can be altered to suit an individual's height or taste; a favourite fabric can be
-                    used to make the Long Coat and drastically alter its appearance; new iterations can be created by 
-                    combining templates in ways dreamt up by the maker/user. The possibilities are literally endless.
-                </p>
-            </div>
-
-            <div class="col-11 col-md-10 mx-3 my-4">
-                <p>
-                    The Make/Use Long Coat has just the one neckline but is still highly modifiable, with a large
-                    selection of sleeve and body styles to choose from. To preview the options, click on the body 
-                    and sleeve tiles. Your selections will be used to update garment sizing and let you know the 
-                    amount of fabric required.
-                    <br>
-                    <br>
-                    Selecting new styles will also filter the patterns needed for your chosen garment. Hover over
-                    pattern template thumbnails for a larger preview. Once settled on a style, click on the link 
-                    provided to download the required pattern template files.
-                </p>
-            </div>
-        </section>
-        
-        <section id="garment-grid-coat" class="row my-4">
-            <div class="grid-outer-wrapper col-11 col-md-8 mx-auto">
                 <div id="grid-long-coat" class="garment-grid">
 
                     <div id="neck-tile-coat" class="garment-tile">
+
                         <img id="neckline-round" class="tile-on"
                             src="assets/images/grid-tiles/neckline-tiles/coat-neck-collar@3x.png"
                             alt="Coat neckline collar">
@@ -473,37 +306,36 @@
         </section>
 
         <section class="sizing-info">
-            <div class="col-11 col-md-9 mx-auto">
-                <table class="table-borderless table-responsive mx-auto">
+            <div class="col-10 mx-auto">
+                <table class="table-borderless mx-auto my-2">
                     <tbody>
                         <tr>
+                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
                             <td data-title="Garment Circum."><span id="garment-circum">110cm</span></td>
                             <td data-title="Garment length"><span id="garment-length">50cm</span></td>
                             <td data-title="Sleeve Circum."><span id="sleeve-circum">50cm</span></td>
                         </tr>
-                        <tr><td></td></tr>
+                    </tbody>
+                </table>
+                <table class="table-borderless mx-auto">
                         <tr>
-                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
-                        </tr>
-                        <tr><td></td></tr>
-                        <tr>
-                            <td><input id="custom-garment-circum" type="number" placeholder="____________cm">
-                            </td>
-                            <td><input id="custom-garment-length" type="number" placeholder="____________cm">
-                            </td>
-                            <td><input id="custom-sleeve-circum" type="number" placeholder="____________cm">
-                            </td>
+                            <th scope="row" class="custom-input-info" text-align="center" width="100%">
+                                Or enter custom values below in 'cm' to calculate your fabric needs.</th>
                         </tr>
                         <tr>
-                            <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter
-                                custom values to calculate your fabric needs.</th>
+                            <td data-title="Garment Circum."><input id="custom-garment-circum" type="number" placeholder=".................cm"></td>
+                            <td data-title="Garment length"><input id="custom-garment-length" type="number" placeholder=".................cm"></td>
+                            <td data-title="Sleeve Length"><input id="custom-sleeve-circum" type="number" placeholder=".................cm"></td>
+                        </tr>
+                        <tr>
+                            <th class="fabric-size"></th>
                         </tr>
                     </tbody>
                 </table>
                 <div class="alert-wrapper">
                     <div id="alert-input-error">
                         <div id="alert-user">
-                            <p>Please enter a positive value in 'cm' to determine your fabric needs.
+                            <p>Please enter a valid number in cm to determine your fabric needs.
                             </p>
                             <button class="okay">OK</button>
                         </div>
@@ -513,8 +345,12 @@
             </div>
         </section>
 
-        <section id="coat-downloads" class="row">
-            <div id="file-downloads-long-coat" class="col-6 mx-auto">
+        <section id="coat-downloads" class="row my-3 pb-2">
+            <!-- <div id="file-downloads-long-coat" class="col-6 mx-auto"> -->
+            <div class="col-10 mx-auto">
+                <h4 class="my-2">Template Downloads</h4>
+            </div>
+            <div id="file-downloads-long-coat" class="col-10 mx-auto"></div>
                 <div><a href="assets/downloads/coat-pattern-with-grid.pdf" id="dl-coat-grid" title="Download Template" download="coat_grid_template.pdf">Coat Grid</a></div>
                 <div><a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Body Rotation & Sleeve Swap - Left</a></div>
                 <div><a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Body Rotation & Sleeve Swap - Right</a></div>
@@ -524,13 +360,78 @@
                 <div><a href="assets/downloads/print-template-elbow-rotation-left.pdf" id="dl-elb-rot-left" title="Download Template" download="elbow_rotation_left_template.pdf">Elbow Rotation - Left</a></div>
                 <div><a href="assets/downloads/print-template-elbow-rotation-right.pdf" id="dl-elb-rot-right" title="Download Template" download="elbow_rotation_right_template.pdf">Elbow Rotation - Right</a></div>
             </div>
+            <div class="col-10 mx-auto">
+                <p>When you are happy with your garment style, simply click on the links above to download the required templates.</p>
+            </div>
         </section>
+        <!-- <section class="sizing-info">
+            <div class="col-10 mx-auto">
+                <table class="table-borderless mx-auto my-2">
+                    <tbody>
+                        <tr>
+                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
+                            <td data-title="Garment Circum."><span id="garment-circum">110cm</span></td>
+                            <td data-title="Garment length"><span id="garment-length">50cm</span></td>
+                            <td data-title="Sleeve Circum."><span id="sleeve-circum">50cm</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table-borderless mx-auto">
+                        <tr>
+                            <th scope="row" class="custom-input-info" text-align="center" width="100%">
+                                Or enter custom values below in 'cm' to calculate your fabric needs.</th>
+                        </tr>
+                        <tr>
+                            <td data-title="Garment Circum."><input id="custom-garment-circum" type="number" placeholder=".................cm"></td>
+                            <td data-title="Garment length"><input id="custom-garment-length" type="number" placeholder=".................cm"></td>
+                            <td data-title="Sleeve Length"><input id="custom-sleeve-circum" type="number" placeholder=".................cm"></td>
+                        </tr>
+                        <tr>
+                            <th class="fabric-size"></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert-wrapper">
+                    <div id="alert-input-error">
+                        <div id="alert-user">
+                            <p>Please enter a valid number in cm to determine your fabric needs.
+                            </p>
+                            <button class="okay">OK</button>
+                        </div>
+                    </div>
+                </div>
+                <input type="button" id="input-error-button" class="d-none" />
+            </div>
+        </section> -->
+
+        <!-- <section id="crop-tshirt-downloads" class="row my-3 pb-2">
+            <div class="col-10 mx-auto">
+                <h4 class="my-2">Template Downloads</h4>
+            </div>
+            <div id="file-downloads-crop-tshirt" class="col-10 mx-auto">
+                <a href="assets/downloads/coat-pattern-with-grid.pdf" id="dl-coat-grid" title="Download Template" download="coat_grid_template.pdf">Template - Coat Grid</a>
+                <a href="assets/downloads/tshirt-pattern-with-grid.pdf" id="dl-tshirt-grid" title="Download Template" download="tshirt-grid">Template - Tshirt Grid</a>
+                <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Template - Body Rotation & Sleeve Swap - Left</a>
+                <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Template - Body Rotation & Sleeve Swap - Right</a>
+                <a href="assets/downloads/print-template-neckline-round.pdf" id="dl-neck-round" title="Download Template" download="round_neckline_template.pdf">Template - Round Neckline</a>
+                <a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Template - Collar Neckline</a>
+                <a href="assets/downloads/print-template-neckline-wide.pdf" id="dl-neck-wide" title="Download Template" download="wide_neckline_template.pdf">Template - Wide Neckline</a>
+                <a href="assets/downloads/print-template-sleeve-cut-left.pdf" id="dl-sleeve-cut-left" title="Download Template" download="sleeve_cut_left_template.pdf">Template - Sleeve Cut - Left</a>
+                <a href="assets/downloads/print-template-sleeve-cut-right.pdf" id="dl-sleeve-cut-right" title="Download Template" download="sleeve_cut_right_template.pdf">Template - Sleeve Cut - Right</a>
+                <a href="assets/downloads/print-template-elbow-rotation-left.pdf" id="dl-elb-rot-left" title="Download Template" download="elbow_rotation_left_template.pdf">Template - Elbow Rotation - Left</a>
+                <a href="assets/downloads/print-template-elbow-rotation-right.pdf" id="dl-elb-rot-right" title="Download Template" download="elbow_rotation_right_template.pdf">Template - Elbow Rotation - Right</a>
+            </div>
+            <div class="col-10 mx-auto">
+                <p>When you are happy with your garment style, simply click on the links above to download the required templates.</p>
+            </div>
+        </div>
+        </section> -->
 
         <section class="contact-form row">
             <p class="mx-auto col-8">
-                To have instructions on how to make the coat sent to you, please enter your email below.
+                To have instructions on how to make the tshirt sent to you, please enter your email below.
             </p>
-            <form id="contact-form-coat" class="col-9 col-md-5 mx-auto my-4">
+            <form id="contact-form-tshirt" class="col-9 col-md-5 mx-auto my-4">
                 <div class="field">
                     <input type="text" name="from_name" class="form-control" id="from_name" placeholder="Your Name" required/>
                 </div>
@@ -538,62 +439,21 @@
                     <input type="email" name="from_email" class="form-control" id="from_email" placeholder="Your email" required/>
                 </div>
                 <div class="field">
-                    <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
+                    <button type="submit" id="form-button-tshirt" value="send" class="btn-dark">Send</button>
                 </div>
             </form>
         </section>
 
-
     </main>
-
-    <footer class="mu-footer container-fluid">
-        <div class="footer-row row">
-            <div class="col-11 col-md-4">
-                <p>
-                    Make/Use is a research project led by Holly McQuillan of Massey University. It explores the concept
-                    of zero-waste user modifiable clothing.
-                    <br>
-                    <br>
-                    <strong>
-                        <a href="https://www.facebook.com/makeruser" target="_blank" rel="noopener"
-                            rel="noreferrer">facebook</a>
-                        <a href="https://twitter.com/search?q=%23makeuse&amp;" target="_blank" rel="noopener"
-                            rel="noreferrer">#makeuse on Twitter</a>
-                        <a href="https://instagram.com/explore/tags/makeuse/" target="_blank" rel="noopener"
-                            rel="noreferrer">#makeuse on instagram</a>
-                    </strong>
-                </p>
-
-                <p class="mu-footer-cc">Make/Use is licensed under a
-                    <span>
-                        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"
-                            rel="noreferrer">Creative Commons
-                            Attribution 4.0 International (CC BY 4.0)</a></span>
-                </p>
-            </div>
-
-            <div class="col-11 col-md-4">
-            </div>
-
-            <div class="col-11 col-md-4 footer-logos mx-auto">
-                <p><a href="http://www.objectspace.org.nz/" target="_blank" rel="noopener" rel="noreferrer"><img
-                            src="assets/images/objectspace-logo.png" alt="Objectspace Auckland"></a></p>
-                <p><a href="http://creative.massey.ac.nz/" target="_blank" rel="noopener" rel="noreferrer"><img
-                            src="assets/images/massey-coca-logo.png"
-                            alt="Massey University - College of Creative Arts"></a></p>
-            </div>
-        </div>
-    </footer>
-
 
     <!---- jquery script ---->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
     <!---- bootstrap min ---->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
-    crossorigin="anonymous"></script>
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous"></script>
     <!---- emailjs script ---->
     <script src="assets/js/sendEmail.js"></script>
 
