@@ -159,7 +159,7 @@ h5 {
 .navbar .navbar-nav,
 .quick-nav .nav-item {
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .quick-nav .nav-item {
@@ -168,7 +168,7 @@ h5 {
 }
 
 .navbar .nav-item a, a {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
 }    
 
@@ -242,6 +242,15 @@ nav .navbar .navbar-custom {
 
 /* \\---  Quick Nav Links  ---////////////////////////////// */
 
+.navbar .nav-item a,
+a {
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+    color: var(--mu-white);
+}
+
 .quick-nav {
     position: static;
     display: flex;
@@ -255,17 +264,6 @@ nav .navbar .navbar-custom {
     color: var(--mu-gold);
     font-size: 13px;
     padding-right: 8px;
-}
-
-/* \\---  Link Styles  ---////////////////////////////// */
-
-.navbar .nav-item a,
-a {
-    text-decoration: none;
-    background: none;
-    cursor: pointer;
-    transition: color .2s ease-in-out;
-    color: var(--mu-white);
 }
 
 /* \\---  Landing Page  ---/////////////////////////// */
@@ -525,7 +523,7 @@ table {
 
 table th,
 table td {
-    padding: 8px;
+    padding-bottom: 6px;
 }
 
 table tr {
@@ -968,6 +966,22 @@ img {
     padding: 6px;
 }
 
+#pattern-hover-panel-coat {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    z-index: 400;
+    display: none;
+    place-items: center;
+}
+
+#pattern-hover-panel-coat img {
+    display: none;
+    background-color: var(--mu-silver);
+    width: 50%;
+    height: 50%;
+    place-self: center;
+}
+
 .thumb-wrapper {
     height: 100px;
 }
@@ -1061,8 +1075,13 @@ img {
     justify-content: center;
 }
 
+#crop-tshirt-downloads p {
+    font-size: 15px;
+    color: var(--mu-slate);
+}
+
 #file-downloads, 
-#file-downloads-long-tshirt, 
+#long-tshirt-downloads, 
 #file-downloads-crop-tshirt, 
 #file-downloads-long-coat {
     height: 180px;

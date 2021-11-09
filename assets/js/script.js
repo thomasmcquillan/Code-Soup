@@ -1,6 +1,6 @@
 // Declaring constants for toggling pattern download thumbnails.
 
-const tShirtGrid =document.getElementById("t-shirt-grid");
+const tShirtGrid = document.getElementById("t-shirt-grid");
 const coatGrid = document.getElementById("coat-grid"); 
 const neckRound = document.getElementById("pattern-neck-round");
 const neckCollar = document.getElementById("pattern-neck-collar");
@@ -25,9 +25,6 @@ const dlSleeveCutLeft = document.getElementById("dl-sleeve-cut-left");
 const dlSleeveCutRight = document.getElementById("dl-sleeve-cut-right");
 const dlElbowRotLeft = document.getElementById("dl-elb-rot-left");
 const dlElbowRotRight = document.getElementById("dl-elb-rot-right");
-
-// const dlSleeveSwapLeft = document.getElementById("dl-sleeve-swap-left");
-// const dlSleeveSwapRight = document.getElementById("dl-sleeve-swap-right");
 
 // Declaring constant values for body-length, sleeve-width and sleeve length of supplied pattern options.
 
@@ -321,6 +318,29 @@ $(document).ready(function () {
         $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
+
+// const tShirtGrid = document.getElementById("t-shirt-grid");
+// const coatGrid = document.getElementById("coat-grid"); 
+// const neckRound = document.getElementById("pattern-neck-round");
+// const neckCollar = document.getElementById("pattern-neck-collar");
+// const neckWide = document.getElementById("pattern-neck-wide");
+// const sleeveCutLeft = document.getElementById("pattern-sleeve-cut-left");
+// const sleeveCutRight = document.getElementById("pattern-sleeve-cut-right");
+// const bodyRotateLeft = document.getElementById("pattern-body-rotate-left");
+// const bodyRotateRight = document.getElementById("pattern-body-rotate-right");
+// const elbowRotateLeft = document.getElementById("pattern-elbow-rotate-left");
+// const elbowRotateRight = document.getElementById("patternelbow-rotate-right");
+
+// $(document).ready(function () {
+    $("#neck-collar").hover(function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#neck-collar-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#neck-collar-hover").toggle();
+    }
+)
+
 
 $(document).ready(function () {
     $(".neck-tile").hover(function () {
