@@ -854,7 +854,9 @@ img {
         opacity: 1;
     }
 }
+
 /* fadeIn prefixes (minified for visual-brevity)  */
+
 @-moz-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-o-keyframes fadeIn{0%{opacity:0;}100%{opacity:1;}}
 
 /* ------------ Media Queries ------------ */
@@ -981,31 +983,6 @@ img {
     display: flex;
     align-items: center;
 }
-/* -----make --------- */
-
-.maker-bg {
-    background-color: var(--mu-silver);
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.downloadwrapper-make {
-    display: grid;
-    place-self: flex-end;
-}
-
-#long-coat-maker,
-#long-cropt-maker,
-#long-longt-maker {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    display: grid;
-    place-content: center;
-    background: none;
-}
 
 .downloadwrapper {
     background-color: var(--mu-silver);
@@ -1013,19 +990,26 @@ img {
 
 .grid-outer-wrapper {
     display: grid;
-    grid-template-rows: minmax(80px, 2fr) minmax(80px, 2fr) minmax(160px, 4fr);
+    grid-template-rows: minmax(80px, 2fr) minmax(160px, 4fr);
     grid-template-columns: minmax(80px, 2fr) minmax(80px, 2fr) minmax(80px, 2fr);
 }
 
 .garment-grid {
     grid-column: 1 / 4;
-    grid-row: 2 / 4;
+    grid-row: 1 / 3;
     display: grid;
     grid-template-rows: minmax(80px, 2fr) minmax(160px, 4fr);
     grid-template-columns: minmax(80px, 2fr) minmax(80px, 2fr) minmax(80px, 2fr);
     grid-gap: clamp(1px, .28rem, 5px);
     overflow: hidden;
 }
+
+/* #garment-grid-crop-tshirt,
+.thumb-wrapper,
+.sizing-info,
+#crop-tshirt-downloads {
+    background-color: var(--mu-silver);
+} */
 
 .downloadwrapper-test {
     display: flex;
@@ -1056,7 +1040,7 @@ img {
 
 /* --------------maker page grid ------------- */
 
-.maker-grid-outer-wrapper {
+/* .maker-grid-outer-wrapper {
     display: grid;
     grid-template-rows: minmax(10px, 2fr) minmax(20px, 4fr), minmax(10px, 2fr);
     grid-template-columns: minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr);
@@ -1068,12 +1052,12 @@ img {
     overflow: hidden;
     grid-template-rows: minmax(10px, 2fr) minmax(20px, 4fr);
     grid-template-columns: minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr);
-}
+} */
 
-#long-coat-maker {
+/* #long-coat-maker {
     height: 100vh;
     background-color: var(--mu-silver);
-}
+} */
 
 /* \\---  Coat specific styles  ---/////////////////////// */
 
@@ -1140,6 +1124,8 @@ img {
     color: var(--mu-dark);
 }
 
+/* displaying the pattern downloads for default style of each garment: */
+
 #file-downloads-crop-tshirt #dl-tshirt-grid,
 #file-downloads-crop-tshirt #dl-neck-round,
 #file-downloads-crop-tshirt #dl-sleeve-cut-left,
@@ -1161,8 +1147,6 @@ img {
 #file-downloads-long-coat #dl-elb-rot-left,
 #file-downloads-long-coat #dl-elb-rot-right {
     display: inline;
-    /* margin: 0 auto; */
-
 }
 
 #dl-neck-collar {
@@ -1177,8 +1161,6 @@ img {
     color: var(--mu-slate);
     background-color: var(--mu-silver);
     border: none;
-    /* margin-left: 20px;
-    margin-top: 10px; */
     margin: 8px auto;
 }
 
@@ -1190,15 +1172,13 @@ img {
 #crop-tshirt-downloads a {
     color: var(--mu-slate);
     text-decoration: none;
-    /* display: inline; */
 }
 
 #file-downloads, 
 #file-downloads-long-tshirt, 
 #file-downloads-crop-tshirt, 
 #file-downloads-long-coat {
-    height: 200px;
-    /* padding: 18px 24px; */
+    height: 180px;
     padding-bottom: auto;
     display: grid;
     grid-template-rows: repeat(16px);
@@ -1207,7 +1187,3 @@ img {
     justify-items: start;
     align-items: start;
 }
-
-/* #crop-tshirt-downloads {
-    margin: auto auto auto 24px;
-} */
