@@ -283,7 +283,7 @@
             </div>
         </section>
         
-        <section id="garment-grid-crop-tshirt" class="row my-4">
+        <section id="garment-grid-crop-tshirt" class="row my-3">
             
             <div class="grid-outer-wrapper col-11 col-md-8 mx-auto">
         
@@ -503,7 +503,7 @@
 
         <section class="sizing-info">
             <div class="col-10 mx-auto">
-                <table class="table-borderless mx-auto">
+                <table class="table-borderless mx-auto my-2">
                     <tbody>
                         <tr>
                             <td data-title="Garment Circum."><span id="garment-circum">110cm</span></td>
@@ -511,17 +511,17 @@
                             <td data-title="Sleeve Circum."><span id="sleeve-circum">50cm</span></td>
                             <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
                         </tr>
-                        <tr>
-                            <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter
-                                custom values to calculate your fabric needs.</th>
-                        </tr>
                     </tbody>
                 </table>
                 <table class="table-borderless mx-auto">
                         <tr>
-                            <td><input id="custom-garment-circum" type="number" placeholder="____________cm"></td>
-                            <td><input id="custom-garment-length" type="number" placeholder="____________cm"></td>
-                            <td><input id="custom-sleeve-circum" type="number" placeholder="____________cm"></td>
+                            <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter
+                                custom values in 'cm' to calculate your fabric needs.</th>
+                        </tr>
+                        <tr>
+                            <td data-title="Garment Circum."><input id="custom-garment-circum" type="number" placeholder=".................cm"></td>
+                            <td data-title="Garment length"><input id="custom-garment-length" type="number" placeholder=".................cm"></td>
+                            <td data-title="Sleeve Length"><input id="custom-sleeve-circum" type="number" placeholder=".................cm"></td>
                         </tr>
                         <tr>
                             <th class="fabric-size"></th>
@@ -531,7 +531,7 @@
                 <div class="alert-wrapper">
                     <div id="alert-input-error">
                         <div id="alert-user">
-                            <p>Please enter a value in cm to determine your fabric needs.
+                            <p>Please enter a valid number in cm to determine your fabric needs.
                             </p>
                             <button class="okay">OK</button>
                         </div>
@@ -541,44 +541,46 @@
             </div>
         </section>
    
-        <section id="crop-tshirt-downloads" class="row mx-auto my-4">
-            <div id="file-downloads-crop-tshirt" class="d-inline col-11 col-md-5 mx-4">
-                <h4>Downloads</h4>
-                <p>If you are happy with your selection, simply click the links below to download the required templates. 
-                <div><a href="assets/downloads/coat-pattern-with-grid.pdf" id="dl-coat-grid" title="Download Template" download="coat_grid_template.pdf">Template Download - Coat Grid</a></div>
-                <div><a href="assets/downloads/tshirt-pattern-with-grid.pdf" id="dl-tshirt-grid" title="Download Template" download="tshirt-grid">Template Download - Tshirt Grid</a></div>
-                <div><a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Template download - Body Rotation & Sleeve Swap - Left</a></div>
-                <div><a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Template download - Body Rotation & Sleeve Swap - Right</a></div>
-                <div><a href="assets/downloads/print-template-neckline-round.pdf" id="dl-neck-round" title="Download Template" download="round_neckline_template.pdf">Template download - Round Neckline</a></div>
-                <div><a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Template download - Collar Neckline</a></div>
-                <div><a href="assets/downloads/print-template-neckline-wide.pdf" id="dl-neck-wide" title="Download Template" download="wide_neckline_template.pdf">Template download - Wide Neckline</a></div>
-                <div><a href="assets/downloads/print-template-sleeve-cut-left.pdf" id="dl-sleeve-cut-left" title="Download Template" download="sleeve_cut_left_template.pdf">Template download - Sleeve Cut - Left</a></div>
-                <div><a href="assets/downloads/print-template-sleeve-cut-right.pdf" id="dl-sleeve-cut-right" title="Download Template" download="sleeve_cut_right_template.pdf">Template download - Sleeve Cut - Right</a></div>
-                <div><a href="assets/downloads/print-template-elbow-rotation-left.pdf" id="dl-elb-rot-left" title="Download Template" download="elbow_rotation_left_template.pdf">Template download - Elbow Rotation - Left</a></div>
-                <div><a href="assets/downloads/print-template-elbow-rotation-right.pdf" id="dl-elb-rot-right" title="Download Template" download="elbow_rotation_right_template.pdf">Template download - Elbow Rotation - Right</a></div>
+        <section id="crop-tshirt-downloads" class="row my-3 pb-2">
+        <!-- <section id="crop-tshirt-downloads" class="row my-4 pb-4"> -->
+            <!-- <div class="col-11 col-md-8 mx-4">     -->
+            <div class="col-10 col-md-9 mx-auto">
+                <h4>Template Downloads</h4>
             </div>
+            <div id="file-downloads-crop-tshirt" class="col-10 col-md-9 mx-auto">
+                <a href="assets/downloads/coat-pattern-with-grid.pdf" id="dl-coat-grid" title="Download Template" download="coat_grid_template.pdf">Template - Coat Grid</a>
+                <a href="assets/downloads/tshirt-pattern-with-grid.pdf" id="dl-tshirt-grid" title="Download Template" download="tshirt-grid">Template - Tshirt Grid</a>
+                <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Template - Body Rotation & Sleeve Swap - Left</a>
+                <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Template - Body Rotation & Sleeve Swap - Right</a>
+                <a href="assets/downloads/print-template-neckline-round.pdf" id="dl-neck-round" title="Download Template" download="round_neckline_template.pdf">Template - Round Neckline</a>
+                <a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Template - Collar Neckline</a>
+                <a href="assets/downloads/print-template-neckline-wide.pdf" id="dl-neck-wide" title="Download Template" download="wide_neckline_template.pdf">Template - Wide Neckline</a>
+                <a href="assets/downloads/print-template-sleeve-cut-left.pdf" id="dl-sleeve-cut-left" title="Download Template" download="sleeve_cut_left_template.pdf">Template - Sleeve Cut - Left</a>
+                <a href="assets/downloads/print-template-sleeve-cut-right.pdf" id="dl-sleeve-cut-right" title="Download Template" download="sleeve_cut_right_template.pdf">Template - Sleeve Cut - Right</a>
+                <a href="assets/downloads/print-template-elbow-rotation-left.pdf" id="dl-elb-rot-left" title="Download Template" download="elbow_rotation_left_template.pdf">Template - Elbow Rotation - Left</a>
+                <a href="assets/downloads/print-template-elbow-rotation-right.pdf" id="dl-elb-rot-right" title="Download Template" download="elbow_rotation_right_template.pdf">Template - Elbow Rotation - Right</a>
+            </div>
+            <div class="col-10 col-md-9 mx-auto">
+                <p>When you are happy with your garment style, simply click on the links above to download the required templates.</p>
+            </div>
+        </div>
         </section>
 
-        <section class="contact-form row">
-            <p class="mx-auto col-8">
-                To have instructions on how to make the coat sent to you, please enter your email below.
-            </p>
-            <form id="contact-form" class="col-9 col-md-5 mx-auto my-4">
-        
+        <section class="contact-form row my-3">
+            <div class="col-10 col-md-9 mx-auto">
+                <p>If you would like to be sent instructions on how to make your chosen garment please enter your email below.</p>
+            </div>
+            <form id="contact-form" class="col-1- col-md-9 mx-auto my-4">
                 <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-        
                 <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-        
-                <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
-                
+                <button type="submit" id="form-button" value="send" class="btn-dark">Send</button> 
             </form>
         </section>
-
     </main>
 
     <footer class="mu-footer container-fluid">
         <div class="footer-row row">
-            <div class="col-11 col-md-4">
+            <div class="col-10 col-md-4 mx-auto px-2">
                 <p>
                     Make/Use is a research project led by Holly McQuillan of Massey University.
                     It explores the concept of zero-waste user modifiable clothing.
@@ -602,10 +604,10 @@
                 </p>
             </div>
 
-            <div class="col-11 col-md-4">
+            <div class="col-10 col-md-4 mx-auto px-2">
             </div>
 
-            <div class="col-11 col-md-4 footer-logos mx-auto">
+            <div class="col-10 col-md-4 footer-logos mx-auto px-2">
                 <p><a href="http://www.objectspace.org.nz/" target="_blank" rel="noopener" rel="noreferrer"><img
                             src="assets/images/objectspace-logo.png" alt="Objectspace Auckland"></a></p>
                 <p><a href="http://creative.massey.ac.nz/" target="_blank" rel="noopener" rel="noreferrer"><img
