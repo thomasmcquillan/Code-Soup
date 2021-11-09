@@ -521,14 +521,16 @@
             <p class="mx-auto col-8">
                 To have instructions on how to make the coat sent to you, please enter your email below.
             </p>
-            <form id="contact-form" class="col-9 col-md-5 mx-auto my-4">
-        
-                <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-        
-                <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-        
-                <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
-                
+            <form id="contact-form-coat" class="col-9 col-md-5 mx-auto my-4">
+                <div class="field">
+                    <input type="text" name="from_name" class="form-control" id="from_name" placeholder="Your Name" required/>
+                </div>
+                <div class="field">
+                    <input type="email" name="from_email" class="form-control" id="from_email" placeholder="Your email" required/>
+                </div>
+                <div class="field">
+                    <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
+                </div>
             </form>
         </section>
 

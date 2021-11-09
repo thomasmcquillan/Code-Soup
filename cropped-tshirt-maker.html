@@ -40,7 +40,7 @@
     <title>MakeUse | Crop T shirt</title>
 </head>
 
-<body>
+<body class="maker-bg">
 
     <main id="makeuse-cropped-tshirt" class="container-lg">
         
@@ -267,17 +267,17 @@
                 <table class="table-borderless mx-auto my-2">
                     <tbody>
                         <tr>
+                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
                             <td data-title="Garment Circum."><span id="garment-circum">110cm</span></td>
                             <td data-title="Garment length"><span id="garment-length">50cm</span></td>
                             <td data-title="Sleeve Circum."><span id="sleeve-circum">50cm</span></td>
-                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
                         </tr>
                     </tbody>
                 </table>
                 <table class="table-borderless mx-auto">
                         <tr>
-                            <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter
-                                custom values in 'cm' to calculate your fabric needs.</th>
+                            <th scope="row" class="custom-input-info" text-align="center" width="100%">
+                                Or enter custom values below in 'cm' to calculate your fabric needs.</th>
                         </tr>
                         <tr>
                             <td data-title="Garment Circum."><input id="custom-garment-circum" type="number" placeholder=".................cm"></td>
@@ -329,10 +329,17 @@
             <div class="col-10 mx-auto">
                 <p>To be sent instructions on how to make your chosen garment please enter your email below.</p>
             </div>
-            <form id="contact-form" class="col-10 mx-auto my-4">
-                <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-                <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-                <button type="submit" id="form-button" value="send" class="btn-dark">Send</button> 
+            <!-- <form onsubmit="return sendMail();" id="contact-form-tshirt" class="col-10 mx-auto my-4"> -->
+            <form id="contact-form-tshirt" class="col-10 mx-auto my-4">
+                <div class="field">
+                    <input type="text" name="from_name" class="form-control" id="from_name" placeholder="Your Name" required/>
+                </div>
+                <div class="field">
+                    <input type="email" name="from_email" class="form-control" id="from_email" placeholder="Your email" required/>
+                </div>
+                <div class="field">
+                    <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
+                </div>
             </form>
         </section>
 
@@ -352,4 +359,3 @@
 </body>
 
 </html>
-

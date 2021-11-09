@@ -1004,13 +1004,6 @@ img {
     overflow: hidden;
 }
 
-/* #garment-grid-crop-tshirt,
-.thumb-wrapper,
-.sizing-info,
-#crop-tshirt-downloads {
-    background-color: var(--mu-silver);
-} */
-
 .downloadwrapper-test {
     display: flex;
     flex-direction: row;
@@ -1186,4 +1179,10 @@ img {
     align-content: start;
     justify-items: start;
     align-items: start;
+}
+
+/* #makeuse-cropped-tshirt */
+
+.maker-bg {
+    background-color: rgba(235, 235, 235, 0.562);
 }
