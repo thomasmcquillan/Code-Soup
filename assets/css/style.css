@@ -428,14 +428,6 @@ img {
 
 .garment-tile {
     z-index: 100;
-    /* filter: saturate(130%) hue-rotate(114deg) brightness(44%); */
-    /* filter: invert(33) saturate(20%) opacity(66); */
-    /* filter: saturate(55%) opacity(66); */
-}
-
-.maker-bg {
-    /* background-color: var(--mu-sand);
-    background-color: rgba(0, 0, 0, 0.88); */
 }
 
 .garment-grid img {
@@ -649,6 +641,7 @@ input {
 .custom-input-info {
     color: var(--mu-slate);
     font-weight: 300;
+    justify-self: center;
 }
 
 /* video */

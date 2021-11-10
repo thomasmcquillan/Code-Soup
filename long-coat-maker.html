@@ -7,11 +7,10 @@
     <!-- display settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- theme colors - light & dark -->
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffd066">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4a494a">
-    <!-- page description -->
-    <meta name="description" content="Prototype Fashion Design Helper Tool">
+    <!-- theme color -->
+    <meta name="theme-color" content="#ffd066">
+     <!-- page description -->
+     <meta name="description" content="Make/Use Maker Toolkit">
     <!-- page author -->
     <meta name="author" content="Thomas McQuillan in consultation with Make/Use.">
     <!-- apple-touch-icon -->
@@ -30,10 +29,10 @@
     <!-- Local Javascript -->
     <script src="assets/js/script.js" defer></script>
     <!-- emailJS script -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <!-- emailJS custom script to fetch coat instructions -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
         (function(){
             emailjs.init("user_wMriEHAEyY3weYxVF1Sjw");
                 window.onload = function() {
@@ -52,9 +51,11 @@
     <title>MakeUse | Long Coat</title>
 </head>
 
+<body class="maker-bg">
+
 <header id="makeuseheader" class="container-fluid">
     <nav class="navbar navbar-custom">
-        <a class="navbar-brand" href="https://makeuse.nz/" target="_blank" rel="noopener" rel="noreferrer">
+        <a class="navbar-brand" href="https://makeuse.nz/" target="_blank" rel="noopener">
             <span id="logo-span" class="navbar-brand">
                 <img    id="makeuse-logo"
                         src="assets/images/makeuse-logo.png"
@@ -67,13 +68,13 @@
         </a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.html" target="_blank" rel="noopener" rel="noreferrer">make</a>
+                <a class="nav-link" href="index.html" target="_blank" rel="noopener">make</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html" target="_blank" rel="noopener" rel="noreferrer">about</a>
+                <a class="nav-link" href="about.html" target="_blank" rel="noopener">about</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html" target="_blank" rel="noopener"rel="noreferrer">articles</a>
+                <a class="nav-link" href="contact.html" target="_blank" rel="noopener">articles</a>
             </li>
         </ul>
     </nav>
@@ -81,16 +82,13 @@
 
 <div>
     <nav class="container-fluid quick-nav my-4">
-        <a href="https://makeuse.nz/make/" class="nav-item" target="_blank" rel="noopener"
-            rel="noreferrer">Home</a>
+        <a href="https://makeuse.nz/make/" class="nav-item" target="_blank" rel="noopener">Home</a>
         <span class="tri-divider">◢</span>
         <a href="index.html" class="nav-item">Make</a>
         <span class="tri-divider">◢</span>
         <a href="makeuse-coat.html" class="nav-item">Long Coat</a>
     </nav>
 </div>
-
-<body class="maker-bg">
 
     <main id="makeuse-long-coat" class="container-lg">
         
@@ -108,10 +106,9 @@
                     </div>
 
                     <div id="body-long-coat" class="garment-tile">
-                        <img id="coat-body-wide-long-rotate" class="tile-on"
+                        <img id="coat-body-wide-long-rotate" class=" body-rotate tile-on"
                             src="assets/images/grid-tiles/body-tiles/coat-body-wide-long-rotate@3x.png"
-                            alt="Coat garment-body in 'narrow/cropped' style with rotation"
-                            class="body-rotate">
+                            alt="Coat garment-body in 'narrow/cropped' style with rotation">
 
                         <img id="coat-body-wide-long"
                             src="assets/images/grid-tiles/body-tiles/coat-body-wide-long@3x.png"
@@ -236,30 +233,31 @@
 
                 <div id="pattern-hover-panel-coat">
                     
-                    <img id="coat-grid-hover" src="assets/images/pattern-thumbs/pattern-coat-grid.png">
+                    <img id="coat-grid-hover" src="assets/images/pattern-thumbs/pattern-coat-grid.png" alt="Make/Use Coat Grid">
 
-                    <img id="neck-collar-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png">
+                    <img id="neck-collar-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png" alt="Make/Use Collar Neckline Template">
 
-                    <img id="sleeve-cut-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png">
+                    <img id="sleeve-cut-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png" alt="Make/Use Sleeve Cut Left Template">
 
-                    <img id="sleeve-cut-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png">
+                    <img id="sleeve-cut-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png" alt="Make/Use Sleeve Cut Right Template">
 
-                    <img id="body-rotate-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png">
+                    <img id="body-rotate-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png" alt="Make/Use Body Rotation and Sleeve Swap Left Template">
 
-                    <img id="body-rotate-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png">
+                    <img id="body-rotate-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png" alt="Make/Use Body Rotation and Sleeve Swap Right Template">
                                     
-                    <img id="elbow-rotate-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png">
+                    <img id="elbow-rotate-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png" alt="Make/Use Body Sleeve Elbow Rotation Left Template">
     
-                    <img id="elbow-rotate-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png">
+                    <img id="elbow-rotate-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png" alt="Make/Use Body Sleeve Elbow Rotation Right Template">
                 </div>
             </div>
         </section>
 
         <section class="thumb-wrapper row">
+
             <div class="downloadwrapper-test col-11 col-md-8 mx-auto">
 
                 <div class="pattern-coat-grid pattern-thumb tile-on">
-                    <a href="assets/downloads/coat pattern with grid.pdf" target="_blank">
+                    <a href="assets/downloads/coat-pattern-with-grid.pdf" target="_blank">
                         <span><img id="coat-grid" class="pattern-thumb tile-on"
                                 src="assets/images/pattern-thumbs/pattern-coat-grid.png"
                                 alt="Make/Use grid, essential for making the MakeUse Coat using templates."></span>
@@ -337,17 +335,16 @@
                     </tbody>
                 </table>
                 <table class="table-borderless mx-auto">
-                        <tr>
-                            <th scope="row" class="custom-input-info" text-align="center" width="100%">
+                        <tr class="justify-content-center">
+                            <th class="custom-input-info">
                                 Or enter custom values below in 'cm' to calculate your fabric needs.</th>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td data-title="Garment Circum."><input id="custom-garment-circum" type="number" placeholder=".................cm"></td>
                             <td data-title="Garment length"><input id="custom-garment-length" type="number" placeholder=".................cm"></td>
                             <td data-title="Sleeve Length"><input id="custom-sleeve-circum" type="number" placeholder=".................cm"></td>
-                        </tr>
-                        <tr>
-                            <th class="fabric-size"></th>
                         </tr>
                     </tbody>
                 </table>
@@ -360,7 +357,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="button" id="input-error-button" class="d-none"/>
+                <input type="button" id="input-error-button" value="okay" class="d-none"/>
             </div>
         </section>
 
@@ -405,15 +402,15 @@
 
     </main>
 
-    <!---- jquery script ---->
+    <!-- jquery script -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
-    <!---- bootstrap min ---->
+    <!-- bootstrap min -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
             crossorigin="anonymous"></script>
-    <!---- emailjs script ---->
+    <!-- emailjs script -->
     <script src="assets/js/sendEmail.js"></script>
 
 </body>

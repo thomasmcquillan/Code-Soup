@@ -7,11 +7,10 @@
     <!-- display settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- theme colors - light & dark -->
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffd066">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#4a494a">
-    <!-- page description -->
-    <meta name="description" content="Prototype Fashion Design Helper Tool">
+    <!-- theme color -->
+    <meta name="theme-color" content="#ffd066">
+     <!-- page description -->
+     <meta name="description" content="Make/Use Maker Toolkit">
     <!-- page author -->
     <meta name="author" content="Thomas McQuillan in consultation with Make/Use.">
     <!-- apple-touch-icon -->
@@ -30,9 +29,9 @@
     <!-- Local Javascript -->
     <script src="assets/js/script.js" defer></script>
     <!-- emailJS script -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <!-- emailJS custom script to fetch tshirt instructions -->
-    <script type="text/javascript">
+    <script>
         (function(){
             emailjs.init("user_wMriEHAEyY3weYxVF1Sjw");
                 window.onload = function() {
@@ -51,9 +50,11 @@
     <title>MakeUse | Long Tshirt</title>
 </head>
 
+<body class="maker-bg">
+
 <header id="makeuseheader" class="container-fluid">
     <nav class="navbar navbar-custom">
-        <a class="navbar-brand" href="https://makeuse.nz/" target="_blank" rel="noopener" rel="noreferrer">
+        <a class="navbar-brand" href="https://makeuse.nz/" target="_blank" rel="noopener">
             <span id="logo-span" class="navbar-brand">
                 <img    id="makeuse-logo"
                         src="assets/images/makeuse-logo.png"
@@ -66,13 +67,13 @@
         </a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.html" target="_blank" rel="noopener" rel="noreferrer">make</a>
+                <a class="nav-link" href="index.html" target="_blank" rel="noopener">make</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html" target="_blank" rel="noopener" rel="noreferrer">about</a>
+                <a class="nav-link" href="about.html" target="_blank" rel="noopener">about</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html" target="_blank" rel="noopener"rel="noreferrer">articles</a>
+                <a class="nav-link" href="contact.html" target="_blank" rel="noopener">articles</a>
             </li>
         </ul>
     </nav>
@@ -80,16 +81,13 @@
 
 <div>
     <nav class="container-fluid quick-nav my-4">
-        <a href="https://makeuse.nz/make/" class="nav-item" target="_blank" rel="noopener"
-            rel="noreferrer">Home</a>
+        <a href="https://makeuse.nz/make/" class="nav-item" target="_blank" rel="noopener">Home</a>
         <span class="tri-divider">◢</span>
         <a href="index.html" class="nav-item">Make</a>
         <span class="tri-divider">◢</span>
         <a href="makeuse-coat.html" class="nav-item">Long Tshirt</a>
     </nav>
 </div>
-
-<body class="maker-bg">
 
     <main id="makeuse-long-coat" class="container-lg">
 
@@ -291,14 +289,11 @@
                                 alt="Make/Use template pattern for elbow rotation modification - RIGHT."></span>
                     </a>
                 </div>
-
             </div>
         </section>
 
         <section class="sizing-info">
-
             <div class="col-10 mx-auto">
-
                 <table class="table-borderless mx-auto my-2">
                     <tbody>
                         <tr>
@@ -310,17 +305,16 @@
                     </tbody>
                 </table>
                 <table class="table-borderless mx-auto">
-                        <tr>
-                            <th scope="row" class="custom-input-info" text-align="center" width="100%">
+                        <tr class="justify-content-center">
+                            <th class="custom-input-info">
                                 Or enter custom values below in 'cm' to calculate your fabric needs.</th>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td data-title="Garment Circum."><input id="custom-garment-circum" type="number" placeholder=".................cm"></td>
                             <td data-title="Garment length"><input id="custom-garment-length" type="number" placeholder=".................cm"></td>
                             <td data-title="Sleeve Length"><input id="custom-sleeve-circum" type="number" placeholder=".................cm"></td>
-                        </tr>
-                        <tr>
-                            <th class="fabric-size"></th>
                         </tr>
                     </tbody>
                 </table>
@@ -333,7 +327,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="button" id="input-error-button" class="d-none"/>
+                <input type="button" id="input-error-button" value="okay" class="d-none"/>
             </div>
         </section>
 
@@ -380,15 +374,15 @@
 
     </main>
 
-    <!---- jquery script ---->
+    <!-- jquery script -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
-    <!---- bootstrap min ---->
+    <!-- bootstrap min -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
             crossorigin="anonymous"></script>
-    <!---- emailjs script ---->
+    <!-- emailjs script -->
     <script src="assets/js/sendEmail.js"></script>
 
 </body>
