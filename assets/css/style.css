@@ -446,12 +446,10 @@ img {
 #grid-long-coat .tile-on,
 #grid-crop-tshirt .tile-on,
 #grid-long-tshirt .tile-on {
-    /* display: grid; */
     display: flex;
 }
 
 .neck-tile {
-    /* display: grid; */
     display: flex;
     grid-column: 2;
     grid-row: 1;
@@ -466,7 +464,6 @@ img {
 #body-crop-tshirt,
 #body-long-tshirt,
 #body-long-coat {
-    /* display: grid; */
     display: flex;
     grid-column: 2;
     grid-row: 2 / 3;
@@ -495,7 +492,6 @@ img {
 }
 
 .tile-on {
-    /* display: grid; */
     display: flex;
 
 }
@@ -655,7 +651,7 @@ input {
 .custom-input-info {
     color: var(--mu-slate);
     font-weight: 300;
-    justify-self: center;
+    justify-self :center;
 }
 
 /* video */
@@ -723,13 +719,6 @@ video {
 
 .pattern-thumb:hover img {
     filter: opacity(88%);
-}
-
-.pattern-hover {
-    display: none;
-    z-index: 10;
-    margin: 5px;
-    background-color: var(--mu-sand);
 }
 
 .pattern-thumb {
@@ -973,7 +962,9 @@ img {
     padding: 6px;
 }
 
-#pattern-hover-panel-coat {
+#pattern-hover-panel-coat,
+#pattern-hover-panel-cropt,
+#pattern-hover-panel-longt {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     z-index: 400;
@@ -981,12 +972,15 @@ img {
     place-items: center;
 }
 
-#pattern-hover-panel-coat img {
+#pattern-hover-panel-coat img,
+#pattern-hover-panel-cropt img,
+#pattern-hover-panel-longt img {
     display: none;
     background-color: var(--mu-silver);
-    width: 50%;
-    height: 50%;
+    /* width: 50%;
+    height: 50%; */
     place-self: center;
+    margin: 5px;
 }
 
 .thumb-wrapper {

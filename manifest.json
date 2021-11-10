@@ -1,11 +1,18 @@
+
+
+
+
+
+
 {
-    "short_name": "Make/Use fashion design tool",
-    "name": "Prototype web tool for aspiring Zero-Waste Fashion Sewists",
-    "icons": [
-      {
-        "src": "assets/images/mu_bnw_icon_x512.png",
-        "type": "image/png",
-        "sizes": "512x512"
+  "short_name": "Make/Use Zero-Waste Fashion Toolkit",
+  "name": "Make/Use explores the concept of zero-waste user modifiable clothing.",
+  
+  "icons": [
+    {
+      "src": "assets/images/mu_bnw_icon_x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
       },
       {
         "src": "assets/images/mu_icon_x128.png",

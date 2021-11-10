@@ -220,6 +220,30 @@
                             alt="right-sleeve in 'narrow/short' style">
                     </div>
                 </div>
+
+                <div id="pattern-hover-panel-crop-tshirt">
+                    
+                    <img id="tshirt-grid-hover" src="assets/images/pattern-thumbs/pattern-tshirt-grid.png" alt="Make/Use Tshirt Grid">
+
+                    <img id="neck-collar-hover" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png" alt="Make/Use Collar Neckline Template">
+
+                    <img id="neck-round-hover" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-round.png" alt="Make/Use Round Neckline Template">
+
+                    <img id="neck-wide-hover" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-wide.png" alt="Make/Use Wide Neckline Template">
+
+                    <img id="sleeve-cut-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png" alt="Make/Use Sleeve Cut Left Template">
+
+                    <img id="sleeve-cut-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png" alt="Make/Use Sleeve Cut Right Template">
+
+                    <img id="body-rotate-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png" alt="Make/Use Body Rotation and Sleeve Swap Left Template">
+
+                    <img id="body-rotate-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png" alt="Make/Use Body Rotation and Sleeve Swap Right Template">
+                                    
+                    <img id="elbow-rotate-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png" alt="Make/Use Body Sleeve Elbow Rotation Left Template">
+    
+                    <img id="elbow-rotate-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png" alt="Make/Use Body Sleeve Elbow Rotation Right Template">
+                </div>
+
             </div>
 
         </section>
@@ -311,41 +335,43 @@
         </section>
 
         <section class="sizing-info">
-            <div class="col-10 mx-auto">
-                <table class="table-borderless mx-auto my-2">
+            <div class="col-11 col-md-9 mx-auto">
+                <table class="table-borderless table-responsive mx-auto">
                     <tbody>
                         <tr>
-                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
                             <td data-title="Garment Circum."><span id="garment-circum">110cm</span></td>
                             <td data-title="Garment length"><span id="garment-length">50cm</span></td>
                             <td data-title="Sleeve Circum."><span id="sleeve-circum">50cm</span></td>
                         </tr>
-                    </tbody>
-                </table>
-                <table class="table-borderless mx-auto">
-                        <tr class="justify-content-center">
-                            <th class="custom-input-info">
-                                Or enter custom values below in 'cm' to calculate your fabric needs.</th>
-                            <td></td>
-                            <td></td>
+                        <tr><td></td></tr>
+                        <tr>
+                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
+                        </tr>
+                        <tr><td></td></tr>
+                        <tr>
+                            <td><input id="custom-garment-circum" type="number" placeholder="____________cm">
+                            </td>
+                            <td><input id="custom-garment-length" type="number" placeholder="____________cm">
+                            </td>
+                            <td><input id="custom-sleeve-circum" type="number" placeholder="____________cm">
+                            </td>
                         </tr>
                         <tr>
-                            <td data-title="Garment Circum."><input id="custom-garment-circum" type="number" placeholder=".................cm"></td>
-                            <td data-title="Garment length"><input id="custom-garment-length" type="number" placeholder=".................cm"></td>
-                            <td data-title="Sleeve Length"><input id="custom-sleeve-circum" type="number" placeholder=".................cm"></td>
+                            <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter
+                                custom values to calculate your fabric needs.</th>
                         </tr>
                     </tbody>
                 </table>
                 <div class="alert-wrapper">
                     <div id="alert-input-error">
                         <div id="alert-user">
-                            <p>Please enter a valid number in cm to determine your fabric needs.
+                            <p>Please enter a positive value in 'cm' to determine your fabric needs.
                             </p>
                             <button class="okay">OK</button>
                         </div>
                     </div>
                 </div>
-                <input type="button" id="input-error-button" value="okay" class="d-none"/>
+                <input type="button" id="input-error-button" class="d-none" />
             </div>
         </section>
 
@@ -375,7 +401,7 @@
                     To receive tshirt template instructions please enter your email address.
                 </p>
 
-                <form id="contact-form-tshirt" class="pt-4">
+                <form id="contact-form-tshirt">
                     <div class="field">
                         <input type="text" name="from_name" class="form-control" id="from_name" placeholder="Your Name" required/>
                     </div>
