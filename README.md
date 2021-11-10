@@ -2,20 +2,15 @@
 
 [View the live website here.](https://thomasmcquillan.github.io/MakeUse/index.html)
 
-Created for makeuse.nz, this project is a radical reimagining of the 'MAKE' pages from their existing website. The Make/Use site is an online toolset and education hub for Zero-Waste Fashion, launched alongside an exhibition and workshop series. The site's 'MAKE' pages each document the required steps, materials and patterns needed to create your own versions of garments featured in the exhibition. The resources are rich in detail but take some effort from users to decipher exactly what pattern pieces and downloads they need for their selected style - and how their finished garment may look. 
+Created for makeuse.nz, this project is a reimagining of the 'MAKE' pages from their existing website. The Make/Use site is an online toolset and education hub for Zero-Waste Fashion, launched alongside an exhibition and workshop series. The existing site's MAKE pages each document the required steps, materials and patterns needed to re-create garments featured in the exhibition. The resources are rich in detail but can take some effort to decipher exactly which pattern pieces and downloads are needed to create selected style - and how the finished garment may look. 
 
- The brief was to streamline the delivery of these resources to improve the user experience and further engage site visitors. Adopting the Make/Use 'Cropped Tshirt' and 'Coat' as pilot project, the new page supplements text instructions and download links with interactive elements. These include a customisable rendered model of the garment which allows users to switch the style of neckline, body and sleeve by clicking on garment tiles. Changes made by the user are reflected in the displayed fabric size required, and pattern downloads are filtered to display only those that are needed for the selected style. Upon settling on a style, users may enter their email address to have a summary of their selection along with instructions and download links sent to their inbox.
+This project seeks to streamline the delivery of these resources to improve the user experience and further engage site visitors. Adopting the Make/Use Cropped Tshirt, Long-Tshirt and Long-Coat as pilot project, the existing pages' text-based instructions and download links are embellished with interactive elements and a new 'Maker' tool. The Maker allows users to switch styles of neckline, body and sleeves to suit their tastes. User modifications to the garment model are mirrored in updated fabric size requirements and a filtered download list.
 
- <br />  
+<br />  
 
-
-<!-- Placeholder for mockup images of finished page:
-
-<p align="center">
+<!-- <p align="center">
     <img width="100%" src="https://thomasmcquillan.github.io/makeuse/documentation/makeusemockup.png" alt="mockup of finished website showing responsivity across devices">
-</p>
-
--->
+</p> -->
 
 ## User Experience (UX)
 <br />
@@ -68,9 +63,9 @@ Created for makeuse.nz, this project is a radical reimagining of the 'MAKE' page
 
 * ### Colour Scheme
 
-    * Given that the project is a reimagining of an existing page on a live website it is important that the color scheme matches the rest of the site. Key colors have been borrowed from the site's existing CSS styles and applied in a manner consistent with the aesthetic of the existing website. 
+    * Given that the project is a reimagining of existing pages on a live website it is important that the color scheme matches the rest of the site. Key colors have been borrowed from the site's existing CSS styles and applied in a manner consistent with the aesthetic of the existing website. 
 
-    * The color scheme is also applied in subtle ways, such as CSS hover states for navigation links (seen in image below) and jQuery 'mouse-over' event listeners for interactivity. One example is the garment tiles changing opacity when hovered to hint that the tile can be clicked on.
+    * The color scheme is also applied in subtle ways, such as CSS hover states for navigation links (as pictured below) and jQuery 'mouse-over' event listeners for interactivity. One example is the garment tiles changing opacity when hovered to hint that the tile can be clicked on.
 
 <br />
 
@@ -85,44 +80,78 @@ Created for makeuse.nz, this project is a radical reimagining of the 'MAKE' page
 
     * I sourced Ubuntu from Google Fonts. It is used for the majority of text elements across the site, including body, links and headings etc.
 
-    * MakeUse font is a bespoke typeface created for the project by designers, Jo Bailey and Thomas Le Bas. In my project the Make/Use font is not used as a typeface as such, but rather it features in the Make/Use logo, at the top-left of the header / navigation bar. As part of the Make/Use project, the font was made available open-source and can be downloaded from makeuse.nz 
-
-
-
-
-
+    * MakeUse font is a bespoke typeface created for the project by designers, Jo Bailey and Thomas Le Bas. In my project the Make/Use font is not used as a typeface as such, but rather it features in the Make/Use logo, at the top-left of the header / navigation bar. As part of the Make/Use project, the font was made available open-source and can be downloaded here:
+    [Make/Use font](assets/fonts/makeuse-icons.woff)
 
 
 * ### Imagery
-    * Make/Use video on landing page by Jason O'Hara and edited by Mon Patel. The model in the video is Photographs by Bonny Stewart-MacDonald. Interactive garment tiles 3d-rendered in Clo3d before being exported as 2d image assets by Holly McQuillan. Garment tile assets resampled and renamed by Thomas McQuillan.
+    * Make/Use video shown on landing page directed by Jason O'Hara and edited by Mon Patel. Modelling by Hannah Dellow. Garments by Holly McQuillan, Textiles by Greta Menzies.
+
+    * Interactive 3D / AR garment models provided by Holly McQuillan.
+
+    * Photographs on the site courtesy of Bonny Stewart-MacDonald. 
+    
+    * Interactive garment tiles 3d-rendered in Clo3d software before being exported as 2d image tiles by Holly McQuillan. Garment tile assets resampled, reordered and renamed by Thomas McQuillan.
+
+<br />
 
 ## Wireframes
+
 * I made the wireframes for the project using Adobe XD.
 
-* See below for an overview of the page structure. 
-
-<!-- Insert screenshot of wireframes. -->
+<br />
 
 *   # User Journey
 
 <!-- Existing page: https://makeuse.nz/make/crop-t-shirt/ -->
 
-<!-- ![Crop T shirt](https://thomasmcquillan.github.io/makeuse/documentation/wireframes/____.png) -->
-
-
-
-
-
+<p align="center">
+    <img width="77%" src="assets/documentation/readme-assets/makeuse-font.png" alt="Make/Use logo showing the bespoke Make/Use typeface, in regular and hovered states.">
+</p>
 
 
 ## Features
-* The page has been stripped down and rebuilt from the ground up, considering the user's journey when setting out to make a given garment. This starts with the creation and implementation of a bespoke interactive garment model which changes appearance as the user clicks the garment's neckline, body or left/right sleeves. As the garment tiles change, so too does the stated fabric width and length requirement to account for the changes in pattern size and shape. In addition, the list of required pattern downloads is filtered to match the resources needed for the changing garment. This avoids overwhelming the user with a long list of downloads to sort through, avoiding confusion and reducing cognitive load. The relevant downloads are displayed as thumbnail images, rather than plain text-links for more visually descriptive and engaging experience. 
+The existing website's 'Make' pages have been stripped down and rebuilt, considering the user's journey when setting out to make a given garment. This saw the creation of a bespoke interactive garment model that changes as the user clicks the neckline, body or sleeve tiles. 
 
-Clicking on the image tiles to change garment style will also provide users with key measurements relating to the garment style and proportion which they can compare with their needs. This will be sufficient for most users, but for the seasoned sewist I have made it possible to enter custom values for the body length and body and arm circumference. Users are warned that when entering custom values, these values won't be represented in the rendered garment model as the possible variations are literally endless. However it will provide them with the fabric width and length requirements for their input values.
+<!-- <image width="77%" src="assets/documentation/readme-assets/makeuse-font.png"></image> -->
 
-Pending:  Upon settling on a given style, the user may, if desired, enter their email address. Upon clicking submit, they can be sent a summary of their selected options - providing them with the instructions, download links and fabric requirements needed to complete the construction.
+* As the garment tiles change, the stated fabric size requirement updates to account for the changes in pattern size and shape.
 
-* The page has been designed to be responsive across devices from the 2016 iPhone-SE to a 27" 4k monitor. 
+* Changes to the garment also provides users with key garment measurements for the style currently displayed. This gives users a sense of the displayed garment's proportions which provides a reference point that they can compare with their own needs.
+
+* For seasoned sewists there is now the option of entering custom values for garment length, garment circumference and sleeve circumference. While input values will not be represented in the garment displayed (as the variations are endless), it provides an easy way of determining how much fabric they will need based on their specific requirements.
+
+* Additionally, with each tile change the list of template downloads is filtered to only show the files needed for the garment configuration that is currently displayed. This seeks to avoid overwhelming the user with a long list of downloads to sort through, thereby reducing cognitive load. The relevant downloads are displayed both as thumbnail images and text-links. This is to familiarise the user with the templates themselves and to provide a more visual and engaging experience.
+
+    * The template thumbnails toggle on and off as their associated garment tile toggles on and off. Some of the more basic garment configurations require relatively few templates, while more ambitious modifications require more template downloads in addition to the core templates required for all designs.
+    
+    * When a user hovers over the template thumbnails a larger preview is displayed to show the template in more detail. If a user would like to see it larger again, the original pdf file can be opened in a new tab simply by clicking the thumbnail.
+
+    * When a user hovers over a tile on the garment model, the associated template thumbnail changes color. The concept is to help users begin to understand the template system and start 'joining the dots' in their head as to which templates are related to the various parts of the garment.
+
+    * Template downloads are also displayed as a dynamic list, which updates as the garment configuration changes. While users can, if desired, open and download the pdf template files by opening thumbnails in a new tab - this is not the conventional way of downloading files. Therefore regular text anchor links are also provided. I have added the HTML5 download attribute to the anchor tags, so that once users are happy with their garment they can simply left-click on the links to download.
+
+* To view detailed instructions on garment construction users have two options:
+
+    1)  Navigate to a separate page to view instructions.
+
+        or
+
+    2)  Enter their name and email address to have the instructions sent directly to their mailbox for easy reference.
+
+* If opting to have the instructions emailed, the garment page that the user is on at the time will determine which instructions they receive. This is achieved through EmailJS custom templates, linked in the head of each Maker page. At launch, there are 3 garments - 2 tshirts and a coat. As the Cropped Tshirt and Long Tshirt are constructed by the same method, their instructions are covered by one template and the coat by another. The email also contains a link back to the Make/Use page for an easy way to navigate back to the site to check measurements, download files or come up with a whole new design.
+
+* The page has been designed to be responsive across devices from small mobile devices to tablets and desktops. The best experience however is when viewed on desktop computers for various reasons:
+
+    * The interactive garment model is a larger size, so easier to see and clicking tiles is less fiddly.
+
+    * The Maker tools' many reactive hover states are not available without a pointing device.
+
+    * The dynamic elements such as template thumbnails, fabric required / garment-measurements, and download links are usually in view when viewed on a desktop or tablet. This gives a tangible feeling of interactivity that can be lacking when viewed on smaller handheld devices. 
+
+    * Additionally, mobile users are unlikely to want to download pdf template files to their mobile. Fortunately they can still have the instructions emailed to them, which contains a link back to the page for when they get to their computer or tablet.
+
+
 
 ## Technologies Used
 ### Languages Used
@@ -166,6 +195,24 @@ Pending:  Upon settling on a given style, the user may, if desired, enter their 
 
 * #### First Time Visitor Goals
     
+
+    "As a first time visitor to Make/Use I would like to learn about zero-waste fashion, and what is the motivation for adopting zero-waste thinking when designing and making clothes."
+
+    "As a first time visitor I want to be provided with easy navigation to the information and resources I need to start making my own garments."
+
+    "As a first time visitor I would like to see visual examples of what kinds of styles are possible when designing zero-waste fashion garments."
+
+    "As a first time visitor I would like some way of customising the Make/Use garments to suit my taste and / or body shape."
+
+    "As a first time site visitor I would like to know how much fabric I will require to sew my selected style."
+
+    "As a first time visitor I would like it to be clear what downloads I need for my selected style, and an easy way of downloading them."
+
+    "As a first time site visitor it would be helpful if I could be emailed the instructions on how to make my chosen garment for easy reference."
+
+    "As a first time visitor I expect a site that displays well across devices and is intuitive to use and navigate."
+
+
     * #### ".."
  
         * Upon arrival at the site....

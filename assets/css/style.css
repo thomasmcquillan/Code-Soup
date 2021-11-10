@@ -87,11 +87,16 @@ p, h1, h2, h3, h4 {
     transition: .3s;
 }
 
-#logo-hover {
-    position: absolute;
-    cursor: pointer;
-    transition: .3s;
-    z-index: 10000;
+#active-long-t,
+#active-crop-t,
+#active-coat {
+    color: var(--mu-orange);
+}
+
+#active-long-t:hover,
+#active-crop-t:hover,
+#active-coat:hover {
+    color: var(--mu-gold);
 }
 
 /* \\---  Fonts  ---////////////////////////////// */
@@ -159,18 +164,15 @@ h5 {
 .navbar .navbar-nav,
 .quick-nav .nav-item {
     font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .quick-nav .nav-item {
     color: var(--mu-slate);
     text-transform: uppercase;
+    padding-right: 6px;
 }
-
-.navbar .nav-item a, a {
-    font-weight: 600;
-    font-size: 14px;
-}    
 
 .intro-sub {
     line-height: 2.6rem;
@@ -191,6 +193,13 @@ h5 {
     padding: 0;
     left: 0;
     height: 160px;
+}
+
+#logo-hover {
+    position: absolute;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 10000;
 }
 
 nav {
@@ -257,7 +266,6 @@ a {
     top: 120px;
     margin: 40px auto 24px auto;
     justify-content: left;
-    background: none;
 }
 
 .tri-divider {
@@ -330,6 +338,7 @@ li {
     margin-top: 100px;
     position: absolute;
     align-self:flex-end;
+    justify-items: center;
 }
 
 .mu-footer img {
@@ -437,11 +446,13 @@ img {
 #grid-long-coat .tile-on,
 #grid-crop-tshirt .tile-on,
 #grid-long-tshirt .tile-on {
-    display: grid;
+    /* display: grid; */
+    display: flex;
 }
 
 .neck-tile {
-    display: grid;
+    /* display: grid; */
+    display: flex;
     grid-column: 2;
     grid-row: 1;
     overflow: auto;
@@ -455,7 +466,8 @@ img {
 #body-crop-tshirt,
 #body-long-tshirt,
 #body-long-coat {
-    display: grid;
+    /* display: grid; */
+    display: flex;
     grid-column: 2;
     grid-row: 2 / 3;
     overflow: auto;
@@ -483,7 +495,9 @@ img {
 }
 
 .tile-on {
-    display: grid;
+    /* display: grid; */
+    display: flex;
+
 }
 
 /* --------- grid-tile tweaking ----------------- */
@@ -993,7 +1007,8 @@ img {
 #grid-long-coat .tile-on,
 #grid-crop-tshirt .tile-on, 
 #grid-long-tshirt .tile-on {
-    display: grid;
+    /* display: grid; */
+    display: flex;
     place-items: end;
 }
 
@@ -1073,8 +1088,7 @@ img {
     color: var(--mu-slate);
 }
 
-#file-downloads, 
-#long-tshirt-downloads, 
+#file-downloads-long-tshirt,
 #file-downloads-crop-tshirt, 
 #file-downloads-long-coat {
     height: 180px;
@@ -1087,7 +1101,9 @@ img {
     align-items: start;
 }
 
-#crop-tshirt-downloads a, #long-tshirt-downloads a, #coat-downloads > a {
+#crop-tshirt-downloads a,
+#long-tshirt-downloads > a,
+#coat-downloads > a {
     color: var(--mu-slate);
     text-decoration: none;
     font-weight: 400;
@@ -1099,6 +1115,7 @@ img {
     font-weight: 400;
 }
 
-#coat-downloads {
+#coat-downloads,
+#tshirt-downloads {
     justify-content: center;
 }
