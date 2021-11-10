@@ -2,15 +2,19 @@
 
 const tShirtGrid = document.getElementById("t-shirt-grid");
 const coatGrid = document.getElementById("coat-grid"); 
-const neckRound = document.getElementById("pattern-neck-round");
-const neckCollar = document.getElementById("pattern-neck-collar");
-const neckWide = document.getElementById("pattern-neck-wide");
+const neckRound = document.getElementsByClassName("pattern-neck-round");
+const neckCollar = document.getElementsByClassName("pattern-neck-collar");
+const neckWide = document.getElementsByClassName("pattern-neck-wide");
 const sleeveCutLeft = document.getElementById("pattern-sleeve-cut-left");
 const sleeveCutRight = document.getElementById("pattern-sleeve-cut-right");
 const bodyRotateLeft = document.getElementById("pattern-body-rotate-left");
 const bodyRotateRight = document.getElementById("pattern-body-rotate-right");
 const elbowRotateLeft = document.getElementById("pattern-elbow-rotate-left");
 const elbowRotateRight = document.getElementById("patternelbow-rotate-right");
+
+const collarNeckImg = document.getElementById("neck-collar");
+const roundNeckImg = document.getElementById("neck-round");
+const wideNeckImg = document.getElementById("neck-wide");
 
 // Declaring template download anchor links.
 
@@ -118,14 +122,18 @@ $(document).ready(function () {
             $("#neckline-wide").toggle(); // Toggle on next available neckline tile.
             $(neckCollar).toggle(); // Toggle off div with download for current neckline. 
             $(neckWide).toggle(); // Toggle on div with download for next neckline.
-            $(dlNeckCollar).toggle();
-            $(dlNeckWide).toggle();
+            $(collarNeckImg).toggle(); // Toggle off template thumbnail.
+            $(wideNeckImg).toggle(); // Toggle on next thumbnail.
+            $(dlNeckCollar).toggle(); // Toggle off collar neckline anchor download.
+            $(dlNeckWide).toggle(); // Toggle on wide neckline anchor download.
         } else if (
             $("#neckline-wide").is(":visible")) {
             $("img:visible", this).toggle();
             $("#neckline-round").toggle();
             $(neckWide).toggle();
             $(neckRound).toggle();
+            $(wideNeckImg).toggle();
+            $(roundNeckImg).toggle();
             $(dlNeckWide).toggle();
             $(dlNeckRound).toggle();
         } else if (
@@ -133,6 +141,8 @@ $(document).ready(function () {
             $("img:visible", this).toggle();
             $("#neckline-collar").toggle();
             $(neckRound).toggle();
+            $(roundNeckImg).toggle();
+            $(collarNeckImg).toggle();
             $(neckCollar).toggle();
             $(dlNeckRound).toggle();
             $(dlNeckCollar).toggle();
@@ -319,28 +329,171 @@ $(document).ready(function () {
     });
 });
 
-// const tShirtGrid = document.getElementById("t-shirt-grid");
-// const coatGrid = document.getElementById("coat-grid"); 
-// const neckRound = document.getElementById("pattern-neck-round");
-// const neckCollar = document.getElementById("pattern-neck-collar");
-// const neckWide = document.getElementById("pattern-neck-wide");
-// const sleeveCutLeft = document.getElementById("pattern-sleeve-cut-left");
-// const sleeveCutRight = document.getElementById("pattern-sleeve-cut-right");
-// const bodyRotateLeft = document.getElementById("pattern-body-rotate-left");
-// const bodyRotateRight = document.getElementById("pattern-body-rotate-right");
-// const elbowRotateLeft = document.getElementById("pattern-elbow-rotate-left");
-// const elbowRotateRight = document.getElementById("patternelbow-rotate-right");
+// template hover - neckline collar
 
-// $(document).ready(function () {
+$(document).ready(function () {
     $("#neck-collar").hover(function () {
         $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
         $("#neck-collar-hover").toggle();
     }, function () {
         $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
         $("#neck-collar-hover").toggle();
-    }
-)
+    })
+});
 
+// template hover - neckline wide (tshirts)
+
+$(document).ready(function () {
+    $("#neck-wide").hover(function () {
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#neck-wide-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#neck-wide-hover").toggle();
+    })
+});
+
+// template hover - neckline round (tshirts)
+
+$(document).ready(function () {
+    $("#neck-round").hover(function () {
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#neck-round-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#neck-round-hover").toggle();
+    })
+});
+
+// template hover - tshirt grid
+
+$(document).ready(function () {
+    $("#tshirt-grid").hover(function () {
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#tshirt-grid-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#tshirt-grid-hover").toggle();
+    })
+});
+
+// template hover coat grid
+
+$(document).ready(function () {
+    $("#coat-grid").hover(function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#coat-grid-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#coat-grid-hover").toggle();
+    })
+});
+
+// template hover - sleeve cut left
+
+$(document).ready(function () {
+    $("#sleeve-cut-left").hover(function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#sleeve-cut-left-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#sleeve-cut-left-hover").toggle();
+    })
+});
+
+// template hover - sleeve cut right
+
+$(document).ready(function () {
+    $("#sleeve-cut-right").hover(function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#sleeve-cut-right-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#sleeve-cut-right-hover").toggle();
+    })
+});
+
+// template hover - body rotate left
+
+$(document).ready(function () {
+    $("#body-rotate-left").hover(function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#body-rotate-left-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#body-rotate-left-hover").toggle();
+    })
+});
+
+// template hover body rotate right
+
+$(document).ready(function () {
+    $("#body-rotate-right").hover(function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#body-rotate-right-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#body-rotate-right-hover").toggle();
+    })
+});
+
+// template hover - body and elbow rotate left
+
+$(document).ready(function () {
+    $("#elbow-rotate-left").hover(function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#elbow-rotate-left-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#elbow-rotate-left-hover").toggle();
+    })
+});
+
+// template hover - body and elbow rotate right
+
+$(document).ready(function () {
+    $("#elbow-rotate-right").hover(function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#elbow-rotate-right-hover").toggle();
+    }, function () {
+        $("#pattern-hover-panel-coat").toggle();
+        $("#pattern-hover-panel-longt").toggle();
+        $("#pattern-hover-panel-cropt").toggle();
+        $("#elbow-rotate-right-hover").toggle();
+    })
+});
 
 $(document).ready(function () {
     $(".neck-tile").hover(function () {
@@ -640,6 +793,8 @@ $(document).ready(function () {
         $("#fabric-required").text(`${currentSleeveLength * 2}cm x ${(currentSleeveCircum * 0.5) + currentGarmentLength}cm`);
     });
 });
+
+// logo - hover function
 
 $(document).ready(function () {
     $("#logo-span").hover(function () {
