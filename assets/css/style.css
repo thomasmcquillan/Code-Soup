@@ -34,9 +34,9 @@ body {
     background-color: var(--mu-white);
 }
 
-#fourzerofour {
+/* #fourzerofour {
     background: url('assets/images/404-bg.png') white no-repeat center center fixed;
-}
+} */
 
 .back-to-makeuse {
     display: grid;
@@ -54,7 +54,7 @@ body {
     font-size: 18px;
 }
 
-/* \\---  Colors  ---///////////////////////////// */
+/* \\---  colors  ---///////// */
 
 a {
     color: var(--mu-slate);
@@ -108,7 +108,7 @@ p, h1, h2, h3, h4 {
     color: var(--mu-orange);
 }
 
-/* \\---  Fonts  ---////////////////////////////// */
+/* \\---  fonts  ---///////// */
 
 html {
     font-family:'Ubuntu', "sans-serif";
@@ -198,7 +198,12 @@ h5 {
     color: var(--mu-white);
 }
 
-/* \\---  Header & Navigation  ---// */
+.maker-p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* \\---  header & nav  ---///////// */
 
 #makeuseheader {
     width: 100%;
@@ -263,7 +268,7 @@ nav .navbar .navbar-custom {
     justify-self: right;
 }
 
-/* \\---  Quick Nav Links  ---////////////////////////////// */
+/* \\---  quick-nav links ---///////// */
 
 .navbar .nav-item a,
 a {
@@ -288,7 +293,25 @@ a {
     padding-right: 8px;
 }
 
-/* \\---  Landing Page  ---/////////////////////////// */
+/* \\---  misc links styles  ---///////// */
+
+.maker-link {
+    background-color: var(--mu-orange);
+    color: var(--mu-white);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 20px 18px;
+}
+
+#crop-tshirt-from-templates a > span:hover {
+    background-color:var(--mu-lightsilver);
+    color: var(--mu-burntorange);
+    border: 4px solid var(--mu-gold);
+    font-weight: 500;
+}
+
+/* \\---  landing page  ---///////// */
 
 #logo-hover {
     display: none;
@@ -333,7 +356,7 @@ a {
     background: none;
 }
 
-/* \\---  Body Layout  ---////////////////////////////// */
+/* \\---  body layout  ---///////// */
 
 ul {
     padding-left: 0;
@@ -358,7 +381,7 @@ li {
     width: 210px;
 }
 
-/* \\---  Bootstrap Cards  ---////////////////////////////// */
+/* \\---  bootstrap card classes  ---///////// */
 
 .card {
     margin-bottom: 30px;
@@ -401,10 +424,6 @@ strong {
     margin: 0;
 }
 
-.cropped-t-instructions p {
-    margin: 2rem;
-}
-
 .coat-cards {
     display: flex;
     flex-direction: row;
@@ -430,7 +449,7 @@ strong {
     border: none;
 }
 
-/* \\---  Images  ---////////////////////////////// */
+/* \\---  images  ---///////// */
 
 .img-3d-render {
     margin: 2rem auto;
@@ -506,7 +525,7 @@ img {
     padding-top: 6px;
 }
 
-/* ------- garment info table  ------ */
+/* \\---  garment info table  ---///////// */
 
 td:after {
     content: attr(data-title);
@@ -680,7 +699,7 @@ input {
     justify-self :center;
 }
 
-/* video */
+/* \\---  video styles  ---///////// */
 
 /* Code for fullscreen video with overlaid elements borrowed from Dudley Storey, first read about at CSS Tricks,
 https://codepen.io/dudleystorey/pen/knqyK , https://css-tricks.com/full-page-background-video-styles/ */
@@ -707,7 +726,7 @@ video {
     display: flex;
 }
 
-/* iframes */
+/* \\---  iframe styles  ---///////// */
 
 /* styling below courtesy of vntana: https://www.vntana.com/resource/3d-webviewer/ */
 
@@ -743,7 +762,7 @@ model-viewer {
     width: 80%;
 }
 
-/* \\---  Garment Grid  ---/////////////////////// */
+/* \\---  garment grid styles  ---///////// */
 
 .garment-info-panel {
     grid-column: 1 / 4;
@@ -776,7 +795,7 @@ model-viewer {
     font-size: 18px;
 }
 
-/* \\---  Pattern Template Downloads  ---////////////////////////////// */
+/* \\---  pattern template thumbnails  ---///////// */
 
 .pattern-thumb {
     display: none;
@@ -813,6 +832,8 @@ model-viewer {
     height: auto;
     padding: 5px;
 }
+
+/* \\---  sizing-info table  ---///////// */
 
 .sizing-info-table {
     grid-row: 3;
@@ -858,7 +879,7 @@ img {
     }
 }
 
-/* ------------ Media Queries ------------ */
+/* \\---  media queries  ---///////// */
 
 @media (min-width: 576px) {
 
@@ -975,10 +996,6 @@ img {
     align-items: center;
 }
 
-.downloadwrapper {
-    background-color: var(--mu-silver);
-}
-
 .grid-outer-wrapper {
     display: grid;
     grid-template-rows: minmax(80px, 2fr) minmax(160px, 4fr);
@@ -1006,6 +1023,8 @@ img {
     padding: 6px;
 }
 
+/* \\---  template preview styles  ---///////// */
+
 #pattern-hover-panel-coat,
 #pattern-hover-panel-cropt,
 #pattern-hover-panel-longt {
@@ -1029,6 +1048,8 @@ img {
 .thumb-wrapper {
     height: 100px;
 }
+
+/* \\--  template download anchor links  --///////// */
 
 #file-downloads a,
 #file-downloads-long-tshirt a,
@@ -1098,6 +1119,9 @@ img {
     display: flex;
 }
 
+/* \\--  cursor to show coat neckline
+         can't be changed              // */
+
 #neck-tile-coat {
     cursor: not-allowed;
 }
@@ -1162,7 +1186,6 @@ img {
 
 #file-downloads-long-tshirt > a {
     text-decoration: underline;
-    text-decoration-thickness: 2px;
     text-decoration-color: var(--mu-orange);
 }
 
