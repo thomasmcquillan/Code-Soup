@@ -1,5 +1,3 @@
-/* Google Fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 /* \\---  Global variables  ---// */
@@ -441,12 +439,7 @@ strong {
 img {
     max-width: 100%;
     height: auto;
-    transition: fade ease-in 1s;
-}
-
-.img-3d-render a span caption {
-    padding: 1.4rem;
-    width: minmax (50vw, 230px);
+    transition: ease-in 1s;
 }
 
 .garment-tile {
@@ -671,7 +664,6 @@ input {
 #alert-user {
     display: flex;
     flex-direction: column;
-    align-items: space-evenly;
     justify-content: space-evenly;
     border: .8px solid #888;
     border-radius: 8px;
@@ -703,8 +695,6 @@ video {
 }
 
 #maker-video {
-    /* width: 368px;
-    height: 460px; */
     width: 50%;
     height: auto;
 }
@@ -715,6 +705,42 @@ video {
 
 .tile-on {
     display: flex;
+}
+
+/* iframes */
+
+/* styling below courtesy of vntana: https://www.vntana.com/resource/3d-webviewer/ */
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+}
+    
+    #enterFullscreen {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    background: #dbdbdb url(‘https://storage.googleapis.com/vntana-viewer/assets/images/enter_fullscreen_icon.svg’) no-repeat center;
+    background-size: 25px auto;
+    cursor: pointer;
+}
+    
+    #exitFullscreen {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    background: #dbdbdb url(‘https://storage.googleapis.com/vntana-viewer/assets/images/exit_fullscreen_icon.svg’) no-repeat center;
+    background-size: 25px auto;
+    display: none;
+    cursor: pointer;
+}
+
+#iframe-long-tshirt {
+    width: 80%;
 }
 
 /* \\---  Garment Grid  ---/////////////////////// */
@@ -784,7 +810,6 @@ video {
 .pattern-thumb {
     display: none;
     width: 77px;
-    max-width: auto;
     height: auto;
     padding: 5px;
 }
@@ -822,10 +847,6 @@ video {
 .garment-tile img,
 img {
     animation: fadeIn ease-in 50ms;
-    -webkit-animation: fadeIn ease-in-out 50ms;
-    -moz-animation: fadeIn ease-in-out 50ms;
-    -o-animation: fadeIn ease-in-out 50ms;
-    -ms-animation: fadeIn ease-in-out 50ms;
 }
 
 @keyframes fadeIn {
@@ -836,10 +857,6 @@ img {
         opacity: 1;
     }
 }
-
-/* fadeIn prefixes (minified for visual-brevity)  */
-
-@-moz-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-o-keyframes fadeIn{0%{opacity:0;}100%{opacity:1;}}
 
 /* ------------ Media Queries ------------ */
 
@@ -1036,7 +1053,6 @@ img {
 #file-downloads-crop-tshirt,
 #file-downloads-long-coat {
     padding-bottom: 18px;
-    padding-bottom: auto;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -1117,9 +1133,8 @@ img {
 #file-downloads-crop-tshirt, 
 #file-downloads-long-coat {
     height: 180px;
-    padding-bottom: auto;
     display: grid;
-    grid-template-rows: repeat(16px);
+    /* grid-template-rows: repeat(16px); */
     justify-content: start;
     align-content: start;
     justify-items: start;
@@ -1153,5 +1168,4 @@ img {
 
 #file-downloads-long-tshirt a:hover {
     background-color: var(--mu-gold);
-    transition-duration: 100ms ease-in-out all;
 }
