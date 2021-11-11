@@ -7,21 +7,22 @@
 :root {
     --mu-silver: #d7d7d7;
     --mu-lightsilver: #f5f3f3;
+    --mu-silversmoke: #eeececce;
     --mu-slate: #4a494a;
     --mu-sand: #b7b3a7;
     --mu-orange: #d46300;
+    --mu-burntorange: #aa5001;
     --mu-gold:  #ffb100;
     --mu-sand: #b7b3a7;
     --mu-white: #fcfcfc;
     --mu-dark: #5c5c5c;
 }
 
-/* --mu-white: #fffefe; */
-
 html,
 body {
     color: var(--mu-slate);
     overflow: auto;
+    scroll-behavior: smooth;
     flex-wrap: wrap;
     box-sizing: border-box;
     font-family:'Ubuntu', "sans-serif";
@@ -36,9 +37,8 @@ body {
     background-color: var(--mu-white);
 }
 
-.four-0-four-header,
 #fourzerofour {
-    background: none;
+    background: url('assets/images/404-bg.png') white no-repeat center center fixed;
 }
 
 .back-to-makeuse {
@@ -90,7 +90,7 @@ p, h1, h2, h3, h4 {
 #active-long-t,
 #active-crop-t,
 #active-coat {
-    color: var(--mu-orange);
+    color: var(--mu-burntorange);
 }
 
 #active-long-t:hover,
@@ -117,6 +117,11 @@ p {
     font-size: 16px;
     font-stretch: 100%;
     text-size-adjust: 100%;
+}
+
+.temp-down-heading {
+    font-size: 17px;
+    margin-bottom: 6px;
 }
 
 h1 {
@@ -298,7 +303,6 @@ a {
     position: absolute;
     height: 76px;
     place-items: center;
-
     display: flex;
     justify-self: center;
 }
@@ -493,7 +497,6 @@ img {
 
 .tile-on {
     display: flex;
-
 }
 
 /* --------- grid-tile tweaking ----------------- */
@@ -504,12 +507,11 @@ img {
 
 /* ------- garment info table  ------ */
 
-.sizing-info {
-    max-width: 876px;
-    margin: 0 auto;
+td:after {
+    content: attr(data-title);
 }
 
-td:before {
+#custom-inputs td::placeholder {
     content: attr(data-title);
 }
 
@@ -523,21 +525,19 @@ table {
     margin: 0 auto;
 }
 
-table th,
-table td {
-    padding-bottom: 6px;
-}
-
 table tr {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
 }
-
 
 table td span {
     font-size: 10px;
-    padding: 6px 0 6px 0;
+    padding: 18px 0 4px 0;
     top: 0;
     margin: auto;
     border-collapse: collapse;
@@ -545,13 +545,15 @@ table td span {
 
 table td {
     display: grid;
-    padding-top: 14px;
-    position: relative;
-    align-content: flex-end;
+    text-align: center;
 }
 
 .fabric-data {
-    width: 100%;
+    text-align: center;
+}
+
+.fabric-row-center {
+    justify-content: center;
 }
 
 #garment-length,
@@ -566,18 +568,46 @@ table td {
     text-align: center;
 }
 
-/* ------table testing end --------- */
-
-section.sizing-info > div > table > tbody > tr > td {
-    margin: 3px auto;
+.garment-info-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
+.field input,
 input {
     border: none;
     text-align: center;
     border-radius: 3px;
-    background-color: var(--mu-lightsilver);
-    place-content: end;
+    background-color: var(--mu-silversmoke);
+    justify-content: center;
+    padding-left: 6px;
+}
+
+.field > input {
+    text-align: center;
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+}
+
+.card-body p {
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 14px;
+}
+
+.card-body strong {
+    color: var(--mu-burntorange);
+}
+
+.form button {
+    display: flex;
+    justify-self: flex-end;
 }
 
 .alert-wrapper {
@@ -627,7 +657,7 @@ input {
     justify-content: center;
     align-self: center;
     font-weight: 400;
-    background-color:var(--mu-white);
+    background-color:var(--mu-lightsilver);
     margin-bottom: 34px;
     padding: .2rem 1rem;
     border-radius: 4px;
@@ -752,8 +782,6 @@ video {
     display: flex;
 }
 
-/* --- rebuild -------- */
-
 .sizing-info-table {
     grid-row: 3;
     grid-column: 1 / 4;
@@ -769,8 +797,7 @@ video {
 }
 
 #form-button {
-    color: var(--mu-slate);
-    background-color: var(--mu-silver);
+    color: var(--mu-lightsilver);
     border: none;
     margin-left: 20px;
     margin-top: 10px;
@@ -1006,8 +1033,7 @@ img {
 #file-downloads-long-coat {
     padding-bottom: 18px;
     padding-bottom: auto;
-    display: grid;
-    grid-template-rows: repeat(14px);
+    grid-template-columns: 1fr 1fr;
 }
 
 #file-downloads-long-coat a,
@@ -1015,6 +1041,7 @@ img {
 #file-downloads-long-tshirt a {
     color: var(--mu-slate);
     text-decoration: none;
+    padding-bottom: 8px;
 }
 
 #downloadlist,
@@ -1051,8 +1078,9 @@ img {
     display: flex;
 }
 
-.contact-form {
-    display: block;
+#contact-form-tshirt input {
+    text-align: left;
+    margin: 5px auto;
 }
 
 #form-button {
@@ -1106,4 +1134,15 @@ img {
 #coat-downloads,
 #tshirt-downloads {
     justify-content: center;
+}
+
+#file-downloads-long-tshirt > a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--mu-orange);
+}
+
+#file-downloads-long-tshirt a:hover {
+    background-color: var(--mu-gold);
+    transition-duration: 100ms ease-in-out all;
 }

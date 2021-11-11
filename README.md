@@ -161,15 +161,15 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
 
 ### Frameworks, Libraries and Programs Used
 1. [Bootstrap 5.1.3](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-* Bootstrap was used to style key page elements such as the navigation bar and for its responsive layout tools such as row and column classes.
+* Bootstrap was used to style key page elements such as the navigation bar and for its responsive layout features including row, column and card classes.
 2. [Google Fonts](https://fonts.google.com/)
-* Google Fonts was used for typography across the site.
+* Google Fonts was used to embed the Ubuntu typeface that is used throughout the existing MakeUse site.
 3. [Adobe Color](https://color.adobe.com/)
 * Adobe Color was used when considering the color-scheme. This helped with matching my page to the rest of the MakeUse site.
 4. [Adobe Photoshop](https://www.adobe.com/products/photoshop.html)
-* Adobe Photoshop was used in the editing, resampling and export of the projects many image assets.
+* Adobe Photoshop was used in the editing, resampling and export of the project's vast collection of image assets.
 5. [jQuery](https://jquery.com/)
-* jQuery was used extensively for declaring and calling variables, functions, objects etc. It was also used to power some of Bootstrap's responsive elements. Also used for Javascript's smooth scroll function.
+* jQuery was used extensively for declaring variables and calling functions. Also used for Javascript's smooth scroll function.
 6. [Git](https://git-scm.com/)
 * Git was utilised for version control via the Gitpod terminal for commiting file changes to Git before pushing to the GitHub repository.
 7. [GitHub](https://github.com/)
@@ -190,6 +190,11 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
     * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
         
         * [Results:](https://jigsaw.w3.org/css-validator/)
+
+    * [JSHint javascript code validator](https://jshint.com/)
+        
+        * [Results:](assets/documentation/jshint-javascript-validator-results-makeuse.html)
+<br />
 
 * ### Testing User Stories from User Experience (UX) Section 
 

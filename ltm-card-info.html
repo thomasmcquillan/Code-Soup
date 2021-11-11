@@ -228,7 +228,13 @@
                 </div>
             </div>
         </section>
-
+<table>
+    <tbody>
+        <tr>
+            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
+        </tr>
+    </tbody>
+</table>
         <section class="thumb-wrapper row">
 
             <div class="downloadwrapper-test col-11 col-md-8 mx-auto">
@@ -314,119 +320,71 @@
                 </div>
             </div>
         </section>
-        <!-- <section id="methods-md-xl-viewports" class="d-none d-md-flex my-2 row">
-            <div class="col-11 mx-3">
-                <h3>
-                    Making the Long Coat</h3>
-                <h4>
-                    There are two methods for making the Make/Use Long Coat - Pattern or Template
-                </h4>
-            </div>
-
-            <div class="coat-cards">
-                <div class="card col-6">
-                    <div class="image">
-                        <img    src="assets/images/cards/card-coat-pattern-lighter.png" 
-                                class="card-img"
-                                alt="Make Use Long Coat sewing pattern"/>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-header my-2">
-                            <h4>Pattern</h4>
-                        </div>
-                        <div>
-                            <p> Simple line diagram to print onto paper at full scale – the closest to using a
-                                traditional dressmaking pattern. Good if you have fabric at the exact width or know 
-                                how to use software to change the pattern to fit. Available as ai file (Adobe 
-                                illustrator/Inkscape for modifications), or pdf. Print tiled and stick
-                                together, or take to a large format printer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <section class="sizing-info">
-            <div class="col-11 col-md-12 mx-auto">
-                <table class="table-borderless table-responsive mx-auto">
+        <section class="container-lg">
+            <div class="row my-4">
+                <table class="col-11 col-md-10 mx-auto">
                     <tbody>
-                        <tr>
-                            <td data-title="Garment Circum."><span id="garment-circum">110cm</span></td>
-                            <td data-title="Garment length"><span id="garment-length">50cm</span></td>
-                            <td data-title="Sleeve Circum."><span id="sleeve-circum">50cm</span></td>
+                        <tr id="garment-metrics" class="col-11 col-md-8 garment-info-row">
+                            <td data-title="garment circumference"><span id="garment-circum">110cm</span></td>
+                            <td data-title="garment length"><span id="garment-length">50cm</span></td>
+                            <td data-title="sleeve circumference"><span id="sleeve-circum">50cm</span></td>
                         </tr>
-                        <tr><td></td></tr>
-                        <tr>
-                            <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
-                        </tr>
-                        <tr><td></td></tr>
-                        <tr>
-                            <td><input id="custom-garment-circum" type="number" placeholder="____________cm">
-                            </td>
-                            <td><input id="custom-garment-length" type="number" placeholder="____________cm">
-                            </td>
-                            <td><input id="custom-sleeve-circum" type="number" placeholder="____________cm">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" class="custom-input-info" text-align="center" width="100%">Or enter
-                                custom values to calculate your fabric needs.</th>
+                        <tr id="custom-inputs" class="col-11 col-md-8 garment-info-row">
+                            <td data-title="custom"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
+                            <td data-title="custom"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
+                            <td data-title="custom"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="alert-wrapper">
-                    <div id="alert-input-error">
-                        <div id="alert-user">
-                            <p>Please enter a positive value in 'cm' to determine your fabric needs.
-                            </p>
-                            <button class="okay">OK</button>
+            </div>
+        </section>
+        <section class="row my-4">
+            <div class="col-11 col-md-7 mx-auto my-4 pt-4">
+                <p>Once you are happy with your selection, simply click the template links below to download. If you would like to receive detailed construction
+                    instructions, please enter your email below. </p>
+            </div>
+            <div class="row my-4">
+                <div class="col-11 col-md-7">
+                    <strong class="temp-down-heading">
+                    Template Downloads
+                    </strong>
+                    <div id="file-downloads-long-tshirt" class="d-grid col-11 col-md-12 pt-2 justify-content-end">
+                        <a href="assets/downloads/tshirt-pattern-with-grid.pdf" id="dl-tshirt-grid" title="Download Template" download="tshirt-grid.pdf">Tshirt Grid</a>
+                        <a href="assets/downloads/print-template-neckline-round.pdf" id="dl-neck-round" title="Download Template" download="round_neckline_template.pdf">Round Neckline</a>
+                        <a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Collar Neckline</a>
+                        <a href="assets/downloads/print-template-neckline-wide.pdf" id="dl-neck-wide" title="Download Template" download="wide_neckline_template.pdf">Wide Neckline</a>
+                        <a href="assets/downloads/print-template-sleeve-cut-left.pdf" id="dl-sleeve-cut-left" title="Download Template" download="sleeve_cut_left_template.pdf">Sleeve Cut - Left</a>
+                        <a href="assets/downloads/print-template-sleeve-cut-right.pdf" id="dl-sleeve-cut-right" title="Download Template" download="sleeve_cut_right_template.pdf">Sleeve Cut - Right</a>
+                        <a href="assets/downloads/print-template-elbow-rotation-left.pdf" id="dl-elb-rot-left" title="Download Template" download="elbow_rotation_left_template.pdf">Elbow Rotation - Left</a>
+                        <a href="assets/downloads/print-template-elbow-rotation-right.pdf" id="dl-elb-rot-right" title="Download Template" download="elbow_rotation_right_template.pdf">Elbow Rotation - Right</a>
+                        <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Body Rotation & Sleeve Swap - Left</a>
+                        <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Body Rotation & Sleeve Swap - Right</a>
+                    </div>
+                </div>
+                <div class="col-11 col-md-5 pt-4 my-2">
+                    <form id="contact-form-tshirt">
+                        <div class="field">
+                            <input type="text" name="from_name" class="form-control" id="from_name" placeholder="name" required/>
                         </div>
+                        <div class="field">
+                            <input type="email" name="from_email" class="form-control" id="from_email" placeholder="email" required/>
+                        </div>
+                        <div class="field">
+                            <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
+                        </div>
+                    </form>
+                </div>
+            <div class="alert-wrapper">
+                <div id="alert-input-error">
+                    <div id="alert-user">
+                        <p>Please enter a positive value in 'cm' to determine your fabric needs.
+                        </p>
+                        <button class="okay">OK</button>
                     </div>
                 </div>
-                <input type="button" id="input-error-button" class="d-none" />
             </div>
+            <input type="button" id="input-error-button" class="d-none"/>
         </section>
-
-        <section id="tshirt-downloads" class="row my-3 mx-auto pb-2">
-
-            <div class="d-block col-10 col-md-5">
-
-                <strong class="mx-1 pb-3">
-                    Template Downloads</strong>
-               
-                <div id="file-downloads-long-tshirt" class="mx-1 pt-4">
-                    <a href="assets/downloads/tshirt-pattern-with-grid.pdf" id="dl-tshirt-grid" title="Download Template" download="tshirt-grid">Tshirt Grid</a>
-                    <a href="assets/downloads/print-template-neckline-round.pdf" id="dl-neck-round" title="Download Template" download="round_neckline_template.pdf">Round Neckline</a>
-                    <a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Collar Neckline</a>
-                    <a href="assets/downloads/print-template-neckline-wide.pdf" id="dl-neck-wide" title="Download Template" download="wide_neckline_template.pdf">Wide Neckline</a>
-                    <a href="assets/downloads/print-template-sleeve-cut-left.pdf" id="dl-sleeve-cut-left" title="Download Template" download="sleeve_cut_left_template.pdf">Sleeve Cut - Left</a>
-                    <a href="assets/downloads/print-template-sleeve-cut-right.pdf" id="dl-sleeve-cut-right" title="Download Template" download="sleeve_cut_right_template.pdf">Sleeve Cut - Right</a>
-                    <a href="assets/downloads/print-template-elbow-rotation-left.pdf" id="dl-elb-rot-left" title="Download Template" download="elbow_rotation_left_template.pdf">Elbow Rotation - Left</a>
-                    <a href="assets/downloads/print-template-elbow-rotation-right.pdf" id="dl-elb-rot-right" title="Download Template" download="elbow_rotation_right_template.pdf">Elbow Rotation - Right</a>
-                    <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Body Rotation & Sleeve Swap - Left</a>
-                    <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Body Rotation & Sleeve Swap - Right</a>
-                </div>
-            </div>
-                
-            <div class="col-10 col-md-5 mt-2">
-                <p class="px-2">
-                    To receive tshirt template instructions please enter your email address.
-                </p>
-           
-                <form id="contact-form-tshirt">
-                    <div class="field">
-                        <input type="text" name="from_name" class="form-control" id="from_name" placeholder="name" required/>
-                    </div>
-                    <div class="field">
-                        <input type="email" name="from_email" class="form-control" id="from_email" placeholder="email" required/>
-                    </div>
-                    <div class="field">
-                        <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
-                    </div>
-                </form>
-            </div>
-            
-        </section>
-
     </main>
 
     <footer class="mu-footer container-fluid">
