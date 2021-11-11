@@ -92,6 +92,10 @@ p, h1, h2, h3, h4 {
     color: var(--mu-burntorange);
 }
 
+#maker-tool-drop {
+    box-shadow: lightgrey;
+}
+
 .maker-asterisk,
 #active-long-t:hover,
 #active-crop-t:hover,
