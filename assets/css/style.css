@@ -13,7 +13,6 @@
     --mu-orange: #d46300;
     --mu-burntorange: #aa5001;
     --mu-gold:  #ffb100;
-    --mu-sand: #b7b3a7;
     --mu-white: #fcfcfc;
     --mu-dark: #5c5c5c;
 }
@@ -349,7 +348,6 @@ li {
     width: 210px;
 }
 
-
 /* \\---  Bootstrap Cards  ---////////////////////////////// */
 
 .card {
@@ -499,8 +497,6 @@ img {
     display: flex;
 }
 
-/* --------- grid-tile tweaking ----------------- */
-
 #sleeve-left-long-tshirt img {
     padding-top: 6px;
 }
@@ -508,10 +504,6 @@ img {
 /* ------- garment info table  ------ */
 
 td:after {
-    content: attr(data-title);
-}
-
-#custom-inputs td::placeholder {
     content: attr(data-title);
 }
 
@@ -778,10 +770,6 @@ video {
     padding: 5px;
 }
 
-.tile-on {
-    display: flex;
-}
-
 .sizing-info-table {
     grid-row: 3;
     grid-column: 1 / 4;
@@ -941,10 +929,6 @@ img {
         max-width:100%;
     }
     
-    .tile-on {
-        display: flex;
-    }
-
     .garment-tile:hover {
         filter: opacity(88%);
     }
@@ -1078,7 +1062,8 @@ img {
     display: flex;
 }
 
-#contact-form-tshirt input {
+#contact-form-tshirt input,
+#contact-form-coat input {
     text-align: left;
     margin: 5px auto;
 }
