@@ -35,7 +35,7 @@ body {
 }
 
 /* #fourzerofour {
-    background: url('assets/images/404-bg.png') white no-repeat center center fixed;
+    background: url('assets/images/makeusebg.png') black no-repeat center center fixed;
 } */
 
 .back-to-makeuse {
@@ -266,6 +266,10 @@ nav .navbar .navbar-custom {
 .navbar .nav-item a {
     padding-left: 20px;
     justify-self: right;
+}
+
+#makeuseheader .nav-active {
+    color: var(--mu-gold);
 }
 
 /* \\---  quick-nav links ---///////// */
