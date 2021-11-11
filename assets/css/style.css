@@ -73,15 +73,8 @@ p, h1, h2, h3, h4 {
     color: var(--mu-orange);
 }
 
-.makeuse-logo-wrap {
-    display: flex;
-    place-self: center;
-    place-items: center;
-    position: absolute;
-    left: 15px;
-    top: 27px;
-    cursor: pointer;
-    transition: .3s;
+#makeuseheader .nav-active {
+    color: var(--mu-gold);
 }
 
 #active-long-t,
@@ -104,7 +97,6 @@ p, h1, h2, h3, h4 {
 }
 
 .maker, .take-me-there {
-    color: var(--mu-gold);
     color: var(--mu-orange);
 }
 
@@ -178,7 +170,6 @@ h5 {
 .navbar .navbar-nav,
 .quick-nav .nav-item {
     font-size: 15px;
-    font-size: 14px;
     font-weight: 600;
 }
 
@@ -268,10 +259,6 @@ nav .navbar .navbar-custom {
     justify-self: right;
 }
 
-#makeuseheader .nav-active {
-    color: var(--mu-gold);
-}
-
 /* \\---  quick-nav links ---///////// */
 
 .navbar .nav-item a,
@@ -347,12 +334,11 @@ a {
 #makeuseheader-landing {
     background-color: var(--mu-slate);
     display: flex;
-    width: 100%;
     margin: 0 auto;
-    height: 153px;
     justify-content: center;
     flex-direction: row;
     justify-items: center;
+    width: 100%;
     height: 160px;
 }
 
@@ -582,16 +568,17 @@ table td {
 #fabric-required {
     font-size: 1.8rem;
     font-weight: 500;
-    color: var(--mu-orange);
     margin: 0 auto;
     justify-content: center;
     text-align: center;
+    color: var(--mu-orange);
 }
 
 .garment-info-row {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .field input,
@@ -599,9 +586,9 @@ input {
     border: none;
     text-align: center;
     border-radius: 3px;
-    background-color: var(--mu-silversmoke);
     justify-content: center;
     padding-left: 6px;
+    background-color: var(--mu-silversmoke);
 }
 
 .field > input {
@@ -717,11 +704,6 @@ video {
     left: 0;
 }
 
-#maker-video {
-    width: 50%;
-    height: auto;
-}
-
 .patternThumb:hover img {
     filter: opacity(44%);
 }
@@ -765,8 +747,6 @@ model-viewer {
 #iframe-long-tshirt {
     width: 80%;
 }
-
-/* \\---  garment grid styles  ---///////// */
 
 .garment-info-panel {
     grid-column: 1 / 4;
@@ -951,25 +931,24 @@ img {
 }
 
 @media (min-width: 768px) {
+
+    .garment-info-row {
+        flex-direction: row;
+    }
     
-    h1 {
-        font-size: 72px;
+    h1 { font-size: 72px;
     }
 
-    h2 {
-        font-size: 54px;
+    h2 { font-size: 54px;
     }
-    
-    h3 {
-        font-size: 38px;
+
+    h3 { font-size: 38px;
     }
        
-    h4 {
-        font-size: 23px;
+    h4 { font-size: 23px;
     }
     
-    h5 {
-        font-size: 20px;
+    h5 { font-size: 20px;
     }
 
     .card > h3 {
@@ -991,7 +970,7 @@ img {
     }
     
     .garment-tile:hover {
-        filter: opacity(88%);
+        filter: opacity(77%);
     }
 }
 
@@ -1017,7 +996,7 @@ img {
     cursor: pointer;
 }
 
-.downloadwrapper-test {
+.downloadwrapper {
     display: flex;
     flex-direction: row;
     grid-row: 1;
