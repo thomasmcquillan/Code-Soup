@@ -93,7 +93,9 @@ p, h1, h2, h3, h4 {
 }
 
 #maker-tool-drop {
-    box-shadow: lightgrey;
+    background-color: var(--mu-silversmoke);
+    padding: 30px;
+    margin: 30px auto 30px auto;
 }
 
 .maker-asterisk,
