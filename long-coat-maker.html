@@ -37,6 +37,7 @@
                 window.onload = function() {
                     document.getElementById('contact-form-coat').addEventListener('submit', function(event) {
                     event.preventDefault();
+                    alert('Sent!');
                     emailjs.send("makeuse", "coat-instructions", {
                         "from_name": contactFormCoat.from_name.value,
                         "from_email": contactFormCoat.from_email.value})
@@ -89,7 +90,7 @@
         <div id="garment-grid-coat" class="row my-4">
             <div class="grid-outer-wrapper col-10 col-md-8 mx-auto">
                 <div id="grid-long-coat" class="garment-grid">
-                    <div id="neck-tile-coat" class="garment-tile">
+                    <div id="neck-tile-coat" title="The Coat only has one neckline" class="garment-tile">
                         <img id="neckline-round" class="tile-on"
                             src="assets/images/grid-tiles/neckline-tiles/coat-neck-collar@3x.png"
                             alt="Coat neckline collar">

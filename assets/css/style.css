@@ -92,10 +92,16 @@ p, h1, h2, h3, h4 {
     color: var(--mu-burntorange);
 }
 
+.maker-asterisk,
 #active-long-t:hover,
 #active-crop-t:hover,
 #active-coat:hover {
     color: var(--mu-gold);
+}
+
+.maker, .take-me-there {
+    color: var(--mu-gold);
+    color: var(--mu-orange);
 }
 
 /* \\---  Fonts  ---////////////////////////////// */
@@ -690,6 +696,13 @@ video {
     left: 0;
 }
 
+#maker-video {
+    /* width: 368px;
+    height: 460px; */
+    width: 50%;
+    height: auto;
+}
+
 .patternThumb:hover img {
     filter: opacity(44%);
 }
@@ -955,8 +968,9 @@ img {
     display: grid;
     grid-template-rows: minmax(80px, 2fr) minmax(160px, 4fr);
     grid-template-columns: minmax(80px, 2fr) minmax(80px, 2fr) minmax(80px, 2fr);
-    grid-gap: clamp(1px, .28rem, 5px);
+    grid-gap: clamp(1px, .20rem, 4px);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .downloadwrapper-test {
@@ -1062,6 +1076,10 @@ img {
     display: flex;
 }
 
+#neck-tile-coat {
+    cursor: not-allowed;
+}
+
 #contact-form-tshirt input,
 #contact-form-coat input {
     text-align: left;
@@ -1069,8 +1087,8 @@ img {
 }
 
 #form-button {
+    background-color: var(--mu-silversmoke);
     color: var(--mu-slate);
-    background-color: var(--mu-silver);
     border: none;
     margin: 8px auto;
 }

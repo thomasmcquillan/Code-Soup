@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- meta tags -->
     <meta charset="UTF-8">
@@ -28,29 +27,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Local Javascript -->
     <script src="assets/js/script.js" defer></script>
-    <!-- emailJS custom script to fetch coat instructions -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("user_wMriEHAEyY3weYxVF1Sjw");
-                window.onload = function() {
-                    document.getElementById('contact-form-coat').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    emailjs.send("makeuse", "coat-instructions", {
-                        "from_name": contactFormCoat.from_name.value,
-                        "from_email": contactFormCoat.from_email.value})
-                    .then (    
-                        function(response)
-                            {console.log('SUCCESS!');
-                        }, function(error) {
-                            console.log('FAILED...', error);});return false;});}})();
-    </script>
     <!-- Page title -->
     <title>MakeUse | Long Coat</title>
 </head>
-
 <body>
-
     <header id="makeuseheader" class="container-fluid">
         <nav class="navbar navbar-custom">
             <a class="navbar-brand" href="index.html">
@@ -58,7 +38,6 @@
                     <img    id="makeuse-logo"
                             src="assets/images/makeuse-logo.png"
                             alt="Make/Use Home">
-
                     <img    id="logo-hover"
                             src="assets/images/makeuse-logo-hover.png" 
                             alt="Make/Use Home">
@@ -77,7 +56,6 @@
             </ul>
         </nav>
     </header>
-
     <div>
         <nav class="container-fluid quick-nav my-4">
             <a href="cropped-tshirt.html" class="nav-item">Cropped Tshirt</a>
@@ -87,11 +65,8 @@
             <a href="long-coat.html" id="active-coat" class="nav-item">Long Coat</a>
         </nav>
     </div>
-
     <main id="makeuse-the-long-coat" class="container-lg">
-
         <section id="long-coat-intro" class="row">
-
             <div class="col-11 mx-3">
                 <h2>
                     Long Coat</h2>  
@@ -100,7 +75,6 @@
                     The only deviation is collar/neckline selection. Once you understand the Tshirt, this coat is easy!
                 </h3>
             </div>
-
             <div class="col-11 col-md-6 mx-3">
                 <h4>
                     Considerations</h4>
@@ -123,7 +97,6 @@
                     </caption>
                 </div>
             </div>
-
             <div class="d-flex d-md-none col-11 mx-3 my-3">
                 <caption>
                         The image below shows a 3D render of the Make/Use Long Coat, created in Clo3D. Click on 
@@ -131,7 +104,6 @@
                         it in augmented reality.  (viewing in AR requires a smartphone)
                 </caption>
             </div>
-
             <div class="img-3d-render col-10 col-md-5 my-3">
                 <a href="https://embed.vntana.com?productUuid=4b670890-821a-400a-b5a9-71a998c0b6f9&clientSlug=phd&organizationSlug=holly-mcquillan"
                     target="_blank" rel="noopener">
@@ -143,7 +115,6 @@
                 </a>
             </div>
         </section>
-
         <section id="methods-md-xl-viewports" class="d-none d-md-flex my-2 row">
             <div class="col-11 mx-3">
                 <h3>
@@ -152,7 +123,6 @@
                     There are two methods for making the Make/Use Long Coat - Pattern or Template
                 </h4>
             </div>
-
             <div class="coat-cards">
                 <div class="card col-6">
                     <div class="image">
@@ -194,7 +164,6 @@
                 </div>
             </div>
         </section>
-        
         <section class="methods-mobile-viewports my-3 row d-md-none">
             <div class="col-11 col-md-7 mx-3">
                 <h3>
@@ -202,11 +171,9 @@
                 <h4>
                     There are three methods of using the Make/Use system - Pattern, Print or Template
                 </h4>
-
                 <img    src="assets/images/cards/card-coat-pattern-lighter.png"
                         class="card-img-mobile py-3" 
                         alt="Digital fabric print of the Make/Use Long Coat"/>
-                
                 <h4>Pattern</h4>
                 <p>
                     Simple line diagram to print onto paper at full scale – the closest to using a traditional dressmaking
@@ -216,10 +183,8 @@
                 <em>
                     The Long Coat does not have a print file provided, but you could make your own.</em>
                 </p>
-           
                 <img class="card-img py-4" src="assets/images/cards/card-pattern-coat.png"
                         alt="Pattern template for the Make/Use Long Coat" />
-
                 <h4>Templates</h4>
                 <p>
                     Lasercut templates printed onto rigid paper or card that allow a maker to draw required patterns onto fabric.
@@ -228,7 +193,6 @@
                 </p>
             </div>
         </section>
-
         <section id="coat-from-templates" class="row">
             <div class="col-11 mx-3 my-3">
                 <h3>
@@ -247,7 +211,6 @@
                     combining templates in ways dreamt up by the maker/user. The possibilities are literally endless.
                 </p>
             </div>
-
             <div class="col-11 col-md-10 mx-3 my-4">
                 <p>
                     The Make/Use Long Coat has just the one neckline but is still highly modifiable, with a large
@@ -262,9 +225,7 @@
                 </p>
             </div>
         </section>
-        
     </main>
-
     <footer class="mu-footer container-fluid">
         <div class="footer-row row">
             <div class="col-10 col-md-4 mx-auto px-2">
@@ -279,17 +240,14 @@
                         <a href="https://instagram.com/explore/tags/makeuse/" target="_blank" rel="noopener">#makeuse on instagram</a>
                     </strong>
                 </p>
-
                 <p class="mu-footer-cc">Make/Use is licensed under a
                     <span>
                         <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons
                             Attribution 4.0 International (CC BY 4.0)</a></span>
                 </p>
             </div>
-
             <div class="col-10 col-md-4 mx-auto px-2">
             </div>
-
             <div class="col-10 col-md-4 footer-logos mx-auto align-contents-center px-3 my-2">
                 <a href="http://www.objectspace.org.nz/" target="_blank" rel="noopener">
                     <img    src="assets/images/objectspace-logo.png"
@@ -303,7 +261,6 @@
             </div>
         </div>
     </footer>
-
     <!-- jquery script -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -314,7 +271,5 @@
     crossorigin="anonymous"></script>
     <!-- emailjs script -->
     <script src="assets/js/sendEmail.js"></script>
-
 </body>
-
 </html>
