@@ -22,10 +22,6 @@ body {
     scroll-behavior: smooth;
     flex-wrap: wrap;
     box-sizing: border-box;
-    font-family:'Ubuntu', "sans-serif";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 1.8rem;
     list-style-type: none;
     color: var(--mu-dark);
@@ -34,18 +30,13 @@ body {
     background-color: var(--mu-white);
 }
 
-/* #fourzerofour {
-    background: url('assets/images/makeusebg.png') black no-repeat center center fixed;
-} */
-
 .back-to-makeuse {
     display: grid;
-    text-align: center;
+    align-content: center;
     place-items: center;
-    align-items: center;
-    margin: 8vh auto;
-    width: 100%;
-    height: 100%;
+    margin: auto auto;
+    width: 100vw;
+    height: 100vh;
 }
 
 .mu-button {
@@ -60,6 +51,11 @@ a {
     color: var(--mu-slate);
 }
 
+.maker-asterisk,
+#active-long-t:hover,
+#active-crop-t:hover,
+#active-coat:hover,
+#makeuseheader .nav-active,
 .navbar .nav-item a:hover,
 nav .nav-item:hover {
     color: var(--mu-gold);
@@ -69,12 +65,10 @@ p, h1, h2, h3, h4 {
     color: var(--mu-dark);
 }
 
+.maker,
+.take-me-there,
 #fabric-required span {
     color: var(--mu-orange);
-}
-
-#makeuseheader .nav-active {
-    color: var(--mu-gold);
 }
 
 #active-long-t,
@@ -87,17 +81,6 @@ p, h1, h2, h3, h4 {
     background-color: var(--mu-silversmoke);
     padding: 30px;
     margin: 30px auto 30px auto;
-}
-
-.maker-asterisk,
-#active-long-t:hover,
-#active-crop-t:hover,
-#active-coat:hover {
-    color: var(--mu-gold);
-}
-
-.maker, .take-me-there {
-    color: var(--mu-orange);
 }
 
 /* \\---  fonts  ---///////// */
@@ -148,7 +131,6 @@ h3 {
 }
    
 h4 {
-    font-size: 20px;
     margin: .2em auto .5em auto;
     padding-bottom: .8rem;
     line-height: 1.4em;
@@ -163,7 +145,7 @@ h5 {
 }
 
 #makeuse-intro  h2 {
-    font-size:56px;
+    font-size: 56px;
     font-weight: 500;
 }
 
@@ -257,6 +239,36 @@ nav .navbar .navbar-custom {
 .navbar .nav-item a {
     padding-left: 20px;
     justify-self: right;
+}
+
+/* \\---  downloads links  ---///////// */
+
+#crop-tshirt-downloads a,
+#long-tshirt-downloads > a,
+#coat-downloads > a {
+    color: var(--mu-slate);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#file-downloads-long-coat a {
+    color: var(--mu-slate);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#coat-downloads,
+#tshirt-downloads {
+    justify-content: center;
+}
+
+#file-downloads-long-tshirt > a {
+    text-decoration: underline;
+    text-decoration-color: var(--mu-orange);
+}
+
+#file-downloads-long-tshirt a:hover {
+    background-color: var(--mu-gold);
 }
 
 /* \\---  quick-nav links ---///////// */
@@ -459,12 +471,6 @@ img {
     display: none;
 }
 
-#grid-long-coat .tile-on,
-#grid-crop-tshirt .tile-on,
-#grid-long-tshirt .tile-on {
-    display: flex;
-}
-
 .neck-tile {
     display: flex;
     grid-column: 2;
@@ -507,10 +513,13 @@ img {
     align-content: flex-start;
 }
 
-.tile-on {
-    display: flex;
+/* \\---  garment tile postion tweaking  ---///// */
+
+#sleeve-right-long-coat img {
+    padding-top: 6px;
 }
 
+#sleeve-left-crop-tshirt,
 #sleeve-left-long-tshirt img {
     padding-top: 6px;
 }
@@ -708,10 +717,6 @@ video {
     filter: opacity(44%);
 }
 
-.tile-on {
-    display: flex;
-}
-
 /* \\---  iframe styles  ---///////// */
 
 /* styling below courtesy of vntana: https://www.vntana.com/resource/3d-webviewer/ */
@@ -851,7 +856,7 @@ model-viewer {
 .fade-in,
 .garment-tile img,
 img {
-    animation: fadeIn ease-in 50ms;
+    animation: fadeIn ease-in 60ms;
 }
 
 @keyframes fadeIn {
@@ -960,7 +965,6 @@ img {
     }
 
     .row {
-        max-width: 1024px;
         max-width: 999px;
         margin: auto;
     }
@@ -972,11 +976,6 @@ img {
     .garment-tile:hover {
         filter: opacity(77%);
     }
-}
-
-.tile-on {
-    display: flex;
-    align-items: center;
 }
 
 .grid-outer-wrapper {
@@ -1032,6 +1031,10 @@ img {
     height: 100px;
 }
 
+.tile-on {
+    display: flex;
+}
+
 /* \\--  template download anchor links  --///////// */
 
 #file-downloads a,
@@ -1040,16 +1043,15 @@ img {
 #file-downloads-long-coat a {
     transition: ease-in 1s all;
     display: none;
-    color: var(--mu-slate);
     text-decoration: none;
     font-weight: 400;
+    color: var(--mu-slate);
 }
 
 #grid-long-coat .tile-on,
 #grid-crop-tshirt .tile-on, 
 #grid-long-tshirt .tile-on {
     display: flex;
-    place-items: end;
 }
 
 #file-downloads,
@@ -1146,32 +1148,4 @@ img {
     align-content: start;
     justify-items: start;
     align-items: start;
-}
-
-#crop-tshirt-downloads a,
-#long-tshirt-downloads > a,
-#coat-downloads > a {
-    color: var(--mu-slate);
-    text-decoration: none;
-    font-weight: 400;
-}
-
-#file-downloads-long-coat a {
-    color: var(--mu-slate);
-    text-decoration: none;
-    font-weight: 400;
-}
-
-#coat-downloads,
-#tshirt-downloads {
-    justify-content: center;
-}
-
-#file-downloads-long-tshirt > a {
-    text-decoration: underline;
-    text-decoration-color: var(--mu-orange);
-}
-
-#file-downloads-long-tshirt a:hover {
-    background-color: var(--mu-gold);
 }
