@@ -15,6 +15,7 @@
     --mu-silversmoke: #eeececce;
     --mu-slate: #4a494a;
     --mu-sand: #b7b3a7;
+    --mu-darksand: #928f86;
     --mu-orange: #d46300;
     --mu-burntorange: #aa5001;
     --mu-gold:  #ffb100;
@@ -74,6 +75,10 @@ nav .nav-item:hover {
 
 p, h1, h2, h3, h4 {
     color: var(--mu-dark);
+}
+
+table > tbody > tr > td {
+    color:var(--mu-darksand);
 }
 
 .maker,
@@ -186,9 +191,9 @@ h5 {
     color: var(--mu-white);
 }
 
-.maker-p {
-    font-weight: 500;
-    font-size: 1.2rem;
+.maker-h3 {
+    font-weight: 600;
+    font-size: 2.5rem;
 }
 
 /* \\---  header & nav  ---///////// */
@@ -355,16 +360,6 @@ a {
 }
 
 /* \\---  misc links styles  ---///////// */
-
-.maker-link {
-    display: flex;
-    background-color: var(--mu-orange);
-    color: var(--mu-white);
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 20px 18px;
-}
 
 #maker-nav-link {
     font-weight: 600;
@@ -653,7 +648,7 @@ img {
         align-content: flex-start;
 }
 
-/* \\---  garment tile postion tweaking  ---///// */
+/* \\---  garment tile fine-positioning  ---///// */
 
 #sleeve-right-long-coat img {
     padding-top: 6px;
@@ -668,10 +663,6 @@ img {
 
 td:after {
     content: attr(data-title);
-}
-
-table > tbody > tr > td {
-    color:var(--mu-sand);
 }
 
 table {
@@ -700,11 +691,8 @@ table tr {
 }
 
 table td span {
-    font-size: 10px;
-    padding: 18px 0 4px 0;
-    top: 0;
-    margin: auto;
-    border-collapse: collapse;
+    font-size: 12px;
+    padding: 8px 0 8px 0;
 }
 
 table td {
@@ -723,12 +711,62 @@ table td {
             justify-content: center;
 }
 
+.table-data-custom,
+.table-data-current {
+    display: flex;   
+}
+
+.data-table-row {
+    width: 33.33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.table-data-current,
+.table-data-custom {
+    text-align: center;
+    color: var(--mu-dark);
+    font-weight: 400;
+    padding: 6px;
+    margin: 6px;
+    /* display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; */
+}
+
+.garment-info-panel strong {
+    font-size: 18px;
+}
+
+#custom-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-input-info {
+    color: var(--mu-slate);
+    font-weight: 300;
+    -ms-grid-column-align :center;
+        justify-self :center;
+}
+
+.data-table-row {
+    width: 33.33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 #garment-length,
 #garment-circum,
 #sleeve-circum,
 #fabric-required {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin: 0 auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -745,10 +783,6 @@ table td {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
 }
 
 .field input,
@@ -904,13 +938,6 @@ input {
     background-color:var(--mu-white);
 }
 
-.custom-input-info {
-    color: var(--mu-slate);
-    font-weight: 300;
-    -ms-grid-column-align :center;
-        justify-self :center;
-}
-
 #form-button {
     color: var(--mu-lightsilver);
     border: none;
@@ -938,7 +965,7 @@ video {
             filter: opacity(44%);
 }
 
-.garment-info-panel {
+/* .garment-info-panel {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1 / 4;
@@ -962,10 +989,12 @@ video {
     padding: 0;
     text-align: center;
     justify-items: center;
-}
+} */
 
-.garment-info-panel p,
-.garment-info-panel strong {
+/* .garment-info-panel p,
+.garment-info-panel strong { */
+/* .table-data-current,
+.table-data-custom {
     text-align: center;
     color: var(--mu-dark);
     font-weight: 400;
@@ -981,7 +1010,7 @@ video {
 
 .garment-info-panel strong {
     font-size: 18px;
-}
+} */
 
 /* \\---  pattern template thumbnails  ---///////// */
 

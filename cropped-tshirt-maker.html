@@ -285,28 +285,33 @@
             </div>
         </div>
         <div class="container-lg">
-            <div class="row my-2">
-                <table class="col-11 col-md-10 mx-auto">
+            <div class="data-table-row row my-2 col-12">
+                <table class="table-data-current col-10 col-md-6 mx-auto">
                     <tbody>
-                        <tr id="garment-metrics" class="col-11 col-md-8 garment-info-row my-2">
+                        <!-- <tr id="garment-metrics" class="col-11 col-md-8 garment-info-row"> -->
+                        <tr id="custom-inputs" class="col-11 col-md-8 garment-info-row">
                             <td data-title="garment circumference"><span id="garment-circum">110cm</span></td>
                             <td data-title="garment length"><span id="garment-length">50cm</span></td>
                             <td data-title="sleeve circumference"><span id="sleeve-circum">50cm</span></td>
                         </tr>
+                    </tbody>
+                </table>
+                <table class="d-flex table-data-custom col-10 col-md-6 mx-auto">
+                    <tbody>
                         <tr id="custom-inputs" class="col-11 col-md-8 garment-info-row">
-                            <td data-title="custom"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
-                            <td data-title="custom"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
-                            <td data-title="custom"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
+                            <td data-title="garment circumference"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
+                            <td data-title="garment length"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
+                            <td data-title="sleeve circumference"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="row my-4">
-            <div class="col-11 col-md-7 mx-auto my-2">
+            <!-- <div class="col-11 col-md-7 mx-auto my-2">
                 <p>Once you are happy with your selection, simply click the template links below to download. If you would like to receive detailed construction
                     instructions, please enter your email below. </p>
-            </div>
+            </div> -->
             <div class="row my-4">
                 <div class="col-11 col-md-7">
                     <strong class="temp-down-heading">
@@ -338,6 +343,10 @@
                         </div>
                     </form>
                 </div>
+            </div>
+            <div class="col-11 col-md-7 mx-auto my-2">
+                <p>Once you are happy with your selection, simply click the template links below to download. If you would like to receive detailed construction
+                    instructions, please enter your email below. </p>
             </div>
             <div class="alert-wrapper">
                 <div id="alert-input-error">
