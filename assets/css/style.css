@@ -269,11 +269,7 @@ nav .navbar .navbar-custom {
     border: none;
     -ms-grid-column-align: center;
         justify-self: center;
-
-        /* top: 120px; */
-        
         padding-left: 6px;
-        /* margin: 40px auto auto auto; */
 }
 
 .navbar .navbar-brand img {
@@ -712,40 +708,37 @@ table td {
             justify-content: center;
 }
 
-.table-data-custom,
-.table-data-current {
-    display: flex;   
+/* .table-data-custom,
+.table-data-current  */
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
-.data-table-row {
-    width: 33.33%;
+/* .data-table-row {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    align-content: flex-end;
+    align-content: center;
     flex-wrap: nowrap;
-}
+} */
 
-.table-data-current,
-.table-data-custom {
+/* .table-data-current {
     text-align: center;
     color: var(--mu-dark);
     font-weight: 400;
     padding: 6px;
     margin: 6px;
-    /* display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex; */
-}
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+} */
 
 .garment-info-panel strong {
     font-size: 18px;
-}
-
-#custom-inputs {
-    display: flex;
-    flex-direction: column;
 }
 
 .custom-input-info {
@@ -755,12 +748,12 @@ table td {
         justify-self :center;
 }
 
-.data-table-row {
+/* .data-table-row {
     width: 33.33%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
 
 #garment-length,
 #garment-circum,
@@ -778,6 +771,7 @@ table td {
 
 .garment-info-row {
     width: 100%;
+    flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -966,52 +960,9 @@ video {
             filter: opacity(44%);
 }
 
-/* .garment-info-panel {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1 / 4;
-    -ms-grid-row: 4;
-    grid-row: 4;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
-    height: auto;
-    padding: 0;
-    text-align: center;
-    justify-items: center;
-} */
-
-/* .garment-info-panel p,
-.garment-info-panel strong { */
-/* .table-data-current,
-.table-data-custom {
-    text-align: center;
-    color: var(--mu-dark);
-    font-weight: 400;
-    font-size: 1.4rem;
-    padding: 8px;
-    margin: 6px;
-    line-height: .8rem;
-    font-size: 1.2em;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-}
-
 .garment-info-panel strong {
     font-size: 18px;
-} */
+}
 
 /* \\---  pattern template thumbnails  ---///////// */
 
@@ -1536,21 +1487,14 @@ video {
     color: var(--mu-slate);
 }
 
-#file-downloads-long-tshirt,
+#file-downloads-long-tshirt, 
 #file-downloads-crop-tshirt, 
 #file-downloads-long-coat {
-    height: 180px;
-    display: -ms-grid;
-    display: grid;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -ms-flex-line-pack: start;
-        align-content: start;
-    justify-items: start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 @media (max-width: 399px) {
@@ -1689,5 +1633,3 @@ model-viewer {
 #iframe-long-tshirt {
     width: 80%;
 }
-
-/* @media (min-width: 740px) and (max-width: 850px) {} */

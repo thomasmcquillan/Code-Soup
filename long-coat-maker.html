@@ -77,22 +77,27 @@
     </header>
     <div>
         <nav class="container-fluid quick-nav my-4">
-            <a href="cropped-tshirt.html" class="nav-item">Cropped Tshirt</a>
+            <a href="cropped-tshirt-maker.html" class="nav-item">Cropped Tshirt</a>
             <span class="tri-divider">◢</span>
-            <a href="long-tshirt.html" class="nav-item">Long Tshirt</a>
+            <a href="long-tshirt-maker.html" class="nav-item">Long Tshirt</a>
             <span class="tri-divider">◢</span>
-            <a href="long-coat.html" id="active-coat" class="nav-item">Long Coat</a>
+            <a href="long-coat-maker.html" id="active-coat" class="nav-item">Long Coat</a>
         </nav>
     </div>
+    <!-- coat garment grid section -->
     <main id="makeuse-long-coat" class="container-lg">
-        <div id="garment-grid-coat" class="row my-4 pb-4">
+        <div class="row my-4 pb-4">
+            <!-- long coat garment grid outer wrapper -->
             <div class="grid-outer-wrapper col-10 col-md-8 mx-auto">
+                <!-- Make/Use long coat garment grid -->
                 <div id="grid-long-coat" class="garment-grid">
+                    <!-- long coat garment grid necktile -->
                     <div id="neck-tile-coat" title="The Coat only has one neckline" class="garment-tile">
                         <img id="neckline-round" class="tile-on"
                             src="assets/images/grid-tiles/neckline-tiles/coat-neck-collar@3x.png"
                             alt="Coat neckline collar">
                     </div>
+                    <!-- long coat garment grid body tile -->
                     <div id="body-long-coat" class="garment-tile">
                         <img id="coat-body-wide-long-rotate" class="body-rotate tile-on"
                             src="assets/images/grid-tiles/body-tiles/coat-body-wide-long-rotate@3x.png"
@@ -141,6 +146,7 @@
                             alt="Coat garment-body in 'narrow/long' style"
                             class="body-straight">
                     </div>
+                    <!-- long coat left sleeve tile -->
                     <div id="sleeve-left-long-coat" class="garment-tile sleeve-left">
                         <img class="sleeve-left-wide-long-rotate sleeve-rotate tile-on"
                             src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-wide-long-rotate@3x.png"
@@ -167,6 +173,7 @@
                             src="assets/images/grid-tiles/sleeve-tiles/sleeve-left-narrow-long-rotate@3x.png"
                             alt="Left-sleeve in 'narrow/long' style with rotation">
                     </div>
+                    <!-- long coat right sleeve tile -->
                     <div id="sleeve-right-long-coat" class="garment-tile sleeve-right">
                         <img class="sleeve-right-wide-long-rotate sleeve-rotate tile-on"
                             src="assets/images/grid-tiles/sleeve-tiles/sleeve-right-wide-long-rotate@3x.png"
@@ -194,6 +201,7 @@
                             alt="right-sleeve in 'narrow/long' style with rotation">
                     </div>
                 </div>
+                <!-- images for pattern previews -->
                 <div id="pattern-hover-panel-coat">
                     <img id="coat-grid-hover" src="assets/images/pattern-thumbs/pattern-coat-grid.png" alt="Make/Use Coat Grid">
                     <img id="neck-collar-hover" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png" alt="Make/Use Collar Neckline Template">
@@ -206,6 +214,7 @@
                 </div>
             </div>
         </div>
+        <!-- fabric required wrap -->
         <div class="fabric-needs">
             <table>
                 <tbody>
@@ -215,6 +224,7 @@
                 </tbody>
             </table>
         </div>
+        <!-- download thumbs wrapper -->
         <div class="thumb-wrapper row">
             <div class="downloadwrapper col-11 col-md-8 mx-auto">
                 <div class="pattern-coat-grid pattern-thumb tile-on">
@@ -276,58 +286,57 @@
             </div>
         </div>
         <div class="container-lg">
-            <div class="row my-2">
-                <table class="col-11 col-md-10 mx-auto">
+            <div class="data-table-row row my-2 col-12">
+                <table class="table-data-current col-11 col-md-4 mx-auto">
                     <tbody>
-                        <tr id="garment-metrics" class="col-11 col-md-8 garment-info-row my-2">
+                        <tr class="garment-info-row">
                             <td data-title="garment circumference"><span id="garment-circum">110cm</span></td>
                             <td data-title="garment length"><span id="garment-length">50cm</span></td>
                             <td data-title="sleeve circumference"><span id="sleeve-circum">50cm</span></td>
                         </tr>
-                        <tr id="custom-inputs" class="col-11 col-md-8 garment-info-row">
-                            <td data-title="custom"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
-                            <td data-title="custom"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
-                            <td data-title="custom"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
+                    </tbody>
+                </table>
+                <table class="table-data-current col-11 col-md-4 mx-auto">
+                    <tbody>
+                        <tr class="garment-info-row">
+                            <td data-title="garment length"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
+                            <td data-title="garment circumference"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
+                            <td data-title="sleeve circumference"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-        <div class="row my-4">
-            <div class="col-11 col-md-7 mx-auto my-2">
-                <p>Once you are happy with your selection, simply click the template links below to download. If you would like to receive detailed construction
-                    instructions, please enter your email below. </p>
-            </div>
-            <div class="row my-4">
-                <div class="col-11 col-md-7">
+                <!-- pattern template anchor downloads -->
+                <div id="file-downloads-long-coat" class="d-flex col-11 col-md-4 pt-2 justify-content-end">
                     <strong class="temp-down-heading">
                         Template Downloads
                     </strong>
-                    <div id="file-downloads-long-coat" class="d-grid col-11 col-md-12 pt-2 justify-content-end">
-                        <a href="assets/downloads/coat-pattern-with-grid.pdf" id="dl-coat-grid" title="Download Template" download="coat_grid_template.pdf">Coat Grid</a>
-                        <a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Collar Neckline</a>
-                        <a href="assets/downloads/print-template-sleeve-cut-left.pdf" id="dl-sleeve-cut-left" title="Download Template" download="sleeve_cut_left_template.pdf">Sleeve Cut - Left</a>
-                        <a href="assets/downloads/print-template-sleeve-cut-right.pdf" id="dl-sleeve-cut-right" title="Download Template" download="sleeve_cut_right_template.pdf">Sleeve Cut - Right</a>
-                        <a href="assets/downloads/print-template-elbow-rotation-left.pdf" id="dl-elb-rot-left" title="Download Template" download="elbow_rotation_left_template.pdf">Elbow Rotation - Left</a>
-                        <a href="assets/downloads/print-template-elbow-rotation-right.pdf" id="dl-elb-rot-right" title="Download Template" download="elbow_rotation_right_template.pdf">Elbow Rotation - Right</a>
-                        <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Body Rotation & Sleeve Swap - Left</a>
-                        <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Body Rotation & Sleeve Swap - Right</a>
-                    </div>
-                </div>              
-                <div class="col-11 col-md-5 pt-4 my-2">
-                    <form id="contact-form-coat">
-                        <div class="field">
-                            <input type="text" name="from_name" class="form-control" id="from_name" placeholder="name" required/>
-                        </div>
-                        <div class="field">
-                            <input type="email" name="from_email" class="form-control" id="from_email" placeholder="email" required/>
-                        </div>
-                        <div class="field">
-                            <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
-                        </div>
-                    </form>
+                    <a href="assets/downloads/coat-pattern-with-grid.pdf" id="dl-coat-grid" title="Download Template" download="coat_grid_template.pdf">Coat Grid</a>
+                    <a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Collar Neckline</a>
+                    <a href="assets/downloads/print-template-sleeve-cut-left.pdf" id="dl-sleeve-cut-left" title="Download Template" download="sleeve_cut_left_template.pdf">Sleeve Cut left</a>
+                    <a href="assets/downloads/print-template-sleeve-cut-right.pdf" id="dl-sleeve-cut-right" title="Download Template" download="sleeve_cut_right_template.pdf">Sleeve Cut right</a>
+                    <a href="assets/downloads/print-template-elbow-rotation-left.pdf" id="dl-elb-rot-left" title="Download Template" download="elbow_rotation_left_template.pdf">Elbow Rotation left</a>
+                    <a href="assets/downloads/print-template-elbow-rotation-right.pdf" id="dl-elb-rot-right" title="Download Template" download="elbow_rotation_right_template.pdf">Elbow Rotation right</a>
+                    <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Body Rotation & Sleeve Swap left</a>
+                    <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Body Rotation & Sleeve Swap right</a>
                 </div>
             </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-11 col-md-5 pt-4 my-2">
+                <!-- contact form for requesting coat instructions -->
+                <form id="contact-form-coat">
+                    <div class="field">
+                        <input type="text" name="from_name" class="form-control" id="from_name" placeholder="name" required/>
+                    </div>
+                    <div class="field">
+                        <input type="email" name="from_email" class="form-control" id="from_email" placeholder="email" required/>
+                    </div>
+                    <div class="field">
+                        <button type="submit" id="form-button" value="send" class="btn-dark">Send</button>
+                    </div>
+                </form>
+            </div>
+            <!-- alert for invalid custom value inputs -->
             <div class="alert-wrapper">
                 <div id="alert-input-error">
                     <div id="alert-user">
@@ -340,6 +349,7 @@
             <input type="button" id="input-error-button" value="okay" class="d-none"/>
         </div>
     </main>            
+    <!-- makeuse footer -->
     <footer class="mu-footer container-fluid">
         <div class="footer-row row">
             <div class="col-10 col-md-4 mx-auto px-2">
