@@ -86,9 +86,9 @@
     </div>
     <!-- coat garment grid section -->
     <main id="makeuse-long-coat" class="container-lg">
-        <div class="row my-4 pb-4">
+        <div class="row my-3">
             <!-- long coat garment grid outer wrapper -->
-            <div class="grid-outer-wrapper col-10 col-md-8 mx-auto">
+            <div class="grid-outer-wrapper col-10 col-md-7 mx-auto">
                 <!-- Make/Use long coat garment grid -->
                 <div id="grid-long-coat" class="garment-grid">
                     <!-- long coat garment grid necktile -->
@@ -225,8 +225,8 @@
             </table>
         </div>
         <!-- download thumbs wrapper -->
-        <div class="thumb-wrapper row">
-            <div class="downloadwrapper col-11 col-md-8 mx-auto">
+        <div class="d-none d-md-flex thumb-wrapper row">
+            <div class="downloadwrapper col-11 col-md-12 mx-auto">
                 <div class="pattern-coat-grid pattern-thumb tile-on">
                     <a href="assets/downloads/coat-pattern-with-grid.pdf" target="_blank">
                         <span><img id="coat-grid" class="pattern-thumb tile-on"
@@ -285,31 +285,13 @@
                 </div>
             </div>
         </div>
-        <div class="container-lg">
-            <div class="data-table-row row my-2 col-12">
-                <table class="table-data-current col-11 col-md-4 mx-auto">
-                    <tbody>
-                        <tr class="garment-info-row">
-                            <td data-title="garment circumference"><span id="garment-circum">110cm</span></td>
-                            <td data-title="garment length"><span id="garment-length">50cm</span></td>
-                            <td data-title="sleeve circumference"><span id="sleeve-circum">50cm</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="table-data-current col-11 col-md-4 mx-auto">
-                    <tbody>
-                        <tr class="garment-info-row">
-                            <td data-title="garment length"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
-                            <td data-title="garment circumference"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
-                            <td data-title="sleeve circumference"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- pattern template anchor downloads -->
-                <div id="file-downloads-long-coat" class="d-flex col-11 col-md-4 pt-2 justify-content-end">
-                    <strong class="temp-down-heading">
+        <div class="container-md my-4">
+            <div class="data-table-row row my-2">
+                
+                <div id="file-downloads-long-coat" class="col-6 col-md-4 mx-auto">
+                    <h5 class="d-grid temp-down-heading">
                         Template Downloads
-                    </strong>
+                    </h5>
                     <a href="assets/downloads/coat-pattern-with-grid.pdf" id="dl-coat-grid" title="Download Template" download="coat_grid_template.pdf">Coat Grid</a>
                     <a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Collar Neckline</a>
                     <a href="assets/downloads/print-template-sleeve-cut-left.pdf" id="dl-sleeve-cut-left" title="Download Template" download="sleeve_cut_left_template.pdf">Sleeve Cut left</a>
@@ -319,10 +301,30 @@
                     <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Body Rotation & Sleeve Swap left</a>
                     <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Body Rotation & Sleeve Swap right</a>
                 </div>
+                <table class="table-data-current col-6 col-md-4 mx-auto">
+                    <tbody>
+                        <tr class="garment-info-row">
+                            <td data-title="sleeve circumference"><span id="sleeve-circum">50cm</span></td>
+                            <td data-title="garment length"><span id="garment-length">50cm</span></td>
+                            <td data-title="garment circumference"><span id="garment-circum">110cm</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table-data-custom col-11 col-md-4 mx-auto">
+                    <tbody>
+                        <tr id="custom-data-row" class="garment-info-row">
+                            <td data-title="sleeve circumference"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
+                            <td data-title="garment length"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
+                            <td data-title="garment circumference"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="row my-4">
             <div class="col-11 col-md-5 pt-4 my-2">
+                <p>Enter email to have coat construction method sent to you.</p>
                 <!-- contact form for requesting coat instructions -->
                 <form id="contact-form-coat">
                     <div class="field">

@@ -122,11 +122,6 @@ p {
             text-size-adjust: 100%;
 }
 
-.temp-down-heading {
-    font-size: 17px;
-    margin-bottom: 6px;
-}
-
 h1 {
     font-size: 66px;
     font-weight: 600;
@@ -708,37 +703,8 @@ table td {
             justify-content: center;
 }
 
-/* .table-data-custom,
-.table-data-current  */
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-/* .data-table-row {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    align-content: center;
-    flex-wrap: nowrap;
-} */
-
-/* .table-data-current {
-    text-align: center;
-    color: var(--mu-dark);
-    font-weight: 400;
-    padding: 6px;
-    margin: 6px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-} */
-
 .garment-info-panel strong {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .custom-input-info {
@@ -747,13 +713,6 @@ table td {
     -ms-grid-column-align :center;
         justify-self :center;
 }
-
-/* .data-table-row {
-    width: 33.33%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} */
 
 #garment-length,
 #garment-circum,
@@ -769,6 +728,33 @@ table td {
     color: var(--mu-orange);
 }
 
+#custom-sleeve-circum,
+#custom-garment-length,
+#custom-garment-circum {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.data-table-row {
+    margin-top: 24px;
+}
+
+#file-downloads-long-coat {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+#custom-data-row > td {
+    margin-top: 22px;
+}
+
+#custom-data-row {
+    align-content: space-around;
+}
+
 .garment-info-row {
     width: 100%;
     flex-direction: column;
@@ -776,8 +762,11 @@ table td {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    flex-wrap: nowrap;
 }
 
 .field input,
@@ -1632,4 +1621,36 @@ model-viewer {
 
 #iframe-long-tshirt {
     width: 80%;
+}
+
+.temp-down-heading {
+    font-size: 15px;
+    padding-top: 14px;
+    margin-bottom: 6px;
+    display: grid;
+}
+
+#file-downloads-long-tshirt, 
+#file-downloads-crop-tshirt, 
+#file-downloads-long-coat {
+    height: 280px;
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+#makeuse-long-coat > div.container-md.my-4 {
+    background-color: var(--mu-lightsilver);
+}
+
+* {
+    border: 1px solid lightblue;
+}
+
+#makeuse-long-coat {
+    margin-bottom: 14px;
 }
