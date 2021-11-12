@@ -782,6 +782,20 @@ input {
         align-content: center;
 }
 
+#instructions-intro p {
+    font-size: 18px;
+    line-height: 1.8rem;
+}
+
+.construction-steps > ul > li {
+    padding-bottom: 11px;
+}
+
+
+.construction-steps ul {
+    margin-left: 24px;
+}
+
 .card-body p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -895,6 +909,13 @@ input {
     font-weight: 300;
     -ms-grid-column-align :center;
         justify-self :center;
+}
+
+#form-button {
+    color: var(--mu-lightsilver);
+    border: none;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 /* \\---  video styles  ---///////// */
@@ -1030,61 +1051,47 @@ video {
     grid-template-columns: 1fr minmax(10px, 2fr) minmax(10px, 2fr) minmax(10px, 2fr) 1fr;
 }
 
+/* \\---  auto-prefixes  ---///////// */
+
 .garment-sizing-information > *:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
 }
-
 .garment-sizing-information > *:nth-child(2) {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
 }
-
 .garment-sizing-information > *:nth-child(3) {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
 }
-
 .garment-sizing-information > *:nth-child(4) {
     -ms-grid-row: 1;
     -ms-grid-column: 4;
 }
-
 .garment-sizing-information > *:nth-child(5) {
     -ms-grid-row: 1;
     -ms-grid-column: 5;
 }
-
 .garment-sizing-information > *:nth-child(6) {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
 }
-
 .garment-sizing-information > *:nth-child(7) {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
 }
-
 .garment-sizing-information > *:nth-child(8) {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
 }
-
 .garment-sizing-information > *:nth-child(9) {
     -ms-grid-row: 2;
     -ms-grid-column: 4;
 }
-
 .garment-sizing-information > *:nth-child(10) {
     -ms-grid-row: 2;
     -ms-grid-column: 5;
-}
-
-#form-button {
-    color: var(--mu-lightsilver);
-    border: none;
-    margin-left: 20px;
-    margin-top: 10px;
 }
 
 /* \\---  media queries  ---///////// */
@@ -1528,10 +1535,6 @@ video {
         width: 94%;
     }
 
-    /* .mx-3 {
-        margin: 0.7rem !important;
-    } */
-    
     .nav {
         padding-right: var(--bs-gutter-x,.30rem);
         padding-left: var(--bs-gutter-x,.30rem);
@@ -1657,4 +1660,4 @@ model-viewer {
     width: 80%;
 }
 
-@media (min-width: 740px) and (max-width: 850px) {}
+/* @media (min-width: 740px) and (max-width: 850px) {} */
