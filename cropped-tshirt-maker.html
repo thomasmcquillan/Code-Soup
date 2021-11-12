@@ -35,6 +35,7 @@
         window.onload = function() {
             document.getElementById('contact-form-tshirt').addEventListener('submit', function(event) {
                 event.preventDefault();
+                    alert('Sent!');
                 emailjs.send("makeuse", "tshirt-instructions", {
                     "from_name": contactFormTshirt.from_name.value,
                     "from_email": contactFormTshirt.from_email.value
