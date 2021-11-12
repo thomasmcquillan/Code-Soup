@@ -159,7 +159,7 @@ h5 {
     line-height: 1.3em;
 }
 
-#makeuse-intro  h2 {
+#makeuse-intro h2 {
     font-size: 56px;
     font-weight: 500;
 }
@@ -338,6 +338,12 @@ a {
             justify-content: left;
 }
 
+#maker-nav-link {
+    display: flex;
+    font-weight: 600;
+    flex-direction: row;
+}
+
 .tri-divider {
     color: var(--mu-gold);
     font-size: 13px;
@@ -347,12 +353,18 @@ a {
 /* \\---  misc links styles  ---///////// */
 
 .maker-link {
+    display: flex;
     background-color: var(--mu-orange);
     color: var(--mu-white);
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
     padding: 20px 18px;
+}
+
+#maker-nav-link {
+    font-weight: 600;
+    font-size: 16px;
 }
 
 #crop-tshirt-from-templates a > span:hover {
@@ -435,15 +447,19 @@ li {
     margin-bottom: 24px;
 }
 
+#make-menu {
+    position: relative;
+    min-height: 66vh;
+}
+
 .mu-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 70px 30px 90px 30px;
+    padding: 50px 28px 60px 28px;
     background-color: var(--mu-slate);
     margin-top: 100px;
-    position: absolute;
     -ms-flex-item-align:end;
         align-self:flex-end;
     justify-items: center;
@@ -1496,8 +1512,8 @@ img {
     display: flex;
 }
 
-/* \\--  cursor to show coat neckline
-         can't be changed              // */
+/* \\--  custom cursor to indictate
+        that coat neckline doesn't change  // */
 
 #neck-tile-coat {
     cursor: not-allowed;
