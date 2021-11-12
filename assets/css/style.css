@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 /* \\---  Global variables  ---// */
@@ -339,9 +346,14 @@ a {
 }
 
 #maker-nav-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-weight: 600;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .tri-divider {
@@ -741,8 +753,13 @@ table td {
 }
 
 #file-downloads-long-coat {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: 14px;
     line-height: 18px;
 }
@@ -752,21 +769,28 @@ table td {
 }
 
 #custom-data-row {
-    align-content: space-around;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
 }
 
 .garment-info-row {
     width: 100%;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 14px;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
 }
 
 .field input,
@@ -1026,42 +1050,62 @@ video {
 .garment-sizing-information > *:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
+    grid-row: 1;
+    grid-column: 1;
 }
 .garment-sizing-information > *:nth-child(2) {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
+    grid-row: 1;
+    grid-column: 2;
 }
 .garment-sizing-information > *:nth-child(3) {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
+    grid-row: 1;
+    grid-column: 3;
 }
 .garment-sizing-information > *:nth-child(4) {
     -ms-grid-row: 1;
     -ms-grid-column: 4;
+    grid-row: 1;
+    grid-column: 4;
 }
 .garment-sizing-information > *:nth-child(5) {
     -ms-grid-row: 1;
     -ms-grid-column: 5;
+    grid-row: 1;
+    grid-column: 5;
 }
 .garment-sizing-information > *:nth-child(6) {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
+    grid-row: 2;
+    grid-column: 1;
 }
 .garment-sizing-information > *:nth-child(7) {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
+    grid-row: 2;
+    grid-column: 2;
 }
 .garment-sizing-information > *:nth-child(8) {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
+    grid-row: 2;
+    grid-column: 3;
 }
 .garment-sizing-information > *:nth-child(9) {
     -ms-grid-row: 2;
     -ms-grid-column: 4;
+    grid-row: 2;
+    grid-column: 4;
 }
 .garment-sizing-information > *:nth-child(10) {
     -ms-grid-row: 2;
     -ms-grid-column: 5;
+    grid-row: 2;
+    grid-column: 5;
 }
 
 /* \\---  media queries  ---///////// */
@@ -1189,7 +1233,8 @@ video {
 
     #long-shirt-intro a > span > img {
         cursor: pointer;
-        animation: fadeIn ease-in 20ms;
+        -webkit-animation: fadeIn ease-in 20ms;
+                animation: fadeIn ease-in 20ms;
         max-width: 100%;
         height: auto;
         padding-top: 28px;
@@ -1205,34 +1250,50 @@ video {
     grid-template-columns: minmax(80px, 2fr) minmax(80px, 2fr) minmax(80px, 2fr);
 }
 
-.grid-outer-wrapper > *:nth-child(1) {
+/* this next css also breaks the grid when doing 
+adding grid-row and grid-column as asked after adding prefixes.
+Un-comment to see for yourself */
+
+/* .grid-outer-wrapper > *:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-}
+    grid-row: 1;
+    grid-column: 1;
+} */
 
 .grid-outer-wrapper > *:nth-child(2) {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
+    grid-row: 1;
+    grid-column: 2;
 }
 
 .grid-outer-wrapper > *:nth-child(3) {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
+    grid-row: 1;
+    grid-column: 3;
 }
 
 .grid-outer-wrapper > *:nth-child(4) {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
+    grid-row: 2;
+    grid-column: 1;
 }
 
 .grid-outer-wrapper > *:nth-child(5) {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
+    grid-row: 2;
+    grid-column: 2;
 }
 
 .grid-outer-wrapper > *:nth-child(6) {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
+    grid-row: 2;
+    grid-column: 3;
 }
 
 .garment-grid {
@@ -1253,34 +1314,49 @@ video {
     cursor: pointer;
 }
 
-.garment-grid > *:nth-child(1) {
+/* Adding grid-row:1; and grid-column: 1; here as requested after adding prefixes,
+ breaks the grid so I am commenting it out and noting it here. */
+
+/* .garment-grid > *:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-}
+    grid-row: 1;
+    grid-column: 1;
+} */
 
 .garment-grid > *:nth-child(2) {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
+    grid-row: 1;
+    grid-column: 3;
 }
 
 .garment-grid > *:nth-child(3) {
     -ms-grid-row: 1;
     -ms-grid-column: 5;
+    grid-row: 1;
+    grid-column: 5;
 }
 
 .garment-grid > *:nth-child(4) {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
+    grid-row: 3;
+    grid-column: 1;
 }
 
 .garment-grid > *:nth-child(5) {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
+    grid-row: 3;
+    grid-column: 3;
 }
 
 .garment-grid > *:nth-child(6) {
     -ms-grid-row: 3;
     -ms-grid-column: 5;
+    grid-row: 3;
+    grid-column: 5;
 }
 
 .downloadwrapper {
@@ -1480,10 +1556,18 @@ video {
 #file-downloads-crop-tshirt, 
 #file-downloads-long-coat {
     height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
 }
 
 @media (max-width: 399px) {
@@ -1494,7 +1578,9 @@ video {
 
     .col-11 {
         margin: 6px;
-        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
         width: 94%;
     }
 
@@ -1504,7 +1590,9 @@ video {
         top: 100px;
         margin: 40px auto 24px auto;
         padding: 0px 6px;
-        justify-content: left;
+        -webkit-box-pack: left;
+            -ms-flex-pack: left;
+                justify-content: left;
     }
 
     .navbar .navbar-nav, .quick-nav .nav-item {
@@ -1518,13 +1606,17 @@ video {
     }
 
     .quick-nav {
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
     }
 
     .tri-divider {
         font-size: 10px;
         padding-right: 4px;
-        align-self: center;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
     }
 
     h2 {
@@ -1627,6 +1719,7 @@ model-viewer {
     font-size: 15px;
     padding-top: 14px;
     margin-bottom: 6px;
+    display: -ms-grid;
     display: grid;
 }
 
@@ -1634,21 +1727,28 @@ model-viewer {
 #file-downloads-crop-tshirt, 
 #file-downloads-long-coat {
     height: 280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 15px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 
 #makeuse-long-coat > div.container-md.my-4 {
     background-color: var(--mu-lightsilver);
-}
-
-* {
-    border: 1px solid lightblue;
 }
 
 #makeuse-long-coat {
