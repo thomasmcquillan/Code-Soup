@@ -455,7 +455,8 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
+    width: 100vw;
+    left: 0;
     padding: 50px 28px 60px 28px;
     background-color: var(--mu-slate);
     margin-top: 100px;
@@ -1248,7 +1249,7 @@ video {
 
     #long-shirt-intro a > span > img {
         cursor: pointer;
-        animation: fadeIn ease-in 60ms;
+        animation: fadeIn ease-in 20ms;
         max-width: 100%;
         height: auto;
         padding-top: 28px;
