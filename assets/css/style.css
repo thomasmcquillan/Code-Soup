@@ -264,6 +264,11 @@ nav .navbar .navbar-custom {
     border: none;
     -ms-grid-column-align: center;
         justify-self: center;
+
+        /* top: 120px; */
+        
+        padding-left: 6px;
+        /* margin: 40px auto auto auto; */
 }
 
 .navbar .navbar-brand img {
@@ -332,7 +337,6 @@ a {
     display: -ms-flexbox;
     display: flex;
     top: 120px;
-    margin: 40px auto 24px auto;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
@@ -913,42 +917,6 @@ video {
             filter: opacity(44%);
 }
 
-/* \\---  iframe styles  ---///////// */
-
-/* styling below courtesy of vntana: https://www.vntana.com/resource/3d-webviewer/ */
-
-model-viewer {
-    width: 100%;
-    height: 100%;
-}
-    
-    #enterFullscreen {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-    width: 40px;
-    height: 40px;
-    background: #dbdbdb url(‘https://storage.googleapis.com/vntana-viewer/assets/images/enter_fullscreen_icon.svg’) no-repeat center;
-    background-size: 25px auto;
-    cursor: pointer;
-}
-    
-    #exitFullscreen {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-    width: 40px;
-    height: 40px;
-    background: #dbdbdb url(‘https://storage.googleapis.com/vntana-viewer/assets/images/exit_fullscreen_icon.svg’) no-repeat center;
-    background-size: 25px auto;
-    display: none;
-    cursor: pointer;
-}
-
-#iframe-long-tshirt {
-    width: 80%;
-}
-
 .garment-info-panel {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -1119,40 +1087,6 @@ model-viewer {
     margin-top: 10px;
 }
 
-/* \\---  Animations  ---// */
-
-.three-d-hover:hover,
-.about-hover:hover {
-    opacity: 88%;
-    -webkit-filter: brightness(77%);
-            filter: brightness(77%);
-}
-
-.fade-in,
-.garment-tile img,
-img {
-    -webkit-animation: fadeIn ease-in 60ms;
-            animation: fadeIn ease-in 60ms;
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 /* \\---  media queries  ---///////// */
 
 @media (min-width: 576px) {
@@ -1242,26 +1176,15 @@ img {
 }
 
 @media (min-width: 768px) {
-
-    .garment-info-row {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-    }
     
     h1 { font-size: 72px;
     }
-
     h2 { font-size: 54px;
     }
-
     h3 { font-size: 38px;
-    }
-       
+    }    
     h4 { font-size: 23px;
-    }
-    
+    } 
     h5 { font-size: 20px;
     }
 
@@ -1285,6 +1208,14 @@ img {
     .garment-tile:hover {
         -webkit-filter: opacity(77%);
                 filter: opacity(77%);
+    }
+
+    #long-shirt-intro a > span > img {
+        cursor: pointer;
+        animation: fadeIn ease-in 60ms;
+        max-width: 100%;
+        height: auto;
+        padding-top: 28px;
     }
 }
 
@@ -1584,3 +1515,146 @@ img {
         -ms-flex-align: start;
             align-items: start;
 }
+
+@media (max-width: 399px) {
+    .row {
+        margin: 2px;
+        padding: none;
+    }
+
+    .col-11 {
+        margin: 6px;
+        flex: 0 0 auto;
+        width: 94%;
+    }
+
+    /* .mx-3 {
+        margin: 0.7rem !important;
+    } */
+    
+    .nav {
+        padding-right: var(--bs-gutter-x,.30rem);
+        padding-left: var(--bs-gutter-x,.30rem);
+        top: 100px;
+        margin: 40px auto 24px auto;
+        padding: 0px 6px;
+        justify-content: left;
+    }
+
+    .navbar .navbar-nav, .quick-nav .nav-item {
+        font-size: 13.5px;
+        font-weight: 600;
+        padding: 0;
+    }
+
+    .quick-nav .nav-item {
+        padding-right: 3px;
+    }
+
+    .quick-nav {
+        justify-content: space-evenly;
+    }
+
+    .tri-divider {
+        font-size: 10px;
+        padding-right: 4px;
+        align-self: center;
+    }
+
+    h2 {
+        font-size: 46px;
+        font-weight: 600;
+        margin: .8rem auto;
+    }
+
+    h3 {
+        margin: 22px auto;
+        line-height: 1.3em;
+        font-size: 33px;
+        margin: .9em auto .6em auto;
+    }
+
+    h4 {
+        margin: .2em auto .5em auto;
+        padding-bottom: .8rem;
+        line-height: 1.4em;
+        font-size: 26px;
+    }
+
+    .mu-footer > a {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+/* \\---  Animations  ---// */
+
+.three-d-hover:hover,
+.about-hover:hover {
+    opacity: 88%;
+    -webkit-filter: brightness(77%);
+            filter: brightness(77%);
+}
+
+.fade-in,
+.garment-tile img,
+img {
+    -webkit-animation: fadeIn ease-in 60ms;
+            animation: fadeIn ease-in 60ms;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* \\---  iframe styles  ---///////// */
+
+/* styling below courtesy of vntana: https://www.vntana.com/resource/3d-webviewer/ */
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+}
+    
+#enterFullscreen {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    background: #dbdbdb url("https://storage.googleapis.com/vntana-viewer/assets/images/enter_fullscreen_icon.svg") no-repeat center;
+    background-size: 25px auto;
+    cursor: pointer;
+}
+    
+#exitFullscreen {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    background: #dbdbdb url("https://storage.googleapis.com/vntana-viewer/assets/images/exit_fullscreen_icon.svg") no-repeat center;
+    background-size: 25px auto;
+    display: none;
+    cursor: pointer;
+}
+
+#iframe-long-tshirt {
+    width: 80%;
+}
+
+@media (min-width: 740px) and (max-width: 850px) {}
