@@ -198,6 +198,11 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
 
 ## Testing
 
+* W3C CSS Validation Service test results here:  
+    * [W3C CSS]("http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthomasmcquillan.github.io%2FMakeUse%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=") - no problems detected with css.
+* W3C HTML Validation Service.  No problems detected. See documentation for screenshots.
+* Lighthouse Testing.  Most pages performed in the high 90s across all areas for both mobile and desktop. One page got straight 100s. Screenshots can be seen in documentation folder.
+
 ## Further Testing
 * The site was tested on different browsers including Google Chrome, Mozilla Firefox and Safari.
 * I accessed the site several devices, with varying display sizes, resolutions and viewport-widths, from the old iPhone SE, the new iPhone SE, MacBook 13" macbook, right up to a 27" 4k monitor. The phones did well with the web pages and 3d model / AR, but a laptop or desktop computer is really best when using the Maker toolkit. There is room to further improve the resposivity of the 'Maker' app.
