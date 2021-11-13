@@ -1794,9 +1794,9 @@ table td {
     margin: 0 auto;
 }
 
-.data-table-row {
+/* .data-table-row {
     margin-top: 24px;
-}
+} */
 
 table tr {
     display: -webkit-box;
@@ -1822,7 +1822,8 @@ table tr {
     width: 100%;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) { */
+@media (min-width: 700px) {
 
     table tr {
         display: -webkit-box;
