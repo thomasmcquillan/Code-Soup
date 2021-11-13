@@ -1,6 +1,6 @@
 # Make/Use | Maker* Zero-Waste Fashion Toolkit
 
-<img    width="88%" 
+<img    width="66%" 
             src="assets/documentation/readme-assets/images-readme/ami-responsive-makeuse.png" 
             alt="mockup of make/use landing page showing responsivity across devices">
 <br />
@@ -71,8 +71,8 @@ This project seeks to streamline the delivery of these resources to improve the 
 * I made the wireframes for the project using Adobe Photoshop. The project scope creeped a lot along the journey as I slowly grew in confidence with Javascript and jquery etc.
 <br />
 
-<img width="44%" src="assets/documentation/readme-assets/images-readme/makeuselogo-readme.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
-<img width="44%" src="assets/documentation/readme-assets/images-readme/makeusefont-readmehover.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
+<img width="150px" src="assets/documentation/readme-assets/images-readme/makeuselogo-readme.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
+<img width="150px" src="assets/documentation/readme-assets/images-readme/makeusefont-readmehover.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
 
 <br />
 
@@ -83,9 +83,10 @@ This project seeks to streamline the delivery of these resources to improve the 
 
     * MakeUse font is a bespoke typeface created for the project by designers, Jo Bailey and Thomas Le Bas. In my project the Make/Use font is not used as a typeface as such, but rather it features in the Make/Use logo, at the top-left of the header / navigation bar. As part of the Make/Use project, the font was made available open-source and can be downloaded here:
     <br />
-    [Make/Use font](assets/fonts/makeuse-icons.woff)
-<br />
 
+[Make/Use font](assets/fonts/makeuse-icons.woff)
+
+<br />
 <br />
 
 * ### Imagery
@@ -98,13 +99,13 @@ This project seeks to streamline the delivery of these resources to improve the 
     
     * Interactive garment tiles 3d-rendered in Clo3d software before being exported as 2d image tiles by Holly McQuillan. Garment tile assets resampled, reordered and renamed by Thomas McQuillan.
 
-<img    width="30%" 
+<img    width="25%" 
             src="assets/images/intro-coat-3d.png" 
             alt="Make/Use Long Coat - 3d Render">
-<img    width="30%" 
+<img    width="25%" 
             src="assets/images/intro-long-t-3d.png" 
             alt="Make/Use Long Tshirt - 3d Render">
-<img    width="30%" 
+<img    width="25%" 
             src="assets/images/intro-crop-t-back.png" 
             alt="Make/Use Cropped Tshirt - 3d Render">
 
