@@ -88,7 +88,7 @@
     <main id="makeuse-long-coat" class="container-lg">
         <div class="row my-3">
             <!-- long coat garment grid outer wrapper -->
-            <div class="grid-outer-wrapper col-10 col-md-7 mx-auto">
+            <div class="grid-outer-wrapper col-10 col-md-7 col-lg-8 mx-auto">
                 <!-- Make/Use long coat garment grid -->
                 <div id="grid-long-coat" class="garment-grid">
                     <!-- long coat garment grid necktile -->
@@ -285,9 +285,8 @@
                 </div>
             </div>
         </div>
-        <div class="container-md my-4">
-            <div class="data-table-row row my-2">
-                
+   <div class="container-md py-4">
+            <div class="data-table-row row py-2">
                 <div id="file-downloads-long-coat" class="col-6 col-md-4 mx-auto">
                     <h5 class="d-grid temp-down-heading">
                         Template Downloads
@@ -313,19 +312,19 @@
                 <table class="table-data-custom col-11 col-md-4 mx-auto">
                     <tbody>
                         <tr id="custom-data-row" class="garment-info-row">
-                            <td data-title="sleeve circumference"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
+                            <th data-title="custom">custom</th>
+                            <td data-title="sleeve circum."><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
                             <td data-title="garment length"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
-                            <td data-title="garment circumference"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
-                            
+                            <td data-title="garment circum."><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="row my-4">
-            <div class="col-11 col-md-5 pt-4 my-2">
-                <p>Enter email to have coat construction method sent to you.</p>
-                <!-- contact form for requesting coat instructions -->
+            <div class="col-11 col-md-5 pt-4 mx-auto my-2">
+                <p>Enter your email if you would like template instructions sent to you.</p>
+                 <!-- contact form to fetch emailjs coat instructions -->
                 <form id="contact-form-coat">
                     <div class="field">
                         <input type="text" name="from_name" class="form-control" id="from_name" placeholder="name" required/>
@@ -338,7 +337,7 @@
                     </div>
                 </form>
             </div>
-            <!-- alert for invalid custom value inputs -->
+        </div> <!-- alert for invalid custom value inputs -->
             <div class="alert-wrapper">
                 <div id="alert-input-error">
                     <div id="alert-user">

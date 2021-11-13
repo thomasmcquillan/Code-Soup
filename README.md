@@ -1,16 +1,23 @@
-# MakeUse | Zero-Waste Fashion | Studio Helper App
+# Make/Use | Maker* Zero-Waste Fashion Toolkit
+
+<img    width="48%" 
+            src="assets/documentation/readme-assets/images-readme/ami-responsive-makeuse.png" 
+            alt="mockup of make/use landing page showing responsivity across devices">
 
 [View the live website here.](https://thomasmcquillan.github.io/MakeUse/index.html)
+
+<br/><br/>
 
 Created for makeuse.nz, this project is a reimagining of the 'MAKE' pages from their existing website. The Make/Use site is an online toolset and education hub for Zero-Waste Fashion, launched alongside an exhibition and workshop series. The existing site's MAKE pages each document the required steps, materials and patterns needed to re-create garments featured in the exhibition. The resources are rich in detail but can take some effort to decipher exactly which pattern pieces and downloads are needed to create selected style - and how the finished garment may look. 
 
 This project seeks to streamline the delivery of these resources to improve the user experience and further engage site visitors. Adopting the Make/Use Cropped Tshirt, Long-Tshirt and Long-Coat as pilot project, the existing pages' text-based instructions and download links are embellished with interactive elements and a new 'Maker' tool. The Maker allows users to switch styles of neckline, body and sleeves to suit their tastes. User modifications to the garment model are mirrored in updated fabric size requirements and a filtered download list.
 
-<br />  
+<br/><br/>
 
-<!-- <p align="center">
-    <img width="100%" src="https://thomasmcquillan.github.io/makeuse/documentation/makeusemockup.png" alt="mockup of finished website showing responsivity across devices">
-</p> -->
+
+<img    width="66%" 
+            src="assets/documentation/readme-assets/ami-responsive-longcoat.png" 
+            alt="mockup of finished website showing responsivity across devices">
 
 ## User Experience (UX)
 <br />
@@ -63,15 +70,14 @@ This project seeks to streamline the delivery of these resources to improve the 
 
 * ### Colour Scheme
 
-    * Given that the project is a reimagining of existing pages on a live website it is important that the color scheme matches the rest of the site. Key colors have been borrowed from the site's existing CSS styles and applied in a manner consistent with the aesthetic of the existing website. 
+    * Given that the project is a reimagining of existing pages on a live website it is important that the color scheme matches the rest of the site. Key colors have been borrowed from the site's existing CSS styles and applied in a manner consistent with the aesthetic of the existing website. The existing makeuse site can be viewed here: [makeuse.nz](https://makeuse.nz/make/crop-t-shirt/))
 
     * The color scheme is also applied in subtle ways, such as CSS hover states for navigation links (as pictured below) and jQuery 'mouse-over' event listeners for interactivity. One example is the garment tiles changing opacity when hovered to hint that the tile can be clicked on.
 
 <br />
 
-<p align="center">
-    <img width="77%" src="assets/documentation/readme-assets/makeuse-font.png" alt="Make/Use logo showing the bespoke Make/Use typeface, in regular and hovered states.">
-</p>
+<img width="36%" src="assets/documentation/readme-assets/images-readme/makeuselogo-readme.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
+<img width="36%" src="assets/documentation/readme-assets/images-readme/makeusefont-readmehover.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
 
 <br />
 
@@ -83,9 +89,12 @@ This project seeks to streamline the delivery of these resources to improve the 
     * MakeUse font is a bespoke typeface created for the project by designers, Jo Bailey and Thomas Le Bas. In my project the Make/Use font is not used as a typeface as such, but rather it features in the Make/Use logo, at the top-left of the header / navigation bar. As part of the Make/Use project, the font was made available open-source and can be downloaded here:
     [Make/Use font](assets/fonts/makeuse-icons.woff)
 
+<img    width="77%" 
+            src="assets/documentation/readme-assets/images-readme/makeusereadmevideo.png" 
+            alt="Make/Use Landing Page mockup">
 
 * ### Imagery
-    * Make/Use video shown on landing page directed by Jason O'Hara and edited by Mon Patel. Modelling by Hannah Dellow. Garments by Holly McQuillan, Textiles by Greta Menzies.
+    * Make/Use concept video on landing page directed by Jason O'Hara and edited by Mon Patel. Modelling by Hannah Dellow. Garments by Holly McQuillan, Textiles by Greta Menzies.
 
     * Interactive 3D / AR garment models provided by Holly McQuillan.
 
@@ -93,27 +102,33 @@ This project seeks to streamline the delivery of these resources to improve the 
     
     * Interactive garment tiles 3d-rendered in Clo3d software before being exported as 2d image tiles by Holly McQuillan. Garment tile assets resampled, reordered and renamed by Thomas McQuillan.
 
+<img    width="30%" 
+            src="assets/images/intro-coat-3d.png" 
+            alt="Make/Use Long Coat - 3d Render">
+<img    width="30%" 
+            src="assets/images/intro-long-t-3d.png" 
+            alt="Make/Use Long Tshirt - 3d Render">
+<img    width="30%" 
+            src="assets/images/intro-crop-t-back.png" 
+            alt="Make/Use Cropped Tshirt - 3d Render">
+
 <br />
 
 ## Wireframes
 
-* I made the wireframes for the project using Adobe XD.
+* I made the wireframes for the project using Adobe Photoshop. The project scope creeped a lot along the journey as I grew in confidence.
 
 <br />
 
+<img    width="88%" 
+            src="assets/documentation/readme-assets/images-readme/makeusescreen.png" 
+            alt="Maker Fashion Toolkit">
+
 *   # User Journey
 
-<!-- Existing page: https://makeuse.nz/make/crop-t-shirt/ -->
-
-<p align="center">
-    <img width="77%" src="assets/documentation/readme-assets/makeuse-font.png" alt="Make/Use logo showing the bespoke Make/Use typeface, in regular and hovered states.">
-</p>
-
-
 ## Features
-The existing website's 'Make' pages have been stripped down and rebuilt, considering the user's journey when setting out to make a given garment. This saw the creation of a bespoke interactive garment model that changes as the user clicks the neckline, body or sleeve tiles. 
 
-<!-- <image width="77%" src="assets/documentation/readme-assets/makeuse-font.png"></image> -->
+The existing website's 'Make' pages have been stripped down and rebuilt, considering the user's journey when setting out to make a given garment. This saw the creation of a bespoke interactive garment model that changes as the user clicks the neckline, body or sleeve tiles. 
 
 * As the garment tiles change, the stated fabric size requirement updates to account for the changes in pattern size and shape.
 
@@ -195,64 +210,73 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
         
         * [Results:](assets/documentation/jshint-javascript-validator-results-makeuse.html)
 <br />
+<br />
+* ## Testing User Stories from User Experience (UX) Section 
 
-* ### Testing User Stories from User Experience (UX) Section 
+* ### First Time Visitor Goals
 
-* #### First Time Visitor Goals
+#### "As a first time visitor to Make/Use I would like to learn about zero-waste fashion and the motivations behind the movement."      
+* The site is packed with information about Zero-Waste Fashion.  The 'about' page has an introduction to zero-waste fashion
+    and the rationale behind the movement and the Make/Use Project. The 'Make' page talks further about some of the zero-waste garments that form part of the exhibition and now the website. Furthermore, the 'articles' page has a short video showing the process of designing a garment  virtually in the CLO3D software package. 
+
+
+#### "As a first time visitor to Make/Use I would like to learn about zero-waste fashion."
+
+* From the moment that visitors arrive at the new site's landing page there is a full-width header at the top of the page with navigation links. Just under the header to the left of the screen there is a quick navigation with diret links to the maker toolkit that I developed for the project.
+        
+<br /> 
     
+#### "As a first time visitor I want to be provided with easy navigation to the information and resources I need to start making my own garments."
 
-    "As a first time visitor to Make/Use I would like to learn about zero-waste fashion, and what is the motivation for adopting zero-waste thinking when designing and making clothes."
+* From the moment that visitors arrive at the new site's landing page there is a full width header at the top of the page with navigation links. Just under the header to the left of the screen there is a quick navigation with diret links to the maker toolkit that I developed for the project.
+<br />
+<br /> 
 
-    "As a first time visitor I want to be provided with easy navigation to the information and resources I need to start making my own garments."
+#### "As a first time visitor I would like to see visual examples of what kinds of styles are possible when designing zero-waste fashion garments."
+        
+* As soon as you reach the landing page you are greeted with an experimental concept video that shows several pieces of the Make / Use garment collection in a playful dance with the dancer. The clothes appear to dress her themselves. Once inside the site there is ample visual evidence of the vast scope that zero waste design and the MakeUse Template system of pattern-making and sewing is capable of. Furthermore, there are three interactive 3d garment models that represent the three garments that were used when building the new site pages and template 'maker' tool.  These are presented as embedded iframes on the 'articles' page, and can even be experienced in Augmented Reality by site visitors.
 
-    "As a first time visitor I would like to see visual examples of what kinds of styles are possible when designing zero-waste fashion garments."
+#### "As a first time visitor I would like some way of customising the Make/Use garments to suit my taste and / or body shape."
 
-    "As a first time visitor I would like some way of customising the Make/Use garments to suit my taste and / or body shape."
+* The new Maker tool that I built for the project allows an easy and engaging interactive means by which to 'imagine' some of the endless possible combinations of body, sleeve and neckline styles. This helps to visualise early on in the design stage which is reassuring for users, and reduces the risk of surprise or disappointment when it comes to making the garment. In addition, I have added a javascript function to allow users to calculate their fabric needs when using the maker tool. 
 
-    "As a first time site visitor I would like to know how much fabric I will require to sew my selected style."
+#### "As a first time site visitor I would like to know how much fabric I will require to sew my selected style."
+        
+* The new Maker tool updates the fabric requirements as users cycle through the garment tiles. Not every change in tile will result in a change to fabric requirements, as some of the styles are simply modifications - and use the same amount of fabric - just sewn in an alternate method.
 
-    "As a first time visitor I would like it to be clear what downloads I need for my selected style, and an easy way of downloading them."
+#### " As a first time visitor I would like it to be clear what downloads I need for my selected style, and an easy way of downloading them."
 
-    "As a first time site visitor it would be helpful if I could be emailed the instructions on how to make my chosen garment for easy reference."
+* A key improvement to the site has been the automatic filtering of downloads to the specific files needed for a given garment configuration. This was programmed in javascript functions that toggle on and off tiles / images and anchor links in time with the relevant garment styles.  There are many moving parts to the tool, but it was worth it to be able to unburden aspiring fashion folk the cognitive load of figuring it all out for themselves.  I have also added code to the download anchor tags to make them download on a single mouse click.
 
-    "As a first time visitor I expect a site that displays well across devices and is intuitive to use and navigate."
+#### "As a first time site visitor it would be helpful if I could be emailed the instructions on how to make my chosen garment for easy reference."
 
+* There is now an emailjs script attached to the head of the garment pages that can send users instructions on how to make the garments using the template system.  It is optional, as there is also a link to the files on the make page. If a user enters their name and email address they receive an email with attached pdf instructions. If they are on the page for the coat when they fill out the form they will be sent the coat instructions, or if on either of the tshirt pages they will receive instructions for those.
+        
+#### " As a first time visitor I expect a site that displays well across devices and is intuitive to use and navigate."
 
-    * #### ".."
- 
-        * Upon arrival at the site....
- 
-    * #### "As a first time visitor, ..."
-        * Upon arrival at the site...
- 
-    * #### "As a first time visitor, ...
- 
-        * The site ...
- 
-    * #### "As a first time visitor, ..."
- 
-        * 
-    
-    * #### "As a first time visitor, ..."
- 
-        * 
- 
-    * #### "As a first time visitor I would like any downloads to open in a separate window/tab to avoid accidental navigation away from the site."
- 
-        * All downloads are instructed to open in a new tab using the target="_blank" syntax.
+* The site pages have been carefully designed to be responsive across various viewport widths. The Maker tool, while  still useable on smaller mobile devices, is much better suited to tablets and desktop use so that you can see more of the dynamic variables changing as you cycle through garment tiles. It also has a number of hover states and subtle animations that aren't available to touch screen users.  It is likely that most of the target audience would want to use a desktop computer to download the necessary files, but strictly speaking it is all possible on a phone.
+
+* ### Returning Visitor Goals
+    *   ####"As a returning 
 
 
 * #### Returning Visitor Goals
-    * #### "As a returning visitor, ..
+    * #### "As a returning visitor, I would like to attempt a new modification of the design and gather the appropriate resources to do so."
         
-        * ....
+        * There is nothing stopping visitors from returning as many times as they wish - and there is boundless scope for variations on the given designs.  If on their first visit they requested instructions be emailed to them then the email has a direct link back to the maker page.
 
-    * #### "..
+    * #### "As a frequent visitor to the Make/Use site, it would be nice to see more garments from the Make/Use collection added to the template 'Maker Tool' to enable easier visualisation of those garments' possible modifications." 
             
-        * ..
+        * The project as it stands is a prototype for a tool to be rolled out for all the other garments in the Make / Use collection. Therefore it is likely that attempting other designs (in addition to the existing scope) is likely to be possible.
 
 * #### Client Goals
 
-    * #### "."
+    * #### "As the Creator and Project Lead for MakeUse I would like to reduce the number of emails I receive from site visitors, asking questions about which downloads they need to create the garments shown.
          
-        * ....
+        * It is difficult to test or even predict - as the site's new functionality is not widely available or known.  It should provide users with more confidence in the steps necessary to both start and complete their chosen garment.
+
+    * #### " As the client I want the new page to match the aesthetic of the rest of the MakeUse site, including colors, fonts, branding etc.
+         
+        * Care was taken to produce page content that is arranged and styled in a manner that is consistent with the exisitng site. This is evident in the fonts, colors and content used.
+    
+<br /> 

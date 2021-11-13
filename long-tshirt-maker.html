@@ -87,8 +87,8 @@
         </nav>
     </div>
     <main id="makeuse-long-tshirt" class="container-lg">
-        <div id="garment-grid-long-tshirt" class="row my-4">
-            <div id="long-t-hover" class="grid-outer-wrapper col-10 col-md-8 mx-auto">
+        <div id="garment-grid-long-tshirt" class="row my-3">
+            <div class="grid-outer-wrapper col-10 col-md-7 col-lg-8 mx-auto">
                 <div id="grid-long-tshirt" class="garment-grid">
                     <div class="neck-tile garment-tile">
                         <img id="neckline-round" class="tile-on"
@@ -170,20 +170,22 @@
                             alt="right-sleeve in 'narrow/short' style with rotation">
                     </div>
                 </div>
+                <!-- images for pattern previews -->
                 <div id="pattern-hover-panel-longt">
-                    <img id="tshirt-grid-hover" src="assets/images/pattern-thumbs/pattern-tshirt-grid.png" alt="Make/Use Tshirt Grid">
-                    <img id="neck-collar-hover" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png" alt="Make/Use Collar Neckline Template">
-                    <img id="neck-round-hover" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-round.png" alt="Make/Use Round Neckline Template">
-                    <img id="neck-wide-hover" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-wide.png" alt="Make/Use Wide Neckline Template">
-                    <img id="sleeve-cut-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png" alt="Make/Use Sleeve Cut Left Template">
-                    <img id="sleeve-cut-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png" alt="Make/Use Sleeve Cut Right Template">
-                    <img id="body-rotate-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png" alt="Make/Use Body Rotation and Sleeve Swap Left Template">
-                    <img id="body-rotate-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png" alt="Make/Use Body Rotation and Sleeve Swap Right Template">
-                    <img id="elbow-rotate-left-hover" src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png" alt="Make/Use Body Sleeve Elbow Rotation Left Template">
-                    <img id="elbow-rotate-right-hover" src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png" alt="Make/Use Body Sleeve Elbow Rotation Right Template">
+                    <img id="tshirt-grid-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-grid.png" alt="Make/Use Tshirt Grid">
+                    <img id="neck-collar-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-collar.png" alt="Make/Use Collar Neckline Template">
+                    <img id="neck-round-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-round.png" alt="Make/Use Round Neckline Template">
+                    <img id="neck-wide-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-tshirt-neckline-wide.png" alt="Make/Use Wide Neckline Template">
+                    <img id="sleeve-cut-left-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-cut-left.png" alt="Make/Use Sleeve Cut Left Template">
+                    <img id="sleeve-cut-right-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-cut-right.png" alt="Make/Use Sleeve Cut Right Template">
+                    <img id="body-rotate-left-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-left-body-rotation-and-sleeve-swap.png" alt="Make/Use Body Rotation and Sleeve Swap Left Template">
+                    <img id="body-rotate-right-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-right-body-rotation-and-sleeve-swap.png" alt="Make/Use Body Rotation and Sleeve Swap Right Template">
+                    <img id="elbow-rotate-left-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-left-elbow-rotation.png" alt="Make/Use Body Sleeve Elbow Rotation Left Template">
+                    <img id="elbow-rotate-right-hover" class="img-fluid" src="assets/images/pattern-thumbs/pattern-sleeve-right-elbow-rotation.png" alt="Make/Use Body Sleeve Elbow Rotation Right Template">
                 </div>
             </div>
         </div>
+        <!-- fabric required wrap -->
         <div class="fabric-needs">
             <table>
                 <tbody>
@@ -193,8 +195,9 @@
                 </tbody>
             </table>
         </div>
-        <div class="thumb-wrapper row">
-            <div class="downloadwrapper col-11 col-md-8 mx-auto">
+        <!-- download thumbs wrapper -->
+        <div class="d-none d-md-flex thumb-wrapper row">
+            <div class="downloadwrapper col-11 col-md-12 mx-auto">
                 <div class="pattern-tshirt-grid pattern-thumb tile-on">
                     <a href="assets/downloads/tshirt-pattern-with-grid.pdf" target="_blank">
                         <span><img id="tshirt-grid" class="pattern-thumb tile-on"
@@ -267,31 +270,12 @@
                 </div>
             </div>
         </div>
-        <div class="container-lg">
-            <div class="row my-2">
-                <table class="col-11 col-md-10 mx-auto">
-                    <tbody>
-                        <tr id="garment-metrics" class="col-11 col-md-8 garment-info-row my-2">
-                            <td data-title="garment circumference"><span id="garment-circum">110cm</span></td>
-                            <td data-title="garment length"><span id="garment-length">50cm</span></td>
-                            <td data-title="sleeve circumference"><span id="sleeve-circum">50cm</span></td>
-                        </tr>
-                        <tr id="custom-inputs" class="col-11 col-md-8 garment-info-row">
-                            <td data-title="custom"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
-                            <td data-title="custom"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
-                            <td data-title="custom"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row my-4">
-            <div class="row my-4">
-                <div class="col-11 col-md-7">
-                    <strong class="temp-down-heading">
-                        Template Downloads
-                    </strong>
-                    <div id="file-downloads-long-tshirt" class="d-grid col-11 col-md-12 pt-2 justify-content-end">
+            <div class="container-md my-4">
+                <div class="data-table-row row my-2">
+                    <div id="file-downloads-long-coat" class="col-6 col-md-4 mx-auto">
+                        <h5 class="d-grid temp-down-heading">
+                            Template Downloads
+                        </h5>
                         <a href="assets/downloads/tshirt-pattern-with-grid.pdf" id="dl-tshirt-grid" title="Download Template" download="tshirt-grid.pdf">Tshirt Grid</a>
                         <a href="assets/downloads/print-template-neckline-round.pdf" id="dl-neck-round" title="Download Template" download="round_neckline_template.pdf">Round Neckline</a>
                         <a href="assets/downloads/print-template-neckline-collar.pdf" id="dl-neck-collar" title="Download Template" download="collar_neckline_template.pdf">Collar Neckline</a>
@@ -303,8 +287,30 @@
                         <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Body Rotation & Sleeve Swap Left</a>
                         <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Body Rotation & Sleeve Swap Right</a>
                     </div>
+                    <table class="table-data-current col-6 col-md-4 mx-auto">
+                        <tbody>
+                            <tr class="garment-info-row">
+                                <td data-title="sleeve circumference"><span id="sleeve-circum">50cm</span></td>
+                                <td data-title="garment length"><span id="garment-length">50cm</span></td>
+                                <td data-title="garment circumference"><span id="garment-circum">110cm</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table-data-custom col-11 col-md-4 mx-auto">
+                        <tbody>
+                            <tr id="custom-data-row" class="garment-info-row">
+                                <td data-title="sleeve circumference"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
+                                <td data-title="garment length"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
+                                <td data-title="garment circumference"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-11 col-md-5 pt-4 my-2">
+            </div>
+            <div class="row my-4">
+                <div class="col-11 col-md-5 pt-4 mx-auto my-2">
+                    <p>Enter your email if you would like template instructions sent to you.</p>
                     <!-- contact form to fetch emailjs tshirt instructions -->
                     <form id="contact-form-tshirt">
                         <div class="field">
@@ -319,6 +325,7 @@
                     </form>
                 </div>
             </div>
+            <!-- alert for invalid custom value inputs -->
             <div class="alert-wrapper">
                 <div id="alert-input-error">
                     <div id="alert-user">
@@ -331,6 +338,7 @@
             <input type="button" id="input-error-button" value="okay" class="d-none"/>
         </div>
     </main>
+    <!-- makeuse footer -->
     <footer class="mu-footer container-fluid">
         <div class="footer-row row">
             <div class="col-10 col-md-4 mx-auto px-2">

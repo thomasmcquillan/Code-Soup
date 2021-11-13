@@ -91,7 +91,8 @@ table > tbody > tr > td {
 .maker,
 .take-me-there,
 #fabric-required span {
-    color: var(--mu-orange);
+    color: var(--mu-burntorange);
+    background-color:lightgrey;
 }
 
 #active-long-t,
@@ -298,6 +299,12 @@ nav .navbar .navbar-custom {
     font-weight: 400;
 }
 
+#file-downloads-long-coat a:hover, 
+#file-downloads-crop-tshirt a:hover, 
+#file-downloads-long-tshirt a:hover {
+    color: var(--mu-orange);
+}
+
 #file-downloads-long-coat a {
     color: var(--mu-slate);
     text-decoration: none;
@@ -313,8 +320,6 @@ nav .navbar .navbar-custom {
 
 #file-downloads-long-tshirt > a {
     text-decoration: underline;
-    -webkit-text-decoration-color: var(--mu-orange);
-            text-decoration-color: var(--mu-orange);
 }
 
 #file-downloads-long-tshirt a:hover {
@@ -328,9 +333,9 @@ a {
     text-decoration: none;
     background: none;
     cursor: pointer;
-    -webkit-transition: color .2s ease-in-out;
-    -o-transition: color .2s ease-in-out;
-    transition: color .2s ease-in-out;
+    -webkit-transition: color .15s ease-in-out;
+    -o-transition: color .15s ease-in-out;
+    transition: color .15s ease-in-out;
     color: var(--mu-white);
 }
 
@@ -570,9 +575,9 @@ strong {
 img {
     max-width: 100%;
     height: auto;
-    -webkit-transition: ease-in 1s;
-    -o-transition: ease-in 1s;
-    transition: ease-in 1s;
+    -webkit-transition: ease-in .3s;
+    -o-transition: ease-in .3s;
+    transition: ease-in .3s;
 }
 
 .garment-tile {
@@ -1250,17 +1255,6 @@ video {
     grid-template-columns: minmax(80px, 2fr) minmax(80px, 2fr) minmax(80px, 2fr);
 }
 
-/* this next css also breaks the grid when doing 
-adding grid-row and grid-column as asked after adding prefixes.
-Un-comment to see for yourself */
-
-/* .grid-outer-wrapper > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-row: 1;
-    grid-column: 1;
-} */
-
 .grid-outer-wrapper > *:nth-child(2) {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -1408,6 +1402,9 @@ Un-comment to see for yourself */
     -ms-grid-column-align: center;
     place-self: center;
     margin: 5px;
+    width: 98%;
+    margin: auto;
+    height: auto;
 }
 
 .thumb-wrapper {
@@ -1426,9 +1423,9 @@ Un-comment to see for yourself */
 #file-downloads-long-tshirt a,
 #file-downloads-crop-tshirt a,
 #file-downloads-long-coat a {
-    -webkit-transition: ease-in 1s all;
-    -o-transition: ease-in 1s all;
-    transition: ease-in 1s all;
+    -webkit-transition: ease-in 40ms;
+    -o-transition: ease-in 40ms;
+    transition: ease-in 40ms;
     display: none;
     text-decoration: none;
     font-weight: 400;
@@ -1745,10 +1742,6 @@ model-viewer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-}
-
-#makeuse-long-coat > div.container-md.my-4 {
-    background-color: var(--mu-lightsilver);
 }
 
 #makeuse-long-coat {
