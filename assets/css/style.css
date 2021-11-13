@@ -298,7 +298,9 @@ nav .navbar .navbar-custom {
 #file-downloads-long-coat a {
     color: var(--mu-slate);
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 16px;
+    color: pink;
 }
 
 .template-method-download {
@@ -1861,4 +1863,26 @@ table tr {
 
 .fabric-needs-center {
     justify-content: center;
+}
+
+#file-downloads-long-coat a,
+#file-downloads-long-tshirt a,
+#file-downloads-cropped-tshirt a {
+    color: var(--mu-slate);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 2rem;;
+    color: var(--mu-orange);
+}
+
+#file-downloads-long-coat a:hover,
+#file-downloads-long-tshirt a:hover,
+#file-downloads-cropped-tshirt a:hover {
+    color: var(--mu-gold);
+}
+
+.temp-down-heading {
+    font-size: 20px;
+    font-weight: 500;
 }
