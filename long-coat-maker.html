@@ -88,7 +88,7 @@
     <main id="makeuse-long-coat" class="container-lg">
         <div class="row my-3">
             <!-- long coat garment grid outer wrapper -->
-            <div class="grid-outer-wrapper col-10 col-md-5 col-lg-7 mx-auto">
+            <div class="grid-outer-wrapper col-11 col-md-7 col-lg-8 mx-auto">
                 <!-- Make/Use long coat garment grid -->
                 <div id="grid-long-coat" class="garment-grid">
                     <!-- long coat garment grid necktile -->
@@ -218,12 +218,30 @@
         <div class="fabric-needs">
             <table>
                 <tbody>
-                    <tr>
+                    <tr class="fabric-needs-center">
                         <td class="fabric-data" data-title="Fabric Required"><span id="fabric-required">110cm x 75cm</span></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <table class="table-data-custom d-md-flex row mx-auto">
+            <tbody>
+                <tr class="garment-info-row">
+                    <td data-title="sleeve circumference"><span id="sleeve-circum">50cm</span></td>
+                    <td data-title="garment length"><span id="garment-length">50cm</span></td>
+                    <td data-title="garment circumference"><span id="garment-circum">110cm</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table-data-custom d-md-flex row mx-auto">
+            <tbody>
+                <tr id="custom-data-row" class="garment-info-row">
+                    <td data-title="sleeve circumference"><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
+                    <td data-title="garment length"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
+                    <td data-title="garment circumference"><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td> 
+                </tr>
+            </tbody>
+        </table>
         <!-- download thumbs wrapper -->
         <div class="d-none d-md-flex thumb-wrapper row">
             <div class="downloadwrapper col-11 col-md-12 mx-auto">
@@ -300,26 +318,6 @@
                     <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-left.pdf" id="dl-sleeve-swap-left" title="Download Template" download="sleeve_swap_left_template.pdf">Body Rotation & Sleeve Swap left</a>
                     <a href="assets/downloads/print-template-body-rotation-and-sleeve-swap-right.pdf" id="dl-sleeve-swap-right" title="Download Template" download="sleeve_swap_right_template.pdf">Body Rotation & Sleeve Swap right</a>
                 </div>
-                <table class="table-data-current col-6 col-md-4 mx-auto">
-                    <tbody>
-                        <tr class="garment-info-row">
-                            <th data-title="custom">current style:</th>
-                            <td data-title="sleeve circumference"><span id="sleeve-circum">50cm</span></td>
-                            <td data-title="garment length"><span id="garment-length">50cm</span></td>
-                            <td data-title="garment circumference"><span id="garment-circum">110cm</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="table-data-custom col-11 col-md-4 mx-auto">
-                    <tbody>
-                        <tr id="custom-data-row" class="garment-info-row">
-                            <th data-title="custom">custom</th>
-                            <td data-title="sleeve circum."><input id="custom-sleeve-circum" type="number" placeholder="...............................cm"></td>
-                            <td data-title="garment length"><input id="custom-garment-length" type="number" placeholder="...............................cm"></td>
-                            <td data-title="garment circum."><input id="custom-garment-circum" type="number" placeholder="...............................cm"></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
         <div class="row my-4">

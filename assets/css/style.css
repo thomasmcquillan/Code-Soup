@@ -662,95 +662,6 @@ img {
     padding-top: 6px;
 }
 
-/* \\---  garment info table  ---///////// */
-
-td:after {
-    content: attr(data-title);
-}
-
-table {
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-}
-
-table tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-}
-
-table td span {
-    font-size: 12px;
-    padding: 8px 0 8px 0;
-}
-
-table td {
-    display: -ms-grid;
-    display: grid;
-    text-align: center;
-}
-
-.fabric-data {
-    text-align: center;
-}
-
-.fabric-row-center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-
-.garment-info-panel strong {
-    font-size: 16px;
-}
-
-.custom-input-info {
-    color: var(--mu-slate);
-    font-weight: 300;
-    -ms-grid-column-align :center;
-        justify-self :center;
-}
-
-#garment-length,
-#garment-circum,
-#sleeve-circum,
-#fabric-required {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0 auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-    color: var(--mu-orange);
-}
-
-#custom-sleeve-circum,
-#custom-garment-length,
-#custom-garment-circum {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 0 auto;
-}
-
-.data-table-row {
-    margin-top: 24px;
-}
-
 #file-downloads-long-coat {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -770,26 +681,6 @@ table td {
 #custom-data-row {
     -ms-flex-line-pack: distribute;
         align-content: space-around;
-}
-
-.garment-info-row {
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 14px;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
 }
 
 .field input,
@@ -1366,7 +1257,8 @@ video {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 6px;
+    padding: 0;
+
 }
 
 /* \\---  template preview styles  ---///////// */
@@ -1392,23 +1284,6 @@ video {
             animation: fadeIn ease-in 200ms;
     display: none;
     background-color: var(--mu-silver);
-    -ms-grid-row-align: center;
-    -ms-grid-column-align: center;
-    place-self: center;
-    margin: 5px;
-    width: 98%;
-    margin: auto;
-    height: auto;
-}
-
-.thumb-wrapper {
-    height: 100px;
-}
-
-.tile-on {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
 }
 
 /* \\--  template download anchor links  --///////// */
@@ -1741,4 +1616,248 @@ model-viewer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+}
+
+
+
+.tile-on {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* * {
+    border: 1px solid black;
+} */
+
+#pattern-hover-panel-coat img,
+#pattern-hover-panel-cropt img,
+#pattern-hover-panel-longt img {
+    -webkit-animation: fadeIn ease-in 200ms;
+            animation: fadeIn ease-in 200ms;
+    display: none;
+    background-color: var(--mu-silver);
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    place-self: center;
+    margin: 5px;
+    width: 98%;
+    margin: auto;
+    height: auto;
+}
+
+table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* #garment-info-row {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+} */
+
+
+#makeuse-long-tshirt > div.d-none.d-md-flex.thumb-wrapper.row > div {
+    box-sizing: border-box;
+    max-width: 100%;
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* grid-row: 1;
+    grid-column: 1 / 4; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 80px;
+}
+
+.field input, input {
+    border: none;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 6px;
+    background-color: var(--mu-silversmoke);
+
+    display: -ms-grid;
+}
+
+table td {
+    display: -ms-grid;
+    /* display: flex; */
+    text-align: center;
+    justify-content: space-between;
+    align-items: stretch;
+    justify-items: stretch;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* \\---  garment info table  ---///////// */
+
+td:after {
+    content: attr(data-title);
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+table td span {
+    font-size: 12px;
+    padding: 8px 0 8px 0;
+}
+
+table td {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+}
+
+.fabric-data {
+    text-align: center;
+}
+
+.fabric-row-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.custom-input-info {
+    color: var(--mu-slate);
+    font-weight: 300;
+    -ms-grid-column-align :center;
+        justify-self :center;
+}
+
+#garment-length,
+#garment-circum,
+#sleeve-circum,
+#fabric-required {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    color: var(--mu-orange);
+}
+
+#custom-sleeve-circum,
+#custom-garment-length,
+#custom-garment-circum {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.data-table-row {
+    margin-top: 24px;
+}
+
+table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+#fabric-required td {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+
+    table tr {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        text-align: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 100%;
+    }
+
+    table tr {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.fabric-needs-center {
+    justify-content: center;
 }
