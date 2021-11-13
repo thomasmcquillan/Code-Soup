@@ -5,13 +5,6 @@
 * Browsers: last 4 version
 */
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 /* \\---  Global variables  ---// */
@@ -1503,6 +1496,11 @@ video {
     margin: 5px auto;
 }
 
+
+#makeuse-long-coat {
+    margin-bottom: 14px;
+}
+
 #form-button {
     background-color: var(--mu-silversmoke);
     color: var(--mu-slate);
@@ -1567,7 +1565,6 @@ video {
 @media (max-width: 399px) {
     .row {
         margin: 2px;
-        padding: none;
     }
 
     .col-11 {
@@ -1740,8 +1737,4 @@ model-viewer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-}
-
-#makeuse-long-coat {
-    margin-bottom: 14px;
 }
