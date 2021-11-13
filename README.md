@@ -1,18 +1,14 @@
 # Make/Use | Maker* Zero-Waste Fashion Toolkit
 
-<img    width="48%" 
+<img    width="88%" 
             src="assets/documentation/readme-assets/images-readme/ami-responsive-makeuse.png" 
             alt="mockup of make/use landing page showing responsivity across devices">
-<img    width="48%" 
-            src="assets/documentation/readme-assets/ami-responsive-longcoat.png" 
-            alt="mockup of finished website showing responsivity across devices">
-
 <br />
 
 [View the live website here.](https://thomasmcquillan.github.io/MakeUse/index.html)
 
 <br/>
-Created for makeuse.nz, this project is a reimagining of the 'MAKE' pages from their existing website. The Make/Use site is an online toolset and education hub for Zero-Waste Fashion, launched alongside an exhibition and workshop series. The existing site's MAKE pages each document the required steps, materials and patterns needed to re-create garments featured in the exhibition. The resources are rich in detail but can take some effort to decipher exactly which pattern pieces and downloads are needed to create selected style - and how the finished garment may look. 
+Created for makeuse.nz, this project is a reimagining of the 'MAKE' pages from their existing website. The Make/Use site is an online toolset and education hub for Zero-Waste Fashion, launched alongside an exhibition and workshop series. The existing site's MAKE pages each document the required steps, materials and patterns needed to re-create garments featured in the exhibition. The resources are rich in detail but can take some effort by site visitors to decipher exactly which pattern pieces and downloads are needed to create selected style - and how the finished garment may look. 
 <br/><br/>
 This project seeks to streamline the delivery of these resources to improve the user experience and further engage site visitors. Adopting the Make/Use Cropped Tshirt, Long-Tshirt and Long-Coat as pilot project, the existing pages' text-based instructions and download links are embellished with interactive elements and a new 'Maker' tool. The Maker allows users to switch styles of neckline, body and sleeves to suit their tastes. User modifications to the garment model are mirrored in updated fabric size requirements and a filtered download list.
 
@@ -122,6 +118,10 @@ This project seeks to streamline the delivery of these resources to improve the 
             src="assets/documentation/readme-assets/images-readme/makeusescreen.png" 
             alt="Maker Fashion Toolkit">
    
+<img    width="100%" 
+            src="assets/documentation/readme-assets/ami-responsive-longcoat.png" 
+            alt="mockup of finished website showing responsivity across devices">
+
 *   # User Journey
 
 ## Features

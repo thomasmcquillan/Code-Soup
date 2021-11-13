@@ -301,6 +301,10 @@ nav .navbar .navbar-custom {
     font-weight: 400;
 }
 
+.template-method-download {
+    color: var(--mu-burntorange);
+}
+
 #coat-downloads,
 #tshirt-downloads {
     -webkit-box-pack: center;
