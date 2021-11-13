@@ -3,21 +3,21 @@
 <img    width="48%" 
             src="assets/documentation/readme-assets/images-readme/ami-responsive-makeuse.png" 
             alt="mockup of make/use landing page showing responsivity across devices">
+<img    width="48%" 
+            src="assets/documentation/readme-assets/ami-responsive-longcoat.png" 
+            alt="mockup of finished website showing responsivity across devices">
+
+<br />
 
 [View the live website here.](https://thomasmcquillan.github.io/MakeUse/index.html)
 
-<br/><br/>
-
+<br/>
 Created for makeuse.nz, this project is a reimagining of the 'MAKE' pages from their existing website. The Make/Use site is an online toolset and education hub for Zero-Waste Fashion, launched alongside an exhibition and workshop series. The existing site's MAKE pages each document the required steps, materials and patterns needed to re-create garments featured in the exhibition. The resources are rich in detail but can take some effort to decipher exactly which pattern pieces and downloads are needed to create selected style - and how the finished garment may look. 
-
+<br/><br/>
 This project seeks to streamline the delivery of these resources to improve the user experience and further engage site visitors. Adopting the Make/Use Cropped Tshirt, Long-Tshirt and Long-Coat as pilot project, the existing pages' text-based instructions and download links are embellished with interactive elements and a new 'Maker' tool. The Maker allows users to switch styles of neckline, body and sleeves to suit their tastes. User modifications to the garment model are mirrored in updated fabric size requirements and a filtered download list.
 
 <br/><br/>
 
-
-<img    width="66%" 
-            src="assets/documentation/readme-assets/ami-responsive-longcoat.png" 
-            alt="mockup of finished website showing responsivity across devices">
 
 ## User Experience (UX)
 <br />
@@ -62,10 +62,6 @@ This project seeks to streamline the delivery of these resources to improve the 
 
         * As the client I want the new page to match the aesthetic of the rest of the MakeUse site, including colors, fonts, branding etc.
 
-        * As the client, it is important that page navigation is intuitive and that all links and functions work as intended.
-
-        * As the client, it is important that the code is structured clearly so that it can serve as a template for bringing the same functionality to the other garments on the MakeUse site.
-
 ## Design
 
 * ### Colour Scheme
@@ -74,10 +70,13 @@ This project seeks to streamline the delivery of these resources to improve the 
 
     * The color scheme is also applied in subtle ways, such as CSS hover states for navigation links (as pictured below) and jQuery 'mouse-over' event listeners for interactivity. One example is the garment tiles changing opacity when hovered to hint that the tile can be clicked on.
 
+*   ### Wireframes
+
+* I made the wireframes for the project using Adobe Photoshop. The project scope creeped a lot along the journey as I slowly grew in confidence with Javascript and jquery etc.
 <br />
 
-<img width="36%" src="assets/documentation/readme-assets/images-readme/makeuselogo-readme.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
-<img width="36%" src="assets/documentation/readme-assets/images-readme/makeusefont-readmehover.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
+<img width="44%" src="assets/documentation/readme-assets/images-readme/makeuselogo-readme.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
+<img width="44%" src="assets/documentation/readme-assets/images-readme/makeusefont-readmehover.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
 
 <br />
 
@@ -87,13 +86,14 @@ This project seeks to streamline the delivery of these resources to improve the 
     * I sourced Ubuntu from Google Fonts. It is used for the majority of text elements across the site, including body, links and headings etc.
 
     * MakeUse font is a bespoke typeface created for the project by designers, Jo Bailey and Thomas Le Bas. In my project the Make/Use font is not used as a typeface as such, but rather it features in the Make/Use logo, at the top-left of the header / navigation bar. As part of the Make/Use project, the font was made available open-source and can be downloaded here:
+    <br />
     [Make/Use font](assets/fonts/makeuse-icons.woff)
+<br />
 
-<img    width="77%" 
-            src="assets/documentation/readme-assets/images-readme/makeusereadmevideo.png" 
-            alt="Make/Use Landing Page mockup">
+<br />
 
 * ### Imagery
+
     * Make/Use concept video on landing page directed by Jason O'Hara and edited by Mon Patel. Modelling by Hannah Dellow. Garments by Holly McQuillan, Textiles by Greta Menzies.
 
     * Interactive 3D / AR garment models provided by Holly McQuillan.
@@ -113,17 +113,15 @@ This project seeks to streamline the delivery of these resources to improve the 
             alt="Make/Use Cropped Tshirt - 3d Render">
 
 <br />
-
-## Wireframes
-
-* I made the wireframes for the project using Adobe Photoshop. The project scope creeped a lot along the journey as I grew in confidence.
-
 <br />
 
-<img    width="88%" 
+<img    height="300px" 
+            src="assets/documentation/readme-assets/images-readme/mobile view.png" 
+            alt="Maker Fashion Toolkit">
+<img    height="300px" 
             src="assets/documentation/readme-assets/images-readme/makeusescreen.png" 
             alt="Maker Fashion Toolkit">
-
+   
 *   # User Journey
 
 ## Features
@@ -173,6 +171,7 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [JQuery](https://en.wikipedia.org/wiki/JQuery)
+* [json)]
 
 ### Frameworks, Libraries and Programs Used
 1. [Bootstrap 5.1.3](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
@@ -192,9 +191,25 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
 8. [Adobe XD](https://www.adobe.com/products/xd.html)
 * Adobe XD was used to create the wireframes for the initial design, to show the layout and basic site elements.
 9. [EmailJS](https://www.emailjs.com/)
-* EmailJS was used for ....
+* EmailJS was used for their email Templates, used to respond to form submissions on the site with an automatic response message and attached pdf garment sewing instructions.
+10. [VNTANA](https://www.vntana.com/resource/3d-webviewer/) Vntana was used for their iframe hosting of the 3D / AR garment models, as rendered by my wife Holly.
+11.[Vimeo](https://vimeo.com/143947170)Vimeo hosted the Make/Use video that is linked on the Articles page. The version on the landing page is a shorter edit that I made.
 
 ## Testing
+
+## Further Testing
+* The site was tested on different browsers including Google Chrome, Mozilla Firefox and Safari.
+* I accessed the site several devices, with varying display sizes, resolutions and viewport-widths, from the old iPhone SE, the new iPhone SE, MacBook 13" macbook, right up to a 27" 4k monitor. The phones did well with the web pages and 3d model / AR, but a laptop or desktop computer is really best when using the Maker toolkit. There is room to further improve the resposivity of the 'Maker' app.
+* Extensive testing was carried out to check that all navigation links to site pages, external sites, emailJS and downloadable content were functioning correctly.
+* Close scrutiny was paid to each page to ensure that no spelling errors or typos were made.
+* Friends and family members were asked to look through the site and associated documentation to give feedback and report on any bugs. 
+
+## Lighthouse Testing 
+* I had completed a number of performance, accessibility and best practices site assessments in the past week.  With the addition of various meta tags to the html head and alt and aria tags to content and navigation 
+elements I was able to consistently score in the 90s. However, given that I have added a number of extra image assets and moved things around a bit I decided it was appropriate to have another try.
+Interestingly the Index page which has a rotating slider animation was no problem for the simulated mobile test, even beating the desktop.  My the image elements on my latest project 
+gallery were entirely populated from custom scaled image assets that I exported in Photoshop.  These I delivered in an srcset. It was satisfying to see lighthouse race through the test
+for the new page.
 
 * ### W3C Markup Validator W3C CSS Validator
 
@@ -254,11 +269,7 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
         
 #### " As a first time visitor I expect a site that displays well across devices and is intuitive to use and navigate."
 
-* The site pages have been carefully designed to be responsive across various viewport widths. The Maker tool, while  still useable on smaller mobile devices, is much better suited to tablets and desktop use so that you can see more of the dynamic variables changing as you cycle through garment tiles. It also has a number of hover states and subtle animations that aren't available to touch screen users.  It is likely that most of the target audience would want to use a desktop computer to download the necessary files, but strictly speaking it is all possible on a phone.
-
-* ### Returning Visitor Goals
-    *   ####"As a returning 
-
+* The site pages have been carefully designed to be responsive across various viewport widths. The Maker tool, while  still useable on smaller mobile devices, is much better suited to tablets and desktop use so that you can see more of the dynamic variables changing as you cycle through garment tiles. It also has a number of hover states and subtle animations that aren't available to touch screen users.  It is likely that most of the target audience would want to use a desktop computer to download the necessary files, but strictly speaking it is all possible on a phone. 
 
 * #### Returning Visitor Goals
     * #### "As a returning visitor, I would like to attempt a new modification of the design and gather the appropriate resources to do so."
@@ -280,3 +291,70 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
         * Care was taken to produce page content that is arranged and styled in a manner that is consistent with the exisitng site. This is evident in the fonts, colors and content used.
     
 <br /> 
+
+## Deployment
+GitHub pages
+Project was deployed to GitHub Pages following this method.
+1. Visit GitHub.com
+2. Log in to my account.
+3. Click "Repositories".
+4. Click "Milestone-One-Project"
+5. Click on "Settings".
+6. Scroll down to the "GitHub Pages" section.
+7. Under "Source" heading, there is a dropdown menu. Click "None". Then select the "Master Branch".
+8. Refresh page. Scroll down to "GitHub Pages" section.
+9. Assuming everything went well you will see the message "Your site is ready to be published at _____".
+## Forking the GitHub repository
+Visit GitHub.com and log in to my account.
+
+1)  Under "Repositories" select the project you wish to fork.
+
+2) Select ‘Milestone-One-Project’
+
+3) Select ‘Clone or download’.
+
+5) Select ‘Download Zip’.
+
+6) Open the project in your favourite editor and open a terminal window.
+
+7) Use the 'git clone' comman in terminal followed by the copied git URL.
+
+8)  cloned copy of the project will be created locally on your computer.
+
+9) See [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) for pictures and further information describing the process.
+
+
+## Credits
+Where I have borrowed snippets of code I have referenced this in comments above the borrowed code, crediting the author and source.
+
+* Code
+
+* CSS Tricks are great as always.
+
+* Bootstrap 5.13 Docs
+
+* Fireship.
+
+## Content
+
+* Make/Use concept video on landing page directed by Jason O'Hara and edited by Mon Patel.  Modelling by Hannah Dellow. Garments by Holly McQuillan, Textiles by Greta Menzies.
+
+* Interactive 3D / AR garment models provided by Holly McQuillan.
+
+* Photographs on the site courtesy of Bonny Stewart-MacDonald. 
+
+* Interactive garment tiles 3d-rendered in Clo3d software 
+
+## Media
+
+## Acknowledgements
+
+* Thanks to my Mentor for his honest feedback and patience.
+
+* Thanks to the Code Institute Tutor Support for their help.
+
+* Thanks to all the creative folk who have contributed to the Make/Use project.
+
+* Thanks to my parents for their love and support.
+
+* Biggest of thanks go out to my wonderful wife Holly for her love and patience - and for the great discussions while in the planning phase of the project. Lastly to my dear boys.. You have been great and I look forward to seeing more of you. Love you guys!

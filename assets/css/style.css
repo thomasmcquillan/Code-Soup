@@ -1747,3 +1747,42 @@ model-viewer {
 #makeuse-long-coat {
     margin-bottom: 14px;
 }
+
+.masthead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover !important;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 36%, rgba(0,0,0,0.65) 100%), url("assets/images/404-bg.png") no-repeat center center scroll;
+}
+      
+button {
+    background: #e79608;
+    transition: ease .25s;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  button:hover {
+    background: #ffaf24
+  }
+
+  button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+  }
