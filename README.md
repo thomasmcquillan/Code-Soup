@@ -1,7 +1,7 @@
 # Make/Use | Maker* Zero-Waste Fashion Toolkit
 
-<img    width="66%" 
-            src="assets/documentation/readme-assets/images-readme/ami-responsive-makeuse.png" 
+<img    width="88%" 
+            src="assets/documentation/testing-screenshots/makeuse-maker-ms2.png" 
             alt="mockup of make/use landing page showing responsivity across devices">
 <br />
 
@@ -13,7 +13,6 @@ Created for makeuse.nz, this project is a reimagining of the 'MAKE' pages from t
 This project seeks to streamline the delivery of these resources to improve the user experience and further engage site visitors. Adopting the Make/Use Cropped Tshirt, Long-Tshirt and Long-Coat as pilot project, the existing pages' text-based instructions and download links are embellished with interactive elements and a new 'Maker' tool. The Maker allows users to switch styles of neckline, body and sleeves to suit their tastes. User modifications to the garment model are mirrored in updated fabric size requirements and a filtered download list.
 
 <br/><br/>
-
 
 ## User Experience (UX)
 <br />
@@ -66,15 +65,10 @@ This project seeks to streamline the delivery of these resources to improve the 
 
     * The color scheme is also applied in subtle ways, such as CSS hover states for navigation links (as pictured below) and jQuery 'mouse-over' event listeners for interactivity. One example is the garment tiles changing opacity when hovered to hint that the tile can be clicked on.
 
-*   ### Wireframes
+<img width="44%" src="assets/documentation/readme-assets/images-readme/makeuselogo-readme.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
+<img width="44%" src="assets/documentation/readme-assets/images-readme/makeusefont-readmehover.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
 
-* I made the wireframes for the project using Adobe Photoshop. The project scope creeped a lot along the journey as I slowly grew in confidence with Javascript and jquery etc.
-<br />
-
-<img width="150px" src="assets/documentation/readme-assets/images-readme/makeuselogo-readme.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
-<img width="150px" src="assets/documentation/readme-assets/images-readme/makeusefont-readmehover.png" alt="Make/Use logo showing the bespoke Make/Use typeface">
-
-<br />
+<br /><br />
 
 * ### Typography
     * For consistency with MakeUse website, my project uses 'Ubuntu', and 'MakeUse' typefaces.
@@ -84,9 +78,14 @@ This project seeks to streamline the delivery of these resources to improve the 
     * MakeUse font is a bespoke typeface created for the project by designers, Jo Bailey and Thomas Le Bas. In my project the Make/Use font is not used as a typeface as such, but rather it features in the Make/Use logo, at the top-left of the header / navigation bar. As part of the Make/Use project, the font was made available open-source and can be downloaded here:
     <br />
 
-[Make/Use font](assets/fonts/makeuse-icons.woff)
+        * [Make/Use font](assets/fonts/makeuse-icons.woff)
 
 <br />
+<br />
+
+<img    width="66%" 
+            src="assets/documentation/readme-assets/images-readme/ami-responsive-makeuse.png" 
+            alt="mockup of make/use landing page showing responsivity across devices">
 <br />
 
 * ### Imagery
@@ -112,15 +111,9 @@ This project seeks to streamline the delivery of these resources to improve the 
 <br />
 <br />
 
-<img    height="300px" 
-            src="assets/documentation/readme-assets/images-readme/mobile view.png" 
-            alt="Maker Fashion Toolkit">
-<img    height="300px" 
-            src="assets/documentation/readme-assets/images-readme/makeusescreen.png" 
-            alt="Maker Fashion Toolkit">
    
 <img    width="100%" 
-            src="assets/documentation/readme-assets/ami-responsive-longcoat.png" 
+            src="assets/documentation/makeuse-maker-ms2.png" 
             alt="mockup of finished website showing responsivity across devices">
 
 *   # User Journey
@@ -172,7 +165,7 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [JQuery](https://en.wikipedia.org/wiki/JQuery)
-* [json)]
+* [json](https://www.json.org/json-en.html)
 
 ### Frameworks, Libraries and Programs Used
 1. [Bootstrap 5.1.3](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
@@ -198,10 +191,31 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
 
 ## Testing
 
-* W3C CSS Validation Service test results here:  
-    * [W3C CSS]("http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthomasmcquillan.github.io%2FMakeUse%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=") - no problems detected with css.
-* W3C HTML Validation Service.  No problems detected. See documentation for screenshots.
-* Lighthouse Testing.  Most pages performed in the high 90s across all areas for both mobile and desktop. One page got straight 100s. Screenshots can be seen in documentation folder.
+* ### W3C Markup Validator W3C CSS Validator
+
+### * [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+* [Click here for results](https://validator.w3.org/nu/_____.html)
+
+*  No problems detected. See documentation folder for screenshots.
+
+### * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+        
+* [Click here for results]("http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthomasmcquillan.github.io%2FMakeUse%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=") 
+
+* When I put the stylesheet through autoprefixer git wanted me to add grid-row: and grid-column: for best compatibility, so I went to the trouble - especially given how important the grid is in my use case.
+
+### * [JSHint javascript code validator](https://jshint.com/)
+        
+* [Click here for Results](assets/documentation/jshint-javascript-validator-results-makeuse.html)
+    
+## * [Lighthouse testing](https://developers.google.com/web/tools/lighthouse)  
+* Most pages performed in the high 90s across all areas for both mobile and desktop. One page got straight 100s. Screenshots can be seen in documentation folder.
+
+<img    width="66%" 
+            src="assets/documentation/testing-screenshots/lighthouse/about-page-ms2-lighthouse.png" 
+            alt="Lighthouse testing">
+
 
 ## Further Testing
 * The site was tested on different browsers including Google Chrome, Mozilla Firefox and Safari.
@@ -210,44 +224,24 @@ The existing website's 'Make' pages have been stripped down and rebuilt, conside
 * Close scrutiny was paid to each page to ensure that no spelling errors or typos were made.
 * Friends and family members were asked to look through the site and associated documentation to give feedback and report on any bugs. 
 
-## Lighthouse Testing 
-* I had completed a number of performance, accessibility and best practices site assessments in the past week.  With the addition of various meta tags to the html head and alt and aria tags to content and navigation 
-elements I was able to consistently score in the 90s. However, given that I have added a number of extra image assets and moved things around a bit I decided it was appropriate to have another try.
-Interestingly the Index page which has a rotating slider animation was no problem for the simulated mobile test, even beating the desktop.  My the image elements on my latest project 
-gallery were entirely populated from custom scaled image assets that I exported in Photoshop.  These I delivered in an srcset. It was satisfying to see lighthouse race through the test
-for the new page.
-
-* ### W3C Markup Validator W3C CSS Validator
-
-    * [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-
-        * [Results:](https://validator.w3.org/nu/_____.html)
-     
-    * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-        
-        * [Results:](https://jigsaw.w3.org/css-validator/)
-
-    * [JSHint javascript code validator](https://jshint.com/)
-        
-        * [Results:](assets/documentation/jshint-javascript-validator-results-makeuse.html)
 <br />
 <br />
-* ## Testing User Stories from User Experience (UX) Section 
+
+## * Testing User Stories from User Experience (UX) Section 
 
 * ### First Time Visitor Goals
 
-#### "As a first time visitor to Make/Use I would like to learn about zero-waste fashion and the motivations behind the movement."      
+    ### "As a first time visitor to Make/Use I would like to learn about zero-waste fashion and the motivations behind the movement."      
 * The site is packed with information about Zero-Waste Fashion.  The 'about' page has an introduction to zero-waste fashion
     and the rationale behind the movement and the Make/Use Project. The 'Make' page talks further about some of the zero-waste garments that form part of the exhibition and now the website. Furthermore, the 'articles' page has a short video showing the process of designing a garment  virtually in the CLO3D software package. 
 
-
-#### "As a first time visitor to Make/Use I would like to learn about zero-waste fashion."
+    ### * "As a first time visitor to Make/Use I would like to learn about zero-waste fashion."
 
 * From the moment that visitors arrive at the new site's landing page there is a full-width header at the top of the page with navigation links. Just under the header to the left of the screen there is a quick navigation with diret links to the maker toolkit that I developed for the project.
         
 <br /> 
     
-#### "As a first time visitor I want to be provided with easy navigation to the information and resources I need to start making my own garments."
+### * "As a first time visitor I want to be provided with easy navigation to the information and resources I need to start making my own garments."
 
 * From the moment that visitors arrive at the new site's landing page there is a full width header at the top of the page with navigation links. Just under the header to the left of the screen there is a quick navigation with diret links to the maker toolkit that I developed for the project.
 <br />
